@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Rendicion_Viajes
+﻿namespace UberFrba.Abm_Cliente
 {
-    partial class Form1
+    partial class ClienteAbm
     {
         /// <summary>
         /// Required designer variable.

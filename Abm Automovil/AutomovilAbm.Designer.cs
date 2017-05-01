@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Facturacion
+﻿namespace UberFrba.Abm_Automovil
 {
-    partial class Form1
+    partial class AutomovilAbm
     {
         /// <summary>
         /// Required designer variable.

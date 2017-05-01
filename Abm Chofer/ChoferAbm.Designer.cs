@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Listado_Estadistico
+﻿namespace UberFrba.Abm_Chofer
 {
-    partial class Form1
+    partial class ChoferAbm
     {
         /// <summary>
         /// Required designer variable.
