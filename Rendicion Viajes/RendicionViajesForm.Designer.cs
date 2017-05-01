@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Listado_Estadistico
+﻿namespace UberFrba.Rendicion_Viajes
 {
-    partial class Form1
+    partial class RendicionViajesForm
     {
         /// <summary>
         /// Required designer variable.

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UberFrba.Abm_Automovil
+namespace UberFrba.Facturacion
 {
-    public partial class Form1 : Form
+    public partial class FacturacionForm : Form
     {
-        public Form1()
+        public FacturacionForm()
         {
             InitializeComponent();
         }

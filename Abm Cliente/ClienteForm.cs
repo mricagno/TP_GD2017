@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UberFrba.Abm_Cliente
 {
-    public partial class Form1 : Form
+    public partial class ClienteForm : Form
     {
-        public Form1()
+        public ClienteForm()
         {
             InitializeComponent();
         }

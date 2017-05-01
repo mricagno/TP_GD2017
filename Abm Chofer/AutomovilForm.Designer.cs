@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Abm_Cliente
+﻿namespace UberFrba.Abm_Chofer
 {
-    partial class Form1
+    partial class AutomovilForm
     {
         /// <summary>
         /// Required designer variable.
