@@ -30,6 +30,11 @@ namespace UberFrba.Registro_Viajes
             this.Close(); //TODO: ver si aca hay qe cerrar alguna conexion a db
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Repositorio.todosLosRegistroViajes();
+        }
+
        
     }
 }

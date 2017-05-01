@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,7 +75,9 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\RegistroViaje.cs" />
     <Compile Include="Backend\Repositorio.cs" />
+    <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Seguridad.cs" />
     <Compile Include="Backend\Usuario.cs" />
     <Compile Include="Facturacion\FacturacionForm.cs">
