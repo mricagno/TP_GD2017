@@ -44,29 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abm Automovil\AutomovilAbm.cs">
+    <Compile Include="Abm Automovil\AutomovilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Automovil\AutomovilAbm.Designer.cs">
-      <DependentUpon>AutomovilAbm.cs</DependentUpon>
+    <Compile Include="Abm Automovil\AutomovilForm.Designer.cs">
+      <DependentUpon>AutomovilForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Chofer\ChoferAbm.cs">
+    <Compile Include="Abm Chofer\AutomovilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Chofer\ChoferAbm.Designer.cs">
-      <DependentUpon>ChoferAbm.cs</DependentUpon>
+    <Compile Include="Abm Chofer\AutomovilForm.Designer.cs">
+      <DependentUpon>AutomovilForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Cliente\ClienteAbm.cs">
+    <Compile Include="Abm Cliente\ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Cliente\ClienteAbm.Designer.cs">
-      <DependentUpon>ClienteAbm.cs</DependentUpon>
+    <Compile Include="Abm Cliente\ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Rol\RolAbm.cs">
+    <Compile Include="Abm Rol\RolForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Rol\RolAbm.Designer.cs">
-      <DependentUpon>RolAbm.cs</DependentUpon>
+    <Compile Include="Abm Rol\RolForm.Designer.cs">
+      <DependentUpon>RolForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador.cs">
       <SubType>Form</SubType>
@@ -77,11 +77,11 @@
     <Compile Include="Backend\Repositorio.cs" />
     <Compile Include="Backend\Seguridad.cs" />
     <Compile Include="Backend\Usuario.cs" />
-    <Compile Include="Facturacion\Facturacion.cs">
+    <Compile Include="Facturacion\FacturacionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturacion\Facturacion.Designer.cs">
-      <DependentUpon>Facturacion.cs</DependentUpon>
+    <Compile Include="Facturacion\FacturacionForm.Designer.cs">
+      <DependentUpon>FacturacionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -89,25 +89,25 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listado Estadistico\ListadoEstadistico.cs">
+    <Compile Include="Listado Estadistico\ListadoEstadisticoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listado Estadistico\ListadoEstadistico.Designer.cs">
-      <DependentUpon>ListadoEstadistico.cs</DependentUpon>
+    <Compile Include="Listado Estadistico\ListadoEstadisticoForm.Designer.cs">
+      <DependentUpon>ListadoEstadisticoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registro Viajes\RegistroViajes.cs">
+    <Compile Include="Registro Viajes\RegistroViajesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro Viajes\RegistroViajes.Designer.cs">
-      <DependentUpon>RegistroViajes.cs</DependentUpon>
+    <Compile Include="Registro Viajes\RegistroViajesForm.Designer.cs">
+      <DependentUpon>RegistroViajesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rendicion Viajes\RendicionViajes.cs">
+    <Compile Include="Rendicion Viajes\RendicionViajesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rendicion Viajes\RendicionViajes.Designer.cs">
-      <DependentUpon>RendicionViajes.cs</DependentUpon>
+    <Compile Include="Rendicion Viajes\RendicionViajesForm.Designer.cs">
+      <DependentUpon>RendicionViajesForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
@@ -124,8 +124,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registro Viajes\RegistroViajes.resx">
-      <DependentUpon>RegistroViajes.cs</DependentUpon>
+    <EmbeddedResource Include="Registro Viajes\RegistroViajesForm.resx">
+      <DependentUpon>RegistroViajesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
