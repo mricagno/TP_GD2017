@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblBienvenida = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.botonIniciarSesion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -45,17 +45,16 @@
             this.lblBienvenida.Name = "lblBienvenida";
             this.lblBienvenida.Size = new System.Drawing.Size(0, 13);
             this.lblBienvenida.TabIndex = 0;
-            this.lblBienvenida.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // botonIniciarSesion
             // 
-            this.button1.Location = new System.Drawing.Point(94, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Iniciar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.botonIniciarSesion.Location = new System.Drawing.Point(94, 178);
+            this.botonIniciarSesion.Name = "botonIniciarSesion";
+            this.botonIniciarSesion.Size = new System.Drawing.Size(96, 28);
+            this.botonIniciarSesion.TabIndex = 2;
+            this.botonIniciarSesion.Text = "Iniciar Sesión";
+            this.botonIniciarSesion.UseVisualStyleBackColor = true;
+            this.botonIniciarSesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -81,7 +80,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(128, 20);
             this.txtUsuario.TabIndex = 5;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+         
             // 
             // txtPassword
             // 
@@ -110,7 +109,6 @@
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Iniciar Como";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Main
             // 
@@ -123,7 +121,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.botonIniciarSesion);
             this.Controls.Add(this.lblBienvenida);
             this.Name = "Main";
             this.Text = "Bienvenidos a Uber";
@@ -135,7 +133,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblBienvenida;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button botonIniciarSesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;

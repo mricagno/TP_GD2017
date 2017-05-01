@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UberFrba.Rendicion_Viajes
+namespace UberFrba.Abm_Cliente
 {
-    public partial class RendicionViajes : Form
+    public partial class ClienteForm : Form
     {
-        public RendicionViajes()
+        public ClienteForm()
         {
             InitializeComponent();
         }

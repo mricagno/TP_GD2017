@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Listado_Estadistico
+﻿namespace UberFrba.Abm_Cliente
 {
-    partial class ListadoEstadistico
+    partial class ClienteForm
     {
         /// <summary>
         /// Required designer variable.

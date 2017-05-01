@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UberFrba.Registro_Viajes
+namespace UberFrba.Abm_Chofer
 {
-    public partial class RegistroViajes : Form
+    public partial class AutomovilForm : Form
     {
-        public RegistroViajes()
+        public AutomovilForm()
         {
             InitializeComponent();
         }

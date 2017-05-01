@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba
 {
@@ -17,24 +18,35 @@ namespace UberFrba
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+      
+        public void button1_Click(object sender, EventArgs e)
         {
+            Usuario usuario = new Usuario();
+            usuario.nombre = txtUsuario.Text;
+            usuario.password = txtPassword.Text;
+            usuario.perfil = comboPerfiles.Text;
 
+            Seguridad seguridad = new Seguridad();
+            
+            if(!seguridad.usuarioTieneAcceso(usuario)){
+                MessageBox.Show("Acceso Denegado");
+            }
+            
+            if(comboPerfiles.Text == "Cliente"){
+                //this.Hide();
+                //new .Inicio_Admin().Show();
+            }
+            if(comboPerfiles.Text == "Chofer"){
+                //this.Hide();
+                //new .Inicio_Admin().Show();
+            }
+            if(comboPerfiles.Text == "Administrador"){
+                this.Hide();
+                new Administrador(usuario).Show();
+            }
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

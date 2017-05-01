@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Abm_Rol
+﻿namespace UberFrba.Listado_Estadistico
 {
-    partial class RolAbm
+    partial class ListadoEstadisticoForm
     {
         /// <summary>
         /// Required designer variable.

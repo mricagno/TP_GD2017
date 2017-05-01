@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Registro_Viajes
+﻿namespace UberFrba.Abm_Chofer
 {
-    partial class RegistroViajes
+    partial class AutomovilForm
     {
         /// <summary>
         /// Required designer variable.
