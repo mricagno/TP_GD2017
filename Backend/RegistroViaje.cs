@@ -9,8 +9,11 @@ namespace UberFrba.Backend
     public class RegistroViaje
     {
 
-        public String idChofer; // tiene que ser el nombre del chofer
-        public String IdAuto;
-      
+        public String Chofer { get; set; }// tiene que ser el nombre del chofer
+        public String Automovil { get; set; }
+
+        public RegistroViaje() { }
+
+
     }
 }

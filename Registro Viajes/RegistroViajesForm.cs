@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -16,12 +17,15 @@ namespace UberFrba.Registro_Viajes
 
         public Administrador formAnterior;
         public Usuario usuario;
+        public ObservableCollection<RegistroViaje> todosLosViajes = new ObservableCollection<RegistroViaje>();
+        
 
         public RegistroViajesForm(Administrador form, Usuario user)
         {
             this.formAnterior = form;
             this.usuario = user;
             InitializeComponent();
+
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -32,9 +36,35 @@ namespace UberFrba.Registro_Viajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Repositorio.todosLosRegistroViajes();
+
+            actualizarGrilla();
+         
         }
 
+        private void RegistroViajesForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRegistrarViaje_Click(object sender, EventArgs e)
+        {
+            RegistroViaje registroViaje = new RegistroViaje();
+            registroViaje.Automovil = txtAutomovil.Text;
+            registroViaje.Chofer = txtChofer.Text;
+            Repositorio.registrarViaje(registroViaje);
+            actualizarGrilla();
+
+        }
+
+        private void actualizarGrilla(){
+            ObservableCollection<RegistroViaje> viajes = Repositorio.todosLosRegistroViajes();
+            GridTodosLosViajes.DataSource = viajes;
+            txtChofer.Text = "";
+            txtAutomovil.Text = "";
+        }
+
+
+        
        
     }
 }
