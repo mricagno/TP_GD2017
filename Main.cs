@@ -32,21 +32,9 @@ namespace UberFrba
                 MessageBox.Show("Acceso Denegado");
             }
             
-            if(comboPerfiles.Text == "Cliente"){
-                //this.Hide();
-                //new .Inicio_Admin().Show();
-            }
-            if(comboPerfiles.Text == "Chofer"){
-                //this.Hide();
-                //new .Inicio_Admin().Show();
-            }
-            if(comboPerfiles.Text == "Administrador"){
-                this.Hide();
-                new Administrador(usuario).Show();
-            }
-            
+            Sesion.username = usuario.nombre;
+            new Principal().Show();
         }
-
-      
+            
     }
 }

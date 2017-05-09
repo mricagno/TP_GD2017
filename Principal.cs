@@ -12,13 +12,12 @@ using UberFrba.Registro_Viajes;
 
 namespace UberFrba
 {
-    public partial class Administrador : Form
+    public partial class Principal : Form
     {
-        public Usuario usuario;
+      
 
-        public Administrador(Usuario user)
+        public Principal()
         {
-            this.usuario = user;
             InitializeComponent();
         }
 
@@ -30,7 +29,12 @@ namespace UberFrba
         private void irRegistrarViaje_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RegistroViajesForm(this, usuario).Show();
+            new RegistroViajesForm(this).Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
         }
 
        

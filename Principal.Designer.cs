@@ -1,6 +1,6 @@
 ﻿namespace UberFrba
 {
-    partial class Administrador
+    partial class Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.irRegistrarViaje.UseVisualStyleBackColor = true;
             this.irRegistrarViaje.Click += new System.EventHandler(this.irRegistrarViaje_Click);
             // 
-            // Administrador
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,8 +70,9 @@
             this.Controls.Add(this.irRegistrarViaje);
             this.Controls.Add(this.IrTurnosAbm);
             this.Controls.Add(this.irAutosAbm);
-            this.Name = "Administrador";
+            this.Name = "Principal";
             this.Text = "Administrador";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
 
         }
