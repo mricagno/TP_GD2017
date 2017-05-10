@@ -29,7 +29,7 @@ namespace UberFrba
         private void irRegistrarViaje_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new RegistroViajesForm(this).Show();
+            new RegistroViajesForm().Show();
         }
 
         private void Principal_Load(object sender, EventArgs e)
