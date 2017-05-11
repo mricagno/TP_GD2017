@@ -38,7 +38,7 @@
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnBajaRol = new System.Windows.Forms.Button();
             this.tblMenu = new System.Windows.Forms.TabControl();
-            this.tabRoles = new System.Windows.Forms.TabPage();
+            this.tabSeguridad = new System.Windows.Forms.TabPage();
             this.tabTurnos = new System.Windows.Forms.TabPage();
             this.tabAutos = new System.Windows.Forms.TabPage();
             this.tabViajes = new System.Windows.Forms.TabPage();
@@ -55,8 +55,10 @@
             this.tabContabilidad = new System.Windows.Forms.TabPage();
             this.btnRendicionViajes = new System.Windows.Forms.Button();
             this.btnFacturacionClientes = new System.Windows.Forms.Button();
+            this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
-            this.tabRoles.SuspendLayout();
+            this.tabSeguridad.SuspendLayout();
             this.tabTurnos.SuspendLayout();
             this.tabAutos.SuspendLayout();
             this.tabViajes.SuspendLayout();
@@ -131,7 +133,7 @@
             // 
             // btnModificarRol
             // 
-            this.btnModificarRol.Location = new System.Drawing.Point(32, 103);
+            this.btnModificarRol.Location = new System.Drawing.Point(32, 76);
             this.btnModificarRol.Name = "btnModificarRol";
             this.btnModificarRol.Size = new System.Drawing.Size(98, 30);
             this.btnModificarRol.TabIndex = 1;
@@ -140,7 +142,7 @@
             // 
             // btnBajaRol
             // 
-            this.btnBajaRol.Location = new System.Drawing.Point(32, 185);
+            this.btnBajaRol.Location = new System.Drawing.Point(32, 124);
             this.btnBajaRol.Name = "btnBajaRol";
             this.btnBajaRol.Size = new System.Drawing.Size(98, 31);
             this.btnBajaRol.TabIndex = 2;
@@ -149,7 +151,7 @@
             // 
             // tblMenu
             // 
-            this.tblMenu.Controls.Add(this.tabRoles);
+            this.tblMenu.Controls.Add(this.tabSeguridad);
             this.tblMenu.Controls.Add(this.tabTurnos);
             this.tblMenu.Controls.Add(this.tabAutos);
             this.tblMenu.Controls.Add(this.tabViajes);
@@ -163,18 +165,20 @@
             this.tblMenu.Size = new System.Drawing.Size(424, 300);
             this.tblMenu.TabIndex = 6;
             // 
-            // tabRoles
+            // tabSeguridad
             // 
-            this.tabRoles.Controls.Add(this.btnBajaRol);
-            this.tabRoles.Controls.Add(this.btnModificarRol);
-            this.tabRoles.Controls.Add(this.btnAltaRol);
-            this.tabRoles.Location = new System.Drawing.Point(4, 22);
-            this.tabRoles.Name = "tabRoles";
-            this.tabRoles.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRoles.Size = new System.Drawing.Size(416, 274);
-            this.tabRoles.TabIndex = 0;
-            this.tabRoles.Text = "Roles";
-            this.tabRoles.UseVisualStyleBackColor = true;
+            this.tabSeguridad.Controls.Add(this.button2);
+            this.tabSeguridad.Controls.Add(this.btnAgregarFuncionalidad);
+            this.tabSeguridad.Controls.Add(this.btnBajaRol);
+            this.tabSeguridad.Controls.Add(this.btnModificarRol);
+            this.tabSeguridad.Controls.Add(this.btnAltaRol);
+            this.tabSeguridad.Location = new System.Drawing.Point(4, 22);
+            this.tabSeguridad.Name = "tabSeguridad";
+            this.tabSeguridad.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSeguridad.Size = new System.Drawing.Size(416, 274);
+            this.tabSeguridad.TabIndex = 0;
+            this.tabSeguridad.Text = "Seguridad";
+            this.tabSeguridad.UseVisualStyleBackColor = true;
             // 
             // tabTurnos
             // 
@@ -342,6 +346,24 @@
             this.btnFacturacionClientes.Text = "Facturacion Clientes";
             this.btnFacturacionClientes.UseVisualStyleBackColor = true;
             // 
+            // btnAgregarFuncionalidad
+            // 
+            this.btnAgregarFuncionalidad.Location = new System.Drawing.Point(36, 174);
+            this.btnAgregarFuncionalidad.Name = "btnAgregarFuncionalidad";
+            this.btnAgregarFuncionalidad.Size = new System.Drawing.Size(95, 39);
+            this.btnAgregarFuncionalidad.TabIndex = 3;
+            this.btnAgregarFuncionalidad.Text = "Agregar Funcionalidad";
+            this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(34, 219);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 34);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Eliminar funcionalidad";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +376,7 @@
             this.Text = "Administrador";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.tblMenu.ResumeLayout(false);
-            this.tabRoles.ResumeLayout(false);
+            this.tabSeguridad.ResumeLayout(false);
             this.tabTurnos.ResumeLayout(false);
             this.tabAutos.ResumeLayout(false);
             this.tabViajes.ResumeLayout(false);
@@ -378,7 +400,7 @@
         private System.Windows.Forms.Button btnModificarRol;
         private System.Windows.Forms.Button btnAltaRol;
         private System.Windows.Forms.TabControl tblMenu;
-        private System.Windows.Forms.TabPage tabRoles;
+        private System.Windows.Forms.TabPage tabSeguridad;
         private System.Windows.Forms.TabPage tabTurnos;
         private System.Windows.Forms.TabPage tabAutos;
         private System.Windows.Forms.TabPage tabViajes;
@@ -395,5 +417,7 @@
         private System.Windows.Forms.TabPage tabContabilidad;
         private System.Windows.Forms.Button btnFacturacionClientes;
         private System.Windows.Forms.Button btnRendicionViajes;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregarFuncionalidad;
     }
 }
