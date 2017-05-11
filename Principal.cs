@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Abm_Rol;
 using UberFrba.Backend;
 using UberFrba.Registro_Viajes;
 
@@ -44,6 +45,13 @@ namespace UberFrba
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAltaRol_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AltaRol().Show();
 
         }
 

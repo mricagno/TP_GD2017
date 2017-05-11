@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace UberFrba.Abm_Rol
 {
-    public partial class RolForm : Form
+    public partial class AltaRol : Form
     {
-        public RolForm()
+        public AltaRol()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

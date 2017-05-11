@@ -63,11 +63,23 @@
     <Compile Include="Abm Cliente\ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Rol\RolForm.cs">
+    <Compile Include="Abm Rol\AltaFuncionalidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Rol\RolForm.Designer.cs">
-      <DependentUpon>RolForm.cs</DependentUpon>
+    <Compile Include="Abm Rol\AltaFuncionalidad.Designer.cs">
+      <DependentUpon>AltaFuncionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\BajaFuncionalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\BajaFuncionalidad.Designer.cs">
+      <DependentUpon>BajaFuncionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\AltaRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\AltaRol.Designer.cs">
+      <DependentUpon>AltaRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Principal.cs">
@@ -122,6 +134,15 @@
     </Compile>
     <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\AltaFuncionalidad.resx">
+      <DependentUpon>AltaFuncionalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\AltaRol.resx">
+      <DependentUpon>AltaRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\BajaFuncionalidad.resx">
+      <DependentUpon>BajaFuncionalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
