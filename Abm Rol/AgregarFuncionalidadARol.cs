@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -34,11 +35,11 @@ namespace UberFrba.Abm_Rol
         private void btnFinalizarAgregadoDeFuncionalidades_Click(object sender, EventArgs e)
         {
             if (formAVolver == "principal")
-                new Principal().Show();
+                new Principal(Tabs.seguridad()).Show();
             else if (formAVolver == "modificarRol")
                 new ModificarRol().Show();
             else
-                new Principal().Show();
+                new Principal(Tabs.seguridad()).Show();
             this.Close();
         }
     }

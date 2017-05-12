@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -22,7 +23,7 @@ namespace UberFrba.Abm_Rol
             DialogResult resultado = MessageBox.Show("Recuerde que la funcionalidad debe estar implementada. ¿Está seguro que desea continuar?", "Nueva funcionalidad", MessageBoxButtons.YesNo);
             if(resultado == DialogResult.Yes){
                 //guardar funcionalidad
-                new Principal().Show();
+                new Principal(Tabs.seguridad()).Show();
                 this.Close();
             }
                 
@@ -30,7 +31,7 @@ namespace UberFrba.Abm_Rol
 
         private void btnVolverAMenu_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Principal(Tabs.seguridad()).Show();
             this.Close();
         }
 

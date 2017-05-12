@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -20,14 +21,14 @@ namespace UberFrba.Abm_Rol
         private void btnEliminarFuncionalidad_Click(object sender, EventArgs e)
         {
             MessageBox.Show("La eliminacion de la funcionalidad se realizo correctamente", "Baja Funcionalidad", MessageBoxButtons.OK);
-            new Principal().Show();
+            new Principal(Tabs.seguridad()).Show();
             this.Close();
 
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Principal(Tabs.seguridad()).Show();
             this.Close();
         }
     }

@@ -33,7 +33,7 @@ namespace UberFrba
             }
             
             Sesion.username = usuario.nombre;
-            new Principal().Show();
+            new Principal("Seguridad").Show();
         }
             
     }

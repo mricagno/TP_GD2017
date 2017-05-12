@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.irAutosAbm = new System.Windows.Forms.Button();
-            this.IrTurnosAbm = new System.Windows.Forms.Button();
+            this.btnNuevoTurno = new System.Windows.Forms.Button();
             this.irRegistrarViaje = new System.Windows.Forms.Button();
             this.btnAuto = new System.Windows.Forms.Button();
             this.btnBajaAuto = new System.Windows.Forms.Button();
@@ -42,6 +42,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
             this.tabTurnos = new System.Windows.Forms.TabPage();
+            this.btnEliminarTurno = new System.Windows.Forms.Button();
+            this.btnModificarTurno = new System.Windows.Forms.Button();
             this.tabAutos = new System.Windows.Forms.TabPage();
             this.tabViajes = new System.Windows.Forms.TabPage();
             this.tabEstadisticas = new System.Windows.Forms.TabPage();
@@ -76,14 +78,15 @@
             this.irAutosAbm.UseVisualStyleBackColor = true;
             this.irAutosAbm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // IrTurnosAbm
+            // btnNuevoTurno
             // 
-            this.IrTurnosAbm.Location = new System.Drawing.Point(23, 35);
-            this.IrTurnosAbm.Name = "IrTurnosAbm";
-            this.IrTurnosAbm.Size = new System.Drawing.Size(112, 34);
-            this.IrTurnosAbm.TabIndex = 1;
-            this.IrTurnosAbm.Text = "Cargar Turno";
-            this.IrTurnosAbm.UseVisualStyleBackColor = true;
+            this.btnNuevoTurno.Location = new System.Drawing.Point(23, 35);
+            this.btnNuevoTurno.Name = "btnNuevoTurno";
+            this.btnNuevoTurno.Size = new System.Drawing.Size(112, 34);
+            this.btnNuevoTurno.TabIndex = 1;
+            this.btnNuevoTurno.Text = "Nuevo Turno";
+            this.btnNuevoTurno.UseVisualStyleBackColor = true;
+            this.btnNuevoTurno.Click += new System.EventHandler(this.btnNuevoTurno_Click);
             // 
             // irRegistrarViaje
             // 
@@ -205,7 +208,9 @@
             // 
             // tabTurnos
             // 
-            this.tabTurnos.Controls.Add(this.IrTurnosAbm);
+            this.tabTurnos.Controls.Add(this.btnEliminarTurno);
+            this.tabTurnos.Controls.Add(this.btnModificarTurno);
+            this.tabTurnos.Controls.Add(this.btnNuevoTurno);
             this.tabTurnos.Location = new System.Drawing.Point(4, 22);
             this.tabTurnos.Name = "tabTurnos";
             this.tabTurnos.Padding = new System.Windows.Forms.Padding(3);
@@ -213,6 +218,26 @@
             this.tabTurnos.TabIndex = 1;
             this.tabTurnos.Text = "Turnos";
             this.tabTurnos.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarTurno
+            // 
+            this.btnEliminarTurno.Location = new System.Drawing.Point(23, 141);
+            this.btnEliminarTurno.Name = "btnEliminarTurno";
+            this.btnEliminarTurno.Size = new System.Drawing.Size(112, 38);
+            this.btnEliminarTurno.TabIndex = 3;
+            this.btnEliminarTurno.Text = "Eliminar Turno";
+            this.btnEliminarTurno.UseVisualStyleBackColor = true;
+            this.btnEliminarTurno.Click += new System.EventHandler(this.btnEliminarTurno_Click);
+            // 
+            // btnModificarTurno
+            // 
+            this.btnModificarTurno.Location = new System.Drawing.Point(23, 87);
+            this.btnModificarTurno.Name = "btnModificarTurno";
+            this.btnModificarTurno.Size = new System.Drawing.Size(111, 37);
+            this.btnModificarTurno.TabIndex = 2;
+            this.btnModificarTurno.Text = "ModificarTurno";
+            this.btnModificarTurno.UseVisualStyleBackColor = true;
+            this.btnModificarTurno.Click += new System.EventHandler(this.btnModificarTurno_Click);
             // 
             // tabAutos
             // 
@@ -396,7 +421,7 @@
         #endregion
 
         private System.Windows.Forms.Button irAutosAbm;
-        private System.Windows.Forms.Button IrTurnosAbm;
+        private System.Windows.Forms.Button btnNuevoTurno;
         private System.Windows.Forms.Button irRegistrarViaje;
         private System.Windows.Forms.Button btnModificarAuto;
         private System.Windows.Forms.Button btnBajaAuto;
@@ -424,5 +449,7 @@
         private System.Windows.Forms.Button btnRendicionViajes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregarFuncionalidad;
+        private System.Windows.Forms.Button btnEliminarTurno;
+        private System.Windows.Forms.Button btnModificarTurno;
     }
 }

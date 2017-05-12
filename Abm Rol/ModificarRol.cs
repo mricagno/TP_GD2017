@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -23,7 +24,7 @@ namespace UberFrba.Abm_Rol
         {
             String nombreRol = dameRolAModificar();
             MessageBox.Show("El rol" + nombreRol + "fue habilitado correctamente", "Modificación de rol", MessageBoxButtons.OK);
-            new Principal().Show();
+            new Principal(Tabs.seguridad()).Show();
             this.Close();
 
         }

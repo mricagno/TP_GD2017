@@ -20,7 +20,7 @@ namespace UberFrba.Abm_Rol
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Principal("Seguridad").Show();
             this.Close();
         }
 
@@ -28,7 +28,7 @@ namespace UberFrba.Abm_Rol
         {
             //eliminar
             MessageBox.Show("Se elimino correctamente el rol", "Baja Rol", MessageBoxButtons.OK);
-            new Principal().Show();
+            new Principal("Seguridad").Show();
             this.Close();
         }
     }

@@ -35,7 +35,7 @@ namespace UberFrba.Abm_Rol
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
-            new Principal().Show();
+            new Principal("Turno").Show();
             this.Close();
         }
     }

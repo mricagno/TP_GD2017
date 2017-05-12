@@ -10,16 +10,18 @@ using System.Windows.Forms;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
 using UberFrba.Registro_Viajes;
+using UberFrba.Turno;
 
 namespace UberFrba
 {
     public partial class Principal : Form
     {
-      
-
-        public Principal()
+        String seleccionarTab;
+        
+        public Principal(String tab)
         {
             InitializeComponent();
+            seleccionarTab = tab;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,7 +37,12 @@ namespace UberFrba
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            if (seleccionarTab == Tabs.turnos())
+                tblMenu.SelectTab(tabTurnos.Name);
+            if (seleccionarTab == Tabs.seguridad())
+                tblMenu.SelectTab(tabSeguridad.Name);
+            if (seleccionarTab == Tabs.viajes())
+                tblMenu.SelectTab(tabViajes.Name);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -78,6 +85,26 @@ namespace UberFrba
             new BajaFuncionalidad().Show();
             this.Close();
         }
+
+        private void btnNuevoTurno_Click(object sender, EventArgs e)
+        {
+            new AltaTurno().Show();
+            this.Close();
+        }
+
+        private void btnModificarTurno_Click(object sender, EventArgs e)
+        {
+            new ModificarTurno().Show();
+            this.Close();
+        }
+
+        private void btnEliminarTurno_Click(object sender, EventArgs e)
+        {
+            new BajaTurno().Show();
+            this.Close();
+        }
+
+        
 
        
     }

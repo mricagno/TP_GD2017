@@ -30,7 +30,7 @@ namespace UberFrba.Registro_Viajes
 
         public void button1_Click(object sender, EventArgs e)
         {
-            formAnterior.Show();
+            new Principal(Tabs.viajes()).Show() ;
             this.Close(); //TODO: ver si aca hay qe cerrar alguna conexion a db
         }
 
@@ -59,7 +59,7 @@ namespace UberFrba.Registro_Viajes
         private void btnRegistrarViaje_Click(object sender, EventArgs e)
         {
             new AltaRegistroViaje(this).Show();
-            this.Hide();
+            this.Close();
         }
 
         
