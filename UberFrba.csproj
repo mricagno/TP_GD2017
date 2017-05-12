@@ -63,6 +63,12 @@
     <Compile Include="Abm Cliente\ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Abm Rol\AgregarFuncionalidadARol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\AgregarRolAFuncionalidad.Designer.cs">
+      <DependentUpon>AgregarFuncionalidadARol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Abm Rol\AltaFuncionalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,32 @@
     </Compile>
     <Compile Include="Abm Rol\AltaRol.Designer.cs">
       <DependentUpon>AltaRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\BajaRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\BajaRol.Designer.cs">
+      <DependentUpon>BajaRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\FormEliminarFuncionalidadARol.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Abm Rol\FormEliminarFuncionalidadARol.Designer.cs">
+      <DependentUpon>FormEliminarFuncionalidadARol.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Abm Rol\ModificarNombreRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\ModificarNombreRol.Designer.cs">
+      <DependentUpon>ModificarNombreRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\ModificarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\ModificarRol.Designer.cs">
+      <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Principal.cs">
@@ -135,6 +167,9 @@
     <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\AgregarRolAFuncionalidad.resx">
+      <DependentUpon>AgregarFuncionalidadARol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\AltaFuncionalidad.resx">
       <DependentUpon>AltaFuncionalidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +178,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\BajaFuncionalidad.resx">
       <DependentUpon>BajaFuncionalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\BajaRol.resx">
+      <DependentUpon>BajaRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\FormEliminarFuncionalidadARol.resx">
+      <DependentUpon>FormEliminarFuncionalidadARol.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\ModificarNombreRol.resx">
+      <DependentUpon>ModificarNombreRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\ModificarRol.resx">
+      <DependentUpon>ModificarRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

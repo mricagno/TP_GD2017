@@ -16,5 +16,23 @@ namespace UberFrba.Abm_Rol
         {
             InitializeComponent();
         }
+
+        private void btnAltaFuncionalidad_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Recuerde que la funcionalidad debe estar implementada. ¿Está seguro que desea continuar?", "Nueva funcionalidad", MessageBoxButtons.YesNo);
+            if(resultado == DialogResult.Yes){
+                //guardar funcionalidad
+                new Principal().Show();
+                this.Close();
+            }
+                
+        }
+
+        private void btnVolverAMenu_Click(object sender, EventArgs e)
+        {
+            new Principal().Show();
+            this.Close();
+        }
+
     }
 }

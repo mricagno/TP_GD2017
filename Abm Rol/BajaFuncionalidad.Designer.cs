@@ -61,6 +61,7 @@
             this.btnEliminarFuncionalidad.TabIndex = 2;
             this.btnEliminarFuncionalidad.Text = "Eliminar";
             this.btnEliminarFuncionalidad.UseVisualStyleBackColor = true;
+            this.btnEliminarFuncionalidad.Click += new System.EventHandler(this.btnEliminarFuncionalidad_Click);
             // 
             // groupBox1
             // 
@@ -82,6 +83,7 @@
             this.btnRegresar.TabIndex = 4;
             this.btnRegresar.Text = "Volver";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // BajaFuncionalidad
             // 

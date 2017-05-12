@@ -140,6 +140,7 @@
             this.btnModificarRol.TabIndex = 1;
             this.btnModificarRol.Text = "Modificar Rol";
             this.btnModificarRol.UseVisualStyleBackColor = true;
+            this.btnModificarRol.Click += new System.EventHandler(this.btnModificarRol_Click);
             // 
             // btnBajaRol
             // 
@@ -149,6 +150,7 @@
             this.btnBajaRol.TabIndex = 2;
             this.btnBajaRol.Text = "Baja Rol";
             this.btnBajaRol.UseVisualStyleBackColor = true;
+            this.btnBajaRol.Click += new System.EventHandler(this.btnBajaRol_Click);
             // 
             // tblMenu
             // 
@@ -189,6 +191,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Eliminar funcionalidad";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAgregarFuncionalidad
             // 
@@ -198,6 +201,7 @@
             this.btnAgregarFuncionalidad.TabIndex = 3;
             this.btnAgregarFuncionalidad.Text = "Agregar Funcionalidad";
             this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
+            this.btnAgregarFuncionalidad.Click += new System.EventHandler(this.btnAgregarFuncionalidad_Click);
             // 
             // tabTurnos
             // 

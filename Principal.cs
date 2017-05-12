@@ -29,8 +29,8 @@ namespace UberFrba
 
         private void irRegistrarViaje_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new RegistroViajesForm().Show();
+            this.Close();
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -50,9 +50,33 @@ namespace UberFrba
 
         private void btnAltaRol_Click(object sender, EventArgs e)
         {
-            this.Hide();
             new AltaRol().Show();
+            this.Close();
+        }
 
+        private void btnBajaRol_Click(object sender, EventArgs e)
+        {
+            
+            new BajaRol().Show();
+            this.Close();
+        }
+
+        private void btnModificarRol_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ModificarRol().Show();
+        }
+
+        private void btnAgregarFuncionalidad_Click(object sender, EventArgs e)
+        {
+            new AltaFuncionalidad().Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new BajaFuncionalidad().Show();
+            this.Close();
         }
 
        

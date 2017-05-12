@@ -17,9 +17,26 @@ namespace UberFrba.Abm_Rol
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        
 
+        private void btnGuardarRolYAgregarFuncionalidad_Click(object sender, EventArgs e)
+        {
+            //aca guardo la funcionalidad y le paso al proximo form el nombre de la funcionalidad. Tener un unique de nombre en roles asi puedo buscarlo en el prox form
+            String nombreRol = dameNombreRol() ;
+            new AgregarFuncionalidadARol(nombreRol, "principal").Show();
+            this.Close();
+
+        }
+
+        private string dameNombreRol()
+        {
+            return "un nombre rol";
+        }
+
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            new Principal().Show();
+            this.Close();
         }
     }
 }

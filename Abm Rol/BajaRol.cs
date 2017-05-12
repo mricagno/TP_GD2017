@@ -10,23 +10,24 @@ using System.Windows.Forms;
 
 namespace UberFrba.Abm_Rol
 {
-    public partial class BajaFuncionalidad : Form
+    public partial class BajaRol : Form
     {
-        public BajaFuncionalidad()
+        public BajaRol()
         {
             InitializeComponent();
+            
         }
 
-        private void btnEliminarFuncionalidad_Click(object sender, EventArgs e)
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("La eliminacion de la funcionalidad se realizo correctamente", "Baja Funcionalidad", MessageBoxButtons.OK);
             new Principal().Show();
             this.Close();
-
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+        private void btnBajaRol_Click(object sender, EventArgs e)
         {
+            //eliminar
+            MessageBox.Show("Se elimino correctamente el rol", "Baja Rol", MessageBoxButtons.OK);
             new Principal().Show();
             this.Close();
         }
