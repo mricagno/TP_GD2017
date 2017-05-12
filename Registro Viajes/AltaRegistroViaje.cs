@@ -13,10 +13,9 @@ namespace UberFrba.Registro_Viajes
 {
     public partial class AltaRegistroViaje : Form
     {
-        public Form formAnterior;
-        public AltaRegistroViaje(Form formAnterior)
+       
+        public AltaRegistroViaje()
         {
-            this.formAnterior = formAnterior;
             InitializeComponent();
         }
 
@@ -42,11 +41,17 @@ namespace UberFrba.Registro_Viajes
 
             //Repositorio.registrarViaje(registroViaje);
             RepositorioMock.registrarViaje(registroViaje);
-            new RegistroViajesForm().Show();
+            new Principal(Tabs.viajes()).Show();
             this.Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
+        {
+            new Principal(Tabs.viajes()).Show();
+            this.Close();
+        }
+
+        private void AltaRegistroViaje_Load(object sender, EventArgs e)
         {
 
         }

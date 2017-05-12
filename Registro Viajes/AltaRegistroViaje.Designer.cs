@@ -162,6 +162,7 @@
             this.Controls.Add(this.viajeGroupBox);
             this.Name = "AltaRegistroViaje";
             this.Text = "AltaRegistroViaje";
+            this.Load += new System.EventHandler(this.AltaRegistroViaje_Load);
             this.viajeGroupBox.ResumeLayout(false);
             this.viajeGroupBox.PerformLayout();
             this.ResumeLayout(false);

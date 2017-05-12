@@ -46,12 +46,13 @@
             this.btnModificarTurno = new System.Windows.Forms.Button();
             this.tabAutos = new System.Windows.Forms.TabPage();
             this.tabViajes = new System.Windows.Forms.TabPage();
+            this.btnVerViajes = new System.Windows.Forms.Button();
             this.tabEstadisticas = new System.Windows.Forms.TabPage();
             this.btnConsultarEstadistica = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMismoAuto = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasConsumo = new System.Windows.Forms.RadioButton();
+            this.radioButtonViajeMasLargo = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.tabCliente = new System.Windows.Forms.TabPage();
             this.tabChoferes = new System.Windows.Forms.TabPage();
             this.tabContabilidad = new System.Windows.Forms.TabPage();
@@ -90,7 +91,7 @@
             // 
             // irRegistrarViaje
             // 
-            this.irRegistrarViaje.Location = new System.Drawing.Point(21, 41);
+            this.irRegistrarViaje.Location = new System.Drawing.Point(19, 77);
             this.irRegistrarViaje.Name = "irRegistrarViaje";
             this.irRegistrarViaje.Size = new System.Drawing.Size(109, 31);
             this.irRegistrarViaje.TabIndex = 2;
@@ -254,6 +255,7 @@
             // 
             // tabViajes
             // 
+            this.tabViajes.Controls.Add(this.btnVerViajes);
             this.tabViajes.Controls.Add(this.irRegistrarViaje);
             this.tabViajes.Location = new System.Drawing.Point(4, 22);
             this.tabViajes.Name = "tabViajes";
@@ -262,13 +264,23 @@
             this.tabViajes.Text = "Viajes";
             this.tabViajes.UseVisualStyleBackColor = true;
             // 
+            // btnVerViajes
+            // 
+            this.btnVerViajes.Location = new System.Drawing.Point(19, 36);
+            this.btnVerViajes.Name = "btnVerViajes";
+            this.btnVerViajes.Size = new System.Drawing.Size(109, 35);
+            this.btnVerViajes.TabIndex = 3;
+            this.btnVerViajes.Text = "Ver Viajes";
+            this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
+            // 
             // tabEstadisticas
             // 
             this.tabEstadisticas.Controls.Add(this.btnConsultarEstadistica);
-            this.tabEstadisticas.Controls.Add(this.radioButton4);
-            this.tabEstadisticas.Controls.Add(this.radioButton3);
-            this.tabEstadisticas.Controls.Add(this.radioButton2);
-            this.tabEstadisticas.Controls.Add(this.radioButton1);
+            this.tabEstadisticas.Controls.Add(this.radioButtonMismoAuto);
+            this.tabEstadisticas.Controls.Add(this.radioButtonMasConsumo);
+            this.tabEstadisticas.Controls.Add(this.radioButtonViajeMasLargo);
+            this.tabEstadisticas.Controls.Add(this.radioButtonMasRecaudacion);
             this.tabEstadisticas.Location = new System.Drawing.Point(4, 22);
             this.tabEstadisticas.Name = "tabEstadisticas";
             this.tabEstadisticas.Size = new System.Drawing.Size(416, 274);
@@ -284,50 +296,51 @@
             this.btnConsultarEstadistica.TabIndex = 4;
             this.btnConsultarEstadistica.Text = "Consultar";
             this.btnConsultarEstadistica.UseVisualStyleBackColor = true;
+            this.btnConsultarEstadistica.Click += new System.EventHandler(this.btnConsultarEstadistica_Click);
             // 
-            // radioButton4
+            // radioButtonMismoAuto
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(42, 140);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(255, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Cliente que utilizo más veces el mismo automóvil ";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonMismoAuto.AutoSize = true;
+            this.radioButtonMismoAuto.Location = new System.Drawing.Point(42, 140);
+            this.radioButtonMismoAuto.Name = "radioButtonMismoAuto";
+            this.radioButtonMismoAuto.Size = new System.Drawing.Size(255, 17);
+            this.radioButtonMismoAuto.TabIndex = 3;
+            this.radioButtonMismoAuto.TabStop = true;
+            this.radioButtonMismoAuto.Text = "Cliente que utilizo más veces el mismo automóvil ";
+            this.radioButtonMismoAuto.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioButtonMasConsumo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(42, 102);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(160, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Clientes con mayor consumo";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonMasConsumo.AutoSize = true;
+            this.radioButtonMasConsumo.Location = new System.Drawing.Point(42, 102);
+            this.radioButtonMasConsumo.Name = "radioButtonMasConsumo";
+            this.radioButtonMasConsumo.Size = new System.Drawing.Size(160, 17);
+            this.radioButtonMasConsumo.TabIndex = 2;
+            this.radioButtonMasConsumo.TabStop = true;
+            this.radioButtonMasConsumo.Text = "Clientes con mayor consumo";
+            this.radioButtonMasConsumo.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonViajeMasLargo
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(42, 63);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(217, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Choferes con el viaje mas largo realizado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonViajeMasLargo.AutoSize = true;
+            this.radioButtonViajeMasLargo.Location = new System.Drawing.Point(42, 63);
+            this.radioButtonViajeMasLargo.Name = "radioButtonViajeMasLargo";
+            this.radioButtonViajeMasLargo.Size = new System.Drawing.Size(217, 17);
+            this.radioButtonViajeMasLargo.TabIndex = 1;
+            this.radioButtonViajeMasLargo.TabStop = true;
+            this.radioButtonViajeMasLargo.Text = "Choferes con el viaje mas largo realizado";
+            this.radioButtonViajeMasLargo.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonMasRecaudacion
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(42, 25);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(182, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Choferes con Mayor recaudación";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonMasRecaudacion.AutoSize = true;
+            this.radioButtonMasRecaudacion.Location = new System.Drawing.Point(42, 25);
+            this.radioButtonMasRecaudacion.Name = "radioButtonMasRecaudacion";
+            this.radioButtonMasRecaudacion.Size = new System.Drawing.Size(182, 17);
+            this.radioButtonMasRecaudacion.TabIndex = 0;
+            this.radioButtonMasRecaudacion.TabStop = true;
+            this.radioButtonMasRecaudacion.Text = "Choferes con Mayor recaudación";
+            this.radioButtonMasRecaudacion.UseVisualStyleBackColor = true;
             // 
             // tabCliente
             // 
@@ -366,6 +379,7 @@
             this.btnFacturacionClientes.TabIndex = 1;
             this.btnFacturacionClientes.Text = "Facturacion Clientes";
             this.btnFacturacionClientes.UseVisualStyleBackColor = true;
+            this.btnFacturacionClientes.Click += new System.EventHandler(this.btnFacturacionClientes_Click);
             // 
             // btnRendicionViajes
             // 
@@ -375,6 +389,7 @@
             this.btnRendicionViajes.TabIndex = 0;
             this.btnRendicionViajes.Text = "RendicionViajes";
             this.btnRendicionViajes.UseVisualStyleBackColor = true;
+            this.btnRendicionViajes.Click += new System.EventHandler(this.btnRendicionViajes_Click);
             // 
             // label1
             // 
@@ -437,10 +452,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage tabEstadisticas;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonMismoAuto;
+        private System.Windows.Forms.RadioButton radioButtonMasConsumo;
+        private System.Windows.Forms.RadioButton radioButtonViajeMasLargo;
+        private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
         private System.Windows.Forms.Button btnConsultarEstadistica;
         private System.Windows.Forms.TabPage tabCliente;
         private System.Windows.Forms.TabPage tabChoferes;
@@ -451,5 +466,6 @@
         private System.Windows.Forms.Button btnAgregarFuncionalidad;
         private System.Windows.Forms.Button btnEliminarTurno;
         private System.Windows.Forms.Button btnModificarTurno;
+        private System.Windows.Forms.Button btnVerViajes;
     }
 }

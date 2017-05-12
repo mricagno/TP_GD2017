@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Facturacion
+﻿namespace UberFrba.Listado_Estadistico
 {
-    partial class FacturacionForm
+    partial class MasRecaudacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MasRecaudacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "MasRecaudacion";
+            this.Text = "Uber Estadisticas";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

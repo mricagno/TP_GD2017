@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
+using UberFrba.Contabilidad;
+using UberFrba.Facturacion;
+using UberFrba.Listado_Estadistico;
 using UberFrba.Registro_Viajes;
 using UberFrba.Turno;
 
@@ -31,7 +34,7 @@ namespace UberFrba
 
         private void irRegistrarViaje_Click(object sender, EventArgs e)
         {
-            new RegistroViajesForm().Show();
+            new AltaRegistroViaje().Show();
             this.Close();
         }
 
@@ -104,8 +107,43 @@ namespace UberFrba
             this.Close();
         }
 
-        
+        private void btnVerViajes_Click(object sender, EventArgs e)
+        {
+            new MostrarViajes().Show();
+            this.Close();
+        }
 
-       
+        private void btnConsultarEstadistica_Click(object sender, EventArgs e)
+        {
+            if (radioButtonMasConsumo.Checked == true){
+                new MasConsumo().Show();
+                this.Close();
+            }else if (radioButtonMasRecaudacion.Checked == true){
+                new MasRecaudacion().Show();
+                this.Close();
+            } else if (radioButtonMismoAuto.Checked == true){
+                new MismoAuto().Show();
+                this.Close();
+            } else if (radioButtonViajeMasLargo.Checked == true){
+                new ViajesMasLargos().Show();
+                this.Close();
+            }else {
+                MessageBox.Show("Debe seleccionar una opcion", "Uber", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void btnRendicionViajes_Click(object sender, EventArgs e)
+        {
+            new RendicionViajes().Show();
+            this.Close();
+        }
+
+        private void btnFacturacionClientes_Click(object sender, EventArgs e)
+        {
+            new FacturacionClientes().Show();
+            this.Close();
+        }
+
     }
 }

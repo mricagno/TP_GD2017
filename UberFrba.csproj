@@ -115,6 +115,24 @@
     </Compile>
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Backend\Tabs.cs" />
+    <Compile Include="Listado Estadistico\MasConsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado Estadistico\MasConsumo.Designer.cs">
+      <DependentUpon>MasConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado Estadistico\MismoAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado Estadistico\MismoAuto.Designer.cs">
+      <DependentUpon>MismoAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado Estadistico\ViajesMasLargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado Estadistico\ViajesMasLargos.Designer.cs">
+      <DependentUpon>ViajesMasLargos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,11 +157,11 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listado Estadistico\ListadoEstadisticoForm.cs">
+    <Compile Include="Listado Estadistico\MasRecaudacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listado Estadistico\ListadoEstadisticoForm.Designer.cs">
-      <DependentUpon>ListadoEstadisticoForm.cs</DependentUpon>
+    <Compile Include="Listado Estadistico\MasRecaudacion.Designer.cs">
+      <DependentUpon>MasRecaudacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,11 +171,11 @@
     <Compile Include="Registro Viajes\AltaRegistroViaje.Designer.cs">
       <DependentUpon>AltaRegistroViaje.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro Viajes\RegistroViajesForm.cs">
+    <Compile Include="Registro Viajes\MostrarViajes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro Viajes\RegistroViajesForm.Designer.cs">
-      <DependentUpon>RegistroViajesForm.cs</DependentUpon>
+    <Compile Include="Registro Viajes\MostrarViajes.Designer.cs">
+      <DependentUpon>MostrarViajes.cs</DependentUpon>
     </Compile>
     <Compile Include="Rendicion Viajes\RendicionViajesForm.cs">
       <SubType>Form</SubType>
@@ -211,6 +229,18 @@
     <EmbeddedResource Include="Abm Rol\ModificarRol.resx">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Listado Estadistico\MasConsumo.resx">
+      <DependentUpon>MasConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado Estadistico\MasRecaudacion.resx">
+      <DependentUpon>MasRecaudacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado Estadistico\MismoAuto.resx">
+      <DependentUpon>MismoAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado Estadistico\ViajesMasLargos.resx">
+      <DependentUpon>ViajesMasLargos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,8 +259,8 @@
     <EmbeddedResource Include="Registro Viajes\AltaRegistroViaje.resx">
       <DependentUpon>AltaRegistroViaje.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro Viajes\RegistroViajesForm.resx">
-      <DependentUpon>RegistroViajesForm.cs</DependentUpon>
+    <EmbeddedResource Include="Registro Viajes\MostrarViajes.resx">
+      <DependentUpon>MostrarViajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Turno\AltaTurno.resx">
       <DependentUpon>AltaTurno.cs</DependentUpon>

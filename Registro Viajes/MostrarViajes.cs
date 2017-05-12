@@ -12,7 +12,7 @@ using UberFrba.Backend;
 
 namespace UberFrba.Registro_Viajes
 {
-    public partial class RegistroViajesForm : Form
+    public partial class MostrarViajes : Form
     {
 
         public Principal formAnterior;
@@ -20,7 +20,7 @@ namespace UberFrba.Registro_Viajes
        // public List<RegistroViaje> todosLosViajes = new List<RegistroViaje>();
         
 
-        public RegistroViajesForm()
+        public MostrarViajes()
         {
             
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace UberFrba.Registro_Viajes
 
         private void btnRegistrarViaje_Click(object sender, EventArgs e)
         {
-            new AltaRegistroViaje(this).Show();
+            new AltaRegistroViaje().Show();
             this.Close();
         }
 
