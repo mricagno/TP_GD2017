@@ -79,12 +79,14 @@ namespace UberFrba
 
         private void btnAgregarFuncionalidad_Click(object sender, EventArgs e)
         {
+            //obsoleto
             new AltaFuncionalidad().Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //obsoleto
             new BajaFuncionalidad().Show();
             this.Close();
         }

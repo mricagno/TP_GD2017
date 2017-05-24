@@ -195,6 +195,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Eliminar funcionalidad";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAgregarFuncionalidad
@@ -205,6 +206,7 @@
             this.btnAgregarFuncionalidad.TabIndex = 3;
             this.btnAgregarFuncionalidad.Text = "Agregar Funcionalidad";
             this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
+            this.btnAgregarFuncionalidad.Visible = false;
             this.btnAgregarFuncionalidad.Click += new System.EventHandler(this.btnAgregarFuncionalidad_Click);
             // 
             // tabTurnos
