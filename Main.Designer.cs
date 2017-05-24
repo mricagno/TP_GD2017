@@ -80,7 +80,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(128, 20);
             this.txtUsuario.TabIndex = 5;
-         
             // 
             // txtPassword
             // 
@@ -100,6 +99,7 @@
             this.comboPerfiles.Name = "comboPerfiles";
             this.comboPerfiles.Size = new System.Drawing.Size(127, 21);
             this.comboPerfiles.TabIndex = 7;
+            this.comboPerfiles.Visible = false;
             // 
             // label4
             // 
@@ -109,6 +109,7 @@
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Iniciar Como";
+            this.label4.Visible = false;
             // 
             // Main
             // 

@@ -24,7 +24,7 @@ namespace UberFrba
             Usuario usuario = new Usuario();
             usuario.nombre = txtUsuario.Text;
             usuario.password = txtPassword.Text;
-            usuario.perfil = comboPerfiles.Text;
+            //usuario.perfil = comboPerfiles.Text;
 
             Seguridad seguridad = new Seguridad();
             

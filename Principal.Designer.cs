@@ -60,12 +60,15 @@
             this.btnRendicionViajes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.NuevoCliente = new System.Windows.Forms.Button();
+            this.ModificarCliente = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabTurnos.SuspendLayout();
             this.tabAutos.SuspendLayout();
             this.tabViajes.SuspendLayout();
             this.tabEstadisticas.SuspendLayout();
+            this.tabCliente.SuspendLayout();
             this.tabContabilidad.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -346,6 +349,8 @@
             // 
             // tabCliente
             // 
+            this.tabCliente.Controls.Add(this.ModificarCliente);
+            this.tabCliente.Controls.Add(this.NuevoCliente);
             this.tabCliente.Location = new System.Drawing.Point(4, 22);
             this.tabCliente.Name = "tabCliente";
             this.tabCliente.Size = new System.Drawing.Size(416, 274);
@@ -411,6 +416,25 @@
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // NuevoCliente
+            // 
+            this.NuevoCliente.Location = new System.Drawing.Point(29, 37);
+            this.NuevoCliente.Name = "NuevoCliente";
+            this.NuevoCliente.Size = new System.Drawing.Size(102, 37);
+            this.NuevoCliente.TabIndex = 0;
+            this.NuevoCliente.Text = "Nuevo Cliente";
+            this.NuevoCliente.UseVisualStyleBackColor = true;
+            this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
+            // 
+            // ModificarCliente
+            // 
+            this.ModificarCliente.Location = new System.Drawing.Point(31, 88);
+            this.ModificarCliente.Name = "ModificarCliente";
+            this.ModificarCliente.Size = new System.Drawing.Size(99, 37);
+            this.ModificarCliente.TabIndex = 1;
+            this.ModificarCliente.Text = "ModificarCliente";
+            this.ModificarCliente.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +453,7 @@
             this.tabViajes.ResumeLayout(false);
             this.tabEstadisticas.ResumeLayout(false);
             this.tabEstadisticas.PerformLayout();
+            this.tabCliente.ResumeLayout(false);
             this.tabContabilidad.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -469,5 +494,7 @@
         private System.Windows.Forms.Button btnEliminarTurno;
         private System.Windows.Forms.Button btnModificarTurno;
         private System.Windows.Forms.Button btnVerViajes;
+        private System.Windows.Forms.Button ModificarCliente;
+        private System.Windows.Forms.Button NuevoCliente;
     }
 }

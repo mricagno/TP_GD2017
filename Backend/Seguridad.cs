@@ -13,8 +13,7 @@ namespace UberFrba.Backend
         public Boolean usuarioTieneAcceso(Usuario usuario)
         {
             //validar que ninguno sea null.
-            //conectarme a db y validar qe tenga permiso para ese perfil
-            //y qe user y pass esten ok
+            //conectarme a db y validar qe tenga permiso
             //Si no está habilitado aumentar el contador y en ese caso bloquear
             return true;
         }

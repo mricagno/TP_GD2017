@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Abm_Cliente;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
 using UberFrba.Contabilidad;
@@ -144,6 +145,12 @@ namespace UberFrba
         private void btnFacturacionClientes_Click(object sender, EventArgs e)
         {
             new FacturacionClientes().Show();
+            this.Close();
+        }
+
+        private void NuevoCliente_Click(object sender, EventArgs e)
+        {
+            new AltaCliente().Show();
             this.Close();
         }
 

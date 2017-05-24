@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace UberFrba.Abm_Cliente
 {
-    public partial class ClienteForm : Form
+    public partial class EditarCliente : Form
     {
-        public ClienteForm()
+        public EditarCliente()
         {
             InitializeComponent();
+        }
+
+        private void EditarCliente_Load(object sender, EventArgs e)
+        {
+            //Completar los campos para el cliente
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

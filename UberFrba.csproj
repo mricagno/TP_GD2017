@@ -57,11 +57,23 @@
     <Compile Include="Abm Chofer\AutomovilForm.Designer.cs">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Cliente\ClienteForm.cs">
+    <Compile Include="Abm Cliente\AltaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Cliente\ClienteForm.Designer.cs">
-      <DependentUpon>ClienteForm.cs</DependentUpon>
+    <Compile Include="Abm Cliente\AltaCliente.Designer.cs">
+      <DependentUpon>AltaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Cliente\EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Cliente\EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Cliente\ModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Cliente\ModificarCliente.Designer.cs">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Rol\AgregarFuncionalidadARol.cs">
       <SubType>Form</SubType>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="Abm Rol\BajaRol.Designer.cs">
       <DependentUpon>BajaRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Rol\EditarRolesDeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Rol\EditarRolesDeUsuario.Designer.cs">
+      <DependentUpon>EditarRolesDeUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Rol\FormEliminarFuncionalidadARol.cs">
       <SubType>Form</SubType>
@@ -210,6 +228,15 @@
     <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Abm Cliente\AltaCliente.resx">
+      <DependentUpon>AltaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Cliente\EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Cliente\ModificarCliente.resx">
+      <DependentUpon>ModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\AgregarRolAFuncionalidad.resx">
       <DependentUpon>AgregarFuncionalidadARol.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\BajaRol.resx">
       <DependentUpon>BajaRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Rol\EditarRolesDeUsuario.resx">
+      <DependentUpon>EditarRolesDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\FormEliminarFuncionalidadARol.resx">
       <DependentUpon>FormEliminarFuncionalidadARol.cs</DependentUpon>
