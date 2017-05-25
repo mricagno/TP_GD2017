@@ -38,7 +38,7 @@
             this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.groupBox2.Controls.Add(this.txtDniCliente);
             this.groupBox2.Controls.Add(this.txtApellidoCliente);
             this.groupBox2.Controls.Add(this.txtNombreCliente);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.dateFechaNacimiento);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
@@ -128,6 +128,7 @@
             // txtDniCliente
             // 
             this.txtDniCliente.Location = new System.Drawing.Point(115, 85);
+            this.txtDniCliente.MaxLength = 8;
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(125, 20);
             this.txtDniCliente.TabIndex = 12;
@@ -146,12 +147,12 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(125, 20);
             this.txtNombreCliente.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // dateFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(115, 242);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(125, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateFechaNacimiento.Location = new System.Drawing.Point(115, 242);
+            this.dateFechaNacimiento.Name = "dateFechaNacimiento";
+            this.dateFechaNacimiento.Size = new System.Drawing.Size(125, 20);
+            this.dateFechaNacimiento.TabIndex = 7;
             // 
             // label8
             // 
@@ -276,7 +277,7 @@
         private System.Windows.Forms.TextBox txtDniCliente;
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateFechaNacimiento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

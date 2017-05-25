@@ -61,5 +61,16 @@ namespace UberFrba.Backend
             reader.Close();
             return clientes;
         }
+
+        public static void crearCliente(NuevoCliente nuevoCliente)
+        {
+            
+            String query = "EXEC DROP_DATABASE.CREAR_CLIENTE " + nuevoCliente.usuario + ", " + nuevoCliente.nombre + ", " + nuevoCliente.apellido + ", " + 
+                nuevoCliente.num_dni + ", " + nuevoCliente.email + ", " + nuevoCliente.telefono + ", " + 
+                nuevoCliente.direccion + ", " + nuevoCliente.codigo_postal + ", '" + nuevoCliente.fecha_nacimiento + "'";
+            
+            new Server().realizarQuery(query);
+            
+        }
     }
 }

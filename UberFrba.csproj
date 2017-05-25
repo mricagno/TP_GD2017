@@ -131,7 +131,8 @@
     <Compile Include="Abm Rol\ModificarRol.Designer.cs">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\Cliente.cs" />
+    <Compile Include="Backend\NuevoCliente.cs" />
+    <Compile Include="Backend\ModificarCliente.cs" />
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Tabs.cs" />

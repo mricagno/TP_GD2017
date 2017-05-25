@@ -36,20 +36,36 @@ namespace UberFrba.Abm_Cliente
 
         private void btnCrearCliente_Click(object sender, EventArgs e)
         {
-            if(lstUsuarios.SelectedItem == null){
-                MessageBox.Show("Debe seleccionar un usuario", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
-            String userName = lstUsuarios.SelectedItem.ToString();
-            String nombre = txtNombreCliente.Text;
-            String apellido = txtApellidoCliente.Text;
+            //if(lstUsuarios.SelectedItem == null){
+            //    MessageBox.Show("Debe seleccionar un usuario", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //    return;
+            //}
+            var nuevoCliente = new NuevoCliente();
+            //nuevoCliente.usuario = lstUsuarios.SelectedItem.ToString();
+            nuevoCliente.usuario = "ehaydossian";
+            nuevoCliente.nombre = txtNombreCliente.Text;
+            nuevoCliente.apellido = txtApellidoCliente.Text;
             if (!Utils.IsDigitsOnly(txtDniCliente.Text) || txtDniCliente.Text.Length != 8)
             {
                 MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            int documento = Convert.ToInt32(txtDniCliente.Text);
-            String mail = txtMailCliente.Text;
+            nuevoCliente.num_dni = Convert.ToInt32(txtDniCliente.Text);
+            nuevoCliente.email = txtMailCliente.Text;
+            nuevoCliente.telefono = Convert.ToInt32(txtTelefonoCliente.Text);
+            nuevoCliente.direccion = txtDireccionCliente.Text;
+            nuevoCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
+            nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                
+
+            try{
+                Repositorio.crearCliente(nuevoCliente);
+            }catch(Exception ex){
+                MessageBox.Show("Error al crear cliente - Exception :" + ex.ToString(), "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
         }
     }
 }
