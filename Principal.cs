@@ -177,7 +177,7 @@ namespace UberFrba
 
         private void btnModificarChofer_Click(object sender, EventArgs e)
         {
-            new ModificarChofer().Show();
+            new UberFrba.Abm_Chofer.ModificarChofer().Show();
             this.Close();
         }
 

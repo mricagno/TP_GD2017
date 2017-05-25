@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -21,6 +22,96 @@ namespace UberFrba.Abm_Chofer
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
         {
             new Principal(Tabs.chofer()).Show();
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow chofer = Utils.getSelectedRow(GridChofer);
+            if (chofer == null)
+            {
+                MessageBox.Show("Debe seleccionar un chofer", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String dni = chofer.Cells[2].Value.ToString();
+
+
+            try
+            {
+                String estabaDeshabilitado = Repositorio.deshabilitarChofer(dni);
+                if (estabaDeshabilitado == "1")
+                {
+                    MessageBox.Show("El chofer ya se encontraba deshabilitado", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                MessageBox.Show("El chofer se deshabilito correctamente", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new Principal(Tabs.chofer()).Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al deshabilitar chofer - Exception :" + ex.ToString(), "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow chofer = Utils.getSelectedRow(GridChofer);
+            if (chofer == null)
+            {
+                MessageBox.Show("Debe seleccionar un chofer", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String dni = chofer.Cells[2].Value.ToString();
+
+
+            try
+            {
+                String estabaHabilitado = Repositorio.habilitarChofer(dni);
+                if (estabaHabilitado == "1")
+                {
+                    MessageBox.Show("El chofer ya se encontraba habilitado", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                MessageBox.Show("El chofer se habilito correctamente", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new Principal(Tabs.chofer()).Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al habilitar chofer - Exception :" + ex.ToString(), "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarChofer_Load(object sender, EventArgs e)
+        {
+            ObservableCollection<UberFrba.Backend.DtoModificarChofer> choferes = Repositorio.todosLosChoferesAModificar();
+
+
+            GridChofer.DataSource = choferes;
+            GridChofer.Update();
+            GridChofer.Refresh();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow chofer = Utils.getSelectedRow(GridChofer);
+            if (chofer == null)
+            {
+                MessageBox.Show("Debe seleccionar un chofer", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String dni = chofer.Cells[2].Value.ToString();
+            new EditarChofer(dni).Show();
             this.Close();
         }
     }

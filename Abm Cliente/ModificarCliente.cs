@@ -81,7 +81,7 @@ namespace UberFrba.Abm_Cliente
         private void ModificarCliente_Load(object sender, EventArgs e)
         {
             //username nombre apellido dni
-            ObservableCollection<ClienteModificar> clientes = Repositorio.todosLosClientesAModificar();
+            ObservableCollection<DtoClienteModificar> clientes = Repositorio.todosLosClientesAModificar();
 
 
             GridClientes.DataSource = clientes;

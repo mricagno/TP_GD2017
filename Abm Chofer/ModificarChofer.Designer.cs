@@ -40,9 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
-            this.GridClientes = new System.Windows.Forms.DataGridView();
+            this.GridChofer = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridChofer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHabilitar
@@ -53,6 +53,7 @@
             this.btnHabilitar.TabIndex = 10;
             this.btnHabilitar.Text = "Habilitar";
             this.btnHabilitar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
             // btnMenuPrincipal
             // 
@@ -72,6 +73,7 @@
             this.btnModificar.TabIndex = 8;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -81,6 +83,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Deshabilitar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
@@ -91,13 +94,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.Nombre);
-            this.groupBox1.Controls.Add(this.GridClientes);
+            this.groupBox1.Controls.Add(this.GridChofer);
             this.groupBox1.Location = new System.Drawing.Point(22, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(527, 291);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar Cliente";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnFiltrar
             // 
@@ -156,15 +160,15 @@
             this.Nombre.TabIndex = 0;
             this.Nombre.Text = "Nombre";
             // 
-            // GridClientes
+            // GridChofer
             // 
-            this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(21, 117);
-            this.GridClientes.MultiSelect = false;
-            this.GridClientes.Name = "GridClientes";
-            this.GridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridClientes.Size = new System.Drawing.Size(475, 150);
-            this.GridClientes.TabIndex = 0;
+            this.GridChofer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridChofer.Location = new System.Drawing.Point(21, 117);
+            this.GridChofer.MultiSelect = false;
+            this.GridChofer.Name = "GridChofer";
+            this.GridChofer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridChofer.Size = new System.Drawing.Size(475, 150);
+            this.GridChofer.TabIndex = 0;
             // 
             // ModificarChofer
             // 
@@ -178,9 +182,10 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarChofer";
             this.Text = "Modificar Chofer";
+            this.Load += new System.EventHandler(this.ModificarChofer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridChofer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +204,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.DataGridView GridClientes;
+        private System.Windows.Forms.DataGridView GridChofer;
     }
 }

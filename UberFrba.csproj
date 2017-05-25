@@ -143,9 +143,10 @@
     <Compile Include="Abm Rol\ModificarRol.Designer.cs">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\DtoModificarChofer.cs" />
     <Compile Include="Backend\NuevoChofer.cs" />
     <Compile Include="Backend\NuevoCliente.cs" />
-    <Compile Include="Backend\ModificarCliente.cs" />
+    <Compile Include="Backend\DtoModificarCliente.cs" />
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Tabs.cs" />
@@ -247,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Chofer\AltaChofer.resx">
       <DependentUpon>AltaChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Chofer\EditarChofer.resx">
+      <DependentUpon>EditarChofer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Chofer\ModificarChofer.resx">
+      <DependentUpon>ModificarChofer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Cliente\AltaCliente.resx">
       <DependentUpon>AltaCliente.cs</DependentUpon>

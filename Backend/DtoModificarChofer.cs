@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UberFrba.Backend
 {
-    public class ClienteModificar
+    public class DtoModificarChofer
     {
         //public String Username { get; set; }
         public String Nombre { get; set; }

@@ -41,15 +41,15 @@ namespace UberFrba.Backend
         }
 
 
-        public static  ObservableCollection<ClienteModificar> todosLosClientesAModificar(){
+        public static  ObservableCollection<DtoClienteModificar> todosLosClientesAModificar(){
             String queryString = "EXEC  DROP_DATABASE.SP_TODOS_LOS_CLIENTES";
          
             SqlDataReader reader = new Server().query(queryString);
-            var clientes = new ObservableCollection<ClienteModificar>();
+            var clientes = new ObservableCollection<DtoClienteModificar>();
             
             while (reader.Read())
             {
-                var clienteModificar = new ClienteModificar();
+                var clienteModificar = new DtoClienteModificar();
 
                 //clienteModificar.Username = reader["id_usuario"].ToString();
                 clienteModificar.Nombre = reader["nombre"].ToString();
@@ -60,6 +60,28 @@ namespace UberFrba.Backend
             }
             reader.Close();
             return clientes;
+        }
+
+        internal static ObservableCollection<DtoModificarChofer> todosLosChoferesAModificar()
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_TODOS_LOS_CHOFERES";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoModificarChofer>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoModificarChofer();
+
+                //chofer.Username = reader["id_usuario"].ToString();
+                chofer.Nombre = reader["nombre"].ToString();
+                chofer.Apellido = reader["apellido"].ToString();
+                chofer.Documento = reader["num_dni"].ToString();
+
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
         }
 
         public static void crearCliente(NuevoCliente nuevoCliente)
@@ -104,9 +126,23 @@ namespace UberFrba.Backend
             return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
 
+        internal static string deshabilitarChofer(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_DESHABILITAR_CHOFER " + dni;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
+        }
+
         internal static string habilitarCliente(string dni)
         {
             String query = "EXEC DROP_DATABASE.SP_HABILITAR_CLIENTE " + dni;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba habilitado un "1"
+        }
+
+        internal static string habilitarChofer(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_CHOFER " + dni;
             new Server().realizarQuery(query);
             return ""; //aca habria qe devolver si ya estaba habilitado un "1"
         }
@@ -120,13 +156,18 @@ namespace UberFrba.Backend
             new Server().realizarQuery(query);
         }
 
+        
+     
+
         internal static void modificarChofer(String dni, NuevoChofer actualizarChofer)
         {
-            String query = "EXEC DROP_DATABASE.SP_CHOFER_CLIENTE " + dni + ", " + actualizarChofer.nombre + ", " + actualizarChofer.apellido + ", " +
+            String query = "EXEC DROP_DATABASE.SP_EDITAR_CHOFER " + dni + ", " + actualizarChofer.nombre + ", " + actualizarChofer.apellido + ", " +
                 actualizarChofer.num_dni + ", " + actualizarChofer.email + ", " + actualizarChofer.telefono + ", " +
                 actualizarChofer.direccion + ", '" + actualizarChofer.fecha_nacimiento + "'";
 
             new Server().realizarQuery(query);
         }
+
+
     }
 }
