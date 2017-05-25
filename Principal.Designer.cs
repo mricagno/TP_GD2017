@@ -54,14 +54,14 @@
             this.radioButtonViajeMasLargo = new System.Windows.Forms.RadioButton();
             this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.tabCliente = new System.Windows.Forms.TabPage();
+            this.ModificarCliente = new System.Windows.Forms.Button();
+            this.NuevoCliente = new System.Windows.Forms.Button();
             this.tabChoferes = new System.Windows.Forms.TabPage();
             this.tabContabilidad = new System.Windows.Forms.TabPage();
             this.btnFacturacionClientes = new System.Windows.Forms.Button();
             this.btnRendicionViajes = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.NuevoCliente = new System.Windows.Forms.Button();
-            this.ModificarCliente = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabTurnos.SuspendLayout();
@@ -162,14 +162,14 @@
             // tblMenu
             // 
             this.tblMenu.Controls.Add(this.tabSeguridad);
+            this.tblMenu.Controls.Add(this.tabChoferes);
+            this.tblMenu.Controls.Add(this.tabCliente);
             this.tblMenu.Controls.Add(this.tabTurnos);
             this.tblMenu.Controls.Add(this.tabAutos);
             this.tblMenu.Controls.Add(this.tabViajes);
-            this.tblMenu.Controls.Add(this.tabEstadisticas);
-            this.tblMenu.Controls.Add(this.tabCliente);
-            this.tblMenu.Controls.Add(this.tabChoferes);
             this.tblMenu.Controls.Add(this.tabContabilidad);
-            this.tblMenu.Location = new System.Drawing.Point(28, 57);
+            this.tblMenu.Controls.Add(this.tabEstadisticas);
+            this.tblMenu.Location = new System.Drawing.Point(51, 53);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.SelectedIndex = 0;
             this.tblMenu.Size = new System.Drawing.Size(424, 300);
@@ -358,6 +358,26 @@
             this.tabCliente.Text = "Clientes";
             this.tabCliente.UseVisualStyleBackColor = true;
             // 
+            // ModificarCliente
+            // 
+            this.ModificarCliente.Location = new System.Drawing.Point(31, 88);
+            this.ModificarCliente.Name = "ModificarCliente";
+            this.ModificarCliente.Size = new System.Drawing.Size(99, 37);
+            this.ModificarCliente.TabIndex = 1;
+            this.ModificarCliente.Text = "Modificar Cliente";
+            this.ModificarCliente.UseVisualStyleBackColor = true;
+            this.ModificarCliente.Click += new System.EventHandler(this.ModificarCliente_Click);
+            // 
+            // NuevoCliente
+            // 
+            this.NuevoCliente.Location = new System.Drawing.Point(29, 37);
+            this.NuevoCliente.Name = "NuevoCliente";
+            this.NuevoCliente.Size = new System.Drawing.Size(102, 37);
+            this.NuevoCliente.TabIndex = 0;
+            this.NuevoCliente.Text = "Nuevo Cliente";
+            this.NuevoCliente.UseVisualStyleBackColor = true;
+            this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
+            // 
             // tabChoferes
             // 
             this.tabChoferes.Location = new System.Drawing.Point(4, 22);
@@ -415,25 +435,6 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // NuevoCliente
-            // 
-            this.NuevoCliente.Location = new System.Drawing.Point(29, 37);
-            this.NuevoCliente.Name = "NuevoCliente";
-            this.NuevoCliente.Size = new System.Drawing.Size(102, 37);
-            this.NuevoCliente.TabIndex = 0;
-            this.NuevoCliente.Text = "Nuevo Cliente";
-            this.NuevoCliente.UseVisualStyleBackColor = true;
-            this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
-            // 
-            // ModificarCliente
-            // 
-            this.ModificarCliente.Location = new System.Drawing.Point(31, 88);
-            this.ModificarCliente.Name = "ModificarCliente";
-            this.ModificarCliente.Size = new System.Drawing.Size(99, 37);
-            this.ModificarCliente.TabIndex = 1;
-            this.ModificarCliente.Text = "ModificarCliente";
-            this.ModificarCliente.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 

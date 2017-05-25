@@ -47,6 +47,12 @@ namespace UberFrba
                 tblMenu.SelectTab(tabSeguridad.Name);
             if (seleccionarTab == Tabs.viajes())
                 tblMenu.SelectTab(tabViajes.Name);
+            if(seleccionarTab == Tabs.clientes())
+                tblMenu.SelectTab(tabCliente.Name);
+            if (seleccionarTab == Tabs.contabilidad())
+                tblMenu.SelectTab(tabContabilidad.Name);
+            if (seleccionarTab == Tabs.autos())
+                tblMenu.SelectTab(tabAutos.Name);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -151,6 +157,12 @@ namespace UberFrba
         private void NuevoCliente_Click(object sender, EventArgs e)
         {
             new AltaCliente().Show();
+            this.Close();
+        }
+
+        private void ModificarCliente_Click(object sender, EventArgs e)
+        {
+            new ModificarCliente().Show();
             this.Close();
         }
 

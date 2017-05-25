@@ -32,5 +32,13 @@ namespace UberFrba.Backend
         {
             return "contabilidad";
         }
+        public static string clientes()
+        {
+            return "clientes";
+        }
+        public static string chofer()
+        {
+            return "chofer";
+        }
     }
 }

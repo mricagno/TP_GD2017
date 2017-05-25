@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Cliente
 {
@@ -45,6 +46,12 @@ namespace UberFrba.Abm_Cliente
         private void ModificarCliente_Load(object sender, EventArgs e)
         {
             //username nombre apellido dni
+        }
+
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            new Principal(Tabs.clientes()).Show();
+            this.Close();
         }
     }
 }

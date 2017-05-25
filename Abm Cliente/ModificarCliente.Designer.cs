@@ -158,6 +158,7 @@
             this.btnMenuPrincipal.TabIndex = 4;
             this.btnMenuPrincipal.Text = "Menu Principal";
             this.btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
             // 
             // btnHabilitar
             // 
