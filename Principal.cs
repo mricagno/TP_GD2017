@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Abm_Chofer;
 using UberFrba.Abm_Cliente;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
@@ -49,6 +50,8 @@ namespace UberFrba
                 tblMenu.SelectTab(tabViajes.Name);
             if(seleccionarTab == Tabs.clientes())
                 tblMenu.SelectTab(tabCliente.Name);
+            if (seleccionarTab == Tabs.chofer())
+                tblMenu.SelectTab(tabChoferes.Name);
             if (seleccionarTab == Tabs.contabilidad())
                 tblMenu.SelectTab(tabContabilidad.Name);
             if (seleccionarTab == Tabs.autos())
@@ -164,6 +167,23 @@ namespace UberFrba
         {
             new ModificarCliente().Show();
             this.Close();
+        }
+
+        private void btnNuevoChofer_Click(object sender, EventArgs e)
+        {
+            new AltaChofer().Show();
+            this.Close();
+        }
+
+        private void btnModificarChofer_Click(object sender, EventArgs e)
+        {
+            new ModificarChofer().Show();
+            this.Close();
+        }
+
+        private void tabChoferes_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

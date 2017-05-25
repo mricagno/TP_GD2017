@@ -8,7 +8,7 @@ namespace UberFrba.Backend
 {
     public class ClienteModificar
     {
-        public String Username { get; set; }
+        //public String Username { get; set; }
         public String Nombre { get; set; }
         public String Apellido { get; set; }
         public String Documento { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace UberFrba.Backend
 {
@@ -19,6 +20,14 @@ namespace UberFrba.Backend
             return true;
         }
 
+
+        public static DataGridViewRow getSelectedRow(DataGridView dataGrid)
+        {
+            foreach (DataGridViewRow row in dataGrid.SelectedRows)
+                return row;
+
+            return null;
+        }
         
     }
 }

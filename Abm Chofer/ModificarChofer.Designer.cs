@@ -1,6 +1,6 @@
-﻿namespace UberFrba.Abm_Cliente
+﻿namespace UberFrba.Abm_Chofer
 {
-    partial class ModificarCliente
+    partial class ModificarChofer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.GridClientes = new System.Windows.Forms.DataGridView();
+            this.btnHabilitar = new System.Windows.Forms.Button();
+            this.btnMenuPrincipal = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -37,24 +40,47 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnMenuPrincipal = new System.Windows.Forms.Button();
-            this.btnHabilitar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
+            this.GridClientes = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // GridClientes
+            // btnHabilitar
             // 
-            this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridClientes.Location = new System.Drawing.Point(21, 117);
-            this.GridClientes.MultiSelect = false;
-            this.GridClientes.Name = "GridClientes";
-            this.GridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridClientes.Size = new System.Drawing.Size(475, 150);
-            this.GridClientes.TabIndex = 0;
-            this.GridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.btnHabilitar.Location = new System.Drawing.Point(233, 324);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(99, 33);
+            this.btnHabilitar.TabIndex = 10;
+            this.btnHabilitar.Text = "Habilitar";
+            this.btnHabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btnMenuPrincipal
+            // 
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(22, 324);
+            this.btnMenuPrincipal.Name = "btnMenuPrincipal";
+            this.btnMenuPrincipal.Size = new System.Drawing.Size(94, 34);
+            this.btnMenuPrincipal.TabIndex = 9;
+            this.btnMenuPrincipal.Text = "Menu Principal";
+            this.btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(338, 323);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(93, 34);
+            this.btnModificar.TabIndex = 8;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(135, 324);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(91, 34);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Deshabilitar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -66,10 +92,10 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.GridClientes);
-            this.groupBox1.Location = new System.Drawing.Point(41, 12);
+            this.groupBox1.Location = new System.Drawing.Point(22, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(527, 291);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar Cliente";
             // 
@@ -81,7 +107,6 @@
             this.btnFiltrar.TabIndex = 6;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // textBox3
             // 
@@ -130,82 +155,50 @@
             this.Nombre.Size = new System.Drawing.Size(44, 13);
             this.Nombre.TabIndex = 0;
             this.Nombre.Text = "Nombre";
-            this.Nombre.Click += new System.EventHandler(this.Nombre_Click);
             // 
-            // btnEliminar
+            // GridClientes
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(154, 323);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(91, 34);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Deshabilitar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.button1_Click);
+            this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridClientes.Location = new System.Drawing.Point(21, 117);
+            this.GridClientes.MultiSelect = false;
+            this.GridClientes.Name = "GridClientes";
+            this.GridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridClientes.Size = new System.Drawing.Size(475, 150);
+            this.GridClientes.TabIndex = 0;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(357, 322);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(93, 34);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnMenuPrincipal
-            // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(41, 323);
-            this.btnMenuPrincipal.Name = "btnMenuPrincipal";
-            this.btnMenuPrincipal.Size = new System.Drawing.Size(94, 34);
-            this.btnMenuPrincipal.TabIndex = 4;
-            this.btnMenuPrincipal.Text = "Menu Principal";
-            this.btnMenuPrincipal.UseVisualStyleBackColor = true;
-            this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
-            // 
-            // btnHabilitar
-            // 
-            this.btnHabilitar.Location = new System.Drawing.Point(252, 323);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(99, 33);
-            this.btnHabilitar.TabIndex = 5;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = true;
-            this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
-            // 
-            // ModificarCliente
+            // ModificarChofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 385);
+            this.ClientSize = new System.Drawing.Size(571, 370);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "ModificarCliente";
-            this.Text = "Modificar Cliente";
-            this.Load += new System.EventHandler(this.ModificarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).EndInit();
+            this.Name = "ModificarChofer";
+            this.Text = "Modificar Chofer";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GridClientes;
+        private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button btnMenuPrincipal;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnMenuPrincipal;
-        private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.DataGridView GridClientes;
     }
 }

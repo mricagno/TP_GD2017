@@ -51,11 +51,23 @@
     <Compile Include="Abm Automovil\AutomovilForm.Designer.cs">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Chofer\AutomovilForm.cs">
+    <Compile Include="Abm Chofer\AltaChofer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Chofer\AutomovilForm.Designer.cs">
-      <DependentUpon>AutomovilForm.cs</DependentUpon>
+    <Compile Include="Abm Chofer\AltaChofer.Designer.cs">
+      <DependentUpon>AltaChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Chofer\EditarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Chofer\EditarChofer.Designer.cs">
+      <DependentUpon>EditarChofer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Chofer\ModificarChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Chofer\ModificarChofer.Designer.cs">
+      <DependentUpon>ModificarChofer.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Cliente\AltaCliente.cs">
       <SubType>Form</SubType>
@@ -131,6 +143,7 @@
     <Compile Include="Abm Rol\ModificarRol.Designer.cs">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\NuevoChofer.cs" />
     <Compile Include="Backend\NuevoCliente.cs" />
     <Compile Include="Backend\ModificarCliente.cs" />
     <Compile Include="Backend\RepositorioMock.cs" />
@@ -231,6 +244,9 @@
     </Compile>
     <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
       <DependentUpon>AutomovilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Chofer\AltaChofer.resx">
+      <DependentUpon>AltaChofer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Cliente\AltaCliente.resx">
       <DependentUpon>AltaCliente.cs</DependentUpon>

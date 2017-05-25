@@ -42,7 +42,7 @@ namespace UberFrba.Backend
 
 
         public static  ObservableCollection<ClienteModificar> todosLosClientesAModificar(){
-            String queryString = "EXEC  DROP_DATABASE.TODOS_LOS_CLIENTES";
+            String queryString = "EXEC  DROP_DATABASE.SP_TODOS_LOS_CLIENTES";
          
             SqlDataReader reader = new Server().query(queryString);
             var clientes = new ObservableCollection<ClienteModificar>();
@@ -51,7 +51,7 @@ namespace UberFrba.Backend
             {
                 var clienteModificar = new ClienteModificar();
 
-                clienteModificar.Username = reader["id_usuario"].ToString();
+                //clienteModificar.Username = reader["id_usuario"].ToString();
                 clienteModificar.Nombre = reader["nombre"].ToString();
                 clienteModificar.Apellido = reader["apellido"].ToString();
                 clienteModificar.Documento = reader["num_dni"].ToString();
@@ -65,7 +65,7 @@ namespace UberFrba.Backend
         public static void crearCliente(NuevoCliente nuevoCliente)
         {
             
-            String query = "EXEC DROP_DATABASE.CREAR_CLIENTE " + nuevoCliente.usuario + ", " + nuevoCliente.nombre + ", " + nuevoCliente.apellido + ", " + 
+            String query = "EXEC DROP_DATABASE.SP_CREAR_CLIENTE " + nuevoCliente.usuario + ", " + nuevoCliente.nombre + ", " + nuevoCliente.apellido + ", " + 
                 nuevoCliente.num_dni + ", " + nuevoCliente.email + ", " + nuevoCliente.telefono + ", " + 
                 nuevoCliente.direccion + ", " + nuevoCliente.codigo_postal + ", '" + nuevoCliente.fecha_nacimiento + "'";
             
@@ -75,7 +75,7 @@ namespace UberFrba.Backend
 
         public static ObservableCollection<String> usuariosSinAsignar()
         {
-            String query = "EXEC [DROP_DATABASE].[USUARIOS_SIN_ASIGNAR] ";
+            String query = "EXEC [DROP_DATABASE].[SP_USUARIOS_SIN_ASIGNAR] ";
             SqlDataReader reader = new Server().query(query);
             var usuarios = new ObservableCollection<String>();
 
@@ -86,6 +86,47 @@ namespace UberFrba.Backend
             }
             reader.Close();
             return usuarios;
+        }
+
+        internal static void crearChofer(NuevoChofer nuevoChofer)
+        {
+            String query = "EXEC DROP_DATABASE.SP_CREAR_CHOFER " + nuevoChofer.usuario + ", " + nuevoChofer.nombre + ", " + nuevoChofer.apellido + ", " +
+                 nuevoChofer.num_dni + ", " + nuevoChofer.email + ", " + nuevoChofer.telefono + ", " +
+                 nuevoChofer.direccion + ", '" + nuevoChofer.fecha_nacimiento + "'";
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static string deshabilitarCliente(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_DESHABILITAR_CLIENTE " + dni;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
+        }
+
+        internal static string habilitarCliente(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_CLIENTE " + dni;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba habilitado un "1"
+        }
+
+        internal static void modificarCliente(String dni, NuevoCliente actualizarCliente)
+        {
+            String query = "EXEC DROP_DATABASE.SP_EDITAR_CLIENTE " + dni + ", " + actualizarCliente.nombre + ", " + actualizarCliente.apellido + ", " +
+                actualizarCliente.num_dni + ", " + actualizarCliente.email + ", " + actualizarCliente.telefono + ", " +
+                actualizarCliente.direccion + ", " + actualizarCliente.codigo_postal + ", '" + actualizarCliente.fecha_nacimiento + "'";
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static void modificarChofer(String dni, NuevoChofer actualizarChofer)
+        {
+            String query = "EXEC DROP_DATABASE.SP_CHOFER_CLIENTE " + dni + ", " + actualizarChofer.nombre + ", " + actualizarChofer.apellido + ", " +
+                actualizarChofer.num_dni + ", " + actualizarChofer.email + ", " + actualizarChofer.telefono + ", " +
+                actualizarChofer.direccion + ", '" + actualizarChofer.fecha_nacimiento + "'";
+
+            new Server().realizarQuery(query);
         }
     }
 }
