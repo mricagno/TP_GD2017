@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -46,6 +47,13 @@ namespace UberFrba.Abm_Cliente
         private void ModificarCliente_Load(object sender, EventArgs e)
         {
             //username nombre apellido dni
+            ObservableCollection<ClienteModificar> clientes = Repositorio.todosLosClientesAModificar();
+
+
+            GridClientes.DataSource = clientes;
+            GridClientes.Update();
+            GridClientes.Refresh();
+
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)

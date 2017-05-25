@@ -46,8 +46,8 @@ namespace UberFrba.Registro_Viajes
         }
 
         private void actualizarGrillaViajes(){
-            //ObservableCollection<RegistroViaje> viajes = Repositorio.todosLosRegistroViajes();
-            List<RegistroViaje> viajes = RepositorioMock.todosLosRegistroViajes();
+            ObservableCollection<RegistroViaje> viajes = Repositorio.todosLosRegistroViajes();
+            //List<RegistroViaje> viajes = RepositorioMock.todosLosRegistroViajes();
             
             
             GridTodosLosViajes.DataSource = viajes;

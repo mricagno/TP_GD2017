@@ -131,6 +131,7 @@
     <Compile Include="Abm Rol\ModificarRol.Designer.cs">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\Cliente.cs" />
     <Compile Include="Backend\RepositorioMock.cs" />
     <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Tabs.cs" />
@@ -321,7 +322,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

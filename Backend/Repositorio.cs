@@ -13,8 +13,8 @@ namespace UberFrba.Backend
     {
         public static ObservableCollection<RegistroViaje> todosLosRegistroViajes()
         {
-            String queryString = "select * from  [GD1C2017].[DROP_DATABASE].[REGISTRO_VIAJE]";
-            //SqlDataReader reader = Server.getInstance().query(queryString);
+            String queryString = "select * from  [Qa_GD1C2017].[DROP_DATABASE].[REGISTRO_VIAJE]";
+            //SqlDataReader reader = ServerStatic.getInstance().query(queryString);
             SqlDataReader reader = new Server().query(queryString);
             reader.Read();
             var todosLosViajes = new ObservableCollection<RegistroViaje>();
@@ -38,6 +38,28 @@ namespace UberFrba.Backend
 
             SqlDataReader reader = ServerStatic.getInstance().query(query);
             reader.Close();
+        }
+
+
+        public static  ObservableCollection<ClienteModificar> todosLosClientesAModificar(){
+            String queryString = "EXEC  DROP_DATABASE.TODOS_LOS_CLIENTES";
+         
+            SqlDataReader reader = new Server().query(queryString);
+            var clientes = new ObservableCollection<ClienteModificar>();
+            
+            while (reader.Read())
+            {
+                var clienteModificar = new ClienteModificar();
+
+                clienteModificar.Username = reader["id_usuario"].ToString();
+                clienteModificar.Nombre = reader["nombre"].ToString();
+                clienteModificar.Apellido = reader["apellido"].ToString();
+                clienteModificar.Documento = reader["num_dni"].ToString();
+
+                clientes.Add(clienteModificar);
+            }
+            reader.Close();
+            return clientes;
         }
     }
 }
