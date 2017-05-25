@@ -72,5 +72,20 @@ namespace UberFrba.Backend
             new Server().realizarQuery(query);
             
         }
+
+        public static ObservableCollection<String> usuariosSinAsignar()
+        {
+            String query = "EXEC [DROP_DATABASE].[USUARIOS_SIN_ASIGNAR] ";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["usuario"].ToString());
+               
+            }
+            reader.Close();
+            return usuarios;
+        }
     }
 }

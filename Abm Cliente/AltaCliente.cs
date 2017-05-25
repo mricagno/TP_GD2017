@@ -26,6 +26,11 @@ namespace UberFrba.Abm_Cliente
         private void AltaCliente_Load(object sender, EventArgs e)
         {
             //@UsuariosSinAsignar
+            lstUsuarios.Items.Clear();
+            foreach(string s in Repositorio.usuariosSinAsignar()) {
+                lstUsuarios.Items.Add(s);
+            }
+            
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -36,13 +41,12 @@ namespace UberFrba.Abm_Cliente
 
         private void btnCrearCliente_Click(object sender, EventArgs e)
         {
-            //if(lstUsuarios.SelectedItem == null){
-            //    MessageBox.Show("Debe seleccionar un usuario", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //}
+            if(lstUsuarios.SelectedItem == null){
+                MessageBox.Show("Debe seleccionar un usuario", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             var nuevoCliente = new NuevoCliente();
-            //nuevoCliente.usuario = lstUsuarios.SelectedItem.ToString();
-            nuevoCliente.usuario = "ehaydossian";
+            nuevoCliente.usuario = lstUsuarios.SelectedItem.ToString();
             nuevoCliente.nombre = txtNombreCliente.Text;
             nuevoCliente.apellido = txtApellidoCliente.Text;
             if (!Utils.IsDigitsOnly(txtDniCliente.Text) || txtDniCliente.Text.Length != 8)
@@ -60,6 +64,10 @@ namespace UberFrba.Abm_Cliente
 
             try{
                 Repositorio.crearCliente(nuevoCliente);
+                MessageBox.Show("El cliente se creo correctamente:", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new Principal(Tabs.clientes()).Show();
+                this.Close();
+
             }catch(Exception ex){
                 MessageBox.Show("Error al crear cliente - Exception :" + ex.ToString(), "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
