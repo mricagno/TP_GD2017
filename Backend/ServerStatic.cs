@@ -1,27 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace UberFrba.Backend
 {
-    public class Server
+    public class ServerStatic
     {
         string servidor = ConfigurationManager.AppSettings["server"];
         string db = ConfigurationManager.AppSettings["database"];
         string user = ConfigurationManager.AppSettings["username"];
         string password = ConfigurationManager.AppSettings["password"];
-        public static Server server;
+        public static ServerStatic server;
         SqlConnection connection;
         SqlDataReader reader;
 
-        public Server()
+        public static ServerStatic getInstance()
         {
-            this.conectar();
+            if (server == null)
+            {
+                server = new ServerStatic();
+                server.conectar();
+            }
+            return server;
         }
 
         public SqlDataReader query(string query)
@@ -55,4 +60,5 @@ namespace UberFrba.Backend
             }
         }
     }
+    
 }

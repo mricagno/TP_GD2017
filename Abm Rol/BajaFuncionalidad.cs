@@ -31,5 +31,10 @@ namespace UberFrba.Abm_Rol
             new Principal(Tabs.seguridad()).Show();
             this.Close();
         }
+
+        private void BajaFuncionalidad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

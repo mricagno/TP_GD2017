@@ -132,7 +132,9 @@
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\RepositorioMock.cs" />
+    <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Tabs.cs" />
+    <Compile Include="Backend\Utils.cs" />
     <Compile Include="Contabilidad\FacturacionClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,7 +173,7 @@
     </Compile>
     <Compile Include="Backend\RegistroViaje.cs" />
     <Compile Include="Backend\Repositorio.cs" />
-    <Compile Include="Backend\Server.cs" />
+    <Compile Include="Backend\ServerStatic.cs" />
     <Compile Include="Backend\Seguridad.cs" />
     <Compile Include="Backend\Sesion.cs" />
     <Compile Include="Backend\Usuario.cs" />

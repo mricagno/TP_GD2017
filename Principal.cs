@@ -137,7 +137,7 @@ namespace UberFrba
                 new ViajesMasLargos().Show();
                 this.Close();
             }else {
-                MessageBox.Show("Debe seleccionar una opcion", "Uber", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar una opción", "Uber", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
