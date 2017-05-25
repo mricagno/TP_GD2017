@@ -87,9 +87,9 @@ namespace UberFrba.Backend
         public static void crearCliente(NuevoCliente nuevoCliente)
         {
             
-            String query = "EXEC DROP_DATABASE.SP_CREAR_CLIENTE " + nuevoCliente.usuario + ", " + nuevoCliente.nombre + ", " + nuevoCliente.apellido + ", " + 
-                nuevoCliente.num_dni + ", " + nuevoCliente.email + ", " + nuevoCliente.telefono + ", " + 
-                nuevoCliente.direccion + ", " + nuevoCliente.codigo_postal + ", '" + nuevoCliente.fecha_nacimiento + "'";
+            String query = "EXEC DROP_DATABASE.SP_CREAR_CLIENTE '" + nuevoCliente.usuario + "', '" + nuevoCliente.nombre + "', '" + nuevoCliente.apellido + "', " + 
+                nuevoCliente.num_dni + ", '" + nuevoCliente.email + "', " + nuevoCliente.telefono + ", '" + 
+                nuevoCliente.direccion + "', " + nuevoCliente.codigo_postal + ", '" + nuevoCliente.fecha_nacimiento + "'";
             
             new Server().realizarQuery(query);
             
@@ -112,9 +112,9 @@ namespace UberFrba.Backend
 
         internal static void crearChofer(NuevoChofer nuevoChofer)
         {
-            String query = "EXEC DROP_DATABASE.SP_CREAR_CHOFER " + nuevoChofer.usuario + ", " + nuevoChofer.nombre + ", " + nuevoChofer.apellido + ", " +
-                 nuevoChofer.num_dni + ", " + nuevoChofer.email + ", " + nuevoChofer.telefono + ", " +
-                 nuevoChofer.direccion + ", '" + nuevoChofer.fecha_nacimiento + "'";
+            String query = "EXEC DROP_DATABASE.SP_CREAR_CHOFER '" + nuevoChofer.usuario + "', '" + nuevoChofer.nombre + "', '" + nuevoChofer.apellido + "', " +
+                 nuevoChofer.num_dni + ", '" + nuevoChofer.email + "', " + nuevoChofer.telefono + ", '" +
+                 nuevoChofer.direccion + "', '" + nuevoChofer.fecha_nacimiento + "'";
 
             new Server().realizarQuery(query);
         }
@@ -149,9 +149,9 @@ namespace UberFrba.Backend
 
         internal static void modificarCliente(String dni, NuevoCliente actualizarCliente)
         {
-            String query = "EXEC DROP_DATABASE.SP_EDITAR_CLIENTE " + dni + ", " + actualizarCliente.nombre + ", " + actualizarCliente.apellido + ", " +
-                actualizarCliente.num_dni + ", " + actualizarCliente.email + ", " + actualizarCliente.telefono + ", " +
-                actualizarCliente.direccion + ", " + actualizarCliente.codigo_postal + ", '" + actualizarCliente.fecha_nacimiento + "'";
+            String query = "EXEC DROP_DATABASE.SP_EDITAR_CLIENTE " + dni + ", '" + actualizarCliente.nombre + "', '" + actualizarCliente.apellido + "', " +
+                actualizarCliente.num_dni + ", '" + actualizarCliente.email + "', " + actualizarCliente.telefono + ", '" +
+                actualizarCliente.direccion + "', " + actualizarCliente.codigo_postal + ", '" + actualizarCliente.fecha_nacimiento + "'";
 
             new Server().realizarQuery(query);
         }
@@ -161,13 +161,67 @@ namespace UberFrba.Backend
 
         internal static void modificarChofer(String dni, NuevoChofer actualizarChofer)
         {
-            String query = "EXEC DROP_DATABASE.SP_EDITAR_CHOFER " + dni + ", " + actualizarChofer.nombre + ", " + actualizarChofer.apellido + ", " +
-                actualizarChofer.num_dni + ", " + actualizarChofer.email + ", " + actualizarChofer.telefono + ", " +
-                actualizarChofer.direccion + ", '" + actualizarChofer.fecha_nacimiento + "'";
+            String query = "EXEC DROP_DATABASE.SP_EDITAR_CHOFER " + dni + ", '" + actualizarChofer.nombre + "', '" + actualizarChofer.apellido + "', " +
+                actualizarChofer.num_dni + ", '" + actualizarChofer.email + "', " + actualizarChofer.telefono + ", '" +
+                actualizarChofer.direccion + "', '" + actualizarChofer.fecha_nacimiento + "'";
 
             new Server().realizarQuery(query);
         }
 
 
+
+        internal static void modificarTurno(string nombre, DtoTurno turnoDto)
+        {
+            String query = "EXEC DROP_DATABASE.SP_EDITAR_TURNO '" + nombre + "', '" + turnoDto.Nombre + "', " + turnoDto.HoraInicio + ", " +
+               turnoDto.HoraFin + ", " + turnoDto.ValorKm + ", " + turnoDto.PrecioBase + ", " +
+               turnoDto.Habilitado;
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static void altaTurno(DtoTurno turnoDto)
+        {
+            String query = "EXEC DROP_DATABASE.SP_CREAR_TURNO '" + turnoDto.Nombre + "', " + turnoDto.HoraInicio + ", " +
+               turnoDto.HoraFin + ", " + turnoDto.ValorKm + ", " + turnoDto.PrecioBase + ", " +
+               turnoDto.Habilitado;
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static void eliminarTurno(string nombreTurno)
+        {
+            String query = "EXEC DROP_DATABASE.SP_DESHABILITAR_TURNO '" + nombreTurno + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static ObservableCollection<String> turnosHabilitados()
+        {
+            String query = "EXEC DROP_DATABASE.SP_TURNOS_HABILITADOS ";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["TURNO"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
+        internal static ObservableCollection<String> todosLosTurnos()
+        {
+            String query = "EXEC DROP_DATABASE.SP_TURNOS";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["TURNO"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
     }
 }

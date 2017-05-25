@@ -83,6 +83,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarTurno";
             this.Text = "ModificarTurno";
+            this.Load += new System.EventHandler(this.ModificarTurno_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -16,5 +16,10 @@ namespace UberFrba.Abm_Automovil
         {
             InitializeComponent();
         }
+
+        private void AutomovilForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

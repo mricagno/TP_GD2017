@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -20,7 +21,23 @@ namespace UberFrba.Turno
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //eliminar turno
+            if(cmbTurnos.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un turno", "Baja turno", MessageBoxButtons.OK);
+                return;
+            }
+
+            String nombreTurno = cmbTurnos.SelectedItem.ToString();
+            try {
+                Repositorio.eliminarTurno(nombreTurno);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el turno - Exception :" + ex.ToString(), "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+           
+
             MessageBox.Show("Se elimino el turno correctamente", "Baja turno", MessageBoxButtons.OK);
             new Principal(Tabs.turnos()).Show();
             this.Close();
@@ -35,7 +52,13 @@ namespace UberFrba.Turno
 
         private void BajaTurno_Load(object sender, EventArgs e)
         {
-        
+            //TURNOS HABILITADOS
+            ObservableCollection<String> turnosHabilitados = Repositorio.turnosHabilitados();
+            cmbTurnos.Items.Clear();
+            foreach (string t in turnosHabilitados)
+            {
+                cmbTurnos.Items.Add(t);
+            }
         }
     }
 }

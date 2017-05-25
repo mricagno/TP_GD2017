@@ -186,5 +186,10 @@ namespace UberFrba
 
         }
 
+        private void btnModificarAuto_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

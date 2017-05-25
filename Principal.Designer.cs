@@ -42,6 +42,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
             this.tabChoferes = new System.Windows.Forms.TabPage();
+            this.btnModificarChofer = new System.Windows.Forms.Button();
+            this.btnNuevoChofer = new System.Windows.Forms.Button();
             this.tabCliente = new System.Windows.Forms.TabPage();
             this.ModificarCliente = new System.Windows.Forms.Button();
             this.NuevoCliente = new System.Windows.Forms.Button();
@@ -62,8 +64,6 @@
             this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnNuevoChofer = new System.Windows.Forms.Button();
-            this.btnModificarChofer = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabChoferes.SuspendLayout();
@@ -131,6 +131,7 @@
             this.btnModificarAuto.TabIndex = 5;
             this.btnModificarAuto.Text = "Modificar Auto";
             this.btnModificarAuto.UseVisualStyleBackColor = true;
+            this.btnModificarAuto.Click += new System.EventHandler(this.btnModificarAuto_Click);
             // 
             // btnAltaRol
             // 
@@ -226,6 +227,26 @@
             this.tabChoferes.Text = "Choferes";
             this.tabChoferes.UseVisualStyleBackColor = true;
             this.tabChoferes.Click += new System.EventHandler(this.tabChoferes_Click);
+            // 
+            // btnModificarChofer
+            // 
+            this.btnModificarChofer.Location = new System.Drawing.Point(33, 91);
+            this.btnModificarChofer.Name = "btnModificarChofer";
+            this.btnModificarChofer.Size = new System.Drawing.Size(100, 44);
+            this.btnModificarChofer.TabIndex = 1;
+            this.btnModificarChofer.Text = "Modificar Chofer";
+            this.btnModificarChofer.UseVisualStyleBackColor = true;
+            this.btnModificarChofer.Click += new System.EventHandler(this.btnModificarChofer_Click);
+            // 
+            // btnNuevoChofer
+            // 
+            this.btnNuevoChofer.Location = new System.Drawing.Point(33, 42);
+            this.btnNuevoChofer.Name = "btnNuevoChofer";
+            this.btnNuevoChofer.Size = new System.Drawing.Size(100, 43);
+            this.btnNuevoChofer.TabIndex = 0;
+            this.btnNuevoChofer.Text = "Nuevo Chofer";
+            this.btnNuevoChofer.UseVisualStyleBackColor = true;
+            this.btnNuevoChofer.Click += new System.EventHandler(this.btnNuevoChofer_Click);
             // 
             // tabCliente
             // 
@@ -441,26 +462,6 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevoChofer
-            // 
-            this.btnNuevoChofer.Location = new System.Drawing.Point(33, 42);
-            this.btnNuevoChofer.Name = "btnNuevoChofer";
-            this.btnNuevoChofer.Size = new System.Drawing.Size(100, 43);
-            this.btnNuevoChofer.TabIndex = 0;
-            this.btnNuevoChofer.Text = "Nuevo Chofer";
-            this.btnNuevoChofer.UseVisualStyleBackColor = true;
-            this.btnNuevoChofer.Click += new System.EventHandler(this.btnNuevoChofer_Click);
-            // 
-            // btnModificarChofer
-            // 
-            this.btnModificarChofer.Location = new System.Drawing.Point(33, 91);
-            this.btnModificarChofer.Name = "btnModificarChofer";
-            this.btnModificarChofer.Size = new System.Drawing.Size(100, 44);
-            this.btnModificarChofer.TabIndex = 1;
-            this.btnModificarChofer.Text = "Modificar Chofer";
-            this.btnModificarChofer.UseVisualStyleBackColor = true;
-            this.btnModificarChofer.Click += new System.EventHandler(this.btnModificarChofer_Click);
             // 
             // Principal
             // 

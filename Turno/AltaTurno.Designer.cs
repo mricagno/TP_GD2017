@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreTurno = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtHoraFin = new System.Windows.Forms.TextBox();
+            this.txtHoraInicio = new System.Windows.Forms.TextBox();
             this.checkHabilitadoTurno = new System.Windows.Forms.CheckBox();
-            this.dateHoraFin = new System.Windows.Forms.DateTimePicker();
-            this.dateHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.txtPrecioBase = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtValorKm = new System.Windows.Forms.TextBox();
@@ -63,9 +63,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtHoraFin);
+            this.groupBox1.Controls.Add(this.txtHoraInicio);
             this.groupBox1.Controls.Add(this.checkHabilitadoTurno);
-            this.groupBox1.Controls.Add(this.dateHoraFin);
-            this.groupBox1.Controls.Add(this.dateHoraInicio);
             this.groupBox1.Controls.Add(this.txtPrecioBase);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtValorKm);
@@ -80,6 +80,22 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // txtHoraFin
+            // 
+            this.txtHoraFin.Location = new System.Drawing.Point(120, 72);
+            this.txtHoraFin.Name = "txtHoraFin";
+            this.txtHoraFin.Size = new System.Drawing.Size(145, 20);
+            this.txtHoraFin.TabIndex = 11;
+            this.txtHoraFin.TextChanged += new System.EventHandler(this.txtHoraFin_TextChanged);
+            // 
+            // txtHoraInicio
+            // 
+            this.txtHoraInicio.Location = new System.Drawing.Point(120, 48);
+            this.txtHoraInicio.Name = "txtHoraInicio";
+            this.txtHoraInicio.Size = new System.Drawing.Size(145, 20);
+            this.txtHoraInicio.TabIndex = 10;
+            this.txtHoraInicio.TextChanged += new System.EventHandler(this.txtHoraInicio_TextChanged);
+            // 
             // checkHabilitadoTurno
             // 
             this.checkHabilitadoTurno.AutoSize = true;
@@ -91,26 +107,6 @@
             this.checkHabilitadoTurno.Text = "Habilitado          ";
             this.checkHabilitadoTurno.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.checkHabilitadoTurno.UseVisualStyleBackColor = true;
-            // 
-            // dateHoraFin
-            // 
-            this.dateHoraFin.CustomFormat = "hh:mm:ss";
-            this.dateHoraFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateHoraFin.Location = new System.Drawing.Point(120, 75);
-            this.dateHoraFin.Name = "dateHoraFin";
-            this.dateHoraFin.ShowUpDown = true;
-            this.dateHoraFin.Size = new System.Drawing.Size(145, 20);
-            this.dateHoraFin.TabIndex = 8;
-            // 
-            // dateHoraInicio
-            // 
-            this.dateHoraInicio.CustomFormat = "hh:mm:ss";
-            this.dateHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateHoraInicio.Location = new System.Drawing.Point(120, 51);
-            this.dateHoraInicio.Name = "dateHoraInicio";
-            this.dateHoraInicio.ShowUpDown = true;
-            this.dateHoraInicio.Size = new System.Drawing.Size(145, 20);
-            this.dateHoraInicio.TabIndex = 3;
             // 
             // txtPrecioBase
             // 
@@ -212,11 +208,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecioBase;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateHoraFin;
-        private System.Windows.Forms.DateTimePicker dateHoraInicio;
         private System.Windows.Forms.CheckBox checkHabilitadoTurno;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.TextBox txtHoraFin;
+        private System.Windows.Forms.TextBox txtHoraInicio;
 
     }
 }

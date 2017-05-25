@@ -144,6 +144,7 @@
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\DtoModificarChofer.cs" />
+    <Compile Include="Backend\DtoTurno.cs" />
     <Compile Include="Backend\NuevoChofer.cs" />
     <Compile Include="Backend\NuevoCliente.cs" />
     <Compile Include="Backend\DtoModificarCliente.cs" />

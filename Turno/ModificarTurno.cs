@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -20,8 +21,14 @@ namespace UberFrba.Turno
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            String unTurno = "un turno";
-            new AltaTurno(unTurno, "modificar").Show();
+            if (cmbTurnos.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un turno", "Baja turno", MessageBoxButtons.OK);
+                return;
+            }
+
+            String nombreTurno = cmbTurnos.SelectedItem.ToString();
+            new AltaTurno(nombreTurno, "modificar").Show();
             this.Close();
         }
 
@@ -29,6 +36,17 @@ namespace UberFrba.Turno
         {
             new Principal(Tabs.turnos()).Show();
             this.Close();
+        }
+
+        private void ModificarTurno_Load(object sender, EventArgs e)
+        {
+            ObservableCollection<String> turnos = Repositorio.todosLosTurnos();
+            cmbTurnos.Items.Clear();
+            foreach (string t in turnos)
+            {
+                cmbTurnos.Items.Add(t);
+            }
+            cmbTurnos.Refresh();
         }
     }
 }
