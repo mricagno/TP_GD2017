@@ -31,10 +31,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbRoles = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEliminarFuncionalidadARol = new System.Windows.Forms.Button();
             this.btnModificarNombreRol = new System.Windows.Forms.Button();
             this.btnAgregarFuncionalidadARol = new System.Windows.Forms.Button();
             this.btnHabilitarRol = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,32 +59,22 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnEliminarFuncionalidadARol);
+            this.groupBox2.Controls.Add(this.btnDeshabilitar);
             this.groupBox2.Controls.Add(this.btnModificarNombreRol);
             this.groupBox2.Controls.Add(this.btnAgregarFuncionalidadARol);
             this.groupBox2.Controls.Add(this.btnHabilitarRol);
             this.groupBox2.Location = new System.Drawing.Point(84, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(299, 126);
+            this.groupBox2.Size = new System.Drawing.Size(323, 151);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleccionar Acción";
             // 
-            // btnEliminarFuncionalidadARol
-            // 
-            this.btnEliminarFuncionalidadARol.Location = new System.Drawing.Point(146, 78);
-            this.btnEliminarFuncionalidadARol.Name = "btnEliminarFuncionalidadARol";
-            this.btnEliminarFuncionalidadARol.Size = new System.Drawing.Size(133, 23);
-            this.btnEliminarFuncionalidadARol.TabIndex = 3;
-            this.btnEliminarFuncionalidadARol.Text = "Eliminar Funcionalidad";
-            this.btnEliminarFuncionalidadARol.UseVisualStyleBackColor = true;
-            this.btnEliminarFuncionalidadARol.Click += new System.EventHandler(this.btnEliminarFuncionalidadARol_Click);
-            // 
             // btnModificarNombreRol
             // 
-            this.btnModificarNombreRol.Location = new System.Drawing.Point(19, 78);
+            this.btnModificarNombreRol.Location = new System.Drawing.Point(19, 84);
             this.btnModificarNombreRol.Name = "btnModificarNombreRol";
-            this.btnModificarNombreRol.Size = new System.Drawing.Size(109, 24);
+            this.btnModificarNombreRol.Size = new System.Drawing.Size(134, 39);
             this.btnModificarNombreRol.TabIndex = 2;
             this.btnModificarNombreRol.Text = "Modificar Nombre";
             this.btnModificarNombreRol.UseVisualStyleBackColor = true;
@@ -92,11 +82,11 @@
             // 
             // btnAgregarFuncionalidadARol
             // 
-            this.btnAgregarFuncionalidadARol.Location = new System.Drawing.Point(146, 34);
+            this.btnAgregarFuncionalidadARol.Location = new System.Drawing.Point(159, 32);
             this.btnAgregarFuncionalidadARol.Name = "btnAgregarFuncionalidadARol";
-            this.btnAgregarFuncionalidadARol.Size = new System.Drawing.Size(134, 23);
+            this.btnAgregarFuncionalidadARol.Size = new System.Drawing.Size(134, 38);
             this.btnAgregarFuncionalidadARol.TabIndex = 1;
-            this.btnAgregarFuncionalidadARol.Text = "Agregar Funcionalidad";
+            this.btnAgregarFuncionalidadARol.Text = "Modificar Funcionalidades";
             this.btnAgregarFuncionalidadARol.UseVisualStyleBackColor = true;
             this.btnAgregarFuncionalidadARol.Click += new System.EventHandler(this.btnAgregarFuncionalidadARol_Click);
             // 
@@ -104,11 +94,22 @@
             // 
             this.btnHabilitarRol.Location = new System.Drawing.Point(19, 32);
             this.btnHabilitarRol.Name = "btnHabilitarRol";
-            this.btnHabilitarRol.Size = new System.Drawing.Size(109, 26);
+            this.btnHabilitarRol.Size = new System.Drawing.Size(134, 38);
             this.btnHabilitarRol.TabIndex = 0;
             this.btnHabilitarRol.Text = "Habilitar";
             this.btnHabilitarRol.UseVisualStyleBackColor = true;
             this.btnHabilitarRol.Click += new System.EventHandler(this.btnHabilitarRol_Click);
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Location = new System.Drawing.Point(160, 84);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(133, 39);
+            this.btnDeshabilitar.TabIndex = 4;
+            this.btnDeshabilitar.Text = "Deshabilitar ///no mostar. es baja";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            this.btnDeshabilitar.Visible = false;
+            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
             // 
             // ModificarRol
             // 
@@ -119,6 +120,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarRol";
             this.Text = "Modificar Rol";
+            this.Load += new System.EventHandler(this.ModificarRol_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -131,8 +133,8 @@
         private System.Windows.Forms.ComboBox cmbRoles;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnHabilitarRol;
-        private System.Windows.Forms.Button btnEliminarFuncionalidadARol;
         private System.Windows.Forms.Button btnModificarNombreRol;
         private System.Windows.Forms.Button btnAgregarFuncionalidadARol;
+        private System.Windows.Forms.Button btnDeshabilitar;
     }
 }

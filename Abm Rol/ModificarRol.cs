@@ -16,13 +16,15 @@ namespace UberFrba.Abm_Rol
         public ModificarRol()
         {
             InitializeComponent();
-            //El combo de roles tiene qe tener los eliminados tambien para poder habilitarlos nuevamente
-            //cmbRoles.s
         }
 
         private void btnHabilitarRol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
+
+            //TODO meter 
+            Repositorio.habilitarRol(nombreRol);
+
             MessageBox.Show("El rol" + nombreRol + "fue habilitado correctamente", "Modificación de rol", MessageBoxButtons.OK);
             new Principal(Tabs.seguridad()).Show();
             this.Close();
@@ -33,7 +35,7 @@ namespace UberFrba.Abm_Rol
         {
             String nombreRol = dameRolAModificar();
             String dondeVolver = "modificarRol";
-            new AgregarFuncionalidadARol(nombreRol, dondeVolver).Show(); //Pasarle el rol qe va a modificar
+            new AgregarFuncARol(nombreRol, dondeVolver, true).Show(); //Pasarle el rol qe va a modificar
             this.Close();
         }
 
@@ -57,7 +59,28 @@ namespace UberFrba.Abm_Rol
         {
             String nombreRol = cmbRoles.Text;
             //Validar x las dudas qe exista el rol antes de pasarle el nombre?? Puede no haber seleccionado ninguno
+
             return nombreRol;
+        }
+
+        private void ModificarRol_Load(object sender, EventArgs e)
+        {
+            //El combo de roles tiene qe tener los eliminados tambien para poder habilitarlos nuevamente
+            cmbRoles.Items.Clear();
+            foreach (string s in Repositorio.todosLosRoles())
+            {
+                cmbRoles.Items.Add(s);
+            }
+        }
+
+        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        {
+
+            //ESTO YA NO APLICA!!!
+            String nombreRol = dameRolAModificar();
+            //TODO agregar try catch y mensajes
+            Repositorio.deshabilitarRol(nombreRol);
+
         }
     }
 }

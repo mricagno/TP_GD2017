@@ -83,6 +83,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "BajaRol";
             this.Text = "Baja Rol";
+            this.Load += new System.EventHandler(this.BajaRol_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

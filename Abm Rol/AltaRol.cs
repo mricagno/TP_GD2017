@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -23,14 +24,19 @@ namespace UberFrba.Abm_Rol
         {
             //aca guardo la funcionalidad y le paso al proximo form el nombre de la funcionalidad. Tener un unique de nombre en roles asi puedo buscarlo en el prox form
             String nombreRol = dameNombreRol() ;
-            new AgregarFuncionalidadARol(nombreRol, "principal").Show();
+           
+            Repositorio.crearRol(nombreRol); //TODO METER TRY CATCH CON MENSAJE. Si fallo no continuar
+
+
+            new AgregarFuncARol(nombreRol, "principal").Show();
             this.Close();
 
         }
 
         private string dameNombreRol()
         {
-            return "un nombre rol";
+            //TODO IMPORTANTE: QUE NO SEA "" SINO TIRAR UN MENSJAE
+            return txtNombreRol.Text;
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)

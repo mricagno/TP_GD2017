@@ -87,23 +87,11 @@
     <Compile Include="Abm Cliente\ModificarCliente.Designer.cs">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Abm Rol\AgregarFuncionalidadARol.cs">
+    <Compile Include="Abm Rol\AgregarFuncARol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Rol\AgregarRolAFuncionalidad.Designer.cs">
-      <DependentUpon>AgregarFuncionalidadARol.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Abm Rol\AltaFuncionalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Abm Rol\AltaFuncionalidad.Designer.cs">
-      <DependentUpon>AltaFuncionalidad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Abm Rol\BajaFuncionalidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Abm Rol\BajaFuncionalidad.Designer.cs">
-      <DependentUpon>BajaFuncionalidad.cs</DependentUpon>
+    <Compile Include="Abm Rol\AgregarFuncARol.Designer.cs">
+      <DependentUpon>AgregarFuncARol.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Rol\AltaRol.cs">
       <SubType>Form</SubType>
@@ -265,17 +253,11 @@
     <EmbeddedResource Include="Abm Cliente\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Abm Rol\AgregarRolAFuncionalidad.resx">
-      <DependentUpon>AgregarFuncionalidadARol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Abm Rol\AltaFuncionalidad.resx">
-      <DependentUpon>AltaFuncionalidad.cs</DependentUpon>
+    <EmbeddedResource Include="Abm Rol\AgregarFuncARol.resx">
+      <DependentUpon>AgregarFuncARol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\AltaRol.resx">
       <DependentUpon>AltaRol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Abm Rol\BajaFuncionalidad.resx">
-      <DependentUpon>BajaFuncionalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Rol\BajaRol.resx">
       <DependentUpon>BajaRol.cs</DependentUpon>

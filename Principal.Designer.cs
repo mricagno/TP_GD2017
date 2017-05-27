@@ -39,8 +39,6 @@
             this.btnBajaRol = new System.Windows.Forms.Button();
             this.tblMenu = new System.Windows.Forms.TabControl();
             this.tabSeguridad = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
             this.tabChoferes = new System.Windows.Forms.TabPage();
             this.btnModificarChofer = new System.Windows.Forms.Button();
             this.btnNuevoChofer = new System.Windows.Forms.Button();
@@ -181,8 +179,6 @@
             // 
             // tabSeguridad
             // 
-            this.tabSeguridad.Controls.Add(this.button2);
-            this.tabSeguridad.Controls.Add(this.btnAgregarFuncionalidad);
             this.tabSeguridad.Controls.Add(this.btnBajaRol);
             this.tabSeguridad.Controls.Add(this.btnModificarRol);
             this.tabSeguridad.Controls.Add(this.btnAltaRol);
@@ -193,28 +189,6 @@
             this.tabSeguridad.TabIndex = 0;
             this.tabSeguridad.Text = "Seguridad";
             this.tabSeguridad.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(37, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 34);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Eliminar funcionalidad";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnAgregarFuncionalidad
-            // 
-            this.btnAgregarFuncionalidad.Location = new System.Drawing.Point(36, 174);
-            this.btnAgregarFuncionalidad.Name = "btnAgregarFuncionalidad";
-            this.btnAgregarFuncionalidad.Size = new System.Drawing.Size(95, 39);
-            this.btnAgregarFuncionalidad.TabIndex = 3;
-            this.btnAgregarFuncionalidad.Text = "Agregar Funcionalidad";
-            this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
-            this.btnAgregarFuncionalidad.Visible = false;
-            this.btnAgregarFuncionalidad.Click += new System.EventHandler(this.btnAgregarFuncionalidad_Click);
             // 
             // tabChoferes
             // 
@@ -518,8 +492,6 @@
         private System.Windows.Forms.TabPage tabContabilidad;
         private System.Windows.Forms.Button btnFacturacionClientes;
         private System.Windows.Forms.Button btnRendicionViajes;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAgregarFuncionalidad;
         private System.Windows.Forms.Button btnEliminarTurno;
         private System.Windows.Forms.Button btnModificarTurno;
         private System.Windows.Forms.Button btnVerViajes;

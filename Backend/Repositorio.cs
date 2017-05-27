@@ -223,5 +223,93 @@ namespace UberFrba.Backend
             reader.Close();
             return usuarios;
         }
+
+        internal static ObservableCollection<String> todasLasFuncionalidades()
+        {
+            String query = "EXEC DROP_DATABASE.SP_FUNCIONALIDADES";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["FUNCIONALIDAD"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
+        internal static void crearRol(string nombreRolNuevo)
+        {
+            String query = "EXEC DROP_DATABASE.ALTA_ROL '" + nombreRolNuevo + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static void agregarFuncionalidadARol(String nombreRolNuevo, String func)
+        {
+
+            String query = "EXEC DROP_DATABASE.ASOCIAR_FUNCIONALIDAD '" + nombreRolNuevo + "', '" + func + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static ObservableCollection<String> todosLosRoles()
+        {
+
+            String query = "EXEC DROP_DATABASE.SP_Roles";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["ROL"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
+        internal static void habilitarRol(string nombreRol)
+        {
+            String query = "EXEC DROP_DATABASE.HABILITAR_ROL '" + nombreRol + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static void deshabilitarRol(string nombreRol)
+        {
+            String query = "EXEC DROP_DATABASE.BAJA_ROL '" + nombreRol + "'";
+            new Server().realizarQuery(query);
+           // return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
+        }
+
+        internal static ObservableCollection<String> todasLasFuncionalidadesDeRol(string rol)
+        {
+            String query = "EXEC DROP_DATABASE.SP_ROLES_Y_FUNCIONALIDADES '" + rol + "'";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["FUNCIONALIDAD"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
+        internal static ObservableCollection<String> todosLosRolesHabilitados()
+        {
+            //TODO IMPORTANTE. ACA TIENEN QUE SER OTRO STORE PROCEDURE QE DEVUELVA SOLO LOS HABILITADOS
+            String query = "EXEC DROP_DATABASE.SP_Roles";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["ROL"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
     }
 }
