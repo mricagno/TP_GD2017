@@ -13,21 +13,29 @@ namespace UberFrba.Backend
     {
         public static ObservableCollection<RegistroViaje> todosLosRegistroViajes()
         {
-            String queryString = "select * from  [Qa_GD1C2017].[DROP_DATABASE].[REGISTRO_VIAJE]";
-            //SqlDataReader reader = ServerStatic.getInstance().query(queryString);
-            SqlDataReader reader = new Server().query(queryString);
-            reader.Read();
-            var todosLosViajes = new ObservableCollection<RegistroViaje>();
-            RegistroViaje registroViaje = new RegistroViaje();
-            registroViaje.Automovil = reader["id_automovil"].ToString();
-            registroViaje.Chofer = reader["id_chofer"].ToString();
+          
+            String queryString = "EXEC  DROP_DATABASE.SP_REGISTROS_DE_VIAJES";
 
-            todosLosViajes.Add(registroViaje);
-            
+            SqlDataReader reader = new Server().query(queryString);
+            var registros = new ObservableCollection<RegistroViaje>();
+
+            while (reader.Read())
+            {
+                var registroViaje = new RegistroViaje();
+
+             
+                registroViaje.FechaInicioViaje = reader["DT_INICIO_VIAJE"].ToString();
+                registroViaje.FechaFinViaje = reader["DT_FIN_VIAJE"].ToString();
+                //registroViaje.Chofer = reader["DT_FIN_VIAJE"].ToString();
+                //registroViaje.FechaFinViaje = reader["DT_FIN_VIAJE"].ToString();
+                
+              
+
+                registros.Add(registroViaje);
+            }
             reader.Close();
-           
-            //MessageBox.Show(registroViaje.IdAuto);
-            return todosLosViajes;
+            return registros;
+
         }
 
         public static void registrarViaje(RegistroViaje registroViaje) {
@@ -38,6 +46,10 @@ namespace UberFrba.Backend
 
             SqlDataReader reader = ServerStatic.getInstance().query(query);
             reader.Close();
+
+
+
+
         }
 
 

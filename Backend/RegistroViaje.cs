@@ -8,14 +8,14 @@ namespace UberFrba.Backend
 {
     public class RegistroViaje : Object
     {
-
+        public String FechaInicioViaje { get; set; }
+        public String FechaFinViaje { get; set; }
         public String Chofer { get; set; }// tiene que ser el nombre del chofer
-        public String Automovil { get; set; }
         public String Cliente { get; set; }
+        public String Automovil { get; set; }
         public String Turno  { get; set; }
         public String CantidadKilometros { get; set; }
-        public String FechaInicioViaje { get; set; }
-        public String FechaFinViaje  { get; set; }
+        
 
         public RegistroViaje() { }
 

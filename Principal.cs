@@ -108,8 +108,9 @@ namespace UberFrba
 
         private void btnVerViajes_Click(object sender, EventArgs e)
         {
-            new MostrarViajes().Show();
+            
             this.Close();
+            new MostrarViajes().Show();
         }
 
         private void btnConsultarEstadistica_Click(object sender, EventArgs e)
