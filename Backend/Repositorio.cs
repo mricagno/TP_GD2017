@@ -311,5 +311,11 @@ namespace UberFrba.Backend
             reader.Close();
             return usuarios;
         }
+
+        internal static void eliminarTodasFuncionalidadesDeRol(string nombreRolNuevo)
+        {
+            String query = "EXEC DROP_DATABASE.ELIMINAR_FUNCIONALIDADES_ROL '" + nombreRolNuevo + "'";
+            new Server().realizarQuery(query);
+        }
     }
 }

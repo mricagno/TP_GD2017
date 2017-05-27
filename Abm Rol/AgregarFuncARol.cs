@@ -92,14 +92,22 @@ namespace UberFrba.Abm_Rol
             }
 
             if(esModificacion)
-                //eliminar todas las funcionalidades
-
+            {
+                Repositorio.eliminarTodasFuncionalidadesDeRol(nombreRolNuevo);
+                
+            }
+             
 
             //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
             foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
             {
                 Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
             }
+
+            if(esModificacion)
+                MessageBox.Show("modificacion ok", "Uber", MessageBoxButtons.OK);
+            else
+                MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
         }
 
         private void btnAgregarFuncionalidad_Click_1(object sender, EventArgs e)
