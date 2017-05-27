@@ -10,11 +10,14 @@ namespace UberFrba.Backend
     {
         public String FechaInicioViaje { get; set; }
         public String FechaFinViaje { get; set; }
-        public int Chofer { get; set; }// dni 
-        public int Cliente { get; set; }//dni
+        public String usuarioChofer { get; set; }
+        public String usuarioCliente { get; set; }
+        public int Chofer; // dni 
+        public int Cliente;//dni
         public String Automovil { get; set; } //patente
         public String Turno  { get; set; } //no puedo modifcar esto
         public String CantidadKilometros { get; set; }
+        
         
 
         public RegistroViaje() { }

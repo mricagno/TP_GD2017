@@ -24,11 +24,15 @@ namespace UberFrba.Backend
                 var registroViaje = new RegistroViaje();
 
            
-                registroViaje.FechaInicioViaje = reader["DT_INICIO_VIAJE"].ToString();
-                registroViaje.FechaFinViaje =reader["DT_FIN_VIAJE"].ToString();
-                //registroViaje.Chofer = reader["DT_FIN_VIAJE"].ToString();
-                //registroViaje.FechaFinViaje = reader["DT_FIN_VIAJE"].ToString();
+                registroViaje.usuarioChofer = reader["CHOFER_USUARIO"].ToString();
+                registroViaje.usuarioCliente = reader["CLIENTE_USUARIO"].ToString();
+                registroViaje.Turno = reader["TURNO"].ToString();
+                registroViaje.CantidadKilometros = reader["CANT_KILOMETROS"].ToString();
+                registroViaje.Automovil = reader["PATENTE"].ToString();
+                registroViaje.FechaInicioViaje = reader["FECHA_INICIO"].ToString();
+                registroViaje.FechaFinViaje = reader["FECHA_FIN"].ToString();
                 
+
               
 
                 registros.Add(registroViaje);
