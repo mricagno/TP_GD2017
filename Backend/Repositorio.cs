@@ -23,9 +23,9 @@ namespace UberFrba.Backend
             {
                 var registroViaje = new RegistroViaje();
 
-             
+           
                 registroViaje.FechaInicioViaje = reader["DT_INICIO_VIAJE"].ToString();
-                registroViaje.FechaFinViaje = reader["DT_FIN_VIAJE"].ToString();
+                registroViaje.FechaFinViaje =reader["DT_FIN_VIAJE"].ToString();
                 //registroViaje.Chofer = reader["DT_FIN_VIAJE"].ToString();
                 //registroViaje.FechaFinViaje = reader["DT_FIN_VIAJE"].ToString();
                 
@@ -39,16 +39,12 @@ namespace UberFrba.Backend
         }
 
         public static void registrarViaje(RegistroViaje registroViaje) {
-            //[ID_CHOFER],[ID_AUTOMOVIL],[ID_TURNO],[ID_CLIENTE],[CANT_KM]
-            //,[DT_INICIO_VIAJE],[DT_FIN_VIAJE],[PRECIO_VIAJE]
-            String query = " insert into [GD1C2017].[DROP_DATABASE].[REGISTRO_VIAJE] values" + 
-                "(" + registroViaje.Chofer+","+registroViaje.Automovil+ ","+"12,1,50,NULL,NULL,50)";
 
-            SqlDataReader reader = ServerStatic.getInstance().query(query);
-            reader.Close();
+            String query = "EXEC DROP_DATABASE.SP_ALTA_REGISTRO_VIAJE '" + registroViaje.Chofer + "', '" + registroViaje.Automovil + "', '" + registroViaje.Turno + "', " +
+                registroViaje.CantidadKilometros + ", '" + registroViaje.FechaInicioViaje + "', '" + registroViaje.FechaFinViaje + "', '" +
+                registroViaje.Cliente + "'";
 
-
-
+            new Server().realizarQuery(query);
 
         }
 
@@ -74,7 +70,7 @@ namespace UberFrba.Backend
             return clientes;
         }
 
-        internal static ObservableCollection<DtoModificarChofer> todosLosChoferesAModificar()
+        internal static ObservableCollection<DtoModificarChofer> todosLosChoferes()
         {
             String queryString = "EXEC  DROP_DATABASE.SP_TODOS_LOS_CHOFERES";
 
@@ -329,5 +325,50 @@ namespace UberFrba.Backend
             String query = "EXEC DROP_DATABASE.ELIMINAR_FUNCIONALIDADES_ROL '" + nombreRolNuevo + "'";
             new Server().realizarQuery(query);
         }
+
+        internal static ObservableCollection<DtoClienteHabilitado> todosLosClientesHabilitados()
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_CLIENTES_HABILITADOS";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var clientes = new ObservableCollection<DtoClienteHabilitado>();
+
+            while (reader.Read())
+            {
+                var cliente = new DtoClienteHabilitado();
+
+
+                cliente.Usuario = reader["USUARIO"].ToString();
+                
+                cliente.DNI = Convert.ToInt32( reader["NUM_DNI"].ToString());
+               
+                clientes.Add(cliente);
+            }
+            reader.Close();
+            return clientes;
+        }
+
+        internal static ObservableCollection<DtoChoferHabilitado> todosLosChoferesHabilitadosConAutos()
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_CHOFERES_HABILITADOS_CON_SUS_AUTOS";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoChoferHabilitado>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoChoferHabilitado();
+
+                chofer.usuario = reader["USUARIO"].ToString();
+                chofer.Patente = reader["PATENTE"].ToString();
+                chofer.TurnoAuto = reader["TURNO"].ToString();
+                chofer.DNI = Convert.ToInt32( reader["NUM_DNI"].ToString());
+               
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
+        }
+        
     }
 }

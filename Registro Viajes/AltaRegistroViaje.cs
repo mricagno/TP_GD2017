@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -31,16 +32,23 @@ namespace UberFrba.Registro_Viajes
 
         private void Guardar_Click(object sender, EventArgs e)
         {
-            //agregarValidaciones
-            RegistroViaje registroViaje = new RegistroViaje();
-            registroViaje.Automovil = txtAutomovil.Text;
-            registroViaje.Chofer = txtChofer.Text;
-            registroViaje.CantidadKilometros = txtCantidadKm.Text;
-            registroViaje.FechaFinViaje = txtFechaFinViaje.Text;
-            registroViaje.FechaInicioViaje = txtFechaInicioViaje.Text;
+            //TODO IMPORTANTE agregarValidaciones
 
-            //Repositorio.registrarViaje(registroViaje);
-            RepositorioMock.registrarViaje(registroViaje);
+            MessageBox.Show(((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI.ToString(), "si pa",MessageBoxButtons.OK);
+           
+            RegistroViaje registroViaje = new RegistroViaje();
+
+            registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
+            registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
+            registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
+            registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
+            registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
+            registroViaje.FechaFinViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+           
+
+            Repositorio.registrarViaje(registroViaje);
+           
             new Principal(Tabs.viajes()).Show();
             this.Close();
         }
@@ -53,7 +61,32 @@ namespace UberFrba.Registro_Viajes
 
         private void AltaRegistroViaje_Load(object sender, EventArgs e)
         {
+             ObservableCollection<DtoClienteHabilitado> clientes = Repositorio.todosLosClientesHabilitados();
 
+             cmbCliente.Items.Clear();
+             foreach (var c in clientes)
+             {
+                 cmbCliente.Items.Add(c);
+             }
+
+
+             ObservableCollection<DtoChoferHabilitado> choferes = Repositorio.todosLosChoferesHabilitadosConAutos();
+
+             cmbChoferHabilitado.Items.Clear();
+
+             foreach (var c in choferes)
+             {
+                 cmbChoferHabilitado.Items.Add(c);
+             }
+            
+        }
+
+        private void cmbChoferHabilitado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            txtAutomovil.Text = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
+            
+            txtTurno.Text = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
         }
     }
 }

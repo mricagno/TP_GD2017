@@ -94,7 +94,7 @@ namespace UberFrba.Abm_Chofer
 
         private void ModificarChofer_Load(object sender, EventArgs e)
         {
-            ObservableCollection<UberFrba.Backend.DtoModificarChofer> choferes = Repositorio.todosLosChoferesAModificar();
+            ObservableCollection<UberFrba.Backend.DtoModificarChofer> choferes = Repositorio.todosLosChoferes();
 
 
             GridChofer.DataSource = choferes;

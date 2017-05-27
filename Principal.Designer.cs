@@ -316,7 +316,7 @@
             this.btnVerViajes.Name = "btnVerViajes";
             this.btnVerViajes.Size = new System.Drawing.Size(109, 35);
             this.btnVerViajes.TabIndex = 3;
-            this.btnVerViajes.Text = "Ver Viajes";
+            this.btnVerViajes.Text = "Listado de Viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
             this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 

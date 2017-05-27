@@ -131,6 +131,8 @@
     <Compile Include="Abm Rol\ModificarRol.Designer.cs">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\DtoChoferHabilitado.cs" />
+    <Compile Include="Backend\DtoClienteHabilitado.cs" />
     <Compile Include="Backend\DtoModificarChofer.cs" />
     <Compile Include="Backend\DtoTurno.cs" />
     <Compile Include="Backend\NuevoChofer.cs" />

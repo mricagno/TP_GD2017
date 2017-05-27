@@ -61,9 +61,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(31, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
+            this.label1.Size = new System.Drawing.Size(147, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Todos Los Viajes";
+            this.label1.Text = "Listado de Viajes";
             // 
             // MostrarViajes
             // 
@@ -74,7 +74,7 @@
             this.Controls.Add(this.GridTodosLosViajes);
             this.Controls.Add(this.button1);
             this.Name = "MostrarViajes";
-            this.Text = "Viajes";
+            this.Text = "Listado De Viajes";
             this.Load += new System.EventHandler(this.RegistroViajesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridTodosLosViajes)).EndInit();
             this.ResumeLayout(false);

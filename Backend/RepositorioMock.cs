@@ -18,10 +18,10 @@ namespace UberFrba.Backend
                 todosLosViajes = new List<RegistroViaje>();
                 RegistroViaje registroViaje = new RegistroViaje();
                 registroViaje.Automovil = "auto 1";
-                registroViaje.Chofer = "chofer 1";
-                registroViaje.Cliente = "cliente 1";
-                registroViaje.FechaFinViaje = "fecha 1";
-                registroViaje.FechaInicioViaje = "fecha 1";
+                //registroViaje.Chofer = "chofer 1";
+                //registroViaje.Cliente = "cliente 1";
+               // registroViaje.FechaFinViaje = "fecha 1";
+                //registroViaje.FechaInicioViaje = "fecha 1";
                 registroViaje.CantidadKilometros = "132312";
                 registroViaje.Turno = "turno";
                 todosLosViajes.Add(registroViaje);
