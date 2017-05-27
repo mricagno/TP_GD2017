@@ -110,7 +110,10 @@ namespace UberFrba
         {
             
             this.Close();
-            new MostrarViajes().Show();
+            var form = new MostrarViajes();
+            form.Show();
+            form.actualizarGrillaViajes();
+
         }
 
         private void btnConsultarEstadistica_Click(object sender, EventArgs e)

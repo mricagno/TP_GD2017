@@ -40,12 +40,16 @@ namespace UberFrba.Registro_Viajes
             
         }
 
+      
+        
         private void RegistroViajesForm_Load(object sender, EventArgs e)
         {
-            actualizarGrillaViajes();
+            
+            //actualizarGrillaViajes();
+    
         }
 
-        private void actualizarGrillaViajes(){
+        public void actualizarGrillaViajes(){
             ObservableCollection<RegistroViaje> viajes = Repositorio.todosLosRegistroViajes();
             //List<RegistroViaje> viajes = RepositorioMock.todosLosRegistroViajes();
             
