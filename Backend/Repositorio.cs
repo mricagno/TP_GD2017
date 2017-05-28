@@ -254,14 +254,30 @@ namespace UberFrba.Backend
         internal static void crearRol(string nombreRolNuevo)
         {
             String query = "EXEC DROP_DATABASE.ALTA_ROL '" + nombreRolNuevo + "'";
-            new Server().realizarQuery(query);
+            try
+            {
+                new Server().realizarQuery(query);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
+            } 
         }
 
         internal static void agregarFuncionalidadARol(String nombreRolNuevo, String func)
         {
 
             String query = "EXEC DROP_DATABASE.ASOCIAR_FUNCIONALIDAD '" + nombreRolNuevo + "', '" + func + "'";
-            new Server().realizarQuery(query);
+            try
+            {
+                new Server().realizarQuery(query);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
+            } 
         }
 
         internal static ObservableCollection<String> todosLosRoles()
@@ -283,13 +299,29 @@ namespace UberFrba.Backend
         internal static void habilitarRol(string nombreRol)
         {
             String query = "EXEC DROP_DATABASE.HABILITAR_ROL '" + nombreRol + "'";
-            new Server().realizarQuery(query);
+            try
+            {
+                new Server().realizarQuery(query);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
+            }
         }
 
         internal static void deshabilitarRol(string nombreRol)
         {
             String query = "EXEC DROP_DATABASE.BAJA_ROL '" + nombreRol + "'";
-            new Server().realizarQuery(query);
+            try
+            {
+                new Server().realizarQuery(query);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                System.Environment.Exit(1);
+            }
            // return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
 

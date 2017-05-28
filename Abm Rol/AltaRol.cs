@@ -36,6 +36,10 @@ namespace UberFrba.Abm_Rol
         private string dameNombreRol()
         {
             //TODO IMPORTANTE: QUE NO SEA "" SINO TIRAR UN MENSJAE
+            if (string.IsNullOrWhiteSpace(txtNombreRol.Text))
+            {
+                MessageBox.Show("Se debe ingresar un nombre para el rol", "Ingresar Rol", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             return txtNombreRol.Text;
         }
 

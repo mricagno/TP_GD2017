@@ -31,8 +31,6 @@ namespace UberFrba.Abm_Rol
             //TODO agregar try catch y mensajes
             Repositorio.deshabilitarRol(nombreRol);
 
-
-
             MessageBox.Show("Se elimino correctamente el rol", "Baja Rol", MessageBoxButtons.OK);
             new Principal("Seguridad").Show();
             this.Close();
