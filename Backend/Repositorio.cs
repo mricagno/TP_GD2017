@@ -443,5 +443,127 @@ namespace UberFrba.Backend
             String query = "EXEC DROP_DATABASE.[BAJA_AUTO] '" + patente + "'";
             new Server().realizarQuery(query);
         }
+
+        internal static void rendir(int dni, string fecha)
+        {
+            String query = "EXEC DROP_DATABASE.[SP_RENDIR_VIAJES] " + dni.ToString() + ", '" + fecha + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static void facturar(int dni, string fecha)
+        {
+            String query = "EXEC DROP_DATABASE.[FACTURAR_MES_CLIENTE] " + dni.ToString() + ", '" + fecha + "'";
+            new Server().realizarQuery(query);
+        }
+
+        internal static ObservableCollection<String> todosLosAnios()
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_ANOS";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var anios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+
+
+                anios.Add(reader["ANIO"].ToString());
+
+
+            }
+            reader.Close();
+            return anios;
+        }
+
+        internal static ObservableCollection<DtoChoferMasRecaudacion> masRecaudacion(String anio, String trimestre)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_CHOFERES_MAYOR_RECAUDACION '" + anio + "', '" + trimestre + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoChoferMasRecaudacion>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoChoferMasRecaudacion();
+
+                chofer.Apellido = reader["APELLIDO"].ToString();
+                chofer.Nombre = reader["NOMBRE"].ToString();
+                chofer.Mail = reader["EMAIL"].ToString();
+                chofer.Usuario = reader["USUARIO"].ToString();
+                chofer.Importe = reader["IMPORTE"].ToString();
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
+        }
+
+        internal static ObservableCollection<DtoChoferMayorKm> choferesMayorKm(string anio, string trimestre)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_CHOFERES_MAYOR_KM '" + anio + "', '" + trimestre + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoChoferMayorKm>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoChoferMayorKm();
+
+                chofer.Apellido = reader["APELLIDO"].ToString();
+                chofer.Nombre = reader["NOMBRE"].ToString();
+                chofer.Mail = reader["EMAIL"].ToString();
+                chofer.Usuario = reader["USUARIO"].ToString();
+                chofer.CantidadKM = reader["CANT_KM"].ToString();
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
+        }
+
+        internal static ObservableCollection<DtoClienteMayorConsumo> masConsumo(string anio, string trimestre)
+        {
+
+
+            String queryString = "EXEC  DROP_DATABASE.SP_CLIENTE_MAYOR_CONSUMO '" + anio + "', '" + trimestre + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoClienteMayorConsumo>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoClienteMayorConsumo();
+
+                chofer.Apellido = reader["APELLIDO"].ToString();
+                chofer.Nombre = reader["NOMBRE"].ToString();
+                chofer.Mail = reader["EMAIL"].ToString();
+                chofer.Usuario = reader["USUARIO"].ToString();
+                chofer.Importe = reader["IMPORTE"].ToString();
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
+        }
+
+        internal static ObservableCollection<DtoMasAutos> masAutos(string anio, string trimestre)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_CLIENTE_MAS_VIAJES_EN_UN_AUTO '" + anio + "', '" + trimestre + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var choferes = new ObservableCollection<DtoMasAutos>();
+
+            while (reader.Read())
+            {
+                var chofer = new DtoMasAutos();
+
+                chofer.Apellido = reader["APELLIDO"].ToString();
+                chofer.Nombre = reader["NOMBRE"].ToString();
+                chofer.Mail = reader["EMAIL"].ToString();
+                chofer.Usuario = reader["USUARIO"].ToString();
+                chofer.Viajes = reader["VIAJES"].ToString();
+                chofer.Patente = reader["PATENTE"].ToString();
+                choferes.Add(chofer);
+            }
+            reader.Close();
+            return choferes;
+        }
     }
 }

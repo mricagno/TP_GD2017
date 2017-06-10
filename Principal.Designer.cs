@@ -59,9 +59,9 @@
             this.radioButtonMismoAuto = new System.Windows.Forms.RadioButton();
             this.radioButtonMasConsumo = new System.Windows.Forms.RadioButton();
             this.radioButtonViajeMasLargo = new System.Windows.Forms.RadioButton();
-            this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabChoferes.SuspendLayout();
@@ -349,7 +349,7 @@
             this.btnRendicionViajes.Name = "btnRendicionViajes";
             this.btnRendicionViajes.Size = new System.Drawing.Size(116, 38);
             this.btnRendicionViajes.TabIndex = 0;
-            this.btnRendicionViajes.Text = "RendicionViajes";
+            this.btnRendicionViajes.Text = "Rendicion Viaje";
             this.btnRendicionViajes.UseVisualStyleBackColor = true;
             this.btnRendicionViajes.Click += new System.EventHandler(this.btnRendicionViajes_Click);
             // 
@@ -410,17 +410,6 @@
             this.radioButtonViajeMasLargo.Text = "Choferes con el viaje mas largo realizado";
             this.radioButtonViajeMasLargo.UseVisualStyleBackColor = true;
             // 
-            // radioButtonMasRecaudacion
-            // 
-            this.radioButtonMasRecaudacion.AutoSize = true;
-            this.radioButtonMasRecaudacion.Location = new System.Drawing.Point(42, 25);
-            this.radioButtonMasRecaudacion.Name = "radioButtonMasRecaudacion";
-            this.radioButtonMasRecaudacion.Size = new System.Drawing.Size(182, 17);
-            this.radioButtonMasRecaudacion.TabIndex = 0;
-            this.radioButtonMasRecaudacion.TabStop = true;
-            this.radioButtonMasRecaudacion.Text = "Choferes con Mayor recaudación";
-            this.radioButtonMasRecaudacion.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -438,6 +427,17 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMasRecaudacion
+            // 
+            this.radioButtonMasRecaudacion.AutoSize = true;
+            this.radioButtonMasRecaudacion.Location = new System.Drawing.Point(42, 25);
+            this.radioButtonMasRecaudacion.Name = "radioButtonMasRecaudacion";
+            this.radioButtonMasRecaudacion.Size = new System.Drawing.Size(182, 17);
+            this.radioButtonMasRecaudacion.TabIndex = 0;
+            this.radioButtonMasRecaudacion.TabStop = true;
+            this.radioButtonMasRecaudacion.Text = "Choferes con Mayor recaudación";
+            this.radioButtonMasRecaudacion.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -487,7 +487,6 @@
         private System.Windows.Forms.RadioButton radioButtonMismoAuto;
         private System.Windows.Forms.RadioButton radioButtonMasConsumo;
         private System.Windows.Forms.RadioButton radioButtonViajeMasLargo;
-        private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
         private System.Windows.Forms.Button btnConsultarEstadistica;
         private System.Windows.Forms.TabPage tabCliente;
         private System.Windows.Forms.TabPage tabChoferes;
@@ -501,5 +500,6 @@
         private System.Windows.Forms.Button NuevoCliente;
         private System.Windows.Forms.Button btnModificarChofer;
         private System.Windows.Forms.Button btnNuevoChofer;
+        private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
     }
 }

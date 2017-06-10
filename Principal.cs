@@ -13,9 +13,9 @@ using UberFrba.Abm_Cliente;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
 using UberFrba.Contabilidad;
-using UberFrba.Facturacion;
 using UberFrba.Listado_Estadistico;
 using UberFrba.Registro_Viajes;
+using UberFrba.Rendicion_Viajes;
 using UberFrba.Turno;
 
 namespace UberFrba
@@ -57,6 +57,8 @@ namespace UberFrba
                 tblMenu.SelectTab(tabContabilidad.Name);
             if (seleccionarTab == Tabs.autos())
                 tblMenu.SelectTab(tabAutos.Name);
+            if (seleccionarTab == Tabs.estadisticas())
+                tblMenu.SelectTab(tabEstadisticas.Name);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -139,7 +141,7 @@ namespace UberFrba
 
         private void btnRendicionViajes_Click(object sender, EventArgs e)
         {
-            new RendicionViajes().Show();
+            new RealizarRendicion().Show();
             this.Close();
         }
 
