@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.irAutosAbm = new System.Windows.Forms.Button();
+            this.brtIrAutos = new System.Windows.Forms.Button();
             this.btnNuevoTurno = new System.Windows.Forms.Button();
             this.irRegistrarViaje = new System.Windows.Forms.Button();
-            this.btnAuto = new System.Windows.Forms.Button();
+            this.btnAltaAuto = new System.Windows.Forms.Button();
             this.btnBajaAuto = new System.Windows.Forms.Button();
             this.btnModificarAuto = new System.Windows.Forms.Button();
             this.btnAltaRol = new System.Windows.Forms.Button();
@@ -59,9 +59,9 @@
             this.radioButtonMismoAuto = new System.Windows.Forms.RadioButton();
             this.radioButtonMasConsumo = new System.Windows.Forms.RadioButton();
             this.radioButtonViajeMasLargo = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabChoferes.SuspendLayout();
@@ -73,15 +73,15 @@
             this.tabEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // irAutosAbm
+            // brtIrAutos
             // 
-            this.irAutosAbm.Location = new System.Drawing.Point(40, 46);
-            this.irAutosAbm.Name = "irAutosAbm";
-            this.irAutosAbm.Size = new System.Drawing.Size(108, 36);
-            this.irAutosAbm.TabIndex = 0;
-            this.irAutosAbm.Text = "Ir a Autos";
-            this.irAutosAbm.UseVisualStyleBackColor = true;
-            this.irAutosAbm.Click += new System.EventHandler(this.button1_Click);
+            this.brtIrAutos.Location = new System.Drawing.Point(188, 83);
+            this.brtIrAutos.Name = "brtIrAutos";
+            this.brtIrAutos.Size = new System.Drawing.Size(108, 36);
+            this.brtIrAutos.TabIndex = 0;
+            this.brtIrAutos.Text = "Ir a Autos";
+            this.brtIrAutos.UseVisualStyleBackColor = true;
+            this.brtIrAutos.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevoTurno
             // 
@@ -103,19 +103,19 @@
             this.irRegistrarViaje.UseVisualStyleBackColor = true;
             this.irRegistrarViaje.Click += new System.EventHandler(this.irRegistrarViaje_Click);
             // 
-            // btnAuto
+            // btnAltaAuto
             // 
-            this.btnAuto.Location = new System.Drawing.Point(40, 100);
-            this.btnAuto.Name = "btnAuto";
-            this.btnAuto.Size = new System.Drawing.Size(108, 34);
-            this.btnAuto.TabIndex = 5;
-            this.btnAuto.Text = "Nuevo Auto";
-            this.btnAuto.UseVisualStyleBackColor = true;
-            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
+            this.btnAltaAuto.Location = new System.Drawing.Point(40, 33);
+            this.btnAltaAuto.Name = "btnAltaAuto";
+            this.btnAltaAuto.Size = new System.Drawing.Size(108, 34);
+            this.btnAltaAuto.TabIndex = 5;
+            this.btnAltaAuto.Text = "Nuevo Auto";
+            this.btnAltaAuto.UseVisualStyleBackColor = true;
+            this.btnAltaAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // btnBajaAuto
             // 
-            this.btnBajaAuto.Location = new System.Drawing.Point(40, 194);
+            this.btnBajaAuto.Location = new System.Drawing.Point(40, 83);
             this.btnBajaAuto.Name = "btnBajaAuto";
             this.btnBajaAuto.Size = new System.Drawing.Size(108, 39);
             this.btnBajaAuto.TabIndex = 6;
@@ -125,7 +125,7 @@
             // 
             // btnModificarAuto
             // 
-            this.btnModificarAuto.Location = new System.Drawing.Point(40, 140);
+            this.btnModificarAuto.Location = new System.Drawing.Point(188, 139);
             this.btnModificarAuto.Name = "btnModificarAuto";
             this.btnModificarAuto.Size = new System.Drawing.Size(108, 37);
             this.btnModificarAuto.TabIndex = 5;
@@ -292,8 +292,8 @@
             // 
             this.tabAutos.Controls.Add(this.btnBajaAuto);
             this.tabAutos.Controls.Add(this.btnModificarAuto);
-            this.tabAutos.Controls.Add(this.irAutosAbm);
-            this.tabAutos.Controls.Add(this.btnAuto);
+            this.tabAutos.Controls.Add(this.brtIrAutos);
+            this.tabAutos.Controls.Add(this.btnAltaAuto);
             this.tabAutos.Location = new System.Drawing.Point(4, 22);
             this.tabAutos.Name = "tabAutos";
             this.tabAutos.Size = new System.Drawing.Size(416, 274);
@@ -410,6 +410,17 @@
             this.radioButtonViajeMasLargo.Text = "Choferes con el viaje mas largo realizado";
             this.radioButtonViajeMasLargo.UseVisualStyleBackColor = true;
             // 
+            // radioButtonMasRecaudacion
+            // 
+            this.radioButtonMasRecaudacion.AutoSize = true;
+            this.radioButtonMasRecaudacion.Location = new System.Drawing.Point(42, 25);
+            this.radioButtonMasRecaudacion.Name = "radioButtonMasRecaudacion";
+            this.radioButtonMasRecaudacion.Size = new System.Drawing.Size(182, 17);
+            this.radioButtonMasRecaudacion.TabIndex = 0;
+            this.radioButtonMasRecaudacion.TabStop = true;
+            this.radioButtonMasRecaudacion.Text = "Choferes con Mayor recaudación";
+            this.radioButtonMasRecaudacion.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -427,17 +438,6 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonMasRecaudacion
-            // 
-            this.radioButtonMasRecaudacion.AutoSize = true;
-            this.radioButtonMasRecaudacion.Location = new System.Drawing.Point(42, 25);
-            this.radioButtonMasRecaudacion.Name = "radioButtonMasRecaudacion";
-            this.radioButtonMasRecaudacion.Size = new System.Drawing.Size(182, 17);
-            this.radioButtonMasRecaudacion.TabIndex = 0;
-            this.radioButtonMasRecaudacion.TabStop = true;
-            this.radioButtonMasRecaudacion.Text = "Choferes con Mayor recaudación";
-            this.radioButtonMasRecaudacion.UseVisualStyleBackColor = true;
             // 
             // Principal
             // 
@@ -467,12 +467,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button irAutosAbm;
+        private System.Windows.Forms.Button brtIrAutos;
         private System.Windows.Forms.Button btnNuevoTurno;
         private System.Windows.Forms.Button irRegistrarViaje;
         private System.Windows.Forms.Button btnModificarAuto;
         private System.Windows.Forms.Button btnBajaAuto;
-        private System.Windows.Forms.Button btnAuto;
+        private System.Windows.Forms.Button btnAltaAuto;
         private System.Windows.Forms.Button btnBajaRol;
         private System.Windows.Forms.Button btnModificarRol;
         private System.Windows.Forms.Button btnAltaRol;

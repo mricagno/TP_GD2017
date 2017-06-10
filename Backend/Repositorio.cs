@@ -565,5 +565,10 @@ namespace UberFrba.Backend
             reader.Close();
             return choferes;
         }
+
+        internal static ObservableCollection<string> funcionalidadesUsuario(string p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
