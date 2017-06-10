@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abm Automovil\AutomovilForm.cs">
+    <Compile Include="Abm Automovil\AltaAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Automovil\AutomovilForm.Designer.cs">
-      <DependentUpon>AutomovilForm.cs</DependentUpon>
+    <Compile Include="Abm Automovil\AltaAuto.Designer.cs">
+      <DependentUpon>AltaAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Automovil\BajaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Automovil\BajaAuto.Designer.cs">
+      <DependentUpon>BajaAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Chofer\AltaChofer.cs">
       <SubType>Form</SubType>
@@ -234,8 +240,11 @@
     <Compile Include="Turno\ModificarTurno.Designer.cs">
       <DependentUpon>ModificarTurno.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
-      <DependentUpon>AutomovilForm.cs</DependentUpon>
+    <EmbeddedResource Include="Abm Automovil\AltaAuto.resx">
+      <DependentUpon>AltaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Automovil\BajaAuto.resx">
+      <DependentUpon>BajaAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Chofer\AltaChofer.resx">
       <DependentUpon>AltaChofer.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Abm_Automovil;
 using UberFrba.Abm_Chofer;
 using UberFrba.Abm_Cliente;
 using UberFrba.Abm_Rol;
@@ -180,6 +181,18 @@ namespace UberFrba
         private void btnModificarAuto_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAuto_Click(object sender, EventArgs e)
+        {
+            new AltaAuto().Show();
+            this.Close();
+        }
+
+        private void btnBajaAuto_Click(object sender, EventArgs e)
+        {
+            new BajaAuto().Show();
+            this.Close();
         }
 
     }

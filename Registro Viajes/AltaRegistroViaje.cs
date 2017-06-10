@@ -32,10 +32,7 @@ namespace UberFrba.Registro_Viajes
 
         private void Guardar_Click(object sender, EventArgs e)
         {
-            //TODO IMPORTANTE agregarValidaciones
-
-            MessageBox.Show(((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI.ToString(), "si pa",MessageBoxButtons.OK);
-           
+            
             RegistroViaje registroViaje = new RegistroViaje();
 
             registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
@@ -79,6 +76,9 @@ namespace UberFrba.Registro_Viajes
                  cmbChoferHabilitado.Items.Add(c);
              }
             
+
+
+
         }
 
         private void cmbChoferHabilitado_SelectedIndexChanged(object sender, EventArgs e)

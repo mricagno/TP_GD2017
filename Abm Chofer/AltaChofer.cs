@@ -42,6 +42,7 @@ namespace UberFrba.Abm_Chofer
             }
             nuevoChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
             nuevoChofer.email = txtMailChofer.Text;
+            Convert.ToInt32(99999999);
             nuevoChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
             nuevoChofer.direccion = txtDireccionChofer.Text;
             nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");

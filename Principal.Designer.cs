@@ -111,6 +111,7 @@
             this.btnAuto.TabIndex = 5;
             this.btnAuto.Text = "Nuevo Auto";
             this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // btnBajaAuto
             // 
@@ -120,6 +121,7 @@
             this.btnBajaAuto.TabIndex = 6;
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
+            this.btnBajaAuto.Click += new System.EventHandler(this.btnBajaAuto_Click);
             // 
             // btnModificarAuto
             // 
