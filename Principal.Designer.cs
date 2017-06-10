@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.brtIrAutos = new System.Windows.Forms.Button();
             this.btnNuevoTurno = new System.Windows.Forms.Button();
             this.irRegistrarViaje = new System.Windows.Forms.Button();
             this.btnAltaAuto = new System.Windows.Forms.Button();
             this.btnBajaAuto = new System.Windows.Forms.Button();
-            this.btnModificarAuto = new System.Windows.Forms.Button();
             this.btnAltaRol = new System.Windows.Forms.Button();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnBajaRol = new System.Windows.Forms.Button();
@@ -72,16 +70,6 @@
             this.tabContabilidad.SuspendLayout();
             this.tabEstadisticas.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // brtIrAutos
-            // 
-            this.brtIrAutos.Location = new System.Drawing.Point(188, 83);
-            this.brtIrAutos.Name = "brtIrAutos";
-            this.brtIrAutos.Size = new System.Drawing.Size(108, 36);
-            this.brtIrAutos.TabIndex = 0;
-            this.brtIrAutos.Text = "Ir a Autos";
-            this.brtIrAutos.UseVisualStyleBackColor = true;
-            this.brtIrAutos.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNuevoTurno
             // 
@@ -122,16 +110,6 @@
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
             this.btnBajaAuto.Click += new System.EventHandler(this.btnBajaAuto_Click);
-            // 
-            // btnModificarAuto
-            // 
-            this.btnModificarAuto.Location = new System.Drawing.Point(188, 139);
-            this.btnModificarAuto.Name = "btnModificarAuto";
-            this.btnModificarAuto.Size = new System.Drawing.Size(108, 37);
-            this.btnModificarAuto.TabIndex = 5;
-            this.btnModificarAuto.Text = "Modificar Auto";
-            this.btnModificarAuto.UseVisualStyleBackColor = true;
-            this.btnModificarAuto.Click += new System.EventHandler(this.btnModificarAuto_Click);
             // 
             // btnAltaRol
             // 
@@ -176,7 +154,7 @@
             this.tblMenu.Location = new System.Drawing.Point(51, 53);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.SelectedIndex = 0;
-            this.tblMenu.Size = new System.Drawing.Size(424, 300);
+            this.tblMenu.Size = new System.Drawing.Size(451, 300);
             this.tblMenu.TabIndex = 6;
             // 
             // tabSeguridad
@@ -187,7 +165,7 @@
             this.tabSeguridad.Location = new System.Drawing.Point(4, 22);
             this.tabSeguridad.Name = "tabSeguridad";
             this.tabSeguridad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeguridad.Size = new System.Drawing.Size(416, 274);
+            this.tabSeguridad.Size = new System.Drawing.Size(443, 274);
             this.tabSeguridad.TabIndex = 0;
             this.tabSeguridad.Text = "Seguridad";
             this.tabSeguridad.UseVisualStyleBackColor = true;
@@ -291,8 +269,6 @@
             // tabAutos
             // 
             this.tabAutos.Controls.Add(this.btnBajaAuto);
-            this.tabAutos.Controls.Add(this.btnModificarAuto);
-            this.tabAutos.Controls.Add(this.brtIrAutos);
             this.tabAutos.Controls.Add(this.btnAltaAuto);
             this.tabAutos.Location = new System.Drawing.Point(4, 22);
             this.tabAutos.Name = "tabAutos";
@@ -443,7 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 458);
+            this.ClientSize = new System.Drawing.Size(567, 458);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tblMenu);
@@ -467,10 +443,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button brtIrAutos;
         private System.Windows.Forms.Button btnNuevoTurno;
         private System.Windows.Forms.Button irRegistrarViaje;
-        private System.Windows.Forms.Button btnModificarAuto;
         private System.Windows.Forms.Button btnBajaAuto;
         private System.Windows.Forms.Button btnAltaAuto;
         private System.Windows.Forms.Button btnBajaRol;
