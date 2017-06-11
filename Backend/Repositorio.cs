@@ -262,6 +262,7 @@ namespace UberFrba.Backend
             catch (SqlException ex)
              {
                  MessageBox.Show(ex.Message);
+                 throw new System.ArgumentException();
             } 
         }
 

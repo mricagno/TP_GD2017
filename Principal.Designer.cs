@@ -402,9 +402,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
-            //this.label1.Text = "BIENVENIDO PEPITO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
@@ -415,6 +414,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Principal
             // 

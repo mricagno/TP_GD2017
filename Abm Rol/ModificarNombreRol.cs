@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// los siguientes a refactorizar 
+using System.Data.SqlClient;
+using UberFrba.Backend;
 
 namespace UberFrba.Abm_Rol
 {
@@ -20,7 +23,17 @@ namespace UberFrba.Abm_Rol
 
         private void btnModificarNombreRol_Click(object sender, EventArgs e)
         {
-            //modificar rol
+            try
+            {
+                String queryString = "EXEC DROP_DATABASE.RENOMBRAR_ROL'" + lblNombreRolAModificarNombre.Text + "', '" + this.txtNuevoNombreRol.Text + "'";
+
+                SqlDataReader reader = new Server().query(queryString);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             MessageBox.Show("Se modifico correctamente el nombre del rol", "Modificacion Rol", MessageBoxButtons.OK);
             new ModificarRol().Show();
             this.Close();
@@ -31,6 +44,11 @@ namespace UberFrba.Abm_Rol
         {
             new ModificarRol().Show();
             this.Close();
+        }
+
+        private void txtNuevoNombreRol_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

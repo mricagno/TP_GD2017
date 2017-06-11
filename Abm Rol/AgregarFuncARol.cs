@@ -102,6 +102,7 @@ namespace UberFrba.Abm_Rol
             //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
             foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
             {
+
                 Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
             }
 
@@ -128,6 +129,13 @@ namespace UberFrba.Abm_Rol
 
 
             lstAgregarFuncionalidades.Items.Remove(lstAgregarFuncionalidades.SelectedItem.ToString());
+        }
+
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            
+
+            this.Close();
         }
     }
 }
