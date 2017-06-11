@@ -28,12 +28,16 @@ namespace UberFrba
         public Principal(String tab)
         {
             InitializeComponent();
+            this.label1.Text = "BIENVENIDO" + ' ' + Sesion.username.ToUpper();
             seleccionarTab = tab;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Main displayMainForm = new Main();
+            displayMainForm.Show();
 
+            this.Close();
         }
 
         private void irRegistrarViaje_Click(object sender, EventArgs e)
@@ -307,6 +311,11 @@ CONSULTAR_ESTADISTICAS
         {
             new BajaAuto().Show();
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

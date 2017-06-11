@@ -176,7 +176,7 @@
             this.tabChoferes.Controls.Add(this.btnNuevoChofer);
             this.tabChoferes.Location = new System.Drawing.Point(4, 22);
             this.tabChoferes.Name = "tabChoferes";
-            this.tabChoferes.Size = new System.Drawing.Size(416, 274);
+            this.tabChoferes.Size = new System.Drawing.Size(443, 274);
             this.tabChoferes.TabIndex = 6;
             this.tabChoferes.Text = "Choferes";
             this.tabChoferes.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.tabCliente.Controls.Add(this.NuevoCliente);
             this.tabCliente.Location = new System.Drawing.Point(4, 22);
             this.tabCliente.Name = "tabCliente";
-            this.tabCliente.Size = new System.Drawing.Size(416, 274);
+            this.tabCliente.Size = new System.Drawing.Size(443, 274);
             this.tabCliente.TabIndex = 5;
             this.tabCliente.Text = "Clientes";
             this.tabCliente.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.tabTurnos.Location = new System.Drawing.Point(4, 22);
             this.tabTurnos.Name = "tabTurnos";
             this.tabTurnos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTurnos.Size = new System.Drawing.Size(416, 274);
+            this.tabTurnos.Size = new System.Drawing.Size(443, 274);
             this.tabTurnos.TabIndex = 1;
             this.tabTurnos.Text = "Turnos";
             this.tabTurnos.UseVisualStyleBackColor = true;
@@ -272,7 +272,7 @@
             this.tabAutos.Controls.Add(this.btnAltaAuto);
             this.tabAutos.Location = new System.Drawing.Point(4, 22);
             this.tabAutos.Name = "tabAutos";
-            this.tabAutos.Size = new System.Drawing.Size(416, 274);
+            this.tabAutos.Size = new System.Drawing.Size(443, 274);
             this.tabAutos.TabIndex = 2;
             this.tabAutos.Text = "Autos";
             this.tabAutos.UseVisualStyleBackColor = true;
@@ -283,7 +283,7 @@
             this.tabViajes.Controls.Add(this.irRegistrarViaje);
             this.tabViajes.Location = new System.Drawing.Point(4, 22);
             this.tabViajes.Name = "tabViajes";
-            this.tabViajes.Size = new System.Drawing.Size(416, 274);
+            this.tabViajes.Size = new System.Drawing.Size(443, 274);
             this.tabViajes.TabIndex = 3;
             this.tabViajes.Text = "Viajes";
             this.tabViajes.UseVisualStyleBackColor = true;
@@ -304,7 +304,7 @@
             this.tabContabilidad.Controls.Add(this.btnRendicionViajes);
             this.tabContabilidad.Location = new System.Drawing.Point(4, 22);
             this.tabContabilidad.Name = "tabContabilidad";
-            this.tabContabilidad.Size = new System.Drawing.Size(416, 274);
+            this.tabContabilidad.Size = new System.Drawing.Size(443, 274);
             this.tabContabilidad.TabIndex = 7;
             this.tabContabilidad.Text = "Contabilidad";
             this.tabContabilidad.UseVisualStyleBackColor = true;
@@ -338,7 +338,7 @@
             this.tabEstadisticas.Controls.Add(this.radioButtonMasRecaudacion);
             this.tabEstadisticas.Location = new System.Drawing.Point(4, 22);
             this.tabEstadisticas.Name = "tabEstadisticas";
-            this.tabEstadisticas.Size = new System.Drawing.Size(416, 274);
+            this.tabEstadisticas.Size = new System.Drawing.Size(443, 274);
             this.tabEstadisticas.TabIndex = 4;
             this.tabEstadisticas.Text = "Estadisticas";
             this.tabEstadisticas.UseVisualStyleBackColor = true;
@@ -404,7 +404,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "BIENVENIDO PEPITO";
+            //this.label1.Text = "BIENVENIDO PEPITO";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 

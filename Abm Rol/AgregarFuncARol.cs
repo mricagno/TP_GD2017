@@ -87,7 +87,8 @@ namespace UberFrba.Abm_Rol
 
             if(lstAgregarFuncionalidades.Items.Count <= 0)
             {
-                //TODO agregar mensaje qe tiene qe tener al menos una func 
+                //TODO agregar mensaje qe tiene qe tener al menos una func
+                MessageBox.Show("El rol debe tener al menos una funcionalidad", "Agregar funcionalidad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
