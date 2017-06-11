@@ -28,15 +28,14 @@ namespace UberFrba.Abm_Rol
                 String queryString = "EXEC DROP_DATABASE.RENOMBRAR_ROL'" + lblNombreRolAModificarNombre.Text + "', '" + this.txtNuevoNombreRol.Text + "'";
 
                 SqlDataReader reader = new Server().query(queryString);
-
+                MessageBox.Show("Se modifico correctamente el nombre del rol", "Modificacion Rol", MessageBoxButtons.OK);
+                new ModificarRol().Show();
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            MessageBox.Show("Se modifico correctamente el nombre del rol", "Modificacion Rol", MessageBoxButtons.OK);
-            new ModificarRol().Show();
-            this.Close();
 
         }
 

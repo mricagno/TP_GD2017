@@ -31,10 +31,7 @@ namespace UberFrba.Abm_Rol
                     new AgregarFuncARol(nombreRol, "principal").Show();
                     this.Close();
                 }
-                catch (System.ArgumentException ae)
-                {
-                   
-                }
+                catch (System.ArgumentException ae) { }
 
             } //TODO METER TRY CATCH CON MENSAJE. Si fallo no continuar
 
