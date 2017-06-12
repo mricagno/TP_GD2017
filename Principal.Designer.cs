@@ -79,6 +79,7 @@
             this.btnNuevoTurno.TabIndex = 1;
             this.btnNuevoTurno.Text = "Nuevo Turno";
             this.btnNuevoTurno.UseVisualStyleBackColor = true;
+            this.btnNuevoTurno.Visible = false;
             this.btnNuevoTurno.Click += new System.EventHandler(this.btnNuevoTurno_Click);
             // 
             // irRegistrarViaje
@@ -89,6 +90,7 @@
             this.irRegistrarViaje.TabIndex = 2;
             this.irRegistrarViaje.Text = "Registrar Viaje";
             this.irRegistrarViaje.UseVisualStyleBackColor = true;
+            this.irRegistrarViaje.Visible = false;
             this.irRegistrarViaje.Click += new System.EventHandler(this.irRegistrarViaje_Click);
             // 
             // btnAltaAuto
@@ -228,6 +230,7 @@
             this.ModificarCliente.TabIndex = 1;
             this.ModificarCliente.Text = "Modificar Cliente";
             this.ModificarCliente.UseVisualStyleBackColor = true;
+            this.ModificarCliente.Visible = false;
             this.ModificarCliente.Click += new System.EventHandler(this.ModificarCliente_Click);
             // 
             // NuevoCliente
@@ -238,6 +241,7 @@
             this.NuevoCliente.TabIndex = 0;
             this.NuevoCliente.Text = "Nuevo Cliente";
             this.NuevoCliente.UseVisualStyleBackColor = true;
+            this.NuevoCliente.Visible = false;
             this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
             // 
             // tabTurnos
