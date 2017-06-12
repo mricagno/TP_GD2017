@@ -20,7 +20,7 @@ namespace UberFrba.Abm_Cliente
             ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
 
             if (funcionalidades.Contains("MODIFICAR_CLIENTE"))
-                this.btnModificar.Enabled = true;
+                //this.btnModificar.Enabled = true;
             if (funcionalidades.Contains("BAJA_CLIENTE"))
                 this.btnEliminar.Enabled = true;
         }
@@ -66,7 +66,7 @@ namespace UberFrba.Abm_Cliente
 
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void btnModifcar_Click(object sender, EventArgs e)
         {
             DataGridViewRow cliente = Utils.getSelectedRow(GridClientes);
             if (cliente == null)

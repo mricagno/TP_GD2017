@@ -66,6 +66,8 @@ namespace UberFrba
                // this.btnverautos = true;
             if (funcionalidades.Contains("ALTA_AUTO"))
                 this.btnAltaAuto.Visible = true;
+            if (funcionalidades.Contains("MODIFICAR_AUTO"))
+               this.btnModificarAuto.Visible = true;
             if (funcionalidades.Contains("BAJA_AUTO"))
                 this.btnBajaAuto.Visible = true;
             if (funcionalidades.Contains("VER_VIAJES"))
@@ -95,6 +97,7 @@ namespace UberFrba
                     this.btnAltaRol.Visible = true;
                     this.btnModificarRol.Visible = true;
                     this.btnBajaRol.Visible = true;
+                    this.btnModificarAuto.Visible = true;
                     this.btnNuevoTurno.Visible = true;
                     this.btnModificarTurno.Visible = true;
                     this.btnEliminarTurno.Visible = true;
@@ -284,11 +287,6 @@ CONSULTAR_ESTADISTICAS
 
         }
 
-        private void btnModificarAuto_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAuto_Click(object sender, EventArgs e)
         {
             new AltaAuto().Show();
@@ -314,6 +312,17 @@ CONSULTAR_ESTADISTICAS
             displayMainForm.Show();
             this.Close();
         }
+
+        private void tabAutos_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnModificarAuto_Click(object sender, EventArgs e)
+        {
+            new ModificarAuto().Show();
+            this.Close();
+        }
+
 
     }
 }

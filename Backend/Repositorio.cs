@@ -33,12 +33,35 @@ namespace UberFrba.Backend
                 registroViaje.FechaFinViaje = reader["FECHA_FIN"].ToString();
                 
 
-              
-
                 registros.Add(registroViaje);
             }
             reader.Close();
             return registros;
+
+        }
+
+        public static ObservableCollection<DtoAutoHabilitado> todosLosAutosAModificar(){
+
+            String queryString = "EXEC  DROP_DATABASE.AUTOS";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var autos = new ObservableCollection<DtoAutoHabilitado>();
+
+            while (reader.Read())
+            {
+                var registroAuto = new DtoAutoHabilitado();
+
+
+                registroAuto.marca = reader["ID_MARCA"].ToString();
+                registroAuto.modelo = reader["MODELO"].ToString();
+                registroAuto.patente = reader["PATENTE"].ToString();
+                registroAuto.DNI = reader["NUM_DNI"].ToString();
+                registroAuto.turno = reader["TURNO"].ToString();
+
+                autos.Add(registroAuto);
+            }
+            reader.Close();
+            return autos;
 
         }
 
@@ -150,6 +173,20 @@ namespace UberFrba.Backend
             String query = "EXEC DROP_DATABASE.SP_HABILITAR_CLIENTE " + dni;
             new Server().realizarQuery(query);
             return ""; //aca habria qe devolver si ya estaba habilitado un "1"
+        }
+
+        internal static string habilitarAuto(DtoAutoHabilitado auto)
+        {
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO " + auto.patente + auto.DNI + auto.turno;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba habilitado un "1"
+        }
+
+        internal static string deshabilitarAuto(DtoAutoHabilitado auto)
+        {
+            String query = "EXEC DROP_DATABASE.BAJA_AUTO " + auto.patente;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
 
         internal static string habilitarChofer(string dni)

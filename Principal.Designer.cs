@@ -47,6 +47,7 @@
             this.btnEliminarTurno = new System.Windows.Forms.Button();
             this.btnModificarTurno = new System.Windows.Forms.Button();
             this.tabAutos = new System.Windows.Forms.TabPage();
+            this.btnModificarAuto = new System.Windows.Forms.Button();
             this.tabViajes = new System.Windows.Forms.TabPage();
             this.btnVerViajes = new System.Windows.Forms.Button();
             this.tabContabilidad = new System.Windows.Forms.TabPage();
@@ -95,10 +96,10 @@
             // 
             // btnAltaAuto
             // 
-            this.btnAltaAuto.Location = new System.Drawing.Point(40, 33);
+            this.btnAltaAuto.Location = new System.Drawing.Point(40, 31);
             this.btnAltaAuto.Name = "btnAltaAuto";
-            this.btnAltaAuto.Size = new System.Drawing.Size(108, 34);
-            this.btnAltaAuto.TabIndex = 5;
+            this.btnAltaAuto.Size = new System.Drawing.Size(108, 27);
+            this.btnAltaAuto.TabIndex = 0;
             this.btnAltaAuto.Text = "Nuevo Auto";
             this.btnAltaAuto.UseVisualStyleBackColor = true;
             this.btnAltaAuto.Visible = false;
@@ -106,10 +107,10 @@
             // 
             // btnBajaAuto
             // 
-            this.btnBajaAuto.Location = new System.Drawing.Point(40, 83);
+            this.btnBajaAuto.Location = new System.Drawing.Point(40, 100);
             this.btnBajaAuto.Name = "btnBajaAuto";
-            this.btnBajaAuto.Size = new System.Drawing.Size(108, 39);
-            this.btnBajaAuto.TabIndex = 6;
+            this.btnBajaAuto.Size = new System.Drawing.Size(108, 31);
+            this.btnBajaAuto.TabIndex = 2;
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
             this.btnBajaAuto.Visible = false;
@@ -281,6 +282,7 @@
             // 
             // tabAutos
             // 
+            this.tabAutos.Controls.Add(this.btnModificarAuto);
             this.tabAutos.Controls.Add(this.btnBajaAuto);
             this.tabAutos.Controls.Add(this.btnAltaAuto);
             this.tabAutos.Location = new System.Drawing.Point(4, 22);
@@ -289,6 +291,16 @@
             this.tabAutos.TabIndex = 2;
             this.tabAutos.Text = "Autos";
             this.tabAutos.UseVisualStyleBackColor = true;
+            this.tabAutos.Click += new System.EventHandler(this.tabAutos_Click);
+            // 
+            // btnModificarAuto
+            // 
+            this.btnModificarAuto.Location = new System.Drawing.Point(40, 64);
+            this.btnModificarAuto.Name = "btnModificarAuto";
+            this.btnModificarAuto.Size = new System.Drawing.Size(108, 30);
+            this.btnModificarAuto.TabIndex = 0;
+            this.btnModificarAuto.Text = "Modificar Auto";
+            this.btnModificarAuto.Click += new System.EventHandler(this.btnModificarAuto_Click);
             // 
             // tabViajes
             // 
@@ -493,5 +505,6 @@
         private System.Windows.Forms.Button btnModificarChofer;
         private System.Windows.Forms.Button btnNuevoChofer;
         private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
+        private System.Windows.Forms.Button btnModificarAuto;
     }
 }

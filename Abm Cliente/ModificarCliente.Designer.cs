@@ -150,7 +150,7 @@
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.btnModificar.Click += new System.EventHandler(this.btnModifcar_Click);
             // 
             // btnMenuPrincipal
             // 
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 385);
+            this.ClientSize = new System.Drawing.Size(616, 385);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnModificar);

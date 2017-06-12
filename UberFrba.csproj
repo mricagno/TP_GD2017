@@ -76,6 +76,12 @@
     <Compile Include="Abm Automovil\BajaAuto.Designer.cs">
       <DependentUpon>BajaAuto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Abm Automovil\ModificarAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Automovil\ModificarAuto.Designer.cs">
+      <DependentUpon>ModificarAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Abm Chofer\AltaChofer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,7 @@
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Rol\OutToFile.cs" />
+    <Compile Include="Backend\DtoAutoHabilitado.cs" />
     <Compile Include="Backend\DtoChoferHabilitado.cs" />
     <Compile Include="Backend\DtoClienteHabilitado.cs" />
     <Compile Include="Backend\DtoEstadisticas.cs" />
@@ -260,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Automovil\BajaAuto.resx">
       <DependentUpon>BajaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Automovil\ModificarAuto.resx">
+      <DependentUpon>ModificarAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Chofer\AltaChofer.resx">
       <DependentUpon>AltaChofer.cs</DependentUpon>
