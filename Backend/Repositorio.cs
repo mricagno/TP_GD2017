@@ -599,9 +599,19 @@ namespace UberFrba.Backend
             return choferes;
         }
 
-        internal static ObservableCollection<string> funcionalidadesUsuario(string p)
+        internal static ObservableCollection<String> funcionalidadesUsuario(string p)
         {
-            throw new NotImplementedException();
+            String query = "SELECT * FROM DROP_DATABASE.FUNCIONALIDADES_ROL ('" + p + "')";
+            SqlDataReader reader = new Server().query(query);
+            string funcion;
+            var funcionalidades = new ObservableCollection<String>();
+            while (reader.Read())
+            {
+                funcion = reader["FUNCIONALIDAD"].ToString();
+                funcionalidades.Add(funcion);
+            }
+            reader.Close();
+            return funcionalidades;
         }
     }
 }

@@ -17,6 +17,13 @@ namespace UberFrba.Abm_Chofer
         public ModificarChofer()
         {
             InitializeComponent();
+            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
+
+            if (funcionalidades.Contains("MODIFICAR_CHOFER"))
+                this.btnModificar.Enabled = true;
+            if (funcionalidades.Contains("BAJA_CHOFER"))
+                this.btnEliminar.Enabled = true;
+
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)

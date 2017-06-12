@@ -99,6 +99,7 @@
             this.btnAltaAuto.TabIndex = 5;
             this.btnAltaAuto.Text = "Nuevo Auto";
             this.btnAltaAuto.UseVisualStyleBackColor = true;
+            this.btnAltaAuto.Visible = false;
             this.btnAltaAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // btnBajaAuto
@@ -109,6 +110,7 @@
             this.btnBajaAuto.TabIndex = 6;
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
+            this.btnBajaAuto.Visible = false;
             this.btnBajaAuto.Click += new System.EventHandler(this.btnBajaAuto_Click);
             // 
             // btnAltaRol
@@ -119,6 +121,7 @@
             this.btnAltaRol.TabIndex = 0;
             this.btnAltaRol.Text = "Alta Rol";
             this.btnAltaRol.UseVisualStyleBackColor = true;
+            this.btnAltaRol.Visible = false;
             this.btnAltaRol.Click += new System.EventHandler(this.btnAltaRol_Click);
             // 
             // btnModificarRol
@@ -129,6 +132,7 @@
             this.btnModificarRol.TabIndex = 1;
             this.btnModificarRol.Text = "Modificar Rol";
             this.btnModificarRol.UseVisualStyleBackColor = true;
+            this.btnModificarRol.Visible = false;
             this.btnModificarRol.Click += new System.EventHandler(this.btnModificarRol_Click);
             // 
             // btnBajaRol
@@ -139,6 +143,7 @@
             this.btnBajaRol.TabIndex = 2;
             this.btnBajaRol.Text = "Baja Rol";
             this.btnBajaRol.UseVisualStyleBackColor = true;
+            this.btnBajaRol.Visible = false;
             this.btnBajaRol.Click += new System.EventHandler(this.btnBajaRol_Click);
             // 
             // tblMenu
@@ -190,6 +195,7 @@
             this.btnModificarChofer.TabIndex = 1;
             this.btnModificarChofer.Text = "Modificar Chofer";
             this.btnModificarChofer.UseVisualStyleBackColor = true;
+            this.btnModificarChofer.Visible = false;
             this.btnModificarChofer.Click += new System.EventHandler(this.btnModificarChofer_Click);
             // 
             // btnNuevoChofer
@@ -200,6 +206,7 @@
             this.btnNuevoChofer.TabIndex = 0;
             this.btnNuevoChofer.Text = "Nuevo Chofer";
             this.btnNuevoChofer.UseVisualStyleBackColor = true;
+            this.btnNuevoChofer.Visible = false;
             this.btnNuevoChofer.Click += new System.EventHandler(this.btnNuevoChofer_Click);
             // 
             // tabCliente
@@ -254,6 +261,7 @@
             this.btnEliminarTurno.TabIndex = 3;
             this.btnEliminarTurno.Text = "Eliminar Turno";
             this.btnEliminarTurno.UseVisualStyleBackColor = true;
+            this.btnEliminarTurno.Visible = false;
             this.btnEliminarTurno.Click += new System.EventHandler(this.btnEliminarTurno_Click);
             // 
             // btnModificarTurno
@@ -264,6 +272,7 @@
             this.btnModificarTurno.TabIndex = 2;
             this.btnModificarTurno.Text = "ModificarTurno";
             this.btnModificarTurno.UseVisualStyleBackColor = true;
+            this.btnModificarTurno.Visible = false;
             this.btnModificarTurno.Click += new System.EventHandler(this.btnModificarTurno_Click);
             // 
             // tabAutos
@@ -296,6 +305,7 @@
             this.btnVerViajes.TabIndex = 3;
             this.btnVerViajes.Text = "Listado de Viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Visible = false;
             this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
             // tabContabilidad
@@ -317,6 +327,7 @@
             this.btnFacturacionClientes.TabIndex = 1;
             this.btnFacturacionClientes.Text = "Facturacion Clientes";
             this.btnFacturacionClientes.UseVisualStyleBackColor = true;
+            this.btnFacturacionClientes.Visible = false;
             this.btnFacturacionClientes.Click += new System.EventHandler(this.btnFacturacionClientes_Click);
             // 
             // btnRendicionViajes
@@ -327,6 +338,7 @@
             this.btnRendicionViajes.TabIndex = 0;
             this.btnRendicionViajes.Text = "Rendicion Viaje";
             this.btnRendicionViajes.UseVisualStyleBackColor = true;
+            this.btnRendicionViajes.Visible = false;
             this.btnRendicionViajes.Click += new System.EventHandler(this.btnRendicionViajes_Click);
             // 
             // tabEstadisticas
@@ -351,6 +363,7 @@
             this.btnConsultarEstadistica.TabIndex = 4;
             this.btnConsultarEstadistica.Text = "Consultar";
             this.btnConsultarEstadistica.UseVisualStyleBackColor = true;
+            this.btnConsultarEstadistica.Visible = false;
             this.btnConsultarEstadistica.Click += new System.EventHandler(this.btnConsultarEstadistica_Click);
             // 
             // radioButtonMismoAuto

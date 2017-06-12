@@ -37,7 +37,9 @@ namespace UberFrba
             if (usuario.perfil.Any())
             {
                 usuario.perfil = this.comboPerfiles.GetItemText(this.comboPerfiles.SelectedItem);
+                Sesion.rol = usuario.perfil;
                 new Principal("Seguridad").Show();
+                this.Close();
             }
 
             //HABILITO COMBO DE ROLES

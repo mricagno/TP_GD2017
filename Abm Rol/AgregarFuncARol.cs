@@ -106,10 +106,16 @@ namespace UberFrba.Abm_Rol
                 Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
             }
 
-            if(esModificacion)
-                MessageBox.Show("modificacion ok", "Uber", MessageBoxButtons.OK);
+            if (esModificacion)
+            {
+                MessageBox.Show("Modificacion ok", "Uber", MessageBoxButtons.OK);
+                new Principal("Turno").Show();
+                this.Close();
+            }
             else
+            {
                 MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
+            }
         }
 
         private void btnAgregarFuncionalidad_Click_1(object sender, EventArgs e)
