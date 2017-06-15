@@ -54,11 +54,11 @@ namespace UberFrba.Abm_Automovil
                 return;
             }
             DtoAutoHabilitado auto_desa = new DtoAutoHabilitado();
-            auto_desa.marca = automovil.Cells[1].Value.ToString();
-            auto_desa.modelo = automovil.Cells[2].Value.ToString();
-            auto_desa.patente = automovil.Cells[3].Value.ToString();
-            auto_desa.DNI = automovil.Cells[4].Value.ToString();
-            auto_desa.turno = automovil.Cells[5].Value.ToString();
+            auto_desa.marca = automovil.Cells[0].Value.ToString();
+            auto_desa.modelo = automovil.Cells[1].Value.ToString();
+            auto_desa.patente = automovil.Cells[2].Value.ToString();
+            auto_desa.DNI = automovil.Cells[3].Value.ToString();
+            auto_desa.turno = automovil.Cells[4].Value.ToString();
 
 
             try
@@ -95,11 +95,11 @@ namespace UberFrba.Abm_Automovil
                 return;
             }
             DtoAutoHabilitado auto_habi = new DtoAutoHabilitado();
-            auto_habi.marca = auto.Cells[1].Value.ToString();
-            auto_habi.modelo = auto.Cells[2].Value.ToString();
-            auto_habi.patente = auto.Cells[3].Value.ToString();
-            auto_habi.DNI = auto.Cells[4].Value.ToString();
-            auto_habi.turno = auto.Cells[5].Value.ToString();
+            auto_habi.marca = auto.Cells[0].Value.ToString();
+            auto_habi.modelo = auto.Cells[1].Value.ToString();
+            auto_habi.patente = auto.Cells[2].Value.ToString();
+            auto_habi.DNI = auto.Cells[3].Value.ToString();
+            auto_habi.turno = auto.Cells[4].Value.ToString();
             try
             {
                 String estabaHabilitado = Repositorio.habilitarAuto(auto_habi);
@@ -118,6 +118,24 @@ namespace UberFrba.Abm_Automovil
                 MessageBox.Show("Error al habilitar auto - Exception :" + ex.ToString(), "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+         
+
+
+        BindingSource bs = new BindingSource();
+        bs.DataSource = GridAutomovil.DataSource;
+        bs.Filter = ( "marca like '%" + marca_Box.Text + "%'");
+        GridAutomovil.DataSource = bs;
+        //GridAutomovil.Update();
+        //GridAutomovil.Refresh();
         }
     }
 }

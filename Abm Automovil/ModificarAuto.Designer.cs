@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.marca_Box = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.GridAutomovil = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnHabilitar = new System.Windows.Forms.Button();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.modificarAutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridAutomovil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificarAutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,7 +59,7 @@
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.marca_Box);
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.GridAutomovil);
             this.groupBox1.Location = new System.Drawing.Point(39, 12);
@@ -67,6 +70,23 @@
             this.groupBox1.Text = "Seleccionar Automovil";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(290, 61);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(218, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Chofer (DNI)";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(421, 58);
@@ -75,6 +95,7 @@
             this.btnFiltrar.TabIndex = 6;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // textBox3
             // 
@@ -108,12 +129,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Modelo";
             // 
-            // textBox1
+            // marca_Box
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.marca_Box.Location = new System.Drawing.Point(90, 28);
+            this.marca_Box.Name = "marca_Box";
+            this.marca_Box.Size = new System.Drawing.Size(100, 20);
+            this.marca_Box.TabIndex = 1;
             // 
             // Nombre
             // 
@@ -134,23 +155,6 @@
             this.GridAutomovil.Size = new System.Drawing.Size(475, 150);
             this.GridAutomovil.TabIndex = 0;
             this.GridAutomovil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAutomovil_CellContentClick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Chofer (DNI)";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(290, 61);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
             // 
             // btnHabilitar
             // 
@@ -180,6 +184,7 @@
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -190,6 +195,10 @@
             this.btnEliminar.Text = "Deshabilitar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // modificarAutoBindingSource
+            // 
+            this.modificarAutoBindingSource.DataSource = typeof(UberFrba.Abm_Automovil.ModificarAuto);
             // 
             // ModificarAuto
             // 
@@ -207,6 +216,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridAutomovil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modificarAutoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,7 +229,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox marca_Box;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.DataGridView GridAutomovil;
         private System.Windows.Forms.Label label3;
@@ -228,5 +238,6 @@
         private System.Windows.Forms.Button btnMenuPrincipal;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.BindingSource modificarAutoBindingSource;
     }
 }

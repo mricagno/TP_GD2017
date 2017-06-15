@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UberFrba.Backend
 {
-    class DtoAutoHabilitado
+    public class DtoAutoHabilitado
     {
         public String marca { get; set; }
         public String modelo { get; set; }
@@ -15,9 +15,7 @@ namespace UberFrba.Backend
         public String turno { get; set; }
 
 
-
-
-        /*public override string ToString()
+       /* public override string ToString()
         {
             return marca;
         }*/

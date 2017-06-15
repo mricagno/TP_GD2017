@@ -360,6 +360,7 @@
       <DependentUpon>ModificarTurno.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Contabilidad\Icon" />
+    <None Include="Properties\DataSources\UberFrba.Abm_Automovil.ModificarAuto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
