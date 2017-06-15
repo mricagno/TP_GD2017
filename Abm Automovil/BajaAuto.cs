@@ -38,8 +38,8 @@ namespace UberFrba.Abm_Automovil
         {
             try
             {
-                String patente = cmbPatentes.SelectedText;
-                if (!String.IsNullOrEmpty(patente))
+                String patente = this.cmbPatentes.GetItemText(this.cmbPatentes.SelectedItem);
+                if (String.IsNullOrEmpty(patente))
                 {
                     MessageBox.Show("Debe seleccionar un auto", "Baja auto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;

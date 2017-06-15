@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UberFrba.Backend;
+using System.Collections.ObjectModel;
 
 namespace UberFrba
 {
@@ -24,16 +25,37 @@ namespace UberFrba
             Usuario usuario = new Usuario();
             usuario.nombre = txtUsuario.Text;
             usuario.password = txtPassword.Text;
-            //usuario.perfil = comboPerfiles.Text;
+            usuario.perfil = comboPerfiles.Text;
 
             Seguridad seguridad = new Seguridad();
             
-            if(!seguridad.usuarioTieneAcceso(usuario)){
-                MessageBox.Show("Acceso Denegado");
+            //if(!seguridad.usuarioTieneAcceso()){
+               // MessageBox.Show("Acceso Denegado");
+            //}
+
+            //Si el rol esta seleccionado, se llama a principal
+            if (usuario.perfil.Any())
+            {
+                usuario.perfil = this.comboPerfiles.GetItemText(this.comboPerfiles.SelectedItem);
+                Sesion.rol = usuario.perfil;
+                new Principal("Seguridad").Show();
+                this.Close();
             }
+
+            //HABILITO COMBO DE ROLES
+            ObservableCollection<String> roles = seguridad.usuarioTieneAcceso(usuario);
+            if (roles.Count() != 0)
+            {
+                this.comboPerfiles.Visible = true;
             
-            Sesion.username = usuario.nombre;
-            new Principal("Seguridad").Show();
+                this.comboPerfiles.Items.Clear();
+                foreach (var m in roles)
+                {
+                    this.comboPerfiles.Items.Add(m);
+                }
+                Sesion.username = usuario.nombre;
+            }
+            //new Principal("Seguridad").Show();
         }
             
     }

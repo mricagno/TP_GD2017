@@ -87,7 +87,8 @@ namespace UberFrba.Abm_Rol
 
             if(lstAgregarFuncionalidades.Items.Count <= 0)
             {
-                //TODO agregar mensaje qe tiene qe tener al menos una func 
+                //TODO agregar mensaje qe tiene qe tener al menos una func
+                MessageBox.Show("El rol debe tener al menos una funcionalidad", "Agregar funcionalidad", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -101,13 +102,20 @@ namespace UberFrba.Abm_Rol
             //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
             foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
             {
+
                 Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
             }
 
-            if(esModificacion)
-                MessageBox.Show("modificacion ok", "Uber", MessageBoxButtons.OK);
+            if (esModificacion)
+            {
+                MessageBox.Show("Modificacion ok", "Uber", MessageBoxButtons.OK);
+                new Principal("Turno").Show();
+                this.Close();
+            }
             else
+            {
                 MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
+            }
         }
 
         private void btnAgregarFuncionalidad_Click_1(object sender, EventArgs e)
@@ -127,6 +135,12 @@ namespace UberFrba.Abm_Rol
 
 
             lstAgregarFuncionalidades.Items.Remove(lstAgregarFuncionalidades.SelectedItem.ToString());
+        }
+
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            new Principal("Turno").Show();
+            this.Close();
         }
     }
 }

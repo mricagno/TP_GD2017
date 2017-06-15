@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSacarFuncionalidad = new System.Windows.Forms.Button();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
             this.lstAgregarFuncionalidades = new System.Windows.Forms.ListBox();
             this.btnFinalizarAgregadoDeFuncionalidades = new System.Windows.Forms.Button();
             this.lstFuncionalidades = new System.Windows.Forms.ListBox();
             this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
-            this.btnSacarFuncionalidad = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,14 +53,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paso 2 - Agregar funcionalidades";
             // 
+            // btnSacarFuncionalidad
+            // 
+            this.btnSacarFuncionalidad.Location = new System.Drawing.Point(348, 29);
+            this.btnSacarFuncionalidad.Name = "btnSacarFuncionalidad";
+            this.btnSacarFuncionalidad.Size = new System.Drawing.Size(32, 23);
+            this.btnSacarFuncionalidad.TabIndex = 5;
+            this.btnSacarFuncionalidad.Text = "-";
+            this.btnSacarFuncionalidad.UseVisualStyleBackColor = true;
+            this.btnSacarFuncionalidad.Click += new System.EventHandler(this.btnSacarFuncionalidad_Click);
+            // 
             // btnMenuPrincipal
             // 
             this.btnMenuPrincipal.Location = new System.Drawing.Point(20, 218);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(90, 31);
             this.btnMenuPrincipal.TabIndex = 4;
-            this.btnMenuPrincipal.Text = "Volver TODO//";
+            this.btnMenuPrincipal.Text = "Salir sin asignar";
             this.btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
             // 
             // lstAgregarFuncionalidades
             // 
@@ -97,16 +108,6 @@
             this.btnAgregarFuncionalidad.Text = "+";
             this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
             this.btnAgregarFuncionalidad.Click += new System.EventHandler(this.btnAgregarFuncionalidad_Click_1);
-            // 
-            // btnSacarFuncionalidad
-            // 
-            this.btnSacarFuncionalidad.Location = new System.Drawing.Point(348, 29);
-            this.btnSacarFuncionalidad.Name = "btnSacarFuncionalidad";
-            this.btnSacarFuncionalidad.Size = new System.Drawing.Size(32, 23);
-            this.btnSacarFuncionalidad.TabIndex = 5;
-            this.btnSacarFuncionalidad.Text = "-";
-            this.btnSacarFuncionalidad.UseVisualStyleBackColor = true;
-            this.btnSacarFuncionalidad.Click += new System.EventHandler(this.btnSacarFuncionalidad_Click);
             // 
             // AgregarFuncARol
             // 

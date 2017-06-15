@@ -43,8 +43,13 @@ namespace UberFrba.Abm_Rol
         {
 
             String nombreRol = dameRolAModificar();
-            new ModificarNombreRol(nombreRol).Show();
-            this.Close();
+            if (!string.IsNullOrWhiteSpace(nombreRol))
+            {
+                new ModificarNombreRol(nombreRol).Show();
+                this.Close();
+            }else{
+                MessageBox.Show("Elija un rol a modificar");
+            }
 
         }
 
@@ -73,13 +78,14 @@ namespace UberFrba.Abm_Rol
             }
         }
 
-        private void btnDeshabilitar_Click(object sender, EventArgs e)
+        private void btnmenu_principal_Click(object sender, EventArgs e)
         {
 
-            //ESTO YA NO APLICA!!!
-            String nombreRol = dameRolAModificar();
+            //String nombreRol = dameRolAModificar();
             //TODO agregar try catch y mensajes
-            Repositorio.deshabilitarRol(nombreRol);
+            //Repositorio.deshabilitarRol(nombreRol);
+            new Principal("Seguridad").Show();
+            this.Close();
 
         }
     }

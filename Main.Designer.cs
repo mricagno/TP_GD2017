@@ -91,10 +91,10 @@
             // comboPerfiles
             // 
             this.comboPerfiles.FormattingEnabled = true;
-            this.comboPerfiles.Items.AddRange(new object[] {
-            "Cliente",
-            "Chofer",
-            "Administrador"});
+            //this.comboPerfiles.Items.AddRange(new object[] );//{
+            //"Cliente",
+            //"Chofer",
+            //"Administrador"});
             this.comboPerfiles.Location = new System.Drawing.Point(94, 101);
             this.comboPerfiles.Name = "comboPerfiles";
             this.comboPerfiles.Size = new System.Drawing.Size(127, 21);
