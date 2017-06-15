@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abm Automovil\AutomovilForm.cs">
+    <Compile Include="Abm Automovil\AltaAuto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Abm Automovil\AutomovilForm.Designer.cs">
-      <DependentUpon>AutomovilForm.cs</DependentUpon>
+    <Compile Include="Abm Automovil\AltaAuto.Designer.cs">
+      <DependentUpon>AltaAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Automovil\BajaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Automovil\BajaAuto.Designer.cs">
+      <DependentUpon>BajaAuto.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Chofer\AltaChofer.cs">
       <SubType>Form</SubType>
@@ -133,6 +139,7 @@
     </Compile>
     <Compile Include="Backend\DtoChoferHabilitado.cs" />
     <Compile Include="Backend\DtoClienteHabilitado.cs" />
+    <Compile Include="Backend\DtoEstadisticas.cs" />
     <Compile Include="Backend\DtoModificarChofer.cs" />
     <Compile Include="Backend\DtoTurno.cs" />
     <Compile Include="Backend\NuevoChofer.cs" />
@@ -147,12 +154,6 @@
     </Compile>
     <Compile Include="Contabilidad\FacturacionClientes.Designer.cs">
       <DependentUpon>FacturacionClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Contabilidad\RendicionViajes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Contabilidad\RendicionViajes.Designer.cs">
-      <DependentUpon>RendicionViajes.cs</DependentUpon>
     </Compile>
     <Compile Include="Listado Estadistico\MasConsumo.cs">
       <SubType>Form</SubType>
@@ -210,11 +211,11 @@
     <Compile Include="Registro Viajes\MostrarViajes.Designer.cs">
       <DependentUpon>MostrarViajes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rendicion Viajes\RendicionViajesForm.cs">
+    <Compile Include="Rendicion Viajes\RealizarRendicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rendicion Viajes\RendicionViajesForm.Designer.cs">
-      <DependentUpon>RendicionViajesForm.cs</DependentUpon>
+    <Compile Include="Rendicion Viajes\RealizarRendicion.Designer.cs">
+      <DependentUpon>RealizarRendicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Turno\AltaTurno.cs">
       <SubType>Form</SubType>
@@ -234,8 +235,11 @@
     <Compile Include="Turno\ModificarTurno.Designer.cs">
       <DependentUpon>ModificarTurno.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Abm Automovil\AutomovilForm.resx">
-      <DependentUpon>AutomovilForm.cs</DependentUpon>
+    <EmbeddedResource Include="Abm Automovil\AltaAuto.resx">
+      <DependentUpon>AltaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Automovil\BajaAuto.resx">
+      <DependentUpon>BajaAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Chofer\AltaChofer.resx">
       <DependentUpon>AltaChofer.cs</DependentUpon>
@@ -277,6 +281,9 @@
     <EmbeddedResource Include="Abm Rol\ModificarRol.resx">
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\FacturacionClientes.resx">
+      <DependentUpon>FacturacionClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Listado Estadistico\MasConsumo.resx">
       <DependentUpon>MasConsumo.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro Viajes\MostrarViajes.resx">
       <DependentUpon>MostrarViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rendicion Viajes\RealizarRendicion.resx">
+      <DependentUpon>RealizarRendicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Turno\AltaTurno.resx">
       <DependentUpon>AltaTurno.cs</DependentUpon>

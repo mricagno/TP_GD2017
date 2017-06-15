@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,14 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UberFrba.Abm_Automovil;
 using UberFrba.Abm_Chofer;
 using UberFrba.Abm_Cliente;
 using UberFrba.Abm_Rol;
 using UberFrba.Backend;
 using UberFrba.Contabilidad;
-using UberFrba.Facturacion;
 using UberFrba.Listado_Estadistico;
 using UberFrba.Registro_Viajes;
+using UberFrba.Rendicion_Viajes;
 using UberFrba.Turno;
 
 namespace UberFrba
@@ -42,6 +44,117 @@ namespace UberFrba
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            /*
+            //if (!funcionalidades.Contains("BAJA_AUTO"))
+            this.btnModificarAuto.Visible = false; // borrar func de la db
+            this.brtIrAutos.Visible = false; // borrar func de la db
+
+
+            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.username);
+            if(!funcionalidades.Contains("ALTA_ROL"))
+                this.btnAltaRol.Enabled = false;
+            
+            if(!funcionalidades.Contains("BAJA_ROL"))
+                this.btnBajaRol.Enabled = false;
+            
+
+            if(!funcionalidades.Contains("MODIFICAR_ROL"))
+                this.btnBajaRol.Enabled = false;
+
+
+             if(!funcionalidades.Contains("ALTA_CHOFER"))
+                this.btnNuevoChofer.Enabled = false;
+
+
+             if(!funcionalidades.Contains("MODIFICAR_CHOFER"))
+                this.btnModificarChofer.Enabled = false;
+
+
+             if (!funcionalidades.Contains("ALTA_CLIENTE"))
+                 this.NuevoCliente.Enabled = false;
+
+
+             if (!funcionalidades.Contains("MODIFICAR_CLIENTE"))
+                 this.ModificarCliente.Enabled = false;
+
+  
+            if (!funcionalidades.Contains("ALTA_TURNO"))
+                 this.btnNuevoTurno.Enabled = false;
+
+
+            if (!funcionalidades.Contains("MODIFICAR_TURNO"))
+                 this.btnModificarTurno.Enabled = false;
+
+            if (!funcionalidades.Contains("BAJA_TURNO"))
+                 this.btnEliminarTurno.Enabled = false;
+            
+
+
+            if(!funcionalidades.Contains("ADMIN")){
+                this.btnBajaRol.Enabled = false;
+                this.btnAltaRol.Enabled = false;
+                this.btnModificarRol.Enabled = false;
+               
+            }
+
+            
+
+
+           
+
+            if (!funcionalidades.Contains("ALTA_AUTO"))
+                this.btnAltaAuto.Enabled = false;
+
+            if (!funcionalidades.Contains("BAJA_AUTO"))
+                this.btnBajaAuto.Enabled = false;
+
+          
+
+//BAJA_CHOFER -- borrarla
+          
+//BAJA_CLIENTE-- borrarla
+
+
+
+            /*
+            this.irAutosAbm;
+            this.btnBajaAuto;
+            this.btnBajaAuto;
+            this.btnModificarAuto;
+
+            this.btnAltaRol;
+            this.btnBajaRol;
+
+            this.btnConsultarEstadistica;
+
+            this.btnFacturacionClientes;
+
+           
+            
+            this.btnRendicionViajes;
+            
+
+            this.irRegistrarViaje;
+            this.btnVerViajes
+            */
+
+
+
+            /*
+            this.
+           
+            btnBajaRol;
+                btn
+
+
+
+VER_VIAJES
+CONSULTAR_ESTADISTICAS
+
+
+
+            */
+            
             if (seleccionarTab == Tabs.turnos())
                 tblMenu.SelectTab(tabTurnos.Name);
             if (seleccionarTab == Tabs.seguridad())
@@ -56,6 +169,8 @@ namespace UberFrba
                 tblMenu.SelectTab(tabContabilidad.Name);
             if (seleccionarTab == Tabs.autos())
                 tblMenu.SelectTab(tabAutos.Name);
+            if (seleccionarTab == Tabs.estadisticas())
+                tblMenu.SelectTab(tabEstadisticas.Name);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -138,7 +253,7 @@ namespace UberFrba
 
         private void btnRendicionViajes_Click(object sender, EventArgs e)
         {
-            new RendicionViajes().Show();
+            new RealizarRendicion().Show();
             this.Close();
         }
 
@@ -180,6 +295,18 @@ namespace UberFrba
         private void btnModificarAuto_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAuto_Click(object sender, EventArgs e)
+        {
+            new AltaAuto().Show();
+            this.Close();
+        }
+
+        private void btnBajaAuto_Click(object sender, EventArgs e)
+        {
+            new BajaAuto().Show();
+            this.Close();
         }
 
     }
