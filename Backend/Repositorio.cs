@@ -33,12 +33,35 @@ namespace UberFrba.Backend
                 registroViaje.FechaFinViaje = reader["FECHA_FIN"].ToString();
                 
 
-              
-
                 registros.Add(registroViaje);
             }
             reader.Close();
             return registros;
+
+        }
+
+        public static ObservableCollection<DtoAutoHabilitado> todosLosAutosAModificar(){
+
+            String queryString = "EXEC  DROP_DATABASE.AUTOS";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var autos = new ObservableCollection<DtoAutoHabilitado>();
+
+            while (reader.Read())
+            {
+                var registroAuto = new DtoAutoHabilitado();
+
+
+                registroAuto.marca = reader["ID_MARCA"].ToString();
+                registroAuto.modelo = reader["MODELO"].ToString();
+                registroAuto.patente = reader["PATENTE"].ToString();
+                registroAuto.DNI = reader["NUM_DNI"].ToString();
+                registroAuto.turno = reader["TURNO"].ToString();
+
+                autos.Add(registroAuto);
+            }
+            reader.Close();
+            return autos;
 
         }
 
@@ -152,6 +175,20 @@ namespace UberFrba.Backend
             return ""; //aca habria qe devolver si ya estaba habilitado un "1"
         }
 
+        internal static string habilitarAuto(DtoAutoHabilitado auto)
+        {
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO " + auto.patente + "', '" + auto.DNI + "', '" + auto.turno;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba habilitado un "1"
+        }
+
+        internal static string deshabilitarAuto(DtoAutoHabilitado auto)
+        {
+            String query = "EXEC DROP_DATABASE.BAJA_AUTO " + auto.patente;
+            new Server().realizarQuery(query);
+            return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
+        }
+
         internal static string habilitarChofer(string dni)
         {
             String query = "EXEC DROP_DATABASE.SP_HABILITAR_CHOFER " + dni;
@@ -254,7 +291,16 @@ namespace UberFrba.Backend
         internal static void crearRol(string nombreRolNuevo)
         {
             String query = "EXEC DROP_DATABASE.ALTA_ROL '" + nombreRolNuevo + "'";
-            new Server().realizarQuery(query);
+            //new Server().realizarQuery(query);
+            try
+             {
+                new Server().realizarQuery(query);
+             }
+            catch (SqlException ex)
+             {
+                 MessageBox.Show(ex.Message);
+                 throw new System.ArgumentException();
+            } 
         }
 
         internal static void crearAuto(String marca, String modelo, String patente, int DNI, String turno)
@@ -268,7 +314,15 @@ namespace UberFrba.Backend
         {
 
             String query = "EXEC DROP_DATABASE.ASOCIAR_FUNCIONALIDAD '" + nombreRolNuevo + "', '" + func + "'";
-            new Server().realizarQuery(query);
+            //new Server().realizarQuery(query);
+         try
+             {
+                 new Server().realizarQuery(query);
+             }
+         catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            } 
         }
 
         internal static ObservableCollection<String> todosLosRoles()
@@ -290,13 +344,29 @@ namespace UberFrba.Backend
         internal static void habilitarRol(string nombreRol)
         {
             String query = "EXEC DROP_DATABASE.HABILITAR_ROL '" + nombreRol + "'";
-            new Server().realizarQuery(query);
+            //new Server().realizarQuery(query);
+           try
+            {
+                new Server().realizarQuery(query);
+            }
+           catch (SqlException ex)
+            {
+                 MessageBox.Show(ex.Message);
+             } 
         }
 
         internal static void deshabilitarRol(string nombreRol)
         {
             String query = "EXEC DROP_DATABASE.BAJA_ROL '" + nombreRol + "'";
-            new Server().realizarQuery(query);
+            //new Server().realizarQuery(query);
+           try
+            {
+                new Server().realizarQuery(query);
+            }
+           catch (SqlException ex)
+             {
+                MessageBox.Show(ex.Message);
+             } 
            // return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
 
@@ -566,9 +636,19 @@ namespace UberFrba.Backend
             return choferes;
         }
 
-        internal static ObservableCollection<string> funcionalidadesUsuario(string p)
+        internal static ObservableCollection<String> funcionalidadesUsuario(string p)
         {
-            throw new NotImplementedException();
+            String query = "SELECT * FROM DROP_DATABASE.FUNCIONALIDADES_ROL ('" + p + "')";
+            SqlDataReader reader = new Server().query(query);
+            string funcion;
+            var funcionalidades = new ObservableCollection<String>();
+            while (reader.Read())
+            {
+                funcion = reader["FUNCIONALIDAD"].ToString();
+                funcionalidades.Add(funcion);
+            }
+            reader.Close();
+            return funcionalidades;
         }
     }
 }

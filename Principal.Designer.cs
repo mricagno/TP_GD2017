@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.brtIrAutos = new System.Windows.Forms.Button();
             this.btnNuevoTurno = new System.Windows.Forms.Button();
             this.irRegistrarViaje = new System.Windows.Forms.Button();
             this.btnAltaAuto = new System.Windows.Forms.Button();
             this.btnBajaAuto = new System.Windows.Forms.Button();
-            this.btnModificarAuto = new System.Windows.Forms.Button();
             this.btnAltaRol = new System.Windows.Forms.Button();
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnBajaRol = new System.Windows.Forms.Button();
@@ -49,6 +47,7 @@
             this.btnEliminarTurno = new System.Windows.Forms.Button();
             this.btnModificarTurno = new System.Windows.Forms.Button();
             this.tabAutos = new System.Windows.Forms.TabPage();
+            this.btnModificarAuto = new System.Windows.Forms.Button();
             this.tabViajes = new System.Windows.Forms.TabPage();
             this.btnVerViajes = new System.Windows.Forms.Button();
             this.tabContabilidad = new System.Windows.Forms.TabPage();
@@ -73,16 +72,6 @@
             this.tabEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // brtIrAutos
-            // 
-            this.brtIrAutos.Location = new System.Drawing.Point(188, 83);
-            this.brtIrAutos.Name = "brtIrAutos";
-            this.brtIrAutos.Size = new System.Drawing.Size(108, 36);
-            this.brtIrAutos.TabIndex = 0;
-            this.brtIrAutos.Text = "Ir a Autos";
-            this.brtIrAutos.UseVisualStyleBackColor = true;
-            this.brtIrAutos.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnNuevoTurno
             // 
             this.btnNuevoTurno.Location = new System.Drawing.Point(23, 35);
@@ -91,6 +80,7 @@
             this.btnNuevoTurno.TabIndex = 1;
             this.btnNuevoTurno.Text = "Nuevo Turno";
             this.btnNuevoTurno.UseVisualStyleBackColor = true;
+            this.btnNuevoTurno.Visible = false;
             this.btnNuevoTurno.Click += new System.EventHandler(this.btnNuevoTurno_Click);
             // 
             // irRegistrarViaje
@@ -101,37 +91,30 @@
             this.irRegistrarViaje.TabIndex = 2;
             this.irRegistrarViaje.Text = "Registrar Viaje";
             this.irRegistrarViaje.UseVisualStyleBackColor = true;
+            this.irRegistrarViaje.Visible = false;
             this.irRegistrarViaje.Click += new System.EventHandler(this.irRegistrarViaje_Click);
             // 
             // btnAltaAuto
             // 
-            this.btnAltaAuto.Location = new System.Drawing.Point(40, 33);
+            this.btnAltaAuto.Location = new System.Drawing.Point(40, 31);
             this.btnAltaAuto.Name = "btnAltaAuto";
-            this.btnAltaAuto.Size = new System.Drawing.Size(108, 34);
-            this.btnAltaAuto.TabIndex = 5;
+            this.btnAltaAuto.Size = new System.Drawing.Size(108, 27);
+            this.btnAltaAuto.TabIndex = 0;
             this.btnAltaAuto.Text = "Nuevo Auto";
             this.btnAltaAuto.UseVisualStyleBackColor = true;
+            this.btnAltaAuto.Visible = false;
             this.btnAltaAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // btnBajaAuto
             // 
-            this.btnBajaAuto.Location = new System.Drawing.Point(40, 83);
+            this.btnBajaAuto.Location = new System.Drawing.Point(40, 100);
             this.btnBajaAuto.Name = "btnBajaAuto";
-            this.btnBajaAuto.Size = new System.Drawing.Size(108, 39);
-            this.btnBajaAuto.TabIndex = 6;
+            this.btnBajaAuto.Size = new System.Drawing.Size(108, 31);
+            this.btnBajaAuto.TabIndex = 2;
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
+            this.btnBajaAuto.Visible = false;
             this.btnBajaAuto.Click += new System.EventHandler(this.btnBajaAuto_Click);
-            // 
-            // btnModificarAuto
-            // 
-            this.btnModificarAuto.Location = new System.Drawing.Point(188, 139);
-            this.btnModificarAuto.Name = "btnModificarAuto";
-            this.btnModificarAuto.Size = new System.Drawing.Size(108, 37);
-            this.btnModificarAuto.TabIndex = 5;
-            this.btnModificarAuto.Text = "Modificar Auto";
-            this.btnModificarAuto.UseVisualStyleBackColor = true;
-            this.btnModificarAuto.Click += new System.EventHandler(this.btnModificarAuto_Click);
             // 
             // btnAltaRol
             // 
@@ -141,6 +124,7 @@
             this.btnAltaRol.TabIndex = 0;
             this.btnAltaRol.Text = "Alta Rol";
             this.btnAltaRol.UseVisualStyleBackColor = true;
+            this.btnAltaRol.Visible = false;
             this.btnAltaRol.Click += new System.EventHandler(this.btnAltaRol_Click);
             // 
             // btnModificarRol
@@ -151,6 +135,7 @@
             this.btnModificarRol.TabIndex = 1;
             this.btnModificarRol.Text = "Modificar Rol";
             this.btnModificarRol.UseVisualStyleBackColor = true;
+            this.btnModificarRol.Visible = false;
             this.btnModificarRol.Click += new System.EventHandler(this.btnModificarRol_Click);
             // 
             // btnBajaRol
@@ -161,6 +146,7 @@
             this.btnBajaRol.TabIndex = 2;
             this.btnBajaRol.Text = "Baja Rol";
             this.btnBajaRol.UseVisualStyleBackColor = true;
+            this.btnBajaRol.Visible = false;
             this.btnBajaRol.Click += new System.EventHandler(this.btnBajaRol_Click);
             // 
             // tblMenu
@@ -176,7 +162,7 @@
             this.tblMenu.Location = new System.Drawing.Point(51, 53);
             this.tblMenu.Name = "tblMenu";
             this.tblMenu.SelectedIndex = 0;
-            this.tblMenu.Size = new System.Drawing.Size(424, 300);
+            this.tblMenu.Size = new System.Drawing.Size(451, 300);
             this.tblMenu.TabIndex = 6;
             // 
             // tabSeguridad
@@ -187,7 +173,7 @@
             this.tabSeguridad.Location = new System.Drawing.Point(4, 22);
             this.tabSeguridad.Name = "tabSeguridad";
             this.tabSeguridad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeguridad.Size = new System.Drawing.Size(416, 274);
+            this.tabSeguridad.Size = new System.Drawing.Size(443, 274);
             this.tabSeguridad.TabIndex = 0;
             this.tabSeguridad.Text = "Seguridad";
             this.tabSeguridad.UseVisualStyleBackColor = true;
@@ -198,7 +184,7 @@
             this.tabChoferes.Controls.Add(this.btnNuevoChofer);
             this.tabChoferes.Location = new System.Drawing.Point(4, 22);
             this.tabChoferes.Name = "tabChoferes";
-            this.tabChoferes.Size = new System.Drawing.Size(416, 274);
+            this.tabChoferes.Size = new System.Drawing.Size(443, 274);
             this.tabChoferes.TabIndex = 6;
             this.tabChoferes.Text = "Choferes";
             this.tabChoferes.UseVisualStyleBackColor = true;
@@ -212,6 +198,7 @@
             this.btnModificarChofer.TabIndex = 1;
             this.btnModificarChofer.Text = "Modificar Chofer";
             this.btnModificarChofer.UseVisualStyleBackColor = true;
+            this.btnModificarChofer.Visible = false;
             this.btnModificarChofer.Click += new System.EventHandler(this.btnModificarChofer_Click);
             // 
             // btnNuevoChofer
@@ -222,6 +209,7 @@
             this.btnNuevoChofer.TabIndex = 0;
             this.btnNuevoChofer.Text = "Nuevo Chofer";
             this.btnNuevoChofer.UseVisualStyleBackColor = true;
+            this.btnNuevoChofer.Visible = false;
             this.btnNuevoChofer.Click += new System.EventHandler(this.btnNuevoChofer_Click);
             // 
             // tabCliente
@@ -230,7 +218,7 @@
             this.tabCliente.Controls.Add(this.NuevoCliente);
             this.tabCliente.Location = new System.Drawing.Point(4, 22);
             this.tabCliente.Name = "tabCliente";
-            this.tabCliente.Size = new System.Drawing.Size(416, 274);
+            this.tabCliente.Size = new System.Drawing.Size(443, 274);
             this.tabCliente.TabIndex = 5;
             this.tabCliente.Text = "Clientes";
             this.tabCliente.UseVisualStyleBackColor = true;
@@ -243,6 +231,7 @@
             this.ModificarCliente.TabIndex = 1;
             this.ModificarCliente.Text = "Modificar Cliente";
             this.ModificarCliente.UseVisualStyleBackColor = true;
+            this.ModificarCliente.Visible = false;
             this.ModificarCliente.Click += new System.EventHandler(this.ModificarCliente_Click);
             // 
             // NuevoCliente
@@ -253,6 +242,7 @@
             this.NuevoCliente.TabIndex = 0;
             this.NuevoCliente.Text = "Nuevo Cliente";
             this.NuevoCliente.UseVisualStyleBackColor = true;
+            this.NuevoCliente.Visible = false;
             this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
             // 
             // tabTurnos
@@ -263,7 +253,7 @@
             this.tabTurnos.Location = new System.Drawing.Point(4, 22);
             this.tabTurnos.Name = "tabTurnos";
             this.tabTurnos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTurnos.Size = new System.Drawing.Size(416, 274);
+            this.tabTurnos.Size = new System.Drawing.Size(443, 274);
             this.tabTurnos.TabIndex = 1;
             this.tabTurnos.Text = "Turnos";
             this.tabTurnos.UseVisualStyleBackColor = true;
@@ -276,6 +266,7 @@
             this.btnEliminarTurno.TabIndex = 3;
             this.btnEliminarTurno.Text = "Eliminar Turno";
             this.btnEliminarTurno.UseVisualStyleBackColor = true;
+            this.btnEliminarTurno.Visible = false;
             this.btnEliminarTurno.Click += new System.EventHandler(this.btnEliminarTurno_Click);
             // 
             // btnModificarTurno
@@ -286,20 +277,30 @@
             this.btnModificarTurno.TabIndex = 2;
             this.btnModificarTurno.Text = "ModificarTurno";
             this.btnModificarTurno.UseVisualStyleBackColor = true;
+            this.btnModificarTurno.Visible = false;
             this.btnModificarTurno.Click += new System.EventHandler(this.btnModificarTurno_Click);
             // 
             // tabAutos
             // 
-            this.tabAutos.Controls.Add(this.btnBajaAuto);
             this.tabAutos.Controls.Add(this.btnModificarAuto);
-            this.tabAutos.Controls.Add(this.brtIrAutos);
+            this.tabAutos.Controls.Add(this.btnBajaAuto);
             this.tabAutos.Controls.Add(this.btnAltaAuto);
             this.tabAutos.Location = new System.Drawing.Point(4, 22);
             this.tabAutos.Name = "tabAutos";
-            this.tabAutos.Size = new System.Drawing.Size(416, 274);
+            this.tabAutos.Size = new System.Drawing.Size(443, 274);
             this.tabAutos.TabIndex = 2;
             this.tabAutos.Text = "Autos";
             this.tabAutos.UseVisualStyleBackColor = true;
+            this.tabAutos.Click += new System.EventHandler(this.tabAutos_Click);
+            // 
+            // btnModificarAuto
+            // 
+            this.btnModificarAuto.Location = new System.Drawing.Point(40, 64);
+            this.btnModificarAuto.Name = "btnModificarAuto";
+            this.btnModificarAuto.Size = new System.Drawing.Size(108, 30);
+            this.btnModificarAuto.TabIndex = 0;
+            this.btnModificarAuto.Text = "Modificar Auto";
+            this.btnModificarAuto.Click += new System.EventHandler(this.btnModificarAuto_Click);
             // 
             // tabViajes
             // 
@@ -307,7 +308,7 @@
             this.tabViajes.Controls.Add(this.irRegistrarViaje);
             this.tabViajes.Location = new System.Drawing.Point(4, 22);
             this.tabViajes.Name = "tabViajes";
-            this.tabViajes.Size = new System.Drawing.Size(416, 274);
+            this.tabViajes.Size = new System.Drawing.Size(443, 274);
             this.tabViajes.TabIndex = 3;
             this.tabViajes.Text = "Viajes";
             this.tabViajes.UseVisualStyleBackColor = true;
@@ -320,6 +321,7 @@
             this.btnVerViajes.TabIndex = 3;
             this.btnVerViajes.Text = "Listado de Viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
+            this.btnVerViajes.Visible = false;
             this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
             // tabContabilidad
@@ -328,7 +330,7 @@
             this.tabContabilidad.Controls.Add(this.btnRendicionViajes);
             this.tabContabilidad.Location = new System.Drawing.Point(4, 22);
             this.tabContabilidad.Name = "tabContabilidad";
-            this.tabContabilidad.Size = new System.Drawing.Size(416, 274);
+            this.tabContabilidad.Size = new System.Drawing.Size(443, 274);
             this.tabContabilidad.TabIndex = 7;
             this.tabContabilidad.Text = "Contabilidad";
             this.tabContabilidad.UseVisualStyleBackColor = true;
@@ -341,6 +343,7 @@
             this.btnFacturacionClientes.TabIndex = 1;
             this.btnFacturacionClientes.Text = "Facturacion Clientes";
             this.btnFacturacionClientes.UseVisualStyleBackColor = true;
+            this.btnFacturacionClientes.Visible = false;
             this.btnFacturacionClientes.Click += new System.EventHandler(this.btnFacturacionClientes_Click);
             // 
             // btnRendicionViajes
@@ -351,6 +354,7 @@
             this.btnRendicionViajes.TabIndex = 0;
             this.btnRendicionViajes.Text = "Rendicion Viaje";
             this.btnRendicionViajes.UseVisualStyleBackColor = true;
+            this.btnRendicionViajes.Visible = false;
             this.btnRendicionViajes.Click += new System.EventHandler(this.btnRendicionViajes_Click);
             // 
             // tabEstadisticas
@@ -362,7 +366,7 @@
             this.tabEstadisticas.Controls.Add(this.radioButtonMasRecaudacion);
             this.tabEstadisticas.Location = new System.Drawing.Point(4, 22);
             this.tabEstadisticas.Name = "tabEstadisticas";
-            this.tabEstadisticas.Size = new System.Drawing.Size(416, 274);
+            this.tabEstadisticas.Size = new System.Drawing.Size(443, 274);
             this.tabEstadisticas.TabIndex = 4;
             this.tabEstadisticas.Text = "Estadisticas";
             this.tabEstadisticas.UseVisualStyleBackColor = true;
@@ -375,6 +379,7 @@
             this.btnConsultarEstadistica.TabIndex = 4;
             this.btnConsultarEstadistica.Text = "Consultar";
             this.btnConsultarEstadistica.UseVisualStyleBackColor = true;
+            this.btnConsultarEstadistica.Visible = false;
             this.btnConsultarEstadistica.Click += new System.EventHandler(this.btnConsultarEstadistica_Click);
             // 
             // radioButtonMismoAuto
@@ -426,9 +431,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "BIENVENIDO PEPITO";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -438,12 +443,13 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cerrar Sesión";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 458);
+            this.ClientSize = new System.Drawing.Size(567, 458);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tblMenu);
@@ -467,10 +473,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button brtIrAutos;
         private System.Windows.Forms.Button btnNuevoTurno;
         private System.Windows.Forms.Button irRegistrarViaje;
-        private System.Windows.Forms.Button btnModificarAuto;
         private System.Windows.Forms.Button btnBajaAuto;
         private System.Windows.Forms.Button btnAltaAuto;
         private System.Windows.Forms.Button btnBajaRol;
@@ -501,5 +505,6 @@
         private System.Windows.Forms.Button btnModificarChofer;
         private System.Windows.Forms.Button btnNuevoChofer;
         private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
+        private System.Windows.Forms.Button btnModificarAuto;
     }
 }

@@ -54,6 +54,7 @@
             this.txtNuevoNombreRol.Name = "txtNuevoNombreRol";
             this.txtNuevoNombreRol.Size = new System.Drawing.Size(154, 20);
             this.txtNuevoNombreRol.TabIndex = 0;
+            this.txtNuevoNombreRol.TextChanged += new System.EventHandler(this.txtNuevoNombreRol_TextChanged);
             // 
             // groupBox2
             // 

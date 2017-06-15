@@ -9,6 +9,7 @@ namespace UberFrba.Backend
     public static class Sesion
     {
         public static String username;
+        public static String rol;
 
     }
 }

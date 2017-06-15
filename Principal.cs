@@ -28,12 +28,16 @@ namespace UberFrba
         public Principal(String tab)
         {
             InitializeComponent();
+            this.label1.Text = "BIENVENIDO" + ' ' + Sesion.username.ToUpper();
             seleccionarTab = tab;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Main displayMainForm = new Main();
+            displayMainForm.Show();
 
+            this.Close();
         }
 
         private void irRegistrarViaje_Click(object sender, EventArgs e)
@@ -44,78 +48,75 @@ namespace UberFrba
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            /*
-            //if (!funcionalidades.Contains("BAJA_AUTO"))
-            this.btnModificarAuto.Visible = false; // borrar func de la db
-            this.brtIrAutos.Visible = false; // borrar func de la db
+            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
 
-
-            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.username);
-            if(!funcionalidades.Contains("ALTA_ROL"))
-                this.btnAltaRol.Enabled = false;
-            
-            if(!funcionalidades.Contains("BAJA_ROL"))
-                this.btnBajaRol.Enabled = false;
-            
-
-            if(!funcionalidades.Contains("MODIFICAR_ROL"))
-                this.btnBajaRol.Enabled = false;
-
-
-             if(!funcionalidades.Contains("ALTA_CHOFER"))
-                this.btnNuevoChofer.Enabled = false;
-
-
-             if(!funcionalidades.Contains("MODIFICAR_CHOFER"))
-                this.btnModificarChofer.Enabled = false;
-
-
-             if (!funcionalidades.Contains("ALTA_CLIENTE"))
-                 this.NuevoCliente.Enabled = false;
-
-
-             if (!funcionalidades.Contains("MODIFICAR_CLIENTE"))
-                 this.ModificarCliente.Enabled = false;
-
-  
-            if (!funcionalidades.Contains("ALTA_TURNO"))
-                 this.btnNuevoTurno.Enabled = false;
-
-
-            if (!funcionalidades.Contains("MODIFICAR_TURNO"))
-                 this.btnModificarTurno.Enabled = false;
-
-            if (!funcionalidades.Contains("BAJA_TURNO"))
-                 this.btnEliminarTurno.Enabled = false;
-            
-
-
-            if(!funcionalidades.Contains("ADMIN")){
-                this.btnBajaRol.Enabled = false;
-                this.btnAltaRol.Enabled = false;
-                this.btnModificarRol.Enabled = false;
-               
+            if (funcionalidades.Contains("ALTA_ROL"))
+                this.btnAltaRol.Visible = true;
+            if (funcionalidades.Contains("BAJA_ROL"))
+                this.btnBajaRol.Visible = true;
+            if(funcionalidades.Contains("MODIFICAR_ROL"))
+                this.btnModificarRol.Visible = true;
+            if (funcionalidades.Contains("ALTA_TURNO"))
+                 this.btnNuevoTurno.Visible = true;
+            if (funcionalidades.Contains("MODIFICAR_TURNO"))
+                 this.btnModificarTurno.Visible = true;
+            if (funcionalidades.Contains("BAJA_TURNO"))
+                 this.btnEliminarTurno.Visible = true;
+            //if (funcionalidades.Contains("VER_AUTOS"))
+               // this.btnverautos = true;
+            if (funcionalidades.Contains("ALTA_AUTO"))
+                this.btnAltaAuto.Visible = true;
+            if (funcionalidades.Contains("MODIFICAR_AUTO"))
+               this.btnModificarAuto.Visible = true;
+            if (funcionalidades.Contains("BAJA_AUTO"))
+                this.btnBajaAuto.Visible = true;
+            if (funcionalidades.Contains("VER_VIAJES"))
+                this.btnVerViajes.Visible = true;
+            if (funcionalidades.Contains("CONSULTAR_ESTADISTICAS"))
+                this.btnConsultarEstadistica.Visible = true;
+            if (funcionalidades.Contains("ALTA_CHOFER"))
+                this.btnNuevoChofer.Visible = true;
+            if (funcionalidades.Contains("BAJA_CHOFER"))
+               // this.btnNuevoChofer.Visible = true;
+                this.btnModificarChofer.Visible = true;
+            if (funcionalidades.Contains("MODIFICAR_CHOFER"))
+                this.btnModificarChofer.Visible = true;
+            if (funcionalidades.Contains("ALTA_CLIENTE"))
+                this.NuevoCliente.Visible = true;
+            if (funcionalidades.Contains("BAJA_CLIENTE"))
+                this.ModificarCliente.Visible = true;
+            if (funcionalidades.Contains("MODIFICAR_CLIENTE"))
+                this.ModificarCliente.Visible = true;
+            if (funcionalidades.Contains("RENDIR_VIAJES"))
+                this.ModificarCliente.Visible = true;
+            if (funcionalidades.Contains("FACTURAR"))
+                this.ModificarCliente.Visible = true;
+            if (funcionalidades.Contains("REGISTRAR_VIAJE"))
+                this.ModificarCliente.Visible = true;
+            if(funcionalidades.Contains("ADMIN")){
+                    this.btnAltaRol.Visible = true;
+                    this.btnModificarRol.Visible = true;
+                    this.btnBajaRol.Visible = true;
+                    this.btnModificarAuto.Visible = true;
+                    this.btnNuevoTurno.Visible = true;
+                    this.btnModificarTurno.Visible = true;
+                    this.btnEliminarTurno.Visible = true;
+                //if (funcionalidades.Contains("VER_AUTOS"))
+                // this.btnverautos = true;
+                    this.btnAltaAuto.Visible = true;
+                    this.btnBajaAuto.Visible = true;
+                    this.btnVerViajes.Visible = true;
+                    this.btnConsultarEstadistica.Visible = true;
+                    this.btnNuevoChofer.Visible = true;
+                    // this.btnNuevoChofer.Visible = true;
+                    this.btnModificarChofer.Visible = true;
+                    this.NuevoCliente.Visible = true;
+                    this.ModificarCliente.Visible = true;
             }
-
-            
-
-
-           
-
-            if (!funcionalidades.Contains("ALTA_AUTO"))
-                this.btnAltaAuto.Enabled = false;
-
-            if (!funcionalidades.Contains("BAJA_AUTO"))
-                this.btnBajaAuto.Enabled = false;
-
-          
 
 //BAJA_CHOFER -- borrarla
           
 //BAJA_CLIENTE-- borrarla
-
-
-
             /*
             this.irAutosAbm;
             this.btnBajaAuto;
@@ -139,20 +140,14 @@ namespace UberFrba
             */
 
 
-
             /*
             this.
            
             btnBajaRol;
                 btn
 
-
-
 VER_VIAJES
 CONSULTAR_ESTADISTICAS
-
-
-
             */
             
             if (seleccionarTab == Tabs.turnos())
@@ -292,11 +287,6 @@ CONSULTAR_ESTADISTICAS
 
         }
 
-        private void btnModificarAuto_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAuto_Click(object sender, EventArgs e)
         {
             new AltaAuto().Show();
@@ -308,6 +298,31 @@ CONSULTAR_ESTADISTICAS
             new BajaAuto().Show();
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Sesion.rol = null;
+            Sesion.username = null;
+            Main displayMainForm = new Main();
+            displayMainForm.Show();
+            this.Close();
+        }
+
+        private void tabAutos_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnModificarAuto_Click(object sender, EventArgs e)
+        {
+            new ModificarAuto().Show();
+            this.Close();
+        }
+
 
     }
 }

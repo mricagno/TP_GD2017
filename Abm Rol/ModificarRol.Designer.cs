@@ -34,7 +34,7 @@
             this.btnModificarNombreRol = new System.Windows.Forms.Button();
             this.btnAgregarFuncionalidadARol = new System.Windows.Forms.Button();
             this.btnHabilitarRol = new System.Windows.Forms.Button();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnmenu_principal = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnDeshabilitar);
+            this.groupBox2.Controls.Add(this.btnmenu_principal);
             this.groupBox2.Controls.Add(this.btnModificarNombreRol);
             this.groupBox2.Controls.Add(this.btnAgregarFuncionalidadARol);
             this.groupBox2.Controls.Add(this.btnHabilitarRol);
@@ -100,16 +100,16 @@
             this.btnHabilitarRol.UseVisualStyleBackColor = true;
             this.btnHabilitarRol.Click += new System.EventHandler(this.btnHabilitarRol_Click);
             // 
-            // btnDeshabilitar
+            // btnmenu_principal
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(160, 84);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(133, 39);
-            this.btnDeshabilitar.TabIndex = 4;
-            this.btnDeshabilitar.Text = "Deshabilitar ///no mostar. es baja";
-            this.btnDeshabilitar.UseVisualStyleBackColor = true;
-            this.btnDeshabilitar.Visible = false;
-            this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
+            this.btnmenu_principal.Location = new System.Drawing.Point(160, 84);
+            this.btnmenu_principal.Name = "btnmenu_principal";
+            this.btnmenu_principal.Size = new System.Drawing.Size(133, 39);
+            this.btnmenu_principal.TabIndex = 4;
+            this.btnmenu_principal.Text = "Menu principal";
+            this.btnmenu_principal.UseVisualStyleBackColor = true;
+            this.btnmenu_principal.Visible = true;
+            this.btnmenu_principal.Click += new System.EventHandler(this.btnmenu_principal_Click);
             // 
             // ModificarRol
             // 
@@ -135,6 +135,6 @@
         private System.Windows.Forms.Button btnHabilitarRol;
         private System.Windows.Forms.Button btnModificarNombreRol;
         private System.Windows.Forms.Button btnAgregarFuncionalidadARol;
-        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnmenu_principal;
     }
 }
