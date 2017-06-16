@@ -33,9 +33,11 @@ namespace UberFrba
 
                 Seguridad seguridad = new Seguridad();
 
-                //if(!seguridad.usuarioTieneAcceso()){
-                // MessageBox.Show("Acceso Denegado");
-                //}
+                if (String.IsNullOrEmpty(usuario.nombre) || String.IsNullOrEmpty(usuario.password))
+                {
+                     MessageBox.Show("Debe ingresar usuario y contraseña");
+                      return;
+                }
 
 
 

@@ -109,20 +109,20 @@ namespace UberFrba.Abm_Rol
 
                 if (esModificacion)
                 {
-                    MessageBox.Show("Modificacion ok", "Uber", MessageBoxButtons.OK);
+                    MessageBox.Show("La modificacion se realizo correctamente", "Uber", MessageBoxButtons.OK);
                     new Principal(Tabs.seguridad()).Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
+                    MessageBox.Show("Se agregaron los roles correctamente", "Uber", MessageBoxButtons.OK);
                     new Principal(Tabs.seguridad()).Show();
                     this.Close();
                 }
                 
             }catch(Exception ex){
                 MessageBox.Show(ex.Message.ToString());
-                
+                return;
             }
             
            
