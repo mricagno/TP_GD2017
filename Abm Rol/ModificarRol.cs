@@ -21,19 +21,36 @@ namespace UberFrba.Abm_Rol
         private void btnHabilitarRol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
-
-            //TODO meter 
-            Repositorio.habilitarRol(nombreRol);
-
-            MessageBox.Show("El rol" + nombreRol + "fue habilitado correctamente", "Modificación de rol", MessageBoxButtons.OK);
-            new Principal(Tabs.seguridad()).Show();
-            this.Close();
+            if (String.IsNullOrEmpty(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol");
+                return;
+            }
+            
+            try{
+                
+                Repositorio.habilitarRol(nombreRol);
+                MessageBox.Show("El rol " + nombreRol + " fue habilitado correctamente", "Modificación de rol", MessageBoxButtons.OK);
+                new Principal(Tabs.seguridad()).Show();
+                this.Close();
+            }catch(Exception ex){
+                MessageBox.Show(ex.Message.ToString());
+            }
+            
 
         }
 
         private void btnAgregarFuncionalidadARol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
+            
+            if (String.IsNullOrEmpty(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol");
+                return;
+            }
+
+
             String dondeVolver = "modificarRol";
             new AgregarFuncARol(nombreRol, dondeVolver, true).Show(); //Pasarle el rol qe va a modificar
             this.Close();
@@ -42,20 +59,31 @@ namespace UberFrba.Abm_Rol
         private void btnModificarNombreRol_Click(object sender, EventArgs e)
         {
 
+            
+
             String nombreRol = dameRolAModificar();
-            if (!string.IsNullOrWhiteSpace(nombreRol))
+            if (String.IsNullOrEmpty(nombreRol))
             {
+                MessageBox.Show("Debe seleccionar un rol");
+                return;
+            }
+            
                 new ModificarNombreRol(nombreRol).Show();
                 this.Close();
-            }else{
-                MessageBox.Show("Elija un rol a modificar");
-            }
+            
 
         }
 
         private void btnEliminarFuncionalidadARol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
+
+           
+            if (String.IsNullOrEmpty(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol");
+                return;
+            }
             new FormEliminarFuncionalidadARol(nombreRol).Show();
             this.Close();
         }
@@ -84,7 +112,7 @@ namespace UberFrba.Abm_Rol
             //String nombreRol = dameRolAModificar();
             //TODO agregar try catch y mensajes
             //Repositorio.deshabilitarRol(nombreRol);
-            new Principal("Seguridad").Show();
+            new Principal(Tabs.seguridad()).Show();
             this.Close();
 
         }

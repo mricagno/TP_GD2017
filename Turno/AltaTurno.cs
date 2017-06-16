@@ -67,43 +67,86 @@ namespace UberFrba.Turno
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var turnoDto = new DtoTurno();
-            turnoDto.Nombre = txtNombreTurno.Text;
-            turnoDto.HoraInicio = Convert.ToInt32(txtHoraInicio.Text);
-            turnoDto.HoraFin = Convert.ToInt32(txtHoraFin.Text);
-            turnoDto.PrecioBase = Convert.ToInt32(txtPrecioBase.Text);
-            turnoDto.ValorKm = Convert.ToInt32(txtValorKm.Text);
-            if(checkHabilitadoTurno.Checked == true){
-                turnoDto.Habilitado = 1;
-            }else{
-                turnoDto.Habilitado = 0;
+            try
+            {
+                var turnoDto = new DtoTurno();
+                turnoDto.Nombre = txtNombreTurno.Text;
+                turnoDto.HoraInicio = Convert.ToInt32(txtHoraInicio.Text);
+                turnoDto.HoraFin = Convert.ToInt32(txtHoraFin.Text);
+                turnoDto.PrecioBase = Convert.ToInt32(txtPrecioBase.Text);
+                turnoDto.ValorKm = Convert.ToInt32(txtValorKm.Text);
+
+                if( turnoDto.HoraInicio > turnoDto.HoraFin)
+                {
+                    MessageBox.Show("La hora fin debe ser mayor a la hora inicio", "Alta turno", MessageBoxButtons.OK);
+                    return;
+                }
+
+
+
+                if (checkHabilitadoTurno.Checked == true)
+                {
+                    turnoDto.Habilitado = 1;
+                }
+                else
+                {
+                    turnoDto.Habilitado = 0;
+                }
+
+                if (accion == "modificar")
+                {
+
+                    Repositorio.modificarTurno(this.turno, turnoDto);
+
+
+                    MessageBox.Show("Se modifico el turno correctamente", "Modificacion turno", MessageBoxButtons.OK);
+                    new Principal(Tabs.turnos()).Show();
+                    this.Close();
+
+
+                }
+                else
+                {
+                    Repositorio.altaTurno(turnoDto);
+                    MessageBox.Show("Se creo el turno correctamente", "Alta turno", MessageBoxButtons.OK);
+                    new Principal(Tabs.turnos()).Show();
+                    this.Close();
+
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Alta turno", MessageBoxButtons.OK);
+                return;
             }
 
-            if(accion== "modificar"){
-
-                Repositorio.modificarTurno(this.turno, turnoDto);
-
-
-                MessageBox.Show("Se modifico el turno correctamente", "Modificacion turno", MessageBoxButtons.OK);
-                new Principal(Tabs.turnos()).Show();
-                this.Close();
-
-
-            }else{
-                Repositorio.altaTurno(turnoDto);
-                MessageBox.Show("Se creo el turno correctamente", "Alta turno", MessageBoxButtons.OK);
-                new Principal(Tabs.turnos()).Show();
-                this.Close();
-
-            }
+           
         }
 
         private void txtHoraInicio_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtHoraInicio.Text, "[^0-9]"))
+            
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtHoraInicio.Text, "[^0-9]") )
             {
+                
+                    if(txtHoraInicio.Text.Contains("."))
+                    {
+                        try{
+                           txtHoraInicio.Text.Split('.')[1].ToString();
+                        }
+                         catch (Exception ex){
+                            
+                        }
+                        MessageBox.Show("Por favor ingresar un solo punto", "Uber", MessageBoxButtons.OK);
+
+                        txtHoraInicio.Text = txtHoraInicio.Text.Remove(txtHoraInicio.Text.Length - 1);
+                        return;
+                        
+                    }
+                   
                 MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);
                 txtHoraInicio.Text = txtHoraInicio.Text.Remove(txtHoraInicio.Text.Length - 1);
+            
             }
         }
 

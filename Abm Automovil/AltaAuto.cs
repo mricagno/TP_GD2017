@@ -64,14 +64,14 @@ namespace UberFrba.Abm_Automovil
 
 
                 Repositorio.crearAuto(marca, modelo, patente, DNI, turno);
-                MessageBox.Show("El auto se creo correctamente:", "Alta auto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El auto se creo correctamente", "Alta auto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 new Principal(Tabs.autos()).Show();
                 this.Close();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al crear auto - Exception :" + ex.ToString(), "Alta auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Alta auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

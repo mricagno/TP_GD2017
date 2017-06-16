@@ -22,6 +22,24 @@ namespace UberFrba
       
         public void button1_Click(object sender, EventArgs e)
         {
+
+
+            Sesion.rol = "ADMINISTRADOR";
+            Sesion.username = "admin";
+            new Principal(Tabs.seguridad()).Show();
+            this.Close();
+
+            return;
+
+
+
+
+
+
+
+
+
+
             Usuario usuario = new Usuario();
             usuario.nombre = txtUsuario.Text;
             usuario.password = txtPassword.Text;
@@ -33,14 +51,7 @@ namespace UberFrba
                // MessageBox.Show("Acceso Denegado");
             //}
 
-            //Si el rol esta seleccionado, se llama a principal
-            if (usuario.perfil.Any())
-            {
-                usuario.perfil = this.comboPerfiles.GetItemText(this.comboPerfiles.SelectedItem);
-                Sesion.rol = usuario.perfil;
-                new Principal("Seguridad").Show();
-                this.Close();
-            }
+            
 
             //HABILITO COMBO DE ROLES
             ObservableCollection<String> roles = seguridad.usuarioTieneAcceso(usuario);
@@ -54,8 +65,33 @@ namespace UberFrba
                     this.comboPerfiles.Items.Add(m);
                 }
                 Sesion.username = usuario.nombre;
-            }
+
+                botonIniciarSesion.Visible = false;
+                lbliniciarComo.Visible = true;
+                btnIngresar.Visible = true;
+                txtUsuario.Enabled = false;
+                txtPassword.Enabled = false;
+                
+            } //sino mostrar un mensaje
             //new Principal("Seguridad").Show();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+            
+            //Si el rol esta seleccionado, se llama a principal
+            Usuario usuario = new Usuario();
+            usuario.nombre = txtUsuario.Text;
+            usuario.password = txtPassword.Text;
+            usuario.perfil = comboPerfiles.Text;
+            if (usuario.perfil.Any())
+            {
+                usuario.perfil = this.comboPerfiles.GetItemText(this.comboPerfiles.SelectedItem);
+                Sesion.rol = usuario.perfil;
+                new Principal(Tabs.seguridad()).Show();
+                this.Close();
+            }
         }
             
     }

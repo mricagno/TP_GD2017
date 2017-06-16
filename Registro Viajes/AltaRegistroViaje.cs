@@ -33,18 +33,28 @@ namespace UberFrba.Registro_Viajes
         private void Guardar_Click(object sender, EventArgs e)
         {
             
-            RegistroViaje registroViaje = new RegistroViaje();
-
-            registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
-            registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
-            registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
-            registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
-            registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
-            registroViaje.FechaFinViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
-            registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+         
            
+            try{
+                RegistroViaje registroViaje = new RegistroViaje();
 
-            Repositorio.registrarViaje(registroViaje);
+                registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
+                registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
+                registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
+                registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
+                registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
+                registroViaje.FechaFinViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                Repositorio.registrarViaje(registroViaje);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+           
            
             new Principal(Tabs.viajes()).Show();
             this.Close();

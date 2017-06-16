@@ -35,7 +35,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.comboPerfiles = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbliniciarComo = new System.Windows.Forms.Label();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblBienvenida
@@ -48,11 +49,11 @@
             // 
             // botonIniciarSesion
             // 
-            this.botonIniciarSesion.Location = new System.Drawing.Point(94, 178);
+            this.botonIniciarSesion.Location = new System.Drawing.Point(94, 212);
             this.botonIniciarSesion.Name = "botonIniciarSesion";
             this.botonIniciarSesion.Size = new System.Drawing.Size(96, 28);
             this.botonIniciarSesion.TabIndex = 2;
-            this.botonIniciarSesion.Text = "Iniciar Sesión";
+            this.botonIniciarSesion.Text = "Login";
             this.botonIniciarSesion.UseVisualStyleBackColor = true;
             this.botonIniciarSesion.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -91,32 +92,39 @@
             // comboPerfiles
             // 
             this.comboPerfiles.FormattingEnabled = true;
-            //this.comboPerfiles.Items.AddRange(new object[] );//{
-            //"Cliente",
-            //"Chofer",
-            //"Administrador"});
             this.comboPerfiles.Location = new System.Drawing.Point(94, 101);
             this.comboPerfiles.Name = "comboPerfiles";
             this.comboPerfiles.Size = new System.Drawing.Size(127, 21);
             this.comboPerfiles.TabIndex = 7;
             this.comboPerfiles.Visible = false;
             // 
-            // label4
+            // lbliniciarComo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Iniciar Como";
-            this.label4.Visible = false;
+            this.lbliniciarComo.AutoSize = true;
+            this.lbliniciarComo.Location = new System.Drawing.Point(24, 109);
+            this.lbliniciarComo.Name = "lbliniciarComo";
+            this.lbliniciarComo.Size = new System.Drawing.Size(65, 13);
+            this.lbliniciarComo.TabIndex = 8;
+            this.lbliniciarComo.Text = "Iniciar Como";
+            this.lbliniciarComo.Visible = false;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(94, 178);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(96, 28);
+            this.btnIngresar.TabIndex = 9;
+            this.btnIngresar.Text = "Iniciar Sesion";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Visible = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbliniciarComo);
             this.Controls.Add(this.comboPerfiles);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
@@ -124,6 +132,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.botonIniciarSesion);
             this.Controls.Add(this.lblBienvenida);
+            this.Controls.Add(this.btnIngresar);
             this.Name = "Main";
             this.Text = "Bienvenidos a Uber";
             this.ResumeLayout(false);
@@ -140,7 +149,8 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.ComboBox comboPerfiles;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbliniciarComo;
+        private System.Windows.Forms.Button btnIngresar;
     }
 }
 

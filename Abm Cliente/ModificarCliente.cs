@@ -55,7 +55,7 @@ namespace UberFrba.Abm_Cliente
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar cliente - Exception :" + ex.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
            
@@ -128,7 +128,7 @@ namespace UberFrba.Abm_Cliente
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al habilitar cliente - Exception :" + ex.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

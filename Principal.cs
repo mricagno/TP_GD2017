@@ -49,7 +49,7 @@ namespace UberFrba
         private void Principal_Load(object sender, EventArgs e)
         {
             ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
-
+            
             if (funcionalidades.Contains("ALTA_ROL"))
                 this.btnAltaRol.Visible = true;
             if (funcionalidades.Contains("BAJA_ROL"))
@@ -112,6 +112,7 @@ namespace UberFrba
                     this.btnModificarChofer.Visible = true;
                     this.NuevoCliente.Visible = true;
                     this.ModificarCliente.Visible = true;
+                    
             }
 
 //BAJA_CHOFER -- borrarla

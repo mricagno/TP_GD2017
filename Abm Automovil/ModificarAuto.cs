@@ -109,13 +109,13 @@ namespace UberFrba.Abm_Automovil
                     return;
                 }
                 MessageBox.Show("El auto se habilito correctamente", "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new Principal(Tabs.clientes()).Show();
+                new Principal(Tabs.autos()).Show();
                 this.Close();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al habilitar auto - Exception :" + ex.ToString(), "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

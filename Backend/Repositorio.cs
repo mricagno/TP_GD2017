@@ -315,14 +315,9 @@ namespace UberFrba.Backend
 
             String query = "EXEC DROP_DATABASE.ASOCIAR_FUNCIONALIDAD '" + nombreRolNuevo + "', '" + func + "'";
             //new Server().realizarQuery(query);
-         try
-             {
-                 new Server().realizarQuery(query);
-             }
-         catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            } 
+        
+            new Server().realizarQuery(query);
+             
         }
 
         internal static ObservableCollection<String> todosLosRoles()
@@ -345,28 +340,17 @@ namespace UberFrba.Backend
         {
             String query = "EXEC DROP_DATABASE.HABILITAR_ROL '" + nombreRol + "'";
             //new Server().realizarQuery(query);
-           try
-            {
-                new Server().realizarQuery(query);
-            }
-           catch (SqlException ex)
-            {
-                 MessageBox.Show(ex.Message);
-             } 
+          
+            new Server().realizarQuery(query);
+            
         }
 
         internal static void deshabilitarRol(string nombreRol)
         {
             String query = "EXEC DROP_DATABASE.BAJA_ROL '" + nombreRol + "'";
             //new Server().realizarQuery(query);
-           try
-            {
-                new Server().realizarQuery(query);
-            }
-           catch (SqlException ex)
-             {
-                MessageBox.Show(ex.Message);
-             } 
+            new Server().realizarQuery(query);
+          
            // return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
 

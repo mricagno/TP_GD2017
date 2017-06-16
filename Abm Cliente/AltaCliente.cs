@@ -69,7 +69,7 @@ namespace UberFrba.Abm_Cliente
                 this.Close();
 
             }catch(Exception ex){
-                MessageBox.Show("Error al crear cliente - Exception :" + ex.ToString(), "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

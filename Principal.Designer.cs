@@ -91,7 +91,6 @@
             this.irRegistrarViaje.TabIndex = 2;
             this.irRegistrarViaje.Text = "Registrar Viaje";
             this.irRegistrarViaje.UseVisualStyleBackColor = true;
-            this.irRegistrarViaje.Visible = false;
             this.irRegistrarViaje.Click += new System.EventHandler(this.irRegistrarViaje_Click);
             // 
             // btnAltaAuto

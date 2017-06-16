@@ -53,7 +53,7 @@ namespace UberFrba.Abm_Automovil
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar el auto - Exception :" + ex.ToString(), "Baja auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Baja auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

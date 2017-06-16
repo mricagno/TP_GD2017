@@ -54,7 +54,7 @@ namespace UberFrba.Abm_Cliente
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar cliente - Exception :" + ex.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

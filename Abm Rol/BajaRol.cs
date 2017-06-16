@@ -28,14 +28,25 @@ namespace UberFrba.Abm_Rol
         private void btnBajaRol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
-            //TODO agregar try catch y mensajes
-            Repositorio.deshabilitarRol(nombreRol);
+            if(String.IsNullOrEmpty(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol");
+                return;
+            }
+           
+            try
+            {
+                Repositorio.deshabilitarRol(nombreRol);
+                MessageBox.Show("Se elimino correctamente el rol", "Baja Rol", MessageBoxButtons.OK);
+                new Principal(Tabs.seguridad()).Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
 
-
-
-            MessageBox.Show("Se elimino correctamente el rol", "Baja Rol", MessageBoxButtons.OK);
-            new Principal("Seguridad").Show();
-            this.Close();
         }
 
         private void BajaRol_Load(object sender, EventArgs e)
@@ -52,7 +63,7 @@ namespace UberFrba.Abm_Rol
         private String dameRolAModificar()
         {
             String nombreRol = cmbRoles.Text;
-            //Validar x las dudas qe exista el rol antes de pasarle el nombre?? Puede no haber seleccionado ninguno
+            
 
             return nombreRol;
         }

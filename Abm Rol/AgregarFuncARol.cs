@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -97,25 +98,36 @@ namespace UberFrba.Abm_Rol
                 Repositorio.eliminarTodasFuncionalidadesDeRol(nombreRolNuevo);
                 
             }
-             
+            
+            try{
+                //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
+                foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
+                {
 
-            //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
-            foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
-            {
+                    Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
+                }
 
-                Repositorio.agregarFuncionalidadARol(nombreRolNuevo, funcionalidad.ToString());
+                if (esModificacion)
+                {
+                    MessageBox.Show("Modificacion ok", "Uber", MessageBoxButtons.OK);
+                    new Principal(Tabs.seguridad()).Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
+                    new Principal(Tabs.seguridad()).Show();
+                    this.Close();
+                }
+                
+            }catch(Exception ex){
+                MessageBox.Show(ex.Message.ToString());
+                
             }
+            
+           
 
-            if (esModificacion)
-            {
-                MessageBox.Show("Modificacion ok", "Uber", MessageBoxButtons.OK);
-                new Principal("Turno").Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("se agregaron las func al nuevo rol", "Uber", MessageBoxButtons.OK);
-            }
+            
         }
 
         private void btnAgregarFuncionalidad_Click_1(object sender, EventArgs e)
