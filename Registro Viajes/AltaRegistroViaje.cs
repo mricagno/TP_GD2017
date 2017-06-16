@@ -53,11 +53,16 @@ namespace UberFrba.Registro_Viajes
                     MessageBox.Show("Debe seleccionar la cantidad de kilometros", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (dateFechaFin.Value <= dateFechaInicio.Value)
+                {
+                    MessageBox.Show("La fecha final debe ser posterior a la inicial ", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
                 registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
                 registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
                 registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
-                registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
+                registroViaje.CantidadKilometros = txtCantidadKm.Text; 
 
               
 
