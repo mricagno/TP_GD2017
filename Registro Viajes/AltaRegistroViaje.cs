@@ -38,12 +38,30 @@ namespace UberFrba.Registro_Viajes
             try{
                 RegistroViaje registroViaje = new RegistroViaje();
 
+                if(cmbChoferHabilitado.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar el chofer", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (cmbCliente.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar el cliente", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtCantidadKm.Text))
+                {
+                    MessageBox.Show("Debe seleccionar la cantidad de kilometros", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
                 registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
                 registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
                 registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
                 registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
-                registroViaje.FechaFinViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+
+              
+
+                registroViaje.FechaFinViaje = dateFechaFin.Value.ToString("yyyy-MM-dd hh:mm:ss");
                 registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
 
                 
@@ -99,6 +117,16 @@ namespace UberFrba.Registro_Viajes
             txtAutomovil.Text = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
             
             txtTurno.Text = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
+        }
+
+        private void txtCantidadKm_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtCantidadKm.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);
+                txtCantidadKm.Text = txtCantidadKm.Text.Remove(txtCantidadKm.Text.Length - 1);
+            }
+       
         }
     }
 }

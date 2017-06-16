@@ -93,6 +93,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AltaRol";
             this.Text = "Alta Rol";
+            this.Load += new System.EventHandler(this.AltaRol_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

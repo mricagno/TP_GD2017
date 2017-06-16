@@ -35,18 +35,20 @@
             this.txtTurno = new System.Windows.Forms.TextBox();
             this.txtCantidadKm = new System.Windows.Forms.TextBox();
             this.viajeGroupBox = new System.Windows.Forms.GroupBox();
+            this.dateFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbChoferHabilitado = new System.Windows.Forms.ComboBox();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbCliente = new System.Windows.Forms.ComboBox();
-            this.cmbChoferHabilitado = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateFechaInicio = new System.Windows.Forms.DateTimePicker();
-            
-            
-            this.dateFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateHoraInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateHoraFin = new System.Windows.Forms.DateTimePicker();
             this.viajeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,9 +102,14 @@
             this.txtCantidadKm.Name = "txtCantidadKm";
             this.txtCantidadKm.Size = new System.Drawing.Size(192, 20);
             this.txtCantidadKm.TabIndex = 9;
+            this.txtCantidadKm.TextChanged += new System.EventHandler(this.txtCantidadKm_TextChanged);
             // 
             // viajeGroupBox
             // 
+            this.viajeGroupBox.Controls.Add(this.dateHoraFin);
+            this.viajeGroupBox.Controls.Add(this.dateHoraInicio);
+            this.viajeGroupBox.Controls.Add(this.label7);
+            this.viajeGroupBox.Controls.Add(this.label6);
             this.viajeGroupBox.Controls.Add(this.dateFechaFin);
             this.viajeGroupBox.Controls.Add(this.dateFechaInicio);
             this.viajeGroupBox.Controls.Add(this.label5);
@@ -119,66 +126,38 @@
             this.viajeGroupBox.Controls.Add(this.txtAutomovil);
             this.viajeGroupBox.Location = new System.Drawing.Point(58, 41);
             this.viajeGroupBox.Name = "viajeGroupBox";
-            this.viajeGroupBox.Size = new System.Drawing.Size(419, 328);
+            this.viajeGroupBox.Size = new System.Drawing.Size(419, 356);
             this.viajeGroupBox.TabIndex = 9;
             this.viajeGroupBox.TabStop = false;
             this.viajeGroupBox.Text = "Viaje";
             this.viajeGroupBox.Enter += new System.EventHandler(this.viajeGroupBox_Enter);
             // 
-            // btnVolver
+            // dateFechaFin
             // 
-            this.btnVolver.Location = new System.Drawing.Point(58, 402);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(100, 28);
-            this.btnVolver.TabIndex = 10;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.dateFechaFin.CustomFormat = "yyyy/MM/dd hh:mm";
+            this.dateFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateFechaFin.Location = new System.Drawing.Point(159, 253);
+            this.dateFechaFin.Name = "dateFechaFin";
+            this.dateFechaFin.Size = new System.Drawing.Size(200, 20);
+            this.dateFechaFin.TabIndex = 17;
             // 
-            // Guardar
+            // dateFechaInicio
             // 
-            this.Guardar.Location = new System.Drawing.Point(180, 403);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(114, 27);
-            this.Guardar.TabIndex = 11;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
-            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
+            this.dateFechaInicio.CustomFormat = "yyyy/MM/dd hh:mm";
+            this.dateFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateFechaInicio.Location = new System.Drawing.Point(159, 216);
+            this.dateFechaInicio.Name = "dateFechaInicio";
+            this.dateFechaInicio.Size = new System.Drawing.Size(200, 20);
+            this.dateFechaInicio.TabIndex = 16;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 135);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Cliente";
-            // 
-            // cmbCliente
-            // 
-            this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(161, 132);
-            this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(190, 21);
-            this.cmbCliente.TabIndex = 13;
-            // 
-            // cmbChoferHabilitado
-            // 
-            this.cmbChoferHabilitado.FormattingEnabled = true;
-            this.cmbChoferHabilitado.Location = new System.Drawing.Point(159, 28);
-            this.cmbChoferHabilitado.Name = "cmbChoferHabilitado";
-            this.cmbChoferHabilitado.Size = new System.Drawing.Size(193, 21);
-            this.cmbChoferHabilitado.TabIndex = 12;
-            this.cmbChoferHabilitado.SelectedIndexChanged += new System.EventHandler(this.cmbChoferHabilitado_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Cantidad Km";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(38, 259);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Fecha Fin";
             // 
             // label4
             // 
@@ -189,28 +168,93 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Fecha Inicio";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 253);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Fecha Fin";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Cantidad Km";
             // 
-            // dateFechaInicio
+            // cmbChoferHabilitado
             // 
-            this.dateFechaInicio.Location = new System.Drawing.Point(159, 216);
-            this.dateFechaInicio.Name = "dateFechaInicio";
-            this.dateFechaInicio.Size = new System.Drawing.Size(200, 20);
-            this.dateFechaInicio.TabIndex = 16;
+            this.cmbChoferHabilitado.FormattingEnabled = true;
+            this.cmbChoferHabilitado.Location = new System.Drawing.Point(159, 28);
+            this.cmbChoferHabilitado.Name = "cmbChoferHabilitado";
+            this.cmbChoferHabilitado.Size = new System.Drawing.Size(193, 21);
+            this.cmbChoferHabilitado.TabIndex = 12;
+            this.cmbChoferHabilitado.SelectedIndexChanged += new System.EventHandler(this.cmbChoferHabilitado_SelectedIndexChanged);
             // 
-            // dateFechaFin
+            // cmbCliente
             // 
-            this.dateFechaFin.Location = new System.Drawing.Point(159, 253);
-            this.dateFechaFin.Name = "dateFechaFin";
-            this.dateFechaFin.Size = new System.Drawing.Size(200, 20);
-            this.dateFechaFin.TabIndex = 17;
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(161, 132);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(190, 21);
+            this.cmbCliente.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Cliente";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(58, 427);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(100, 28);
+            this.btnVolver.TabIndex = 10;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // Guardar
+            // 
+            this.Guardar.Location = new System.Drawing.Point(180, 427);
+            this.Guardar.Name = "Guardar";
+            this.Guardar.Size = new System.Drawing.Size(114, 27);
+            this.Guardar.TabIndex = 11;
+            this.Guardar.Text = "Guardar";
+            this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(38, 301);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Hora Inicio";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(38, 326);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Hora Fin";
+            // 
+            // dateHoraInicio
+            // 
+            this.dateHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateHoraInicio.Location = new System.Drawing.Point(161, 294);
+            this.dateHoraInicio.Name = "dateHoraInicio";
+            this.dateHoraInicio.Size = new System.Drawing.Size(200, 20);
+            this.dateHoraInicio.TabIndex = 20;
+            // 
+            // dateHoraFin
+            // 
+            this.dateHoraFin.Location = new System.Drawing.Point(161, 320);
+            this.dateHoraFin.Name = "dateHoraFin";
+            this.dateHoraFin.Size = new System.Drawing.Size(200, 20);
+            this.dateHoraFin.TabIndex = 21;
             // 
             // AltaRegistroViaje
             // 
@@ -248,5 +292,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dateHoraFin;
+        private System.Windows.Forms.DateTimePicker dateHoraInicio;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

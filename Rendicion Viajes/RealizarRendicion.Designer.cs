@@ -81,13 +81,15 @@
             this.groupBox2.Controls.Add(this.dateRendicion);
             this.groupBox2.Location = new System.Drawing.Point(206, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(240, 100);
+            this.groupBox2.Size = new System.Drawing.Size(240, 152);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleccionar Fecha";
             // 
             // dateRendicion
             // 
+            this.dateRendicion.CustomFormat = "yyyy/mm/dd hh:mm";
+            this.dateRendicion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateRendicion.Location = new System.Drawing.Point(24, 31);
             this.dateRendicion.Name = "dateRendicion";
             this.dateRendicion.Size = new System.Drawing.Size(200, 20);

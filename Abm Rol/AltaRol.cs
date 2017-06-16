@@ -31,7 +31,9 @@ namespace UberFrba.Abm_Rol
                     new AgregarFuncARol(nombreRol, "principal").Show();
                     this.Close();
                 }
-                catch (System.ArgumentException ae) { }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message.ToString(), "Alta Rol", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             } //TODO METER TRY CATCH CON MENSAJE. Si fallo no continuar
 
@@ -51,6 +53,11 @@ namespace UberFrba.Abm_Rol
         {
             new Principal("Turno").Show();
             this.Close();
+        }
+
+        private void AltaRol_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
