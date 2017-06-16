@@ -44,6 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateFechaInicio = new System.Windows.Forms.DateTimePicker();
+            
+            
             this.dateFechaFin = new System.Windows.Forms.DateTimePicker();
             this.viajeGroupBox.SuspendLayout();
             this.SuspendLayout();

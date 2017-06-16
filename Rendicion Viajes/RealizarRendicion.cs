@@ -60,7 +60,7 @@ namespace UberFrba.Rendicion_Viajes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al realizar la rendicion - Exception :" + ex.ToString(), "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

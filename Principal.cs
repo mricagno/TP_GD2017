@@ -112,6 +112,9 @@ namespace UberFrba
                     this.btnModificarChofer.Visible = true;
                     this.NuevoCliente.Visible = true;
                     this.ModificarCliente.Visible = true;
+                    this.btnFacturacionClientes.Visible = true;
+                    this.btnRendicionViajes.Visible = true;
+                    this.irRegistrarViaje.Visible = true;
                     
             }
 
