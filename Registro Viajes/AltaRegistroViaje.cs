@@ -45,6 +45,8 @@ namespace UberFrba.Registro_Viajes
                 registroViaje.CantidadKilometros = txtCantidadKm.Text; //mayor a 0 tiene qe ser validarlo!
                 registroViaje.FechaFinViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
                 registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+
+                
                 Repositorio.registrarViaje(registroViaje);
             }
             catch (Exception ex)

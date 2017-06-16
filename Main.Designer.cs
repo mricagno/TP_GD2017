@@ -135,6 +135,7 @@
             this.Controls.Add(this.btnIngresar);
             this.Name = "Main";
             this.Text = "Bienvenidos a Uber";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

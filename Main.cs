@@ -24,21 +24,7 @@ namespace UberFrba
         {
 
 
-            Sesion.rol = "ADMINISTRADOR";
-            Sesion.username = "admin";
-            new Principal(Tabs.seguridad()).Show();
-            this.Close();
-
-            return;
-
-
-
-
-
-
-
-
-
+            
 
             Usuario usuario = new Usuario();
             usuario.nombre = txtUsuario.Text;
@@ -92,6 +78,11 @@ namespace UberFrba
                 new Principal(Tabs.seguridad()).Show();
                 this.Close();
             }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
             
     }
