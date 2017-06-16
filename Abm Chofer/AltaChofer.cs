@@ -33,17 +33,37 @@ namespace UberFrba.Abm_Chofer
             }
             var nuevoChofer = new NuevoChofer();
             nuevoChofer.usuario = lstUsuarios.SelectedItem.ToString();
+
+            if (String.IsNullOrEmpty(txtNombreChofer.Text) || String.IsNullOrEmpty(txtNombreChofer.Text))
+            {
+                MessageBox.Show("Debe ingresar nombre y apellido un usuario", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             nuevoChofer.nombre = txtNombreChofer.Text;
             nuevoChofer.apellido = txtApellidoChofer.Text;
-            if (!Utils.IsDigitsOnly(txtDniChofer.Text) || txtDniChofer.Text.Length != 8)
+            if (String.IsNullOrEmpty(txtDniChofer.Text) || !Utils.IsDigitsOnly(txtDniChofer.Text) || txtDniChofer.Text.Length != 8)
             {
                 MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             nuevoChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
+            if (String.IsNullOrEmpty(txtDniChofer.Text) )
+            {
+                MessageBox.Show("Debe ingresar mail", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             nuevoChofer.email = txtMailChofer.Text;
-            Convert.ToInt32(99999999);
+            if (String.IsNullOrEmpty(txtTelefonoChofer.Text) || !Utils.IsDigitsOnly(txtTelefonoChofer.Text))
+            {
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             nuevoChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
+            if (String.IsNullOrEmpty(txtDireccionChofer.Text))
+            {
+                MessageBox.Show("Debe ingresar direccion", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             nuevoChofer.direccion = txtDireccionChofer.Text;
             nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
 
@@ -58,7 +78,7 @@ namespace UberFrba.Abm_Chofer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al crear chofer - Exception :" + ex.ToString(), "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

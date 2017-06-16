@@ -36,12 +36,7 @@ namespace UberFrba.Abm_Rol
 
         }
 
-        private void btnAgregarFuncionalidad_Click(object sender, EventArgs e)
-        {
-            //agregarFuncioanlidad
-            MessageBox.Show("La funcionalidad se agregó correctamente", "Uber", MessageBoxButtons.OK);
-            //Sino mostrar otro mensaje
-        }
+        
 
         private void AgregarFuncARol_Load(object sender, EventArgs e)
         {
@@ -93,13 +88,15 @@ namespace UberFrba.Abm_Rol
                 return;
             }
 
-            if(esModificacion)
-            {
-                Repositorio.eliminarTodasFuncionalidadesDeRol(nombreRolNuevo);
-                
-            }
+            
             
             try{
+                if (esModificacion)
+                {
+                    Repositorio.eliminarTodasFuncionalidadesDeRol(nombreRolNuevo);
+
+                }
+
                 //TODO analizar como hacer try catch y rollback por si rompe algun store procedure
                 foreach (var funcionalidad in lstAgregarFuncionalidades.Items)
                 {
@@ -121,7 +118,8 @@ namespace UberFrba.Abm_Rol
                 }
                 
             }catch(Exception ex){
-                MessageBox.Show(ex.Message.ToString());
+                
+                MessageBox.Show(ex.Message.ToString(), "Uber", MessageBoxButtons.OK);
                 return;
             }
             

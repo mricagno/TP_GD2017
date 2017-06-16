@@ -105,6 +105,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarNombreRol";
             this.Text = "Modificar Nombre Rol";
+            this.Load += new System.EventHandler(this.ModificarNombreRol_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

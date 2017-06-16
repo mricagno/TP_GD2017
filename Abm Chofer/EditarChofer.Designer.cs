@@ -86,7 +86,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(38, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 255);
+            this.groupBox2.Size = new System.Drawing.Size(334, 255);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Editar Campos";
@@ -95,21 +95,21 @@
             // 
             this.txtDireccionChofer.Location = new System.Drawing.Point(115, 173);
             this.txtDireccionChofer.Name = "txtDireccionChofer";
-            this.txtDireccionChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtDireccionChofer.Size = new System.Drawing.Size(198, 20);
             this.txtDireccionChofer.TabIndex = 15;
             // 
             // txtTelefonoChofer
             // 
             this.txtTelefonoChofer.Location = new System.Drawing.Point(115, 142);
             this.txtTelefonoChofer.Name = "txtTelefonoChofer";
-            this.txtTelefonoChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtTelefonoChofer.Size = new System.Drawing.Size(198, 20);
             this.txtTelefonoChofer.TabIndex = 14;
             // 
             // txtMailChofer
             // 
             this.txtMailChofer.Location = new System.Drawing.Point(115, 115);
             this.txtMailChofer.Name = "txtMailChofer";
-            this.txtMailChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtMailChofer.Size = new System.Drawing.Size(198, 20);
             this.txtMailChofer.TabIndex = 13;
             // 
             // txtDniChofer
@@ -117,28 +117,28 @@
             this.txtDniChofer.Location = new System.Drawing.Point(115, 85);
             this.txtDniChofer.MaxLength = 8;
             this.txtDniChofer.Name = "txtDniChofer";
-            this.txtDniChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtDniChofer.Size = new System.Drawing.Size(198, 20);
             this.txtDniChofer.TabIndex = 12;
             // 
             // txtApellidoChofer
             // 
             this.txtApellidoChofer.Location = new System.Drawing.Point(115, 59);
             this.txtApellidoChofer.Name = "txtApellidoChofer";
-            this.txtApellidoChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtApellidoChofer.Size = new System.Drawing.Size(198, 20);
             this.txtApellidoChofer.TabIndex = 11;
             // 
             // txtNombreChofer
             // 
             this.txtNombreChofer.Location = new System.Drawing.Point(115, 34);
             this.txtNombreChofer.Name = "txtNombreChofer";
-            this.txtNombreChofer.Size = new System.Drawing.Size(125, 20);
+            this.txtNombreChofer.Size = new System.Drawing.Size(198, 20);
             this.txtNombreChofer.TabIndex = 10;
             // 
             // dateFechaNacimiento
             // 
             this.dateFechaNacimiento.Location = new System.Drawing.Point(115, 206);
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
-            this.dateFechaNacimiento.Size = new System.Drawing.Size(125, 20);
+            this.dateFechaNacimiento.Size = new System.Drawing.Size(198, 20);
             this.dateFechaNacimiento.TabIndex = 7;
             // 
             // label8
@@ -208,7 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 339);
+            this.ClientSize = new System.Drawing.Size(426, 339);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnGuardarChofer);
             this.Controls.Add(this.groupBox2);

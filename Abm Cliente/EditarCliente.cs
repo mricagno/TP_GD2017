@@ -27,22 +27,58 @@ namespace UberFrba.Abm_Cliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var actualizarCliente = new NuevoCliente();
+            var nuevoCliente = new NuevoCliente();
 
-            actualizarCliente.nombre = txtNombreCliente.Text;
-            actualizarCliente.apellido = txtApellidoCliente.Text;
-            if (!Utils.IsDigitsOnly(txtDniCliente.Text) || txtDniCliente.Text.Length != 8)
+         
+
+
+            
+            if (String.IsNullOrEmpty(txtNombreCliente.Text) || String.IsNullOrEmpty(txtApellidoCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar nombre y apellido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            nuevoCliente.nombre = txtNombreCliente.Text;
+            nuevoCliente.apellido = txtApellidoCliente.Text;
+            if (String.IsNullOrEmpty(txtDniCliente.Text) || !Utils.IsDigitsOnly(txtDniCliente.Text) || txtDniCliente.Text.Length != 8)
             {
                 MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            actualizarCliente.num_dni = Convert.ToInt32(txtDniCliente.Text);
-            actualizarCliente.email = txtMailCliente.Text;
-            actualizarCliente.telefono = Convert.ToInt32(txtTelefonoCliente.Text);
-            actualizarCliente.direccion = txtDireccionCliente.Text;
-            actualizarCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
-            actualizarCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
 
+
+            nuevoCliente.num_dni = Convert.ToInt32(txtDniCliente.Text);
+            if (String.IsNullOrEmpty(txtMailCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un mail", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            nuevoCliente.email = txtMailCliente.Text;
+            if (String.IsNullOrEmpty(txtTelefonoCliente.Text) || !Utils.IsDigitsOnly(txtTelefonoCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            nuevoCliente.telefono = Convert.ToInt32(txtTelefonoCliente.Text);
+            if (String.IsNullOrEmpty(txtDireccionCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar una direccion", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            nuevoCliente.direccion = txtDireccionCliente.Text;
+            if (String.IsNullOrEmpty(txtCodigoPostalCliente.Text) || !Utils.IsDigitsOnly(txtCodigoPostalCliente.Text))
+            {
+                MessageBox.Show("Debe ingresar codigo postal", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            nuevoCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
+            nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
+
+
+
+            var actualizarCliente = nuevoCliente;
+
+           
 
             try
             {

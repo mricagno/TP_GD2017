@@ -33,6 +33,7 @@ namespace UberFrba.Abm_Rol
                 }
                 catch (Exception ex) {
                     MessageBox.Show(ex.Message.ToString(), "Alta Rol", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
 
             } //TODO METER TRY CATCH CON MENSAJE. Si fallo no continuar
@@ -41,7 +42,7 @@ namespace UberFrba.Abm_Rol
 
         private string dameNombreRol()
         {
-            //TODO IMPORTANTE: QUE NO SEA "" SINO TIRAR UN MENSJAE
+            
             if (string.IsNullOrWhiteSpace(txtNombreRol.Text))
             {
                MessageBox.Show("Se debe ingresar un nombre para el rol", "Ingresar Rol", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

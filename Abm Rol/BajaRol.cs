@@ -30,7 +30,8 @@ namespace UberFrba.Abm_Rol
             String nombreRol = dameRolAModificar();
             if(String.IsNullOrEmpty(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol");
+               
+                MessageBox.Show("Debe seleccionar un rol", "Baja Rol", MessageBoxButtons.OK);
                 return;
             }
            
@@ -43,7 +44,8 @@ namespace UberFrba.Abm_Rol
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
+                MessageBox.Show(ex.Message.ToString(), "Baja Rol", MessageBoxButtons.OK);
             }
            
 
@@ -63,8 +65,7 @@ namespace UberFrba.Abm_Rol
         private String dameRolAModificar()
         {
             String nombreRol = cmbRoles.Text;
-            
-
+           
             return nombreRol;
         }
     }

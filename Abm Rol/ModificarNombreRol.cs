@@ -34,7 +34,8 @@ namespace UberFrba.Abm_Rol
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
+                MessageBox.Show(ex.Message.ToString(), "Uber", MessageBoxButtons.OK);
             }
 
         }
@@ -46,6 +47,11 @@ namespace UberFrba.Abm_Rol
         }
 
         private void txtNuevoNombreRol_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarNombreRol_Load(object sender, EventArgs e)
         {
 
         }
