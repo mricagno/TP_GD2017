@@ -145,6 +145,36 @@ namespace UberFrba.Backend
             return usuarios;
         }
 
+        public static ObservableCollection<String> usuariosSinAsignarAChoferes()
+        {
+            String query = "EXEC [DROP_DATABASE].[SP_USUARIOS_SIN_ASIGNAR_A_CHOFERES] ";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["usuario"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
+        public static ObservableCollection<String> usuariosSinAsignarAClientes()
+        {
+            String query = "EXEC [DROP_DATABASE].[SP_USUARIOS_SIN_ASIGNAR] ";
+            SqlDataReader reader = new Server().query(query);
+            var usuarios = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                usuarios.Add(reader["usuario"].ToString());
+
+            }
+            reader.Close();
+            return usuarios;
+        }
+
         internal static void crearChofer(NuevoChofer nuevoChofer)
         {
             String query = "EXEC DROP_DATABASE.SP_CREAR_CHOFER '" + nuevoChofer.usuario + "', '" + nuevoChofer.nombre + "', '" + nuevoChofer.apellido + "', " +
