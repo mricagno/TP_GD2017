@@ -646,17 +646,17 @@ namespace UberFrba.Backend
         public static ObservableCollection<DtoAutoHabilitado> filtrar_Autos(string marca, string modelo, string patente,string dni)
         {
             int? dni_s = null;
+            String queryString;
             if (!String.IsNullOrEmpty(dni))
             {
                 dni_s = Convert.ToInt32(dni);
+                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
+     + "', '" + patente + "'," + dni_s;
+            }else{
+                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
+     + "', '" + patente + "',null";
             }
 
-            
-            
-
-           
-            String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
-                 + "', '" + patente + "', " + dni_s ;
 
             SqlDataReader reader = new Server().query(queryString);
             var autos_filtrados = new ObservableCollection<DtoAutoHabilitado>();
