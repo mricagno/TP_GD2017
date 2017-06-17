@@ -183,6 +183,7 @@
     <Compile Include="Backend\Server.cs" />
     <Compile Include="Backend\Tabs.cs" />
     <Compile Include="Backend\Utils.cs" />
+    <Compile Include="Backend\ViajeRendido.cs" />
     <Compile Include="Contabilidad\FacturacionClientes.cs">
       <SubType>Form</SubType>
     </Compile>

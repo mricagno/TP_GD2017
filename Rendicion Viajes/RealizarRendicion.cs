@@ -27,6 +27,7 @@ namespace UberFrba.Rendicion_Viajes
 
         private void RealizarRendicion_Load(object sender, EventArgs e)
         {
+            txtTotal.Enabled = false;
             lstChoferes.Items.Clear();
             ObservableCollection<DtoChoferHabilitado> choferes = Repositorio.todosLosChoferesHabilitadosConAutos();
 
@@ -34,6 +35,13 @@ namespace UberFrba.Rendicion_Viajes
             {
                 lstChoferes.Items.Add(c);
             }
+
+           
+            this.GridViajesRendidos.DataSource = new ObservableCollection<ViajeRendido>();
+
+            GridViajesRendidos.Update();
+            GridViajesRendidos.Refresh();
+
         }
 
         private void btnRendirViaje_Click(object sender, EventArgs e)
@@ -52,10 +60,18 @@ namespace UberFrba.Rendicion_Viajes
 
 
 
-                Repositorio.rendir(chofer.DNI, fecha);
+                ObservableCollection<ViajeRendido> viajes = Repositorio.rendir(chofer.DNI, fecha);
+                decimal total = 0;
+                foreach (var v in viajes)
+                {
+                    total = total + Convert.ToDecimal(v.Monto);
+                }
+                txtTotal.Text = total.ToString();
                 MessageBox.Show("La rendicion del chofer se realizo correctamente", "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                new Principal(Tabs.contabilidad()).Show();
-                this.Close();
+                this.GridViajesRendidos.DataSource = viajes;
+                GridViajesRendidos.Update();
+                GridViajesRendidos.Refresh();
+               
 
             }
             catch (Exception ex)

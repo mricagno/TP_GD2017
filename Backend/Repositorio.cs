@@ -498,10 +498,29 @@ namespace UberFrba.Backend
             new Server().realizarQuery(query);
         }
 
-        internal static void rendir(int dni, string fecha)
+        internal static ObservableCollection<ViajeRendido> rendir(int dni, string fecha)
         {
             String query = "EXEC DROP_DATABASE.[SP_RENDIR_VIAJES] " + dni.ToString() + ", '" + fecha + "'";
-            new Server().realizarQuery(query);
+            SqlDataReader reader = new Server().query(query);
+            var viajes = new ObservableCollection<ViajeRendido>();
+
+            while (reader.Read())
+            {
+                var viaje = new ViajeRendido();
+
+                viaje.Patente = (reader["PATENTE"].ToString());
+                viaje.Chofer = (reader["CHOFER_USUARIO"].ToString());
+                viaje.Cliente = (reader["CLIENTE_USUARIO"].ToString());
+                viaje.Turno = (reader["TURNO"].ToString());
+                viaje.Monto = (reader["PRECIO"].ToString());
+                viajes.Add(viaje);
+
+
+            }
+            reader.Close();
+            return viajes;
+        
+         
         }
 
         internal static void facturar(int dni, string fecha)
