@@ -54,10 +54,29 @@ namespace UberFrba.Abm_Automovil
           
             try
             {
-                //agregar validaciones
+                if (cmbMarcas.SelectedItem == null)
+                 {
+                    MessageBox.Show("Debe seleccionar un marca", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 String marca = cmbMarcas.SelectedItem.ToString();
+                if (String.IsNullOrEmpty(txtModelo.Text))
+                {
+                    MessageBox.Show("Debe ingresar modelo", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 String modelo = txtModelo.Text;
+                if (String.IsNullOrEmpty(txtPatente.Text))
+                {
+                    MessageBox.Show("Debe ingresar patente", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 String patente = txtPatente.Text;
+                if (cmbTurnos.SelectedItem == null)
+                {
+                    MessageBox.Show("Debe seleccionar un turno", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 String turno = cmbTurnos.SelectedItem.ToString();
                 int DNI = ((DtoChoferHabilitado)lstChoferes.SelectedItem).DNI;
 

@@ -87,7 +87,7 @@
             this.cmbMarcas.FormattingEnabled = true;
             this.cmbMarcas.Location = new System.Drawing.Point(114, 29);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarcas.Size = new System.Drawing.Size(126, 21);
             this.cmbMarcas.TabIndex = 15;
             // 
             // cmbTurnos
@@ -95,7 +95,7 @@
             this.cmbTurnos.FormattingEnabled = true;
             this.cmbTurnos.Location = new System.Drawing.Point(115, 116);
             this.cmbTurnos.Name = "cmbTurnos";
-            this.cmbTurnos.Size = new System.Drawing.Size(120, 21);
+            this.cmbTurnos.Size = new System.Drawing.Size(125, 21);
             this.cmbTurnos.TabIndex = 14;
             // 
             // label4

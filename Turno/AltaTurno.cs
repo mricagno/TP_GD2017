@@ -70,7 +70,33 @@ namespace UberFrba.Turno
             try
             {
                 var turnoDto = new DtoTurno();
+                if (String.IsNullOrEmpty(txtNombreTurno.Text))
+                {
+                    MessageBox.Show("Debe ingresar nombre del turno", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 turnoDto.Nombre = txtNombreTurno.Text;
+                if (String.IsNullOrEmpty(txtHoraInicio.Text) || !Utils.IsDigitsOnly(txtHoraInicio.Text))
+                {
+                    MessageBox.Show("Debe ingresar hora incio numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+
+                if (String.IsNullOrEmpty(txtHoraFin.Text) || !Utils.IsDigitsOnly(txtHoraFin.Text))
+                {
+                    MessageBox.Show("Debe ingresar hora fin numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtPrecioBase.Text) || !Utils.IsDigitsOnly(txtPrecioBase.Text))
+                {
+                    MessageBox.Show("Debe ingresar precio base numerico", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                if (String.IsNullOrEmpty(txtValorKm.Text) || !Utils.IsDigitsOnly(txtValorKm.Text))
+                {
+                    MessageBox.Show("Debe ingresar valor km numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
                 turnoDto.HoraInicio = Convert.ToInt32(txtHoraInicio.Text);
                 turnoDto.HoraFin = Convert.ToInt32(txtHoraFin.Text);
                 turnoDto.PrecioBase = Convert.ToInt32(txtPrecioBase.Text);
