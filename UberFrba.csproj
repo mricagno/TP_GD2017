@@ -77,6 +77,12 @@
     <Compile Include="Abm Automovil\BajaAuto.Designer.cs">
       <DependentUpon>BajaAuto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Abm Automovil\EditarAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Automovil\EditarAuto.Designer.cs">
+      <DependentUpon>EditarAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Abm Automovil\ModificarAuto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Automovil\BajaAuto.resx">
       <DependentUpon>BajaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Automovil\EditarAuto.resx">
+      <DependentUpon>EditarAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Automovil\ModificarAuto.resx">
       <DependentUpon>ModificarAuto.cs</DependentUpon>

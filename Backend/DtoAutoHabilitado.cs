@@ -8,11 +8,11 @@ namespace UberFrba.Backend
 {
     public class DtoAutoHabilitado
     {
-        public String marca { get; set; }
-        public String modelo { get; set; }
-        public String patente { get; set; }
+        public String Patente { get; set; }
+        public String Marca { get; set; }
+        public String Modelo { get; set; }
         public String DNI { get; set; }
-        public String turno { get; set; }
+        public String Turno { get; set; }
 
 
        /* public override string ToString()

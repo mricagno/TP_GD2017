@@ -54,11 +54,11 @@ namespace UberFrba.Abm_Automovil
                 return;
             }
             DtoAutoHabilitado auto_desa = new DtoAutoHabilitado();
-            auto_desa.marca = automovil.Cells[0].Value.ToString();
-            auto_desa.modelo = automovil.Cells[1].Value.ToString();
-            auto_desa.patente = automovil.Cells[2].Value.ToString();
+            auto_desa.Marca = automovil.Cells[0].Value.ToString();
+            auto_desa.Modelo = automovil.Cells[1].Value.ToString();
+            auto_desa.Patente = automovil.Cells[2].Value.ToString();
             auto_desa.DNI = automovil.Cells[3].Value.ToString();
-            auto_desa.turno = automovil.Cells[4].Value.ToString();
+            auto_desa.Turno = automovil.Cells[4].Value.ToString();
 
 
             try
@@ -95,11 +95,11 @@ namespace UberFrba.Abm_Automovil
                 return;
             }
             DtoAutoHabilitado auto_habi = new DtoAutoHabilitado();
-            auto_habi.marca = auto.Cells[0].Value.ToString();
-            auto_habi.modelo = auto.Cells[1].Value.ToString();
-            auto_habi.patente = auto.Cells[2].Value.ToString();
+            auto_habi.Marca = auto.Cells[0].Value.ToString();
+            auto_habi.Modelo = auto.Cells[1].Value.ToString();
+            auto_habi.Patente = auto.Cells[2].Value.ToString();
             auto_habi.DNI = auto.Cells[3].Value.ToString();
-            auto_habi.turno = auto.Cells[4].Value.ToString();
+            auto_habi.Turno = auto.Cells[4].Value.ToString();
             try
             {
                 String estabaHabilitado = Repositorio.habilitarAuto(auto_habi);
@@ -122,7 +122,15 @@ namespace UberFrba.Abm_Automovil
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow auto = Utils.getSelectedRow(GridAutomovil);
+            if (auto == null)
+            {
+                MessageBox.Show("Debe seleccionar un auto", "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String patente = auto.Cells[0].Value.ToString();
+            new EditarAuto(patente).Show();
+            this.Close();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)

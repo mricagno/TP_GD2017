@@ -52,11 +52,11 @@ namespace UberFrba.Backend
                 var registroAuto = new DtoAutoHabilitado();
 
 
-                registroAuto.marca = reader["MARCA"].ToString();
-                registroAuto.modelo = reader["MODELO"].ToString();
-                registroAuto.patente = reader["PATENTE"].ToString();
+                registroAuto.Marca = reader["MARCA"].ToString();
+                registroAuto.Modelo = reader["MODELO"].ToString();
+                registroAuto.Patente = reader["PATENTE"].ToString();
                 registroAuto.DNI = reader["NUM_DNI"].ToString();
-                registroAuto.turno = reader["TURNO"].ToString();
+                registroAuto.Turno = reader["TURNO"].ToString();
 
                 autos.Add(registroAuto);
             }
@@ -177,14 +177,14 @@ namespace UberFrba.Backend
 
         internal static string habilitarAuto(DtoAutoHabilitado auto)
         {
-            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO '" + auto.patente + "', " + auto.DNI + ", '" + auto.turno + "'";
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO '" + auto.Patente + "', " + auto.DNI + ", '" + auto.Turno + "'";
             new Server().realizarQuery(query);
             return ""; //aca habria qe devolver si ya estaba habilitado un "1"
         }
 
         internal static string deshabilitarAuto(DtoAutoHabilitado auto)
         {
-            String query = "EXEC DROP_DATABASE.BAJA_AUTO " + auto.patente;
+            String query = "EXEC DROP_DATABASE.BAJA_AUTO " + auto.Patente;
             new Server().realizarQuery(query);
             return ""; //aca habria qe devolver si ya estaba deshabilitado un "1"
         }
@@ -633,6 +633,14 @@ namespace UberFrba.Backend
             }
             reader.Close();
             return funcionalidades;
+        }
+
+        internal static void modificarAuto(String patentevieja, string marca, string modelo, string patente, string turno)
+        {
+
+             String query = "EXEC DROP_DATABASE.[MODIFICAR_AUTO] '" + patentevieja.ToString() + "', '" + marca
+                 + "'"  + modelo + "', '" + patente + "', '" + turno + "'" ;
+            new Server().realizarQuery(query);
         }
     }
 }
