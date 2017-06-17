@@ -63,7 +63,10 @@ namespace UberFrba.Abm_Cliente
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-
+            ObservableCollection<DtoClienteModificar> cliente_filtrado = Repositorio.filtrar_Cliente(nombre_Box.Text, apellido_Box.Text, documento_Box.Text);
+            GridClientes.DataSource = cliente_filtrado;
+            GridClientes.Update();
+            GridClientes.Refresh();
         }
 
         private void btnModifcar_Click(object sender, EventArgs e)
