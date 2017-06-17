@@ -639,7 +639,7 @@ namespace UberFrba.Backend
         {
 
              String query = "EXEC DROP_DATABASE.[MODIFICAR_AUTO] '" + patentevieja.ToString() + "', '" + marca
-                 + "'"  + modelo + "', '" + patente + "', '" + turno + "'" ;
+                 + "', '"  + modelo + "', '" + patente + "', '" + turno + "'" ;
             new Server().realizarQuery(query);
         }
     }
