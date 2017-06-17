@@ -33,8 +33,6 @@ namespace UberFrba.Registro_Viajes
         private void Guardar_Click(object sender, EventArgs e)
         {
             
-         
-           
             try{
                 RegistroViaje registroViaje = new RegistroViaje();
 
@@ -77,9 +75,7 @@ namespace UberFrba.Registro_Viajes
                 MessageBox.Show(ex.Message.ToString(), "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-
-           
+            MessageBox.Show("Se registro el viaje correctamente", "Viaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
             new Principal(Tabs.viajes()).Show();
             this.Close();
