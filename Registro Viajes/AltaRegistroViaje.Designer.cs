@@ -45,10 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.Guardar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateHoraInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateHoraFin = new System.Windows.Forms.DateTimePicker();
             this.viajeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,10 +102,6 @@
             // 
             // viajeGroupBox
             // 
-            this.viajeGroupBox.Controls.Add(this.dateHoraFin);
-            this.viajeGroupBox.Controls.Add(this.dateHoraInicio);
-            this.viajeGroupBox.Controls.Add(this.label7);
-            this.viajeGroupBox.Controls.Add(this.label6);
             this.viajeGroupBox.Controls.Add(this.dateFechaFin);
             this.viajeGroupBox.Controls.Add(this.dateFechaInicio);
             this.viajeGroupBox.Controls.Add(this.label5);
@@ -126,7 +118,7 @@
             this.viajeGroupBox.Controls.Add(this.txtAutomovil);
             this.viajeGroupBox.Location = new System.Drawing.Point(58, 41);
             this.viajeGroupBox.Name = "viajeGroupBox";
-            this.viajeGroupBox.Size = new System.Drawing.Size(419, 356);
+            this.viajeGroupBox.Size = new System.Drawing.Size(419, 309);
             this.viajeGroupBox.TabIndex = 9;
             this.viajeGroupBox.TabStop = false;
             this.viajeGroupBox.Text = "Viaje";
@@ -205,7 +197,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(58, 427);
+            this.btnVolver.Location = new System.Drawing.Point(63, 365);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(100, 28);
             this.btnVolver.TabIndex = 10;
@@ -215,7 +207,7 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(180, 427);
+            this.Guardar.Location = new System.Drawing.Point(303, 365);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(114, 27);
             this.Guardar.TabIndex = 11;
@@ -223,44 +215,11 @@
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 301);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Hora Inicio";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 326);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Hora Fin";
-            // 
-            // dateHoraInicio
-            // 
-            this.dateHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateHoraInicio.Location = new System.Drawing.Point(161, 294);
-            this.dateHoraInicio.Name = "dateHoraInicio";
-            this.dateHoraInicio.Size = new System.Drawing.Size(200, 20);
-            this.dateHoraInicio.TabIndex = 20;
-            // 
-            // dateHoraFin
-            // 
-            this.dateHoraFin.Location = new System.Drawing.Point(161, 320);
-            this.dateHoraFin.Name = "dateHoraFin";
-            this.dateHoraFin.Size = new System.Drawing.Size(200, 20);
-            this.dateHoraFin.TabIndex = 21;
-            // 
             // AltaRegistroViaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 550);
+            this.ClientSize = new System.Drawing.Size(570, 413);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.viajeGroupBox);
@@ -292,9 +251,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateHoraFin;
-        private System.Windows.Forms.DateTimePicker dateHoraInicio;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
     }
 }
