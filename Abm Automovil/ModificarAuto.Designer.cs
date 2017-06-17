@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.chofer_Box = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.patente_Box = new System.Windows.Forms.TextBox();
+            this.modelo_Box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.marca_Box = new System.Windows.Forms.TextBox();
@@ -52,11 +52,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.chofer_Box);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnFiltrar);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.patente_Box);
+            this.groupBox1.Controls.Add(this.modelo_Box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.marca_Box);
@@ -70,12 +70,12 @@
             this.groupBox1.Text = "Seleccionar Automovil";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox4
+            // chofer_Box
             // 
-            this.textBox4.Location = new System.Drawing.Point(290, 61);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
+            this.chofer_Box.Location = new System.Drawing.Point(290, 61);
+            this.chofer_Box.Name = "chofer_Box";
+            this.chofer_Box.Size = new System.Drawing.Size(100, 20);
+            this.chofer_Box.TabIndex = 8;
             // 
             // label3
             // 
@@ -97,19 +97,20 @@
             this.btnFiltrar.UseVisualStyleBackColor = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // textBox3
+            // patente_Box
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.patente_Box.Location = new System.Drawing.Point(90, 61);
+            this.patente_Box.Name = "patente_Box";
+            this.patente_Box.Size = new System.Drawing.Size(100, 20);
+            this.patente_Box.TabIndex = 5;
             // 
-            // textBox2
+            // modelo_Box
             // 
-            this.textBox2.Location = new System.Drawing.Point(290, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.modelo_Box.Location = new System.Drawing.Point(290, 28);
+            this.modelo_Box.Name = "modelo_Box";
+            this.modelo_Box.Size = new System.Drawing.Size(100, 20);
+            this.modelo_Box.TabIndex = 4;
+            this.modelo_Box.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -135,7 +136,6 @@
             this.marca_Box.Name = "marca_Box";
             this.marca_Box.Size = new System.Drawing.Size(100, 20);
             this.marca_Box.TabIndex = 1;
-            
             // 
             // Nombre
             // 
@@ -226,15 +226,15 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox patente_Box;
+        private System.Windows.Forms.TextBox modelo_Box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox marca_Box;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.DataGridView GridAutomovil;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox chofer_Box;
         private System.Windows.Forms.Button btnHabilitar;
         private System.Windows.Forms.Button btnMenuPrincipal;
         private System.Windows.Forms.Button btnModificar;
