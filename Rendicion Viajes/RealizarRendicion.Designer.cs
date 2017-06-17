@@ -106,6 +106,7 @@
             this.GridViajesRendidos.Name = "GridViajesRendidos";
             this.GridViajesRendidos.Size = new System.Drawing.Size(543, 339);
             this.GridViajesRendidos.TabIndex = 25;
+            this.GridViajesRendidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViajesRendidos_CellContentClick);
             // 
             // txtTotal
             // 

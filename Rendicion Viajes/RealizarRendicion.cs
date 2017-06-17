@@ -81,6 +81,11 @@ namespace UberFrba.Rendicion_Viajes
             }
         }
 
+        private void GridViajesRendidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         
     }
 }

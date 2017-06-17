@@ -553,10 +553,25 @@ namespace UberFrba.Backend
          
         }
 
-        internal static void facturar(int dni, string fecha)
+        internal static ObservableCollection<ClienteFacturado> facturar(int dni, string fecha)
         {
             String query = "EXEC DROP_DATABASE.[FACTURAR_MES_CLIENTE] " + dni.ToString() + ", '" + fecha + "'";
-            new Server().realizarQuery(query);
+            SqlDataReader reader = new Server().query(query);
+            var facturas = new ObservableCollection<ClienteFacturado>();
+
+            while (reader.Read())
+            {
+                var factura = new ClienteFacturado();
+
+                factura.Patente = (reader["PATENTE"].ToString());
+                factura.Chofer = (reader["CHOFER_USUARIO"].ToString());
+                factura.Cliente = (reader["CLIENTE_USUARIO"].ToString());
+                factura.Turno = (reader["TURNO"].ToString());
+                factura.Monto = (reader["PRECIO"].ToString());
+                facturas.Add(factura);
+            }
+            reader.Close();
+            return facturas;
         }
 
         internal static ObservableCollection<String> todosLosAnios()

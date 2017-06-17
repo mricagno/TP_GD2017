@@ -170,6 +170,7 @@
       <DependentUpon>ModificarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Rol\OutToFile.cs" />
+    <Compile Include="Backend\ClienteFacturado.cs" />
     <Compile Include="Backend\DtoAutoHabilitado.cs" />
     <Compile Include="Backend\DtoChoferHabilitado.cs" />
     <Compile Include="Backend\DtoClienteHabilitado.cs" />

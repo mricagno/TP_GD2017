@@ -107,9 +107,6 @@ namespace UberFrba.Registro_Viajes
                  cmbChoferHabilitado.Items.Add(c);
              }
             
-
-
-
         }
 
         private void cmbChoferHabilitado_SelectedIndexChanged(object sender, EventArgs e)
