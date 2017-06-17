@@ -76,7 +76,7 @@ namespace UberFrba.Abm_Automovil
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al deshabilitar el Auto - Exception :" + ex.ToString(), "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Auto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -137,5 +137,7 @@ namespace UberFrba.Abm_Automovil
         //GridAutomovil.Update();
         //GridAutomovil.Refresh();
         }
+
+       
     }
 }

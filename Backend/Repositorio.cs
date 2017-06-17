@@ -52,7 +52,7 @@ namespace UberFrba.Backend
                 var registroAuto = new DtoAutoHabilitado();
 
 
-                registroAuto.marca = reader["ID_MARCA"].ToString();
+                registroAuto.marca = reader["MARCA"].ToString();
                 registroAuto.modelo = reader["MODELO"].ToString();
                 registroAuto.patente = reader["PATENTE"].ToString();
                 registroAuto.DNI = reader["NUM_DNI"].ToString();
@@ -177,7 +177,7 @@ namespace UberFrba.Backend
 
         internal static string habilitarAuto(DtoAutoHabilitado auto)
         {
-            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO " + auto.patente + "', '" + auto.DNI + "', '" + auto.turno;
+            String query = "EXEC DROP_DATABASE.SP_HABILITAR_AUTO '" + auto.patente + "', " + auto.DNI + ", '" + auto.turno + "'";
             new Server().realizarQuery(query);
             return ""; //aca habria qe devolver si ya estaba habilitado un "1"
         }

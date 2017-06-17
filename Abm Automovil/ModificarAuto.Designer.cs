@@ -135,6 +135,7 @@
             this.marca_Box.Name = "marca_Box";
             this.marca_Box.Size = new System.Drawing.Size(100, 20);
             this.marca_Box.TabIndex = 1;
+            
             // 
             // Nombre
             // 
