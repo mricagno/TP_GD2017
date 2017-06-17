@@ -135,16 +135,7 @@ namespace UberFrba.Abm_Automovil
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-         
 
-
-        /*BindingSource bs = new BindingSource();
-        bs.DataSource = GridAutomovil.DataSource;
-        var queryFilter = String.Join("marca LIKE '%" , marca_Box.Text,"%'");
-        bs.Filter = queryFilter;//("marca = " + marca_Box.Text );
-        GridAutomovil.DataSource = bs;
-        GridAutomovil.Update();
-        GridAutomovil.Refresh();*/
             ObservableCollection<DtoAutoHabilitado> autos_filtrado = Repositorio.filtrar_Autos(marca_Box.Text,modelo_Box.Text,patente_Box.Text, chofer_Box.Text);
             GridAutomovil.DataSource = autos_filtrado;
             GridAutomovil.Update();

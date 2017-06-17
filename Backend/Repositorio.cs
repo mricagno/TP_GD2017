@@ -697,5 +697,40 @@ namespace UberFrba.Backend
             return autos_filtrados;
 
         }
+        public static ObservableCollection<DtoModificarChofer> filtrar_Chofer(string nombre, string apellido, string documento)
+        {
+            int? documento_s = null;
+            String queryString;
+            if (!String.IsNullOrEmpty(documento))
+            {
+                documento_s = Convert.ToInt32(documento);
+                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CHOFER'" + nombre + "', '" + apellido
+                + "'," + documento_s;
+            }
+            else
+            {
+                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CHOFER'" + nombre + "', '" + apellido
+                 + "',null";
+            }
+
+            SqlDataReader reader = new Server().query(queryString);
+            var chofer_filtrados = new ObservableCollection<DtoModificarChofer>();
+
+
+            while (reader.Read())
+            {
+                var chofer = new DtoModificarChofer();
+
+                //chofer.Username = reader["id_usuario"].ToString();
+                chofer.Nombre = reader["nombre"].ToString();
+                chofer.Apellido = reader["apellido"].ToString();
+                chofer.Documento = reader["num_dni"].ToString();
+
+                chofer_filtrados.Add(chofer);
+            }
+            reader.Close();
+            return chofer_filtrados;
+
+        }
     }
-}
+    }

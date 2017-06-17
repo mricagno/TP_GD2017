@@ -34,11 +34,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.documento_Box = new System.Windows.Forms.TextBox();
+            this.apellido_Box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nombre_Box = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.GridChofer = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
@@ -88,11 +88,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnFiltrar);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.documento_Box);
+            this.groupBox1.Controls.Add(this.apellido_Box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.nombre_Box);
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.GridChofer);
             this.groupBox1.Location = new System.Drawing.Point(22, 13);
@@ -111,20 +111,21 @@
             this.btnFiltrar.TabIndex = 6;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // textBox3
+            // documento_Box
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.documento_Box.Location = new System.Drawing.Point(90, 61);
+            this.documento_Box.Name = "documento_Box";
+            this.documento_Box.Size = new System.Drawing.Size(100, 20);
+            this.documento_Box.TabIndex = 5;
             // 
-            // textBox2
+            // apellido_Box
             // 
-            this.textBox2.Location = new System.Drawing.Point(289, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.apellido_Box.Location = new System.Drawing.Point(289, 28);
+            this.apellido_Box.Name = "apellido_Box";
+            this.apellido_Box.Size = new System.Drawing.Size(100, 20);
+            this.apellido_Box.TabIndex = 4;
             // 
             // label2
             // 
@@ -144,12 +145,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Apellido";
             // 
-            // textBox1
+            // nombre_Box
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.nombre_Box.Location = new System.Drawing.Point(90, 25);
+            this.nombre_Box.Name = "nombre_Box";
+            this.nombre_Box.Size = new System.Drawing.Size(100, 20);
+            this.nombre_Box.TabIndex = 1;
+            this.nombre_Box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Nombre
             // 
@@ -198,11 +200,11 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox documento_Box;
+        private System.Windows.Forms.TextBox apellido_Box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nombre_Box;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.DataGridView GridChofer;
     }
