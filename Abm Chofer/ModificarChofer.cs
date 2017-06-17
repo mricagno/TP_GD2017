@@ -121,5 +121,18 @@ namespace UberFrba.Abm_Chofer
             new EditarChofer(dni).Show();
             this.Close();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            ObservableCollection<DtoModificarChofer> chofer_filtrado = Repositorio.filtrar_Chofer(nombre_Box.Text, apellido_Box.Text, documento_Box.Text);
+            GridChofer.DataSource = chofer_filtrado;
+            GridChofer.Update();
+            GridChofer.Refresh();
+        }
     }
 }
