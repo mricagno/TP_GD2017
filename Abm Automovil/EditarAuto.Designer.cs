@@ -144,6 +144,7 @@
             this.btnMenuPrincipal.TabIndex = 18;
             this.btnMenuPrincipal.Text = " Menu Principal";
             this.btnMenuPrincipal.UseVisualStyleBackColor = true;
+            this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
             // 
             // EditarAuto
             // 

@@ -83,5 +83,11 @@ namespace UberFrba.Abm_Automovil
             }
             txtPatente.Text = this.lapatente;
         }
+
+        private void btnMenuPrincipal_Click(object sender, EventArgs e)
+        {
+            new Principal(Tabs.autos()).Show();
+            this.Close();
+        }
     }
 }
