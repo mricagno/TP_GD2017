@@ -212,7 +212,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox1);
             this.Name = "ModificarAuto";
-            this.Text = "Form1";
+            this.Text = "Modificar Auto";
             this.Load += new System.EventHandler(this.ModificarAuto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
