@@ -225,6 +225,7 @@
             this.lstUsuarios.Name = "lstUsuarios";
             this.lstUsuarios.Size = new System.Drawing.Size(120, 238);
             this.lstUsuarios.TabIndex = 0;
+            this.lstUsuarios.SelectedIndexChanged += new System.EventHandler(this.lstUsuarios_SelectedIndexChanged);
             // 
             // AltaChofer
             // 

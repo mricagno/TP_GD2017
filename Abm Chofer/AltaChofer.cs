@@ -86,10 +86,16 @@ namespace UberFrba.Abm_Chofer
         private void AltaChofer_Load(object sender, EventArgs e)
         {
             lstUsuarios.Items.Clear();
-            foreach (string s in Repositorio.usuariosSinAsignarAClientes())
+            //foreach (string s in Repositorio.usuariosSinAsignarAClientes())
+            foreach (string s in Repositorio.usuariosSinAsignarAChoferes())
             {
                 lstUsuarios.Items.Add(s);
             }
+        }
+
+        private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
