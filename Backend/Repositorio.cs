@@ -642,5 +642,41 @@ namespace UberFrba.Backend
                  + "', '"  + modelo + "', '" + patente + "', '" + turno + "'" ;
             new Server().realizarQuery(query);
         }
+
+        public static ObservableCollection<DtoAutoHabilitado> filtrar_Autos(string marca, string modelo, string patente,string dni)
+        {
+            int? dni_s = null;
+            if (!String.IsNullOrEmpty(dni))
+            {
+                dni_s = Convert.ToInt32(dni);
+            }
+
+            
+            
+
+           
+            String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
+                 + "', '" + patente + "', " + dni_s ;
+
+            SqlDataReader reader = new Server().query(queryString);
+            var autos_filtrados = new ObservableCollection<DtoAutoHabilitado>();
+
+            while (reader.Read())
+            {
+                var registroAuto = new DtoAutoHabilitado();
+
+
+                registroAuto.Marca = reader["MARCA"].ToString();
+                registroAuto.Modelo = reader["MODELO"].ToString();
+                registroAuto.Patente = reader["PATENTE"].ToString();
+                registroAuto.DNI = reader["NUM_DNI"].ToString();
+                registroAuto.Turno = reader["ID_TURNO"].ToString();
+
+                autos_filtrados.Add(registroAuto);
+            }
+            reader.Close();
+            return autos_filtrados;
+
+        }
     }
 }
