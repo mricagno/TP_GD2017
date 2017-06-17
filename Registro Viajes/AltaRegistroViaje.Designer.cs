@@ -126,7 +126,7 @@
             // 
             // dateFechaFin
             // 
-            this.dateFechaFin.CustomFormat = "yyyy/MM/dd hh:mm";
+            this.dateFechaFin.CustomFormat = "yyyy/MM/dd hh:mm tt";
             this.dateFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFechaFin.Location = new System.Drawing.Point(159, 253);
             this.dateFechaFin.Name = "dateFechaFin";
@@ -135,7 +135,7 @@
             // 
             // dateFechaInicio
             // 
-            this.dateFechaInicio.CustomFormat = "yyyy/MM/dd hh:mm";
+            this.dateFechaInicio.CustomFormat = "yyyy/MM/dd hh:mm tt";
             this.dateFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFechaInicio.Location = new System.Drawing.Point(159, 216);
             this.dateFechaInicio.Name = "dateFechaInicio";

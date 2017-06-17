@@ -66,8 +66,8 @@ namespace UberFrba.Registro_Viajes
 
               
 
-                registroViaje.FechaFinViaje = dateFechaFin.Value.ToString("yyyy-MM-dd hh:mm:ss");
-                registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                registroViaje.FechaFinViaje = dateFechaFin.Value.ToString("yyyy-MM-dd hh:mm:ss tt");
+                registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-dd hh:mm:ss tt");
 
                 
                 Repositorio.registrarViaje(registroViaje);
