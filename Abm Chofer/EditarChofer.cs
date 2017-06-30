@@ -46,7 +46,7 @@ namespace UberFrba.Abm_Chofer
             actualizarChofer.email = txtMailChofer.Text;
             actualizarChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
             actualizarChofer.direccion = txtDireccionChofer.Text;
-            actualizarChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            actualizarChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
 
             try

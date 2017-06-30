@@ -94,7 +94,7 @@ namespace UberFrba.Abm_Cliente
                 return;
             }
             nuevoCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
-            nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
                 
 
             try{

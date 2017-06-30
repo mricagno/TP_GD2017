@@ -49,7 +49,7 @@ namespace UberFrba.Contabilidad
                     return;
                 }
                  
-                String fecha = dateFactura.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                String fecha = dateFactura.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 /*
                  * ObservableCollection<ViajeRendido> viajes = Repositorio.rendir(chofer.DNI, fecha);

@@ -65,7 +65,7 @@ namespace UberFrba.Abm_Chofer
                 return;
             }
             nuevoChofer.direccion = txtDireccionChofer.Text;
-            nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-dd hh:mm:ss");
+            nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
 
             try

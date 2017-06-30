@@ -56,7 +56,7 @@ namespace UberFrba.Rendicion_Viajes
                     MessageBox.Show("Debe seleccionar un chofer", "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                String fecha = dateRendicion.Value.ToString("yyyy-MM-dd hh:mm:ss");
+                String fecha = dateRendicion.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
 
 
