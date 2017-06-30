@@ -57,7 +57,7 @@ namespace UberFrba
                 String fechaHoy = nuevaFecha.ToString("yyyy-MM-ddT23:59:59Z");
                 Repositorio.setearFecha(fechaHoy);
 
-            }catch(Exception e)
+            }catch(Exception exep)
             {
         
             }
