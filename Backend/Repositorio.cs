@@ -811,6 +811,15 @@ namespace UberFrba.Backend
             reader.Close();
             return cliente_filtrados;
 
+
+        }
+
+        internal static void setearFecha(string fechaHoy)
+        {
+            String query = "EXEC DROP_DATABASE.SETEAR_FECHA '" + fechaHoy + "'";
+           
+
+            new Server().realizarQuery(query);
         }
     }
-    }
+}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -48,6 +49,20 @@ namespace UberFrba
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            
+            try
+            {
+                String fecha_hoy = ConfigurationManager.AppSettings["fecha_hoy"];
+                DateTime nuevaFecha = DateTime.ParseExact(fecha_hoy, "yyyy-MM-dd", null);
+                String fechaHoy = nuevaFecha.ToString("yyyy-MM-ddT23:59:59Z");
+                Repositorio.setearFecha(fechaHoy);
+
+            }catch(Exception e)
+            {
+        
+            }
+            
+
             ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
             
             if (funcionalidades.Contains("ALTA_ROL"))
