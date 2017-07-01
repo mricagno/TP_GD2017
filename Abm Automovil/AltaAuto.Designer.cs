@@ -47,7 +47,7 @@
             // 
             // btnMenuPrincipal
             // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(36, 340);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(12, 340);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(101, 34);
             this.btnMenuPrincipal.TabIndex = 17;
@@ -57,7 +57,7 @@
             // 
             // btnCrearAuto
             // 
-            this.btnCrearAuto.Location = new System.Drawing.Point(386, 340);
+            this.btnCrearAuto.Location = new System.Drawing.Point(431, 340);
             this.btnCrearAuto.Name = "btnCrearAuto";
             this.btnCrearAuto.Size = new System.Drawing.Size(102, 35);
             this.btnCrearAuto.TabIndex = 16;
@@ -152,9 +152,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstChoferes);
-            this.groupBox1.Location = new System.Drawing.Point(33, 26);
+            this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(167, 290);
+            this.groupBox1.Size = new System.Drawing.Size(188, 290);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar chofer";
@@ -164,7 +164,7 @@
             this.lstChoferes.FormattingEnabled = true;
             this.lstChoferes.Location = new System.Drawing.Point(15, 31);
             this.lstChoferes.Name = "lstChoferes";
-            this.lstChoferes.Size = new System.Drawing.Size(120, 238);
+            this.lstChoferes.Size = new System.Drawing.Size(149, 238);
             this.lstChoferes.TabIndex = 0;
             // 
             // AltaAuto

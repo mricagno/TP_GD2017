@@ -36,7 +36,7 @@ namespace UberFrba.Abm_Rol
 
                 }
 
-            } //TODO METER TRY CATCH CON MENSAJE. Si fallo no continuar
+            } 
 
         }
 

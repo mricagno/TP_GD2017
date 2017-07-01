@@ -58,16 +58,16 @@
             this.lstUsuarios.FormattingEnabled = true;
             this.lstUsuarios.Location = new System.Drawing.Point(15, 31);
             this.lstUsuarios.Name = "lstUsuarios";
-            this.lstUsuarios.Size = new System.Drawing.Size(120, 238);
+            this.lstUsuarios.Size = new System.Drawing.Size(162, 238);
             this.lstUsuarios.TabIndex = 0;
             this.lstUsuarios.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstUsuarios);
-            this.groupBox1.Location = new System.Drawing.Point(24, 25);
+            this.groupBox1.Location = new System.Drawing.Point(7, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(167, 290);
+            this.groupBox1.Size = new System.Drawing.Size(201, 290);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar usuario ";
@@ -90,7 +90,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(210, 25);
+            this.groupBox2.Location = new System.Drawing.Point(227, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(341, 290);
             this.groupBox2.TabIndex = 1;
@@ -239,7 +239,7 @@
             // 
             // btnMenuPrincipal
             // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(27, 339);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(12, 338);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(101, 34);
             this.btnMenuPrincipal.TabIndex = 9;

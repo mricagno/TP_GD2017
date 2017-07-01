@@ -74,17 +74,18 @@
             // 
             // btnNuevoTurno
             // 
+            this.btnNuevoTurno.Enabled = false;
             this.btnNuevoTurno.Location = new System.Drawing.Point(23, 35);
             this.btnNuevoTurno.Name = "btnNuevoTurno";
             this.btnNuevoTurno.Size = new System.Drawing.Size(112, 34);
             this.btnNuevoTurno.TabIndex = 1;
             this.btnNuevoTurno.Text = "Nuevo Turno";
             this.btnNuevoTurno.UseVisualStyleBackColor = true;
-            this.btnNuevoTurno.Visible = false;
             this.btnNuevoTurno.Click += new System.EventHandler(this.btnNuevoTurno_Click);
             // 
             // irRegistrarViaje
             // 
+            this.irRegistrarViaje.Enabled = false;
             this.irRegistrarViaje.Location = new System.Drawing.Point(19, 77);
             this.irRegistrarViaje.Name = "irRegistrarViaje";
             this.irRegistrarViaje.Size = new System.Drawing.Size(109, 31);
@@ -95,57 +96,57 @@
             // 
             // btnAltaAuto
             // 
+            this.btnAltaAuto.Enabled = false;
             this.btnAltaAuto.Location = new System.Drawing.Point(40, 31);
             this.btnAltaAuto.Name = "btnAltaAuto";
             this.btnAltaAuto.Size = new System.Drawing.Size(108, 27);
             this.btnAltaAuto.TabIndex = 0;
             this.btnAltaAuto.Text = "Nuevo Auto";
             this.btnAltaAuto.UseVisualStyleBackColor = true;
-            this.btnAltaAuto.Visible = false;
             this.btnAltaAuto.Click += new System.EventHandler(this.btnAuto_Click);
             // 
             // btnBajaAuto
             // 
+            this.btnBajaAuto.Enabled = false;
             this.btnBajaAuto.Location = new System.Drawing.Point(40, 100);
             this.btnBajaAuto.Name = "btnBajaAuto";
             this.btnBajaAuto.Size = new System.Drawing.Size(108, 31);
             this.btnBajaAuto.TabIndex = 2;
             this.btnBajaAuto.Text = "Baja Auto";
             this.btnBajaAuto.UseVisualStyleBackColor = true;
-            this.btnBajaAuto.Visible = false;
             this.btnBajaAuto.Click += new System.EventHandler(this.btnBajaAuto_Click);
             // 
             // btnAltaRol
             // 
+            this.btnAltaRol.Enabled = false;
             this.btnAltaRol.Location = new System.Drawing.Point(32, 31);
             this.btnAltaRol.Name = "btnAltaRol";
             this.btnAltaRol.Size = new System.Drawing.Size(98, 27);
             this.btnAltaRol.TabIndex = 0;
             this.btnAltaRol.Text = "Alta Rol";
             this.btnAltaRol.UseVisualStyleBackColor = true;
-            this.btnAltaRol.Visible = false;
             this.btnAltaRol.Click += new System.EventHandler(this.btnAltaRol_Click);
             // 
             // btnModificarRol
             // 
+            this.btnModificarRol.Enabled = false;
             this.btnModificarRol.Location = new System.Drawing.Point(32, 64);
             this.btnModificarRol.Name = "btnModificarRol";
             this.btnModificarRol.Size = new System.Drawing.Size(98, 30);
             this.btnModificarRol.TabIndex = 1;
             this.btnModificarRol.Text = "Modificar Rol";
             this.btnModificarRol.UseVisualStyleBackColor = true;
-            this.btnModificarRol.Visible = false;
             this.btnModificarRol.Click += new System.EventHandler(this.btnModificarRol_Click);
             // 
             // btnBajaRol
             // 
+            this.btnBajaRol.Enabled = false;
             this.btnBajaRol.Location = new System.Drawing.Point(32, 100);
             this.btnBajaRol.Name = "btnBajaRol";
             this.btnBajaRol.Size = new System.Drawing.Size(98, 31);
             this.btnBajaRol.TabIndex = 2;
             this.btnBajaRol.Text = "Baja Rol";
             this.btnBajaRol.UseVisualStyleBackColor = true;
-            this.btnBajaRol.Visible = false;
             this.btnBajaRol.Click += new System.EventHandler(this.btnBajaRol_Click);
             // 
             // tblMenu
@@ -191,24 +192,24 @@
             // 
             // btnModificarChofer
             // 
+            this.btnModificarChofer.Enabled = false;
             this.btnModificarChofer.Location = new System.Drawing.Point(33, 91);
             this.btnModificarChofer.Name = "btnModificarChofer";
             this.btnModificarChofer.Size = new System.Drawing.Size(100, 44);
             this.btnModificarChofer.TabIndex = 1;
             this.btnModificarChofer.Text = "Modificar Chofer";
             this.btnModificarChofer.UseVisualStyleBackColor = true;
-            this.btnModificarChofer.Visible = false;
             this.btnModificarChofer.Click += new System.EventHandler(this.btnModificarChofer_Click);
             // 
             // btnNuevoChofer
             // 
+            this.btnNuevoChofer.Enabled = false;
             this.btnNuevoChofer.Location = new System.Drawing.Point(33, 42);
             this.btnNuevoChofer.Name = "btnNuevoChofer";
             this.btnNuevoChofer.Size = new System.Drawing.Size(100, 43);
             this.btnNuevoChofer.TabIndex = 0;
             this.btnNuevoChofer.Text = "Nuevo Chofer";
             this.btnNuevoChofer.UseVisualStyleBackColor = true;
-            this.btnNuevoChofer.Visible = false;
             this.btnNuevoChofer.Click += new System.EventHandler(this.btnNuevoChofer_Click);
             // 
             // tabCliente
@@ -224,24 +225,24 @@
             // 
             // ModificarCliente
             // 
+            this.ModificarCliente.Enabled = false;
             this.ModificarCliente.Location = new System.Drawing.Point(31, 88);
             this.ModificarCliente.Name = "ModificarCliente";
             this.ModificarCliente.Size = new System.Drawing.Size(99, 37);
             this.ModificarCliente.TabIndex = 1;
             this.ModificarCliente.Text = "Modificar Cliente";
             this.ModificarCliente.UseVisualStyleBackColor = true;
-            this.ModificarCliente.Visible = false;
             this.ModificarCliente.Click += new System.EventHandler(this.ModificarCliente_Click);
             // 
             // NuevoCliente
             // 
+            this.NuevoCliente.Enabled = false;
             this.NuevoCliente.Location = new System.Drawing.Point(29, 37);
             this.NuevoCliente.Name = "NuevoCliente";
             this.NuevoCliente.Size = new System.Drawing.Size(102, 37);
             this.NuevoCliente.TabIndex = 0;
             this.NuevoCliente.Text = "Nuevo Cliente";
             this.NuevoCliente.UseVisualStyleBackColor = true;
-            this.NuevoCliente.Visible = false;
             this.NuevoCliente.Click += new System.EventHandler(this.NuevoCliente_Click);
             // 
             // tabTurnos
@@ -259,24 +260,24 @@
             // 
             // btnEliminarTurno
             // 
+            this.btnEliminarTurno.Enabled = false;
             this.btnEliminarTurno.Location = new System.Drawing.Point(23, 141);
             this.btnEliminarTurno.Name = "btnEliminarTurno";
             this.btnEliminarTurno.Size = new System.Drawing.Size(112, 38);
             this.btnEliminarTurno.TabIndex = 3;
             this.btnEliminarTurno.Text = "Eliminar Turno";
             this.btnEliminarTurno.UseVisualStyleBackColor = true;
-            this.btnEliminarTurno.Visible = false;
             this.btnEliminarTurno.Click += new System.EventHandler(this.btnEliminarTurno_Click);
             // 
             // btnModificarTurno
             // 
+            this.btnModificarTurno.Enabled = false;
             this.btnModificarTurno.Location = new System.Drawing.Point(23, 87);
             this.btnModificarTurno.Name = "btnModificarTurno";
             this.btnModificarTurno.Size = new System.Drawing.Size(111, 37);
             this.btnModificarTurno.TabIndex = 2;
             this.btnModificarTurno.Text = "ModificarTurno";
             this.btnModificarTurno.UseVisualStyleBackColor = true;
-            this.btnModificarTurno.Visible = false;
             this.btnModificarTurno.Click += new System.EventHandler(this.btnModificarTurno_Click);
             // 
             // tabAutos
@@ -294,6 +295,7 @@
             // 
             // btnModificarAuto
             // 
+            this.btnModificarAuto.Enabled = false;
             this.btnModificarAuto.Location = new System.Drawing.Point(40, 64);
             this.btnModificarAuto.Name = "btnModificarAuto";
             this.btnModificarAuto.Size = new System.Drawing.Size(108, 30);
@@ -314,13 +316,13 @@
             // 
             // btnVerViajes
             // 
+            this.btnVerViajes.Enabled = false;
             this.btnVerViajes.Location = new System.Drawing.Point(19, 36);
             this.btnVerViajes.Name = "btnVerViajes";
             this.btnVerViajes.Size = new System.Drawing.Size(109, 35);
             this.btnVerViajes.TabIndex = 3;
             this.btnVerViajes.Text = "Listado de Viajes";
             this.btnVerViajes.UseVisualStyleBackColor = true;
-            this.btnVerViajes.Visible = false;
             this.btnVerViajes.Click += new System.EventHandler(this.btnVerViajes_Click);
             // 
             // tabContabilidad
@@ -336,24 +338,24 @@
             // 
             // btnFacturacionClientes
             // 
+            this.btnFacturacionClientes.Enabled = false;
             this.btnFacturacionClientes.Location = new System.Drawing.Point(37, 100);
             this.btnFacturacionClientes.Name = "btnFacturacionClientes";
             this.btnFacturacionClientes.Size = new System.Drawing.Size(113, 41);
             this.btnFacturacionClientes.TabIndex = 1;
             this.btnFacturacionClientes.Text = "Facturacion Clientes";
             this.btnFacturacionClientes.UseVisualStyleBackColor = true;
-            this.btnFacturacionClientes.Visible = false;
             this.btnFacturacionClientes.Click += new System.EventHandler(this.btnFacturacionClientes_Click);
             // 
             // btnRendicionViajes
             // 
+            this.btnRendicionViajes.Enabled = false;
             this.btnRendicionViajes.Location = new System.Drawing.Point(35, 38);
             this.btnRendicionViajes.Name = "btnRendicionViajes";
             this.btnRendicionViajes.Size = new System.Drawing.Size(116, 38);
             this.btnRendicionViajes.TabIndex = 0;
             this.btnRendicionViajes.Text = "Rendicion Viaje";
             this.btnRendicionViajes.UseVisualStyleBackColor = true;
-            this.btnRendicionViajes.Visible = false;
             this.btnRendicionViajes.Click += new System.EventHandler(this.btnRendicionViajes_Click);
             // 
             // tabEstadisticas
@@ -372,13 +374,13 @@
             // 
             // btnConsultarEstadistica
             // 
+            this.btnConsultarEstadistica.Enabled = false;
             this.btnConsultarEstadistica.Location = new System.Drawing.Point(42, 193);
             this.btnConsultarEstadistica.Name = "btnConsultarEstadistica";
             this.btnConsultarEstadistica.Size = new System.Drawing.Size(85, 26);
             this.btnConsultarEstadistica.TabIndex = 4;
             this.btnConsultarEstadistica.Text = "Consultar";
             this.btnConsultarEstadistica.UseVisualStyleBackColor = true;
-            this.btnConsultarEstadistica.Visible = false;
             this.btnConsultarEstadistica.Click += new System.EventHandler(this.btnConsultarEstadistica_Click);
             // 
             // radioButtonMismoAuto
@@ -453,7 +455,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tblMenu);
             this.Name = "Principal";
-            this.Text = "Administrador";
+            this.Text = "Uber - FRBA";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.tblMenu.ResumeLayout(false);
             this.tabSeguridad.ResumeLayout(false);

@@ -57,7 +57,7 @@ namespace UberFrba.Listado_Estadistico
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al realizar la consulta" + ex.ToString(), "Estadisticas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Estadisticas", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

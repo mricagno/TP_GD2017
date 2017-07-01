@@ -35,7 +35,7 @@ namespace UberFrba
 
                 if (String.IsNullOrEmpty(usuario.nombre) || String.IsNullOrEmpty(usuario.password))
                 {
-                     MessageBox.Show("Debe ingresar usuario y contraseña");
+                     MessageBox.Show("Debe ingresar usuario y contraseña",  "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                       return;
                 }
 
@@ -86,7 +86,7 @@ namespace UberFrba
                 {
                     usuario.perfil = this.comboPerfiles.GetItemText(this.comboPerfiles.SelectedItem);
                     Sesion.rol = usuario.perfil;
-                    new Principal(Tabs.seguridad()).Show();
+                    new Principal("").Show();
                     this.Close();
             }
 

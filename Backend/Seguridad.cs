@@ -26,7 +26,7 @@ namespace UberFrba.Backend
                 }
                 reader.Close();
                 if(roles.Count() == 0)
-                    MessageBox.Show("El usuario no tiene roles asignados");
+                    MessageBox.Show("El usuario no tiene roles asignados", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return roles;
             
            

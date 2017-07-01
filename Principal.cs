@@ -29,7 +29,7 @@ namespace UberFrba
         public Principal(String tab)
         {
             InitializeComponent();
-            this.label1.Text = "BIENVENIDO" + ' ' + Sesion.username.ToUpper();
+            //this.label1.Text = "BIENVENIDO" + ' ' + Sesion.username.ToUpper();
             seleccionarTab = tab;
         }
 
@@ -47,6 +47,9 @@ namespace UberFrba
             this.Close();
         }
 
+
+        
+
         private void Principal_Load(object sender, EventArgs e)
         {
             
@@ -62,127 +65,187 @@ namespace UberFrba
             
 
             ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
-            
+
+
+
+            tblMenu.TabPages.Clear();
+            //TAB seguridad
             if (funcionalidades.Contains("ALTA_ROL"))
-                this.btnAltaRol.Visible = true;
+                this.btnAltaRol.Enabled = true;
             if (funcionalidades.Contains("BAJA_ROL"))
-                this.btnBajaRol.Visible = true;
+                this.btnBajaRol.Enabled = true;
             if(funcionalidades.Contains("MODIFICAR_ROL"))
-                this.btnModificarRol.Visible = true;
-            if (funcionalidades.Contains("ALTA_TURNO"))
-                 this.btnNuevoTurno.Visible = true;
-            if (funcionalidades.Contains("MODIFICAR_TURNO"))
-                 this.btnModificarTurno.Visible = true;
-            if (funcionalidades.Contains("BAJA_TURNO"))
-                 this.btnEliminarTurno.Visible = true;
-            //if (funcionalidades.Contains("VER_AUTOS"))
-               // this.btnverautos = true;
-            if (funcionalidades.Contains("ALTA_AUTO"))
-                this.btnAltaAuto.Visible = true;
-            if (funcionalidades.Contains("MODIFICAR_AUTO"))
-               this.btnModificarAuto.Visible = true;
-            if (funcionalidades.Contains("BAJA_AUTO"))
-                this.btnBajaAuto.Visible = true;
-            if (funcionalidades.Contains("VER_VIAJES"))
-                this.btnVerViajes.Visible = true;
-            if (funcionalidades.Contains("CONSULTAR_ESTADISTICAS"))
-                this.btnConsultarEstadistica.Visible = true;
-            if (funcionalidades.Contains("ALTA_CHOFER"))
-                this.btnNuevoChofer.Visible = true;
-            if (funcionalidades.Contains("BAJA_CHOFER"))
-               // this.btnNuevoChofer.Visible = true;
-                this.btnModificarChofer.Visible = true;
-            if (funcionalidades.Contains("MODIFICAR_CHOFER"))
-                this.btnModificarChofer.Visible = true;
+                this.btnModificarRol.Enabled = true;
+
+
+            if (!this.btnModificarRol.Enabled && !this.btnBajaRol.Enabled && !this.btnAltaRol.Enabled )
+                tblMenu.TabPages.Remove(tabSeguridad);
+            else
+                tblMenu.TabPages.Add(tabSeguridad);
+
+
+            //TAB CLIENTE
+
             if (funcionalidades.Contains("ALTA_CLIENTE"))
-                this.NuevoCliente.Visible = true;
+                NuevoCliente.Enabled = true;
             if (funcionalidades.Contains("BAJA_CLIENTE"))
-                this.ModificarCliente.Visible = true;
+                ModificarCliente.Enabled = true;
             if (funcionalidades.Contains("MODIFICAR_CLIENTE"))
-                this.ModificarCliente.Visible = true;
-            if (funcionalidades.Contains("RENDIR_VIAJES"))
-                this.ModificarCliente.Visible = true;
-            if (funcionalidades.Contains("FACTURAR"))
-                this.ModificarCliente.Visible = true;
+                ModificarCliente.Enabled = true;
+
+            //TAB CHOFER
+
+            if (funcionalidades.Contains("ALTA_CHOFER"))
+                this.btnNuevoChofer.Enabled = true;
+            if (funcionalidades.Contains("BAJA_CHOFER"))
+            {
+           
+                this.btnModificarChofer.Enabled = true;
+            }
+            if (funcionalidades.Contains("MODIFICAR_CHOFER"))
+                this.btnModificarChofer.Enabled = true;
+
+
+            if (!this.btnNuevoChofer.Enabled && !this.btnModificarChofer.Enabled)
+                tblMenu.TabPages.Remove(tabChoferes);
+            else
+                tblMenu.TabPages.Add(tabChoferes);   
+
+
+            //TAB TURNO
+            if (funcionalidades.Contains("ALTA_TURNO"))
+                this.btnNuevoTurno.Enabled = true;
+            if (funcionalidades.Contains("MODIFICAR_TURNO"))
+                 this.btnModificarTurno.Enabled = true;
+            if (funcionalidades.Contains("BAJA_TURNO"))
+            {
+                this.btnEliminarTurno.Enabled = true;
+             
+            }
+            if (!this.btnNuevoTurno.Enabled && !this.btnEliminarTurno.Enabled && !this.btnModificarTurno.Enabled)
+                tblMenu.TabPages.Remove(tabTurnos);
+            else
+                tblMenu.TabPages.Add(tabTurnos);   
+
+
+
+
+            //TAB AUTO
+            if (funcionalidades.Contains("ALTA_AUTO"))
+                btnAltaAuto.Enabled = true;
+            if (funcionalidades.Contains("MODIFICAR_AUTO"))
+                btnModificarAuto.Enabled = true;
+            if (funcionalidades.Contains("BAJA_AUTO"))
+                this.btnBajaAuto.Enabled = true;
+
+            if (!this.btnAltaAuto.Enabled && !this.btnModificarAuto.Enabled && !this.btnBajaAuto.Enabled)
+                tblMenu.TabPages.Remove(tabAutos);
+            else
+                tblMenu.TabPages.Add(tabAutos);   
+
+
+            //TAB VIAJES
+
+            if (funcionalidades.Contains("VER_VIAJES"))
+                this.btnVerViajes.Enabled = true;
+
             if (funcionalidades.Contains("REGISTRAR_VIAJE"))
-                this.ModificarCliente.Visible = true;
+                this.irRegistrarViaje.Enabled = true;
+
+            if (!this.btnVerViajes.Enabled && !this.irRegistrarViaje.Enabled)
+                tblMenu.TabPages.Remove(tabViajes);
+            else
+                tblMenu.TabPages.Add(tabViajes);
+
+
+            //TAB CONTABILIDAD
+
+            if (funcionalidades.Contains("RENDIR_VIAJES"))
+                this.btnRendicionViajes.Enabled = true;
+
+
+            if (funcionalidades.Contains("FACTURAR"))
+                this.btnFacturacionClientes.Enabled = true;
+
+           
+
+            if (!this.btnRendicionViajes.Enabled && !this.btnFacturacionClientes.Enabled)
+                tblMenu.TabPages.Remove(tabContabilidad);
+            else
+                tblMenu.TabPages.Add(tabContabilidad);
+
+
+            //Tab ConsultarEstadisticas
+            if (funcionalidades.Contains("CONSULTAR_ESTADISTICAS"))
+                this.btnConsultarEstadistica.Enabled = true;
+
+            if (!this.btnConsultarEstadistica.Enabled)
+                tblMenu.TabPages.Remove(tabContabilidad);
+            else
+                tblMenu.TabPages.Add(tabContabilidad);
+
+
+           
+            
             if(funcionalidades.Contains("ADMIN")){
-                    this.btnAltaRol.Visible = true;
-                    this.btnModificarRol.Visible = true;
-                    this.btnBajaRol.Visible = true;
-                    this.btnModificarAuto.Visible = true;
-                    this.btnNuevoTurno.Visible = true;
-                    this.btnModificarTurno.Visible = true;
-                    this.btnEliminarTurno.Visible = true;
+                    this.btnAltaRol.Enabled = true;
+                    this.btnModificarRol.Enabled = true;
+                    this.btnBajaRol.Enabled = true;
+                    this.btnModificarAuto.Enabled = true;
+                    this.btnNuevoTurno.Enabled = true;
+                    this.btnModificarTurno.Enabled = true;
+                    this.btnEliminarTurno.Enabled = true;
                 //if (funcionalidades.Contains("VER_AUTOS"))
                 // this.btnverautos = true;
-                    this.btnAltaAuto.Visible = true;
-                    this.btnBajaAuto.Visible = true;
-                    this.btnVerViajes.Visible = true;
-                    this.btnConsultarEstadistica.Visible = true;
-                    this.btnNuevoChofer.Visible = true;
-                    // this.btnNuevoChofer.Visible = true;
-                    this.btnModificarChofer.Visible = true;
-                    this.NuevoCliente.Visible = true;
-                    this.ModificarCliente.Visible = true;
-                    this.btnFacturacionClientes.Visible = true;
-                    this.btnRendicionViajes.Visible = true;
-                    this.irRegistrarViaje.Visible = true;
+                    this.btnAltaAuto.Enabled = true;
+                    this.btnBajaAuto.Enabled = true;
+                    this.btnVerViajes.Enabled = true;
+                    this.btnConsultarEstadistica.Enabled = true;
+                    this.btnNuevoChofer.Enabled = true;
+                    // this.btnNuevoChofer.Enabled = true;
+                    this.btnModificarChofer.Enabled = true;
+                    this.NuevoCliente.Enabled = true;
+                    this.ModificarCliente.Enabled = true;
+                    this.btnFacturacionClientes.Enabled = true;
+                    this.btnRendicionViajes.Enabled = true;
+                    this.irRegistrarViaje.Enabled = true;
+                    tblMenu.TabPages.Clear();
+                    tblMenu.TabPages.Add(tabSeguridad);
+                    tblMenu.TabPages.Add(tabCliente);
+                    tblMenu.TabPages.Add(tabChoferes);
+                    tblMenu.TabPages.Add(tabTurnos);
+                    tblMenu.TabPages.Add(tabAutos);
+                    tblMenu.TabPages.Add(tabViajes);
+                    tblMenu.TabPages.Add(tabContabilidad);
+                    tblMenu.TabPages.Add(tabEstadisticas);
+
                     
             }
 
-//BAJA_CHOFER -- borrarla
-          
-//BAJA_CLIENTE-- borrarla
-            /*
-            this.irAutosAbm;
-            this.btnBajaAuto;
-            this.btnBajaAuto;
-            this.btnModificarAuto;
 
-            this.btnAltaRol;
-            this.btnBajaRol;
+            try{
+                if (seleccionarTab == Tabs.turnos())
+                    tblMenu.SelectTab(tabTurnos.Name);
+                if (seleccionarTab == Tabs.seguridad())
+                    tblMenu.SelectTab(tabSeguridad.Name);
+                if (seleccionarTab == Tabs.viajes())
+                    tblMenu.SelectTab(tabViajes.Name);
+                if (seleccionarTab == Tabs.clientes())
+                    tblMenu.SelectTab(tabCliente.Name);
+                if (seleccionarTab == Tabs.chofer())
+                    tblMenu.SelectTab(tabChoferes.Name);
+                if (seleccionarTab == Tabs.contabilidad())
+                    tblMenu.SelectTab(tabContabilidad.Name);
+                if (seleccionarTab == Tabs.autos())
+                    tblMenu.SelectTab(tabAutos.Name);
+                if (seleccionarTab == Tabs.estadisticas())
+                    tblMenu.SelectTab(tabEstadisticas.Name);
+            }
+            catch
+            {
 
-            this.btnConsultarEstadistica;
-
-            this.btnFacturacionClientes;
-
-           
+            }
             
-            this.btnRendicionViajes;
-            
-
-            this.irRegistrarViaje;
-            this.btnVerViajes
-            */
-
-
-            /*
-            this.
-           
-            btnBajaRol;
-                btn
-
-VER_VIAJES
-CONSULTAR_ESTADISTICAS
-            */
-            
-            if (seleccionarTab == Tabs.turnos())
-                tblMenu.SelectTab(tabTurnos.Name);
-            if (seleccionarTab == Tabs.seguridad())
-                tblMenu.SelectTab(tabSeguridad.Name);
-            if (seleccionarTab == Tabs.viajes())
-                tblMenu.SelectTab(tabViajes.Name);
-            if(seleccionarTab == Tabs.clientes())
-                tblMenu.SelectTab(tabCliente.Name);
-            if (seleccionarTab == Tabs.chofer())
-                tblMenu.SelectTab(tabChoferes.Name);
-            if (seleccionarTab == Tabs.contabilidad())
-                tblMenu.SelectTab(tabContabilidad.Name);
-            if (seleccionarTab == Tabs.autos())
-                tblMenu.SelectTab(tabAutos.Name);
-            if (seleccionarTab == Tabs.estadisticas())
-                tblMenu.SelectTab(tabEstadisticas.Name);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -40,5 +40,12 @@ namespace UberFrba.Backend
         {
             return "chofer";
         }
+
+        internal static string first()
+        {
+            return "first";
+        }
+
+        
     }
 }

@@ -48,14 +48,14 @@
             this.groupBox1.Controls.Add(this.btnAgregarFuncionalidad);
             this.groupBox1.Location = new System.Drawing.Point(70, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 266);
+            this.groupBox1.Size = new System.Drawing.Size(450, 266);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paso 2 - Agregar funcionalidades";
             // 
             // btnSacarFuncionalidad
             // 
-            this.btnSacarFuncionalidad.Location = new System.Drawing.Point(348, 29);
+            this.btnSacarFuncionalidad.Location = new System.Drawing.Point(392, 29);
             this.btnSacarFuncionalidad.Name = "btnSacarFuncionalidad";
             this.btnSacarFuncionalidad.Size = new System.Drawing.Size(32, 23);
             this.btnSacarFuncionalidad.TabIndex = 5;
@@ -76,14 +76,14 @@
             // lstAgregarFuncionalidades
             // 
             this.lstAgregarFuncionalidades.FormattingEnabled = true;
-            this.lstAgregarFuncionalidades.Location = new System.Drawing.Point(206, 29);
+            this.lstAgregarFuncionalidades.Location = new System.Drawing.Point(231, 29);
             this.lstAgregarFuncionalidades.Name = "lstAgregarFuncionalidades";
-            this.lstAgregarFuncionalidades.Size = new System.Drawing.Size(120, 160);
+            this.lstAgregarFuncionalidades.Size = new System.Drawing.Size(155, 160);
             this.lstAgregarFuncionalidades.TabIndex = 3;
             // 
             // btnFinalizarAgregadoDeFuncionalidades
             // 
-            this.btnFinalizarAgregadoDeFuncionalidades.Location = new System.Drawing.Point(239, 218);
+            this.btnFinalizarAgregadoDeFuncionalidades.Location = new System.Drawing.Point(299, 217);
             this.btnFinalizarAgregadoDeFuncionalidades.Name = "btnFinalizarAgregadoDeFuncionalidades";
             this.btnFinalizarAgregadoDeFuncionalidades.Size = new System.Drawing.Size(87, 32);
             this.btnFinalizarAgregadoDeFuncionalidades.TabIndex = 1;
@@ -96,12 +96,12 @@
             this.lstFuncionalidades.FormattingEnabled = true;
             this.lstFuncionalidades.Location = new System.Drawing.Point(16, 29);
             this.lstFuncionalidades.Name = "lstFuncionalidades";
-            this.lstFuncionalidades.Size = new System.Drawing.Size(120, 160);
+            this.lstFuncionalidades.Size = new System.Drawing.Size(171, 160);
             this.lstFuncionalidades.TabIndex = 2;
             // 
             // btnAgregarFuncionalidad
             // 
-            this.btnAgregarFuncionalidad.Location = new System.Drawing.Point(153, 29);
+            this.btnAgregarFuncionalidad.Location = new System.Drawing.Point(193, 29);
             this.btnAgregarFuncionalidad.Name = "btnAgregarFuncionalidad";
             this.btnAgregarFuncionalidad.Size = new System.Drawing.Size(32, 25);
             this.btnAgregarFuncionalidad.TabIndex = 1;
@@ -113,10 +113,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 425);
+            this.ClientSize = new System.Drawing.Size(584, 342);
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarFuncARol";
-            this.Text = "AgregarFuncARol";
+            this.Text = "Agregar Funcionalidad ";
             this.Load += new System.EventHandler(this.AgregarFuncARol_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

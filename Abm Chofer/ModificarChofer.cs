@@ -89,7 +89,7 @@ namespace UberFrba.Abm_Chofer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al habilitar chofer - Exception :" + ex.ToString(), "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
