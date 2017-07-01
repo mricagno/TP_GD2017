@@ -860,9 +860,12 @@ namespace UberFrba.Backend
             new Server().realizarQuery(query);
         }
 
-        internal static void agregarRolAChofer(string unChofer, object rol)
+        internal static void agregarRolAChofer(string dni, object rol)
         {
-            throw new NotImplementedException();
+
+            String query = "EXEC DROP_DATABASE.SP_AGREGAR_ROL_EXTRA_CHOFER '" + dni + "', '" + rol + "'";
+
+            new Server().realizarQuery(query);
         }
 
         internal static void eliminarRolesExtraDeCliente(string dni)
@@ -874,7 +877,10 @@ namespace UberFrba.Backend
 
         internal static void agregarRolACliente(string dni, object rol)
         {
-            throw new NotImplementedException();
+
+            String query = "EXEC DROP_DATABASE.SP_AGREGAR_ROL_EXTRA_CLIENTE '" + dni + "', '" + rol + "'";
+
+            new Server().realizarQuery(query);
         }
 
         internal static IEnumerable<string> todosLosRolesExtraDeCliente(string dni)
