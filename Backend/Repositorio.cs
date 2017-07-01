@@ -837,9 +837,9 @@ namespace UberFrba.Backend
             return roles;
         }
 
-        internal static IEnumerable<string> todosLosRolesExtraDeChofer(string unChofer)
+        internal static IEnumerable<string> todosLosRolesExtraDeChofer(string dni)
         {
-            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CHOFER ";
+            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CHOFER '" + dni + "'" ;
 
             SqlDataReader reader = new Server().query(queryString);
             var roles = new ObservableCollection<String>();
@@ -885,7 +885,7 @@ namespace UberFrba.Backend
 
         internal static IEnumerable<string> todosLosRolesExtraDeCliente(string dni)
         {
-            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CLIENTE ";
+            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CLIENTE '" + dni + "'";
 
             SqlDataReader reader = new Server().query(queryString);
             var roles = new ObservableCollection<String>();
