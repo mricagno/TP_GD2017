@@ -69,6 +69,16 @@ namespace UberFrba
 
 
             tblMenu.TabPages.Clear();
+            
+            //tab perfil
+            tblMenu.TabPages.Add(tabPerfil);
+            if (Sesion.rol.Equals("CLIENTE"))
+                ;
+            if (Sesion.rol.Equals("CHOFER"))
+                ;
+
+
+
             //TAB seguridad
             if (funcionalidades.Contains("ALTA_ROL"))
                 this.btnAltaRol.Enabled = true;
@@ -188,6 +198,7 @@ namespace UberFrba
            
             
             if(funcionalidades.Contains("ADMIN")){
+                    
                     this.btnAltaRol.Enabled = true;
                     this.btnModificarRol.Enabled = true;
                     this.btnBajaRol.Enabled = true;
@@ -401,6 +412,24 @@ namespace UberFrba
         {
             new ModificarAuto().Show();
             this.Close();
+        }
+
+        private void btnEditarDatosCliente_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lbltexto2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String dni;
+           
+            new AltaCliente(dni).Show();
+            this.Close()
         }
 
 

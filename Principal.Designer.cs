@@ -36,6 +36,10 @@
             this.btnModificarRol = new System.Windows.Forms.Button();
             this.btnBajaRol = new System.Windows.Forms.Button();
             this.tblMenu = new System.Windows.Forms.TabControl();
+            this.tabPerfil = new System.Windows.Forms.TabPage();
+            this.lbltexto2 = new System.Windows.Forms.Label();
+            this.lbltexto = new System.Windows.Forms.Label();
+            this.lblusuario = new System.Windows.Forms.Label();
             this.tabSeguridad = new System.Windows.Forms.TabPage();
             this.tabChoferes = new System.Windows.Forms.TabPage();
             this.btnModificarChofer = new System.Windows.Forms.Button();
@@ -61,7 +65,9 @@
             this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
+            this.tabPerfil.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabChoferes.SuspendLayout();
             this.tabCliente.SuspendLayout();
@@ -151,6 +157,7 @@
             // 
             // tblMenu
             // 
+            this.tblMenu.Controls.Add(this.tabPerfil);
             this.tblMenu.Controls.Add(this.tabSeguridad);
             this.tblMenu.Controls.Add(this.tabChoferes);
             this.tblMenu.Controls.Add(this.tabCliente);
@@ -164,6 +171,51 @@
             this.tblMenu.SelectedIndex = 0;
             this.tblMenu.Size = new System.Drawing.Size(451, 300);
             this.tblMenu.TabIndex = 6;
+            // 
+            // tabPerfil
+            // 
+            this.tabPerfil.Controls.Add(this.button2);
+            this.tabPerfil.Controls.Add(this.lbltexto2);
+            this.tabPerfil.Controls.Add(this.lbltexto);
+            this.tabPerfil.Controls.Add(this.lblusuario);
+            this.tabPerfil.Location = new System.Drawing.Point(4, 22);
+            this.tabPerfil.Name = "tabPerfil";
+            this.tabPerfil.Size = new System.Drawing.Size(443, 274);
+            this.tabPerfil.TabIndex = 8;
+            this.tabPerfil.Text = "Perfil";
+            this.tabPerfil.UseVisualStyleBackColor = true;
+            // 
+            // lbltexto2
+            // 
+            this.lbltexto2.AutoSize = true;
+            this.lbltexto2.ForeColor = System.Drawing.Color.Red;
+            this.lbltexto2.Location = new System.Drawing.Point(31, 214);
+            this.lbltexto2.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lbltexto2.Name = "lbltexto2";
+            this.lbltexto2.Size = new System.Drawing.Size(372, 26);
+            this.lbltexto2.TabIndex = 10;
+            this.lbltexto2.Text = "Recuerde actualizar sus datos periodicamente para que los choferes puedan contact" +
+    "arse con usted";
+            this.lbltexto2.Click += new System.EventHandler(this.lbltexto2_Click);
+            // 
+            // lbltexto
+            // 
+            this.lbltexto.AutoSize = true;
+            this.lbltexto.Location = new System.Drawing.Point(31, 87);
+            this.lbltexto.Name = "lbltexto";
+            this.lbltexto.Size = new System.Drawing.Size(202, 13);
+            this.lbltexto.TabIndex = 9;
+            this.lbltexto.Text = "Hasta el momento haz realizado 10 viajes";
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(31, 37);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(123, 16);
+            this.lblusuario.TabIndex = 9;
+            this.lblusuario.Text = "Bienvenido usuario";
             // 
             // tabSeguridad
             // 
@@ -446,6 +498,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(34, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 29);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Editar mis datos";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +520,8 @@
             this.Text = "Uber - FRBA";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.tblMenu.ResumeLayout(false);
+            this.tabPerfil.ResumeLayout(false);
+            this.tabPerfil.PerformLayout();
             this.tabSeguridad.ResumeLayout(false);
             this.tabChoferes.ResumeLayout(false);
             this.tabCliente.ResumeLayout(false);
@@ -507,5 +571,10 @@
         private System.Windows.Forms.Button btnNuevoChofer;
         private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
         private System.Windows.Forms.Button btnModificarAuto;
+        private System.Windows.Forms.TabPage tabPerfil;
+        private System.Windows.Forms.Label lbltexto2;
+        private System.Windows.Forms.Label lbltexto;
+        private System.Windows.Forms.Label lblusuario;
+        private System.Windows.Forms.Button button2;
     }
 }

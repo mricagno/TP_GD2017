@@ -13,6 +13,14 @@ namespace UberFrba.Abm_Cliente
 {
     public partial class AltaCliente : Form
     {
+        private string dni;
+        private string nombre;
+        private string apellido;
+        private string fecha_nacimiento;
+        private string mail;
+        private string direccion;
+        private string codigoPostal;
+
         public AltaCliente()
         {
             InitializeComponent();
@@ -27,6 +35,8 @@ namespace UberFrba.Abm_Cliente
 
             }
         }
+
+       
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
