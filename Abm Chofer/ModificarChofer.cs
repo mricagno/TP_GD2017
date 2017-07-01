@@ -134,5 +134,18 @@ namespace UberFrba.Abm_Chofer
             GridChofer.Update();
             GridChofer.Refresh();
         }
+
+        private void btnEditarRolesChofer_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow chofer = Utils.getSelectedRow(GridChofer);
+            if (chofer == null)
+            {
+                MessageBox.Show("Debe seleccionar un chofer", "Modificar Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String dni = chofer.Cells[2].Value.ToString();
+            new EditarRolChofer(dni).Show();
+            this.Close();
+        }
     }
 }

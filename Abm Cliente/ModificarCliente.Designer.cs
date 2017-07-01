@@ -41,6 +41,7 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
             this.btnHabilitar = new System.Windows.Forms.Button();
+            this.btnEditarRolesChofer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -172,11 +173,22 @@
             this.btnHabilitar.UseVisualStyleBackColor = true;
             this.btnHabilitar.Click += new System.EventHandler(this.btnHabilitar_Click);
             // 
+            // btnEditarRolesChofer
+            // 
+            this.btnEditarRolesChofer.Location = new System.Drawing.Point(456, 322);
+            this.btnEditarRolesChofer.Name = "btnEditarRolesChofer";
+            this.btnEditarRolesChofer.Size = new System.Drawing.Size(81, 34);
+            this.btnEditarRolesChofer.TabIndex = 12;
+            this.btnEditarRolesChofer.Text = "Editar Roles";
+            this.btnEditarRolesChofer.UseVisualStyleBackColor = true;
+            this.btnEditarRolesChofer.Click += new System.EventHandler(this.btnEditarRolesChofer_Click);
+            // 
             // ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 385);
+            this.Controls.Add(this.btnEditarRolesChofer);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnModificar);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnMenuPrincipal;
         private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button btnEditarRolesChofer;
     }
 }

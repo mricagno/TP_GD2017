@@ -41,6 +41,7 @@
             this.nombre_Box = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
             this.GridChofer = new System.Windows.Forms.DataGridView();
+            this.btnEditarRolesChofer = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridChofer)).BeginInit();
             this.SuspendLayout();
@@ -172,11 +173,22 @@
             this.GridChofer.Size = new System.Drawing.Size(475, 150);
             this.GridChofer.TabIndex = 0;
             // 
+            // btnEditarRolesChofer
+            // 
+            this.btnEditarRolesChofer.Location = new System.Drawing.Point(437, 323);
+            this.btnEditarRolesChofer.Name = "btnEditarRolesChofer";
+            this.btnEditarRolesChofer.Size = new System.Drawing.Size(81, 34);
+            this.btnEditarRolesChofer.TabIndex = 11;
+            this.btnEditarRolesChofer.Text = "Editar Roles";
+            this.btnEditarRolesChofer.UseVisualStyleBackColor = true;
+            this.btnEditarRolesChofer.Click += new System.EventHandler(this.btnEditarRolesChofer_Click);
+            // 
             // ModificarChofer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 370);
+            this.Controls.Add(this.btnEditarRolesChofer);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnModificar);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.TextBox nombre_Box;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.DataGridView GridChofer;
+        private System.Windows.Forms.Button btnEditarRolesChofer;
     }
 }

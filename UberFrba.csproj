@@ -101,6 +101,12 @@
     <Compile Include="Abm Chofer\EditarChofer.Designer.cs">
       <DependentUpon>EditarChofer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Abm Chofer\EditarRolChofer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Chofer\EditarRolChofer.Designer.cs">
+      <DependentUpon>EditarRolChofer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Abm Chofer\ModificarChofer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="Abm Cliente\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abm Cliente\EditarRolesCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abm Cliente\EditarRolesCliente.Designer.cs">
+      <DependentUpon>EditarRolesCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Abm Cliente\ModificarCliente.cs">
       <SubType>Form</SubType>
@@ -289,6 +301,9 @@
     <EmbeddedResource Include="Abm Chofer\EditarChofer.resx">
       <DependentUpon>EditarChofer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Abm Chofer\EditarRolChofer.resx">
+      <DependentUpon>EditarRolChofer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Abm Chofer\ModificarChofer.resx">
       <DependentUpon>ModificarChofer.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Cliente\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abm Cliente\EditarRolesCliente.resx">
+      <DependentUpon>EditarRolesCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abm Cliente\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>

@@ -821,5 +821,75 @@ namespace UberFrba.Backend
 
             new Server().realizarQuery(query);
         }
+
+        internal static IEnumerable<string> todosLosRolesExtra()
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_HABILITADOS ";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var roles = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                roles.Add(reader["ROL"].ToString());
+            }
+            reader.Close();
+            return roles;
+        }
+
+        internal static IEnumerable<string> todosLosRolesExtraDeChofer(string unChofer)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CHOFER ";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var roles = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                roles.Add(reader["ROL"].ToString());
+            }
+            reader.Close();
+            return roles;
+            
+        }
+
+        internal static void eliminarRolesExtraDeChofer(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_ELIMINAR_ROL_EXTRA_CHOFER '" + dni + "'";
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static void agregarRolAChofer(string unChofer, object rol)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void eliminarRolesExtraDeCliente(string dni)
+        {
+            String query = "EXEC DROP_DATABASE.SP_ELIMINAR_ROL_EXTRA_CLIENTE '" + dni + "'";
+
+            new Server().realizarQuery(query);
+        }
+
+        internal static void agregarRolACliente(string dni, object rol)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static IEnumerable<string> todosLosRolesExtraDeCliente(string dni)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_ROLES_EXTRA_CLIENTE ";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var roles = new ObservableCollection<String>();
+
+            while (reader.Read())
+            {
+                roles.Add(reader["ROL"].ToString());
+            }
+            reader.Close();
+            return roles;
+        }
     }
 }

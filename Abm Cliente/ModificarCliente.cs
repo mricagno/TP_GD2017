@@ -135,5 +135,18 @@ namespace UberFrba.Abm_Cliente
                 return;
             }
         }
+
+        private void btnEditarRolesChofer_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow cliente = Utils.getSelectedRow(GridClientes);
+            if (cliente == null)
+            {
+                MessageBox.Show("Debe seleccionar un cliente", "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            String dni = cliente.Cells[2].Value.ToString();
+            new EditarRolesCliente(dni).Show();
+            this.Close();
+        }
     }
 }
