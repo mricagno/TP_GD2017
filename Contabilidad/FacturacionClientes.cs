@@ -17,6 +17,17 @@ namespace UberFrba.Contabilidad
         public FacturacionClientes()
         {
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFactura.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
 
         private void FacturacionClientes_Load(object sender, EventArgs e)

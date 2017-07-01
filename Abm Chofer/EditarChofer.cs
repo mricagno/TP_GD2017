@@ -18,6 +18,17 @@ namespace UberFrba.Abm_Chofer
         {
             this.dni = unDni;
             InitializeComponent();
+
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void EditarChofer_Load(object sender, EventArgs e)

@@ -18,6 +18,17 @@ namespace UberFrba.Registro_Viajes
         public AltaRegistroViaje()
         {
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaFin.Value = fecha_hoy;
+                dateFechaInicio.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void viajeGroupBox_Enter(object sender, EventArgs e)

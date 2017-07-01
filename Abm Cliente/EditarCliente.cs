@@ -18,6 +18,17 @@ namespace UberFrba.Abm_Cliente
         {
             this.dni = unDni;
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+           
         }
 
         private void EditarCliente_Load(object sender, EventArgs e)

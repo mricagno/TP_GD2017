@@ -17,6 +17,16 @@ namespace UberFrba.Rendicion_Viajes
         public RealizarRendicion()
         {
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateRendicion.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -67,7 +77,7 @@ namespace UberFrba.Rendicion_Viajes
                     total = total + Convert.ToDecimal(v.Monto);
                 }
                 txtTotal.Text = total.ToString();
-                MessageBox.Show("La rendicion del chofer se realizo correctamente", "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La rendición del chofer se realizó correctamente", "Rendición", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.GridViajesRendidos.DataSource = viajes;
                 GridViajesRendidos.Update();
                 GridViajesRendidos.Refresh();

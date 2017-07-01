@@ -52,9 +52,7 @@ namespace UberFrba
             
             try
             {
-                String fecha_hoy = ConfigurationManager.AppSettings["fecha_hoy"];
-                DateTime nuevaFecha = DateTime.ParseExact(fecha_hoy, "yyyy-MM-dd", null);
-                String fechaHoy = nuevaFecha.ToString("yyyy-MM-ddT23:59:59Z");
+                String fechaHoy = Utils.getIsoConfigDateTime();
                 Repositorio.setearFecha(fechaHoy);
 
             }catch(Exception exep)

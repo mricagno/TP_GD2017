@@ -16,6 +16,17 @@ namespace UberFrba.Abm_Chofer
         public AltaChofer()
         {
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+               
+            }
+
         }
 
         private void btnMenuPrincipal_Click(object sender, EventArgs e)
@@ -94,6 +105,11 @@ namespace UberFrba.Abm_Chofer
         }
 
         private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateFechaNacimiento_ValueChanged(object sender, EventArgs e)
         {
 
         }

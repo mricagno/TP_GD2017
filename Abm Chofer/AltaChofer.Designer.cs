@@ -144,6 +144,7 @@
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
             this.dateFechaNacimiento.Size = new System.Drawing.Size(215, 20);
             this.dateFechaNacimiento.TabIndex = 7;
+            this.dateFechaNacimiento.ValueChanged += new System.EventHandler(this.dateFechaNacimiento_ValueChanged);
             // 
             // label8
             // 

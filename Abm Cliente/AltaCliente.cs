@@ -16,6 +16,16 @@ namespace UberFrba.Abm_Cliente
         public AltaCliente()
         {
             InitializeComponent();
+            try
+            {
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
