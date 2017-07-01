@@ -42,7 +42,7 @@
             // 
             // btnPrincipal
             // 
-            this.btnPrincipal.Location = new System.Drawing.Point(25, 321);
+            this.btnPrincipal.Location = new System.Drawing.Point(25, 329);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(112, 31);
             this.btnPrincipal.TabIndex = 6;
@@ -53,7 +53,7 @@
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(25, 72);
+            this.dataGrid.Location = new System.Drawing.Point(25, 85);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(544, 230);
             this.dataGrid.TabIndex = 4;
@@ -65,9 +65,9 @@
             this.groupBox1.Controls.Add(this.Consultar);
             this.groupBox1.Controls.Add(this.cmbAnio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(16, 9);
+            this.groupBox1.Location = new System.Drawing.Point(25, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 57);
+            this.groupBox1.Size = new System.Drawing.Size(544, 57);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar";
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 360);
+            this.ClientSize = new System.Drawing.Size(585, 372);
             this.Controls.Add(this.btnPrincipal);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.groupBox1);

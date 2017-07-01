@@ -66,9 +66,9 @@
             this.groupBox1.Controls.Add(this.Consultar);
             this.groupBox1.Controls.Add(this.cmbAnio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(45, 14);
+            this.groupBox1.Location = new System.Drawing.Point(54, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 57);
+            this.groupBox1.Size = new System.Drawing.Size(544, 57);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar";

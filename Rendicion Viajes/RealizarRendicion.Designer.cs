@@ -44,7 +44,7 @@
             // 
             // btnMenuPrincipal
             // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(33, 424);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(204, 410);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(101, 34);
             this.btnMenuPrincipal.TabIndex = 22;
@@ -54,7 +54,7 @@
             // 
             // btnRendirViaje
             // 
-            this.btnRendirViaje.Location = new System.Drawing.Point(629, 424);
+            this.btnRendirViaje.Location = new System.Drawing.Point(646, 412);
             this.btnRendirViaje.Name = "btnRendirViaje";
             this.btnRendirViaje.Size = new System.Drawing.Size(101, 32);
             this.btnRendirViaje.TabIndex = 21;
@@ -65,9 +65,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstChoferes);
-            this.groupBox1.Location = new System.Drawing.Point(33, 118);
+            this.groupBox1.Location = new System.Drawing.Point(21, 132);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(167, 290);
+            this.groupBox1.Size = new System.Drawing.Size(167, 312);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar chofer";
@@ -77,15 +77,15 @@
             this.lstChoferes.FormattingEnabled = true;
             this.lstChoferes.Location = new System.Drawing.Point(15, 31);
             this.lstChoferes.Name = "lstChoferes";
-            this.lstChoferes.Size = new System.Drawing.Size(120, 238);
+            this.lstChoferes.Size = new System.Drawing.Size(120, 264);
             this.lstChoferes.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dateRendicion);
-            this.groupBox2.Location = new System.Drawing.Point(33, 12);
+            this.groupBox2.Location = new System.Drawing.Point(21, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(167, 86);
+            this.groupBox2.Size = new System.Drawing.Size(167, 69);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleccionar Fecha";
@@ -94,7 +94,7 @@
             // 
             this.dateRendicion.CustomFormat = "yyyy/MM/dd";
             this.dateRendicion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateRendicion.Location = new System.Drawing.Point(24, 31);
+            this.dateRendicion.Location = new System.Drawing.Point(15, 32);
             this.dateRendicion.Name = "dateRendicion";
             this.dateRendicion.Size = new System.Drawing.Size(111, 20);
             this.dateRendicion.TabIndex = 0;
@@ -102,7 +102,7 @@
             // GridViajesRendidos
             // 
             this.GridViajesRendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViajesRendidos.Location = new System.Drawing.Point(206, 69);
+            this.GridViajesRendidos.Location = new System.Drawing.Point(204, 35);
             this.GridViajesRendidos.Name = "GridViajesRendidos";
             this.GridViajesRendidos.Size = new System.Drawing.Size(543, 339);
             this.GridViajesRendidos.TabIndex = 25;
@@ -110,16 +110,16 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(549, 29);
+            this.txtTotal.Location = new System.Drawing.Point(549, 9);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(181, 20);
+            this.txtTotal.Size = new System.Drawing.Size(198, 20);
             this.txtTotal.TabIndex = 26;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(454, 32);
+            this.label1.Location = new System.Drawing.Point(454, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 27;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 470);
+            this.ClientSize = new System.Drawing.Size(772, 459);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.GridViajesRendidos);

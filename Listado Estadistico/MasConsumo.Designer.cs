@@ -42,7 +42,7 @@
             // 
             // btnPrincipal
             // 
-            this.btnPrincipal.Location = new System.Drawing.Point(33, 334);
+            this.btnPrincipal.Location = new System.Drawing.Point(33, 337);
             this.btnPrincipal.Name = "btnPrincipal";
             this.btnPrincipal.Size = new System.Drawing.Size(112, 31);
             this.btnPrincipal.TabIndex = 6;
@@ -65,9 +65,9 @@
             this.groupBox1.Controls.Add(this.Consultar);
             this.groupBox1.Controls.Add(this.cmbAnio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(24, 22);
+            this.groupBox1.Location = new System.Drawing.Point(33, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 57);
+            this.groupBox1.Size = new System.Drawing.Size(544, 55);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar";

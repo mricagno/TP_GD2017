@@ -77,7 +77,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(239, 26);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 171);
+            this.groupBox2.Size = new System.Drawing.Size(337, 171);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos";
@@ -87,7 +87,7 @@
             this.cmbMarcas.FormattingEnabled = true;
             this.cmbMarcas.Location = new System.Drawing.Point(114, 29);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(126, 21);
+            this.cmbMarcas.Size = new System.Drawing.Size(180, 21);
             this.cmbMarcas.TabIndex = 15;
             // 
             // cmbTurnos
@@ -95,7 +95,7 @@
             this.cmbTurnos.FormattingEnabled = true;
             this.cmbTurnos.Location = new System.Drawing.Point(115, 116);
             this.cmbTurnos.Name = "cmbTurnos";
-            this.cmbTurnos.Size = new System.Drawing.Size(125, 21);
+            this.cmbTurnos.Size = new System.Drawing.Size(179, 21);
             this.cmbTurnos.TabIndex = 14;
             // 
             // label4
@@ -112,14 +112,14 @@
             this.txtPatente.Location = new System.Drawing.Point(115, 85);
             this.txtPatente.MaxLength = 8;
             this.txtPatente.Name = "txtPatente";
-            this.txtPatente.Size = new System.Drawing.Size(125, 20);
+            this.txtPatente.Size = new System.Drawing.Size(179, 20);
             this.txtPatente.TabIndex = 12;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(115, 59);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(125, 20);
+            this.txtModelo.Size = new System.Drawing.Size(179, 20);
             this.txtModelo.TabIndex = 11;
             // 
             // label3

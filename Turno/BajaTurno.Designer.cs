@@ -38,9 +38,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cmbTurnos);
-            this.groupBox1.Location = new System.Drawing.Point(53, 39);
+            this.groupBox1.Location = new System.Drawing.Point(39, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 105);
+            this.groupBox1.Size = new System.Drawing.Size(185, 89);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar Turno";
@@ -50,7 +50,7 @@
             this.cmbTurnos.FormattingEnabled = true;
             this.cmbTurnos.Location = new System.Drawing.Point(18, 38);
             this.cmbTurnos.Name = "cmbTurnos";
-            this.cmbTurnos.Size = new System.Drawing.Size(130, 21);
+            this.cmbTurnos.Size = new System.Drawing.Size(146, 21);
             this.cmbTurnos.TabIndex = 0;
             // 
             // btnEliminar
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 228);
             this.Controls.Add(this.btnVolverPrincipal);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox1);

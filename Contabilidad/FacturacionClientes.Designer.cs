@@ -47,16 +47,16 @@
             this.groupBox2.Controls.Add(this.dateFactura);
             this.groupBox2.Location = new System.Drawing.Point(12, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(233, 60);
+            this.groupBox2.Size = new System.Drawing.Size(259, 60);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Seleccionar Fecha";
             // 
             // dateFactura
             // 
-            this.dateFactura.Location = new System.Drawing.Point(0, 31);
+            this.dateFactura.Location = new System.Drawing.Point(22, 24);
             this.dateFactura.Name = "dateFactura";
-            this.dateFactura.Size = new System.Drawing.Size(200, 20);
+            this.dateFactura.Size = new System.Drawing.Size(218, 20);
             this.dateFactura.TabIndex = 0;
             // 
             // groupBox1

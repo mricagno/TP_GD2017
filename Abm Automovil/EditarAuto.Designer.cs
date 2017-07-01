@@ -54,7 +54,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(26, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 171);
+            this.groupBox2.Size = new System.Drawing.Size(301, 171);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos";
@@ -64,7 +64,7 @@
             this.cmbMarcas.FormattingEnabled = true;
             this.cmbMarcas.Location = new System.Drawing.Point(114, 49);
             this.cmbMarcas.Name = "cmbMarcas";
-            this.cmbMarcas.Size = new System.Drawing.Size(126, 21);
+            this.cmbMarcas.Size = new System.Drawing.Size(155, 21);
             this.cmbMarcas.TabIndex = 15;
             // 
             // cmbTurnos
@@ -72,7 +72,7 @@
             this.cmbTurnos.FormattingEnabled = true;
             this.cmbTurnos.Location = new System.Drawing.Point(115, 116);
             this.cmbTurnos.Name = "cmbTurnos";
-            this.cmbTurnos.Size = new System.Drawing.Size(125, 21);
+            this.cmbTurnos.Size = new System.Drawing.Size(154, 21);
             this.cmbTurnos.TabIndex = 14;
             // 
             // label4
@@ -89,14 +89,14 @@
             this.txtPatente.Location = new System.Drawing.Point(115, 19);
             this.txtPatente.MaxLength = 8;
             this.txtPatente.Name = "txtPatente";
-            this.txtPatente.Size = new System.Drawing.Size(125, 20);
+            this.txtPatente.Size = new System.Drawing.Size(154, 20);
             this.txtPatente.TabIndex = 12;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(115, 83);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(125, 20);
+            this.txtModelo.Size = new System.Drawing.Size(154, 20);
             this.txtModelo.TabIndex = 11;
             // 
             // label3
@@ -155,7 +155,7 @@
             this.Controls.Add(this.btnCrearAuto);
             this.Controls.Add(this.groupBox2);
             this.Name = "EditarAuto";
-            this.Text = "EditarAuto";
+            this.Text = "Editar Auto";
             this.Load += new System.EventHandler(this.EditarAuto_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

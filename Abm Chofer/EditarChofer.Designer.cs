@@ -60,7 +60,7 @@
             // 
             // btnGuardarChofer
             // 
-            this.btnGuardarChofer.Location = new System.Drawing.Point(204, 284);
+            this.btnGuardarChofer.Location = new System.Drawing.Point(259, 283);
             this.btnGuardarChofer.Name = "btnGuardarChofer";
             this.btnGuardarChofer.Size = new System.Drawing.Size(92, 28);
             this.btnGuardarChofer.TabIndex = 6;

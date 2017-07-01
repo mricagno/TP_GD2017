@@ -53,14 +53,14 @@
             this.txtAutomovil.Location = new System.Drawing.Point(161, 62);
             this.txtAutomovil.Name = "txtAutomovil";
             this.txtAutomovil.ReadOnly = true;
-            this.txtAutomovil.Size = new System.Drawing.Size(190, 20);
+            this.txtAutomovil.Size = new System.Drawing.Size(198, 20);
             this.txtAutomovil.TabIndex = 3;
             this.txtAutomovil.TextChanged += new System.EventHandler(this.txtAutomovil_TextChanged);
             // 
             // lblAutomovil
             // 
             this.lblAutomovil.AutoSize = true;
-            this.lblAutomovil.Location = new System.Drawing.Point(31, 65);
+            this.lblAutomovil.Location = new System.Drawing.Point(34, 65);
             this.lblAutomovil.Name = "lblAutomovil";
             this.lblAutomovil.Size = new System.Drawing.Size(53, 13);
             this.lblAutomovil.TabIndex = 5;
@@ -69,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 99);
+            this.label1.Location = new System.Drawing.Point(34, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
@@ -78,7 +78,7 @@
             // lblChofer
             // 
             this.lblChofer.AutoSize = true;
-            this.lblChofer.Location = new System.Drawing.Point(31, 31);
+            this.lblChofer.Location = new System.Drawing.Point(35, 31);
             this.lblChofer.Name = "lblChofer";
             this.lblChofer.Size = new System.Drawing.Size(38, 13);
             this.lblChofer.TabIndex = 7;
@@ -89,14 +89,14 @@
             this.txtTurno.Location = new System.Drawing.Point(161, 96);
             this.txtTurno.Name = "txtTurno";
             this.txtTurno.ReadOnly = true;
-            this.txtTurno.Size = new System.Drawing.Size(190, 20);
+            this.txtTurno.Size = new System.Drawing.Size(198, 20);
             this.txtTurno.TabIndex = 8;
             // 
             // txtCantidadKm
             // 
             this.txtCantidadKm.Location = new System.Drawing.Point(159, 167);
             this.txtCantidadKm.Name = "txtCantidadKm";
-            this.txtCantidadKm.Size = new System.Drawing.Size(192, 20);
+            this.txtCantidadKm.Size = new System.Drawing.Size(200, 20);
             this.txtCantidadKm.TabIndex = 9;
             this.txtCantidadKm.TextChanged += new System.EventHandler(this.txtCantidadKm_TextChanged);
             // 
@@ -118,7 +118,7 @@
             this.viajeGroupBox.Controls.Add(this.txtAutomovil);
             this.viajeGroupBox.Location = new System.Drawing.Point(58, 41);
             this.viajeGroupBox.Name = "viajeGroupBox";
-            this.viajeGroupBox.Size = new System.Drawing.Size(419, 309);
+            this.viajeGroupBox.Size = new System.Drawing.Size(394, 309);
             this.viajeGroupBox.TabIndex = 9;
             this.viajeGroupBox.TabStop = false;
             this.viajeGroupBox.Text = "Viaje";
@@ -145,7 +145,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 259);
+            this.label5.Location = new System.Drawing.Point(35, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 15;
@@ -154,7 +154,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 216);
+            this.label4.Location = new System.Drawing.Point(34, 216);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 12;
@@ -163,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 174);
+            this.label3.Location = new System.Drawing.Point(34, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 14;
@@ -174,7 +174,7 @@
             this.cmbChoferHabilitado.FormattingEnabled = true;
             this.cmbChoferHabilitado.Location = new System.Drawing.Point(159, 28);
             this.cmbChoferHabilitado.Name = "cmbChoferHabilitado";
-            this.cmbChoferHabilitado.Size = new System.Drawing.Size(193, 21);
+            this.cmbChoferHabilitado.Size = new System.Drawing.Size(200, 21);
             this.cmbChoferHabilitado.TabIndex = 12;
             this.cmbChoferHabilitado.SelectedIndexChanged += new System.EventHandler(this.cmbChoferHabilitado_SelectedIndexChanged);
             // 
@@ -183,7 +183,7 @@
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(161, 132);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(190, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(198, 21);
             this.cmbCliente.TabIndex = 13;
             // 
             // label2
@@ -224,7 +224,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.viajeGroupBox);
             this.Name = "AltaRegistroViaje";
-            this.Text = "AltaRegistroViaje";
+            this.Text = "Alta Registro Viaje";
             this.Load += new System.EventHandler(this.AltaRegistroViaje_Load);
             this.viajeGroupBox.ResumeLayout(false);
             this.viajeGroupBox.PerformLayout();

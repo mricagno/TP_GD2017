@@ -62,7 +62,7 @@
             this.groupBox1.Controls.Add(this.txtNombreRol);
             this.groupBox1.Location = new System.Drawing.Point(47, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(212, 79);
+            this.groupBox1.Size = new System.Drawing.Size(226, 79);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paso 1 - Ingrese el nombre del Rol";
@@ -80,7 +80,7 @@
             // 
             this.txtNombreRol.Location = new System.Drawing.Point(25, 36);
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(145, 20);
+            this.txtNombreRol.Size = new System.Drawing.Size(177, 20);
             this.txtNombreRol.TabIndex = 1;
             // 
             // AltaRol

@@ -52,7 +52,7 @@
             this.cmbPatentes.FormattingEnabled = true;
             this.cmbPatentes.Location = new System.Drawing.Point(93, 40);
             this.cmbPatentes.Name = "cmbPatentes";
-            this.cmbPatentes.Size = new System.Drawing.Size(121, 21);
+            this.cmbPatentes.Size = new System.Drawing.Size(154, 21);
             this.cmbPatentes.TabIndex = 15;
             // 
             // label3

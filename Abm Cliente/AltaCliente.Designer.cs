@@ -92,7 +92,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(210, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 290);
+            this.groupBox2.Size = new System.Drawing.Size(341, 290);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos";
@@ -101,14 +101,14 @@
             // 
             this.txtCodigoPostalCliente.Location = new System.Drawing.Point(115, 208);
             this.txtCodigoPostalCliente.Name = "txtCodigoPostalCliente";
-            this.txtCodigoPostalCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtCodigoPostalCliente.Size = new System.Drawing.Size(211, 20);
             this.txtCodigoPostalCliente.TabIndex = 16;
             // 
             // txtDireccionCliente
             // 
             this.txtDireccionCliente.Location = new System.Drawing.Point(115, 173);
             this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(211, 20);
             this.txtDireccionCliente.TabIndex = 15;
             // 
             // txtTelefonoCliente
@@ -116,14 +116,14 @@
             this.txtTelefonoCliente.Location = new System.Drawing.Point(115, 142);
             this.txtTelefonoCliente.MaxLength = 10;
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-            this.txtTelefonoCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(211, 20);
             this.txtTelefonoCliente.TabIndex = 14;
             // 
             // txtMailCliente
             // 
             this.txtMailCliente.Location = new System.Drawing.Point(115, 115);
             this.txtMailCliente.Name = "txtMailCliente";
-            this.txtMailCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtMailCliente.Size = new System.Drawing.Size(211, 20);
             this.txtMailCliente.TabIndex = 13;
             // 
             // txtDniCliente
@@ -131,28 +131,28 @@
             this.txtDniCliente.Location = new System.Drawing.Point(115, 85);
             this.txtDniCliente.MaxLength = 8;
             this.txtDniCliente.Name = "txtDniCliente";
-            this.txtDniCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtDniCliente.Size = new System.Drawing.Size(211, 20);
             this.txtDniCliente.TabIndex = 12;
             // 
             // txtApellidoCliente
             // 
             this.txtApellidoCliente.Location = new System.Drawing.Point(115, 59);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtApellidoCliente.Size = new System.Drawing.Size(211, 20);
             this.txtApellidoCliente.TabIndex = 11;
             // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.Location = new System.Drawing.Point(115, 34);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(125, 20);
+            this.txtNombreCliente.Size = new System.Drawing.Size(211, 20);
             this.txtNombreCliente.TabIndex = 10;
             // 
             // dateFechaNacimiento
             // 
             this.dateFechaNacimiento.Location = new System.Drawing.Point(115, 242);
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
-            this.dateFechaNacimiento.Size = new System.Drawing.Size(125, 20);
+            this.dateFechaNacimiento.Size = new System.Drawing.Size(211, 20);
             this.dateFechaNacimiento.TabIndex = 7;
             // 
             // label8
@@ -229,7 +229,7 @@
             // 
             // btnCrearCliente
             // 
-            this.btnCrearCliente.Location = new System.Drawing.Point(377, 339);
+            this.btnCrearCliente.Location = new System.Drawing.Point(434, 338);
             this.btnCrearCliente.Name = "btnCrearCliente";
             this.btnCrearCliente.Size = new System.Drawing.Size(102, 35);
             this.btnCrearCliente.TabIndex = 8;

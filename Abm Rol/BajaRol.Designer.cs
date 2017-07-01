@@ -55,9 +55,9 @@
             // 
             // btnBajaRol
             // 
-            this.btnBajaRol.Location = new System.Drawing.Point(177, 143);
+            this.btnBajaRol.Location = new System.Drawing.Point(165, 142);
             this.btnBajaRol.Name = "btnBajaRol";
-            this.btnBajaRol.Size = new System.Drawing.Size(69, 28);
+            this.btnBajaRol.Size = new System.Drawing.Size(81, 29);
             this.btnBajaRol.TabIndex = 1;
             this.btnBajaRol.Text = "Eliminar";
             this.btnBajaRol.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.btnMenuPrincipal.Location = new System.Drawing.Point(51, 142);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
-            this.btnMenuPrincipal.Size = new System.Drawing.Size(93, 28);
+            this.btnMenuPrincipal.Size = new System.Drawing.Size(96, 29);
             this.btnMenuPrincipal.TabIndex = 2;
             this.btnMenuPrincipal.Text = "Menu Principal";
             this.btnMenuPrincipal.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 221);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnBajaRol);
             this.Controls.Add(this.groupBox1);
