@@ -95,6 +95,7 @@
             // txtCantidadKm
             // 
             this.txtCantidadKm.Location = new System.Drawing.Point(159, 167);
+            this.txtCantidadKm.MaxLength = 5;
             this.txtCantidadKm.Name = "txtCantidadKm";
             this.txtCantidadKm.Size = new System.Drawing.Size(200, 20);
             this.txtCantidadKm.TabIndex = 9;

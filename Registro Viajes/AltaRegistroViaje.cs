@@ -71,8 +71,19 @@ namespace UberFrba.Registro_Viajes
                 registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
                 registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
                 registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
-                registroViaje.CantidadKilometros = txtCantidadKm.Text; 
+                
 
+               
+                try
+                {
+                    var temp = Convert.ToInt32(txtCantidadKm.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Debe ingresar cantidad de km valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                registroViaje.CantidadKilometros = txtCantidadKm.Text;
               
 
                 registroViaje.FechaFinViaje = dateFechaFin.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");

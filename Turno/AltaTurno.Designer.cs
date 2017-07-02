@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.lblturno = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,11 +181,22 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // lblturno
+            // 
+            this.lblturno.AutoSize = true;
+            this.lblturno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblturno.Location = new System.Drawing.Point(60, 9);
+            this.lblturno.Name = "lblturno";
+            this.lblturno.Size = new System.Drawing.Size(50, 20);
+            this.lblturno.TabIndex = 5;
+            this.lblturno.Text = "Turno";
+            // 
             // AltaTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 298);
+            this.Controls.Add(this.lblturno);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -194,6 +206,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -213,6 +226,7 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtHoraFin;
         private System.Windows.Forms.TextBox txtHoraInicio;
+        private System.Windows.Forms.Label lblturno;
 
     }
 }

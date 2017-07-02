@@ -51,11 +51,12 @@ namespace UberFrba.Turno
             
             if(accion == "modificar"){
                 this.Text = "Modificar turno";
-
+                lblturno.Text = turno;
                 //traer el turno de la db
                 //setear valores en los combos
             }else{
                 this.Text = "Alta turno";
+                lblturno.Text = "";
             }
         }
 
