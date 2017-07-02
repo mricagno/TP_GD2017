@@ -703,21 +703,42 @@ namespace UberFrba.Backend
 
         public static ObservableCollection<DtoAutoHabilitado> filtrar_Autos(string marca, string modelo, string patente,string dni)
         {
-            int? dni_s = null;
-            String queryString;
-            if (!String.IsNullOrEmpty(dni))
+            
+           
+
+            String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS ";
+            if (String.IsNullOrEmpty(marca))
             {
-                dni_s = Convert.ToInt32(dni);
-                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
-     + "', '" + patente + "'," + dni_s;
-            }else{
-                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS'" + marca + "', '" + modelo
-     + "', '" + patente + "',null";
+                queryString = queryString + "''";
             }
+            else
+                queryString = queryString + "'" + marca + "'";
 
+            queryString = queryString + " , ";
 
+            if (String.IsNullOrEmpty(modelo))
+            {
+                queryString = queryString + "''";
+            }
+            else
+                queryString = queryString + "'" + modelo + "'";
 
+            queryString = queryString + " , ";
+            if (String.IsNullOrEmpty(patente))
+            {
+                queryString = queryString + "''";
+            }
+            else
+                queryString = queryString + "'" + patente + "'";
 
+            queryString = queryString + " , ";
+
+            if (String.IsNullOrEmpty(dni))
+            {
+                queryString = queryString + "''";
+            }
+            else
+                queryString = queryString + "'" + dni + "'";
 
             SqlDataReader reader = new Server().query(queryString);
             var autos_filtrados = new ObservableCollection<DtoAutoHabilitado>();
