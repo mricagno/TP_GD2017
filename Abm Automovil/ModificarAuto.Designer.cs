@@ -64,7 +64,7 @@
             this.groupBox1.Controls.Add(this.GridAutomovil);
             this.groupBox1.Location = new System.Drawing.Point(39, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(527, 291);
+            this.groupBox1.Size = new System.Drawing.Size(689, 449);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccionar Automovil";
@@ -89,9 +89,9 @@
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(421, 58);
+            this.btnFiltrar.Location = new System.Drawing.Point(433, 28);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.Size = new System.Drawing.Size(81, 26);
             this.btnFiltrar.TabIndex = 6;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -154,13 +154,13 @@
             this.GridAutomovil.Name = "GridAutomovil";
             this.GridAutomovil.ReadOnly = true;
             this.GridAutomovil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridAutomovil.Size = new System.Drawing.Size(475, 150);
+            this.GridAutomovil.Size = new System.Drawing.Size(643, 313);
             this.GridAutomovil.TabIndex = 0;
             this.GridAutomovil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridAutomovil_CellContentClick);
             // 
             // btnHabilitar
             // 
-            this.btnHabilitar.Location = new System.Drawing.Point(289, 328);
+            this.btnHabilitar.Location = new System.Drawing.Point(384, 467);
             this.btnHabilitar.Name = "btnHabilitar";
             this.btnHabilitar.Size = new System.Drawing.Size(99, 33);
             this.btnHabilitar.TabIndex = 9;
@@ -170,7 +170,7 @@
             // 
             // btnMenuPrincipal
             // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(60, 327);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(60, 467);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(94, 34);
             this.btnMenuPrincipal.TabIndex = 8;
@@ -180,7 +180,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(412, 327);
+            this.btnModificar.Location = new System.Drawing.Point(581, 467);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 34);
             this.btnModificar.TabIndex = 7;
@@ -190,7 +190,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(176, 327);
+            this.btnEliminar.Location = new System.Drawing.Point(226, 467);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 34);
             this.btnEliminar.TabIndex = 6;
@@ -206,7 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 373);
+            this.ClientSize = new System.Drawing.Size(740, 513);
             this.Controls.Add(this.btnHabilitar);
             this.Controls.Add(this.btnMenuPrincipal);
             this.Controls.Add(this.btnModificar);

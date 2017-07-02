@@ -110,7 +110,7 @@
             // txtPatente
             // 
             this.txtPatente.Location = new System.Drawing.Point(115, 85);
-            this.txtPatente.MaxLength = 8;
+            this.txtPatente.MaxLength = 10;
             this.txtPatente.Name = "txtPatente";
             this.txtPatente.Size = new System.Drawing.Size(179, 20);
             this.txtPatente.TabIndex = 12;
@@ -118,6 +118,7 @@
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(115, 59);
+            this.txtModelo.MaxLength = 50;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(179, 20);
             this.txtModelo.TabIndex = 11;
