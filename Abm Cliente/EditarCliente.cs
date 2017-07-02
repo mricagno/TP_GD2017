@@ -55,7 +55,17 @@ namespace UberFrba.Abm_Cliente
             }
 
 
-            nuevoCliente.num_dni = Convert.ToInt32(txtDniCliente.Text);
+            
+            try
+            {
+                nuevoCliente.num_dni = Convert.ToInt32(txtDniCliente.Text);
+            }
+            catch
+            {
+                MessageBox.Show("El dni ingresado no es valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (String.IsNullOrEmpty(txtMailCliente.Text))
             {
                 MessageBox.Show("Debe ingresar un mail", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -67,7 +77,17 @@ namespace UberFrba.Abm_Cliente
                 MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            nuevoCliente.telefono = Convert.ToInt32(txtTelefonoCliente.Text);
+           
+            try
+            {
+                nuevoCliente.telefono = Convert.ToInt32(txtTelefonoCliente.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (String.IsNullOrEmpty(txtDireccionCliente.Text))
             {
                 MessageBox.Show("Debe ingresar una direccion", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -79,8 +99,27 @@ namespace UberFrba.Abm_Cliente
                 MessageBox.Show("Debe ingresar codigo postal", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            nuevoCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
-            nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            
+            try
+            {
+                nuevoCliente.codigo_postal = Convert.ToInt32(txtCodigoPostalCliente.Text);
+            }
+            catch
+            {
+                MessageBox.Show("El codigo postal ingresado no es valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            try
+            {
+                nuevoCliente.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            }
+            catch
+            {
+                MessageBox.Show("La fecha de nacimiento ingresada no es valida", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
 
 
 

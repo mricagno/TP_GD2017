@@ -53,11 +53,48 @@ namespace UberFrba.Abm_Chofer
                 MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            actualizarChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
+            try
+            {
+                actualizarChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un dni valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(txtMailChofer.Text))
+            {
+                MessageBox.Show("Debe ingresar un mail", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             actualizarChofer.email = txtMailChofer.Text;
-            actualizarChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
+            try
+            {
+                actualizarChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (String.IsNullOrEmpty(txtDireccionChofer.Text))
+            {
+                MessageBox.Show("Debe ingresar una direccion", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             actualizarChofer.direccion = txtDireccionChofer.Text;
-            actualizarChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            try
+            {
+                actualizarChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar una fecha valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
 
 
             try

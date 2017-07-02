@@ -78,6 +78,7 @@
             // txtCodigoPostalCliente
             // 
             this.txtCodigoPostalCliente.Location = new System.Drawing.Point(115, 208);
+            this.txtCodigoPostalCliente.MaxLength = 6;
             this.txtCodigoPostalCliente.Name = "txtCodigoPostalCliente";
             this.txtCodigoPostalCliente.Size = new System.Drawing.Size(214, 20);
             this.txtCodigoPostalCliente.TabIndex = 16;

@@ -57,8 +57,20 @@ namespace UberFrba.Abm_Chofer
                 MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            nuevoChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
-            if (String.IsNullOrEmpty(txtDniChofer.Text) )
+
+
+            try
+            {
+                nuevoChofer.num_dni = Convert.ToInt32(txtDniChofer.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un dni valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+           
+         
+            if (String.IsNullOrEmpty(txtMailChofer.Text))
             {
                 MessageBox.Show("Debe ingresar mail", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -69,14 +81,33 @@ namespace UberFrba.Abm_Chofer
                 MessageBox.Show("Debe ingresar un telefono valido", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            nuevoChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
+
+            try
+            {
+                nuevoChofer.telefono = Convert.ToInt32(txtTelefonoChofer.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
             if (String.IsNullOrEmpty(txtDireccionChofer.Text))
             {
-                MessageBox.Show("Debe ingresar direccion", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar una direccion", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             nuevoChofer.direccion = txtDireccionChofer.Text;
-            nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            try
+            {
+                nuevoChofer.fecha_nacimiento = dateFechaNacimiento.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            }
+            catch
+            {
+                MessageBox.Show("Debe ingresar una fecha valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
 
 
             try

@@ -101,6 +101,7 @@
             // txtTelefonoChofer
             // 
             this.txtTelefonoChofer.Location = new System.Drawing.Point(115, 142);
+            this.txtTelefonoChofer.MaxLength = 10;
             this.txtTelefonoChofer.Name = "txtTelefonoChofer";
             this.txtTelefonoChofer.Size = new System.Drawing.Size(198, 20);
             this.txtTelefonoChofer.TabIndex = 14;
