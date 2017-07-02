@@ -24,13 +24,13 @@ namespace UberFrba.Backend
                 var registroViaje = new RegistroViaje();
 
            
-                registroViaje.usuarioChofer = reader["CHOFER_USUARIO"].ToString();
-                registroViaje.usuarioCliente = reader["CLIENTE_USUARIO"].ToString();
+                registroViaje.Chofer = reader["CHOFER_USUARIO"].ToString();
+                registroViaje.Cliente = reader["CLIENTE_USUARIO"].ToString();
                 registroViaje.Turno = reader["TURNO"].ToString();
-                registroViaje.CantidadKilometros = reader["CANT_KILOMETROS"].ToString();
+                registroViaje.Km = reader["CANT_KILOMETROS"].ToString();
                 registroViaje.Automovil = reader["PATENTE"].ToString();
-                registroViaje.FechaInicioViaje = reader["FECHA_INICIO"].ToString();
-                registroViaje.FechaFinViaje = reader["FECHA_FIN"].ToString();
+                registroViaje.Inicio = reader["FECHA_INICIO"].ToString();
+                registroViaje.Fin = reader["FECHA_FIN"].ToString();
                 
 
                 registros.Add(registroViaje);
@@ -67,9 +67,9 @@ namespace UberFrba.Backend
 
         public static void registrarViaje(RegistroViaje registroViaje) {
 
-            String query = "EXEC DROP_DATABASE.SP_ALTA_REGISTRO_VIAJE '" + registroViaje.Chofer + "', '" + registroViaje.Automovil + "', '" + registroViaje.Turno + "', " +
-                registroViaje.CantidadKilometros + ", '" + registroViaje.FechaInicioViaje + "', '" + registroViaje.FechaFinViaje + "', '" +
-                registroViaje.Cliente + "'";
+            String query = "EXEC DROP_DATABASE.SP_ALTA_REGISTRO_VIAJE '" + registroViaje.idChofer + "', '" + registroViaje.Automovil + "', '" + registroViaje.Turno + "', " +
+                registroViaje.Km + ", '" + registroViaje.Inicio + "', '" + registroViaje.Fin + "', '" +
+                registroViaje.idCliente + "'";
 
             new Server().realizarQuery(query);
 

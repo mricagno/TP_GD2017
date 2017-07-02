@@ -22,7 +22,7 @@ namespace UberFrba.Backend
                 //registroViaje.Cliente = "cliente 1";
                // registroViaje.FechaFinViaje = "fecha 1";
                 //registroViaje.FechaInicioViaje = "fecha 1";
-                registroViaje.CantidadKilometros = "132312";
+                registroViaje.Km = "132312";
                 registroViaje.Turno = "turno";
                 todosLosViajes.Add(registroViaje);
             }

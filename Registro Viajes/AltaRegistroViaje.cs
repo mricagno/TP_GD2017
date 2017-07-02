@@ -67,10 +67,10 @@ namespace UberFrba.Registro_Viajes
                     MessageBox.Show("La fecha final debe ser posterior a la inicial ", "Alta registro Viaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                registroViaje.Chofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
+                registroViaje.idChofer = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).DNI;
                 registroViaje.Automovil = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).Patente;
                 registroViaje.Turno = ((DtoChoferHabilitado)cmbChoferHabilitado.SelectedItem).TurnoAuto;
-                registroViaje.Cliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
+                registroViaje.idCliente = ((DtoClienteHabilitado)cmbCliente.SelectedItem).DNI;
                 
 
                
@@ -83,11 +83,11 @@ namespace UberFrba.Registro_Viajes
                     MessageBox.Show("Debe ingresar cantidad de km valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                registroViaje.CantidadKilometros = txtCantidadKm.Text;
+                registroViaje.Km = txtCantidadKm.Text;
               
 
-                registroViaje.FechaFinViaje = dateFechaFin.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
-                registroViaje.FechaInicioViaje = dateFechaInicio.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+                registroViaje.Fin = dateFechaFin.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+                registroViaje.Inicio = dateFechaInicio.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
                 
                 Repositorio.registrarViaje(registroViaje);

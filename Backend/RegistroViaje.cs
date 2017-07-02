@@ -8,15 +8,15 @@ namespace UberFrba.Backend
 {
     public class RegistroViaje : Object
     {
-        public String FechaInicioViaje { get; set; }
-        public String FechaFinViaje { get; set; }
-        public String usuarioChofer { get; set; }
-        public String usuarioCliente { get; set; }
-        public int Chofer; // dni 
-        public int Cliente;//dni
+        public String Inicio { get; set; }
+        public String Fin { get; set; }
+        public String Chofer { get; set; }
+        public String Cliente { get; set; }
+        public int idChofer; // dni 
+        public int idCliente;//dni
         public String Automovil { get; set; } //patente
         public String Turno  { get; set; } //no puedo modifcar esto
-        public String CantidadKilometros { get; set; }
+        public String Km { get; set; }
         
         
 
@@ -28,7 +28,7 @@ namespace UberFrba.Backend
                 return false;
 
             RegistroViaje registro = (RegistroViaje)obj;
-            return (this.Chofer == registro.Chofer) && (this.Cliente == registro.Cliente) && (this.Automovil == registro.Automovil); ;
+            return (this.idChofer == registro.idChofer) && (this.idCliente == registro.idCliente) && (this.Automovil == registro.Automovil); ;
 
         }
 
