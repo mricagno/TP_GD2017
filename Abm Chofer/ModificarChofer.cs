@@ -129,10 +129,19 @@ namespace UberFrba.Abm_Chofer
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            ObservableCollection<DtoModificarChofer> chofer_filtrado = Repositorio.filtrar_Chofer(nombre_Box.Text, apellido_Box.Text, documento_Box.Text);
-            GridChofer.DataSource = chofer_filtrado;
-            GridChofer.Update();
-            GridChofer.Refresh();
+           
+
+            try
+            {
+                ObservableCollection<DtoModificarChofer> chofer_filtrado = Repositorio.filtrar_Chofer(nombre_Box.Text, apellido_Box.Text, documento_Box.Text);
+                GridChofer.DataSource = chofer_filtrado;
+                GridChofer.Update();
+                GridChofer.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         private void btnEditarRolesChofer_Click(object sender, EventArgs e)

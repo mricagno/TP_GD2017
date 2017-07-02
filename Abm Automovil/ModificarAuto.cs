@@ -136,10 +136,20 @@ namespace UberFrba.Abm_Automovil
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
 
-            ObservableCollection<DtoAutoHabilitado> autos_filtrado = Repositorio.filtrar_Autos(marca_Box.Text,modelo_Box.Text,patente_Box.Text, chofer_Box.Text);
-            GridAutomovil.DataSource = autos_filtrado;
-            GridAutomovil.Update();
-            GridAutomovil.Refresh();
+            try
+            {
+                ObservableCollection<DtoAutoHabilitado> autos_filtrado = Repositorio.filtrar_Autos(marca_Box.Text, modelo_Box.Text, patente_Box.Text, chofer_Box.Text);
+                GridAutomovil.DataSource = autos_filtrado;
+                GridAutomovil.Update();
+                GridAutomovil.Refresh();
+
+            }
+            catch (Exception ex)
+            {
+            }
+
+
+           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
