@@ -35,6 +35,7 @@
             this.btnFinalizarAgregadoDeFuncionalidades = new System.Windows.Forms.Button();
             this.lstFuncionalidades = new System.Windows.Forms.ListBox();
             this.btnAgregarFuncionalidad = new System.Windows.Forms.Button();
+            this.lblNombreRol = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.groupBox1.Controls.Add(this.btnFinalizarAgregadoDeFuncionalidades);
             this.groupBox1.Controls.Add(this.lstFuncionalidades);
             this.groupBox1.Controls.Add(this.btnAgregarFuncionalidad);
-            this.groupBox1.Location = new System.Drawing.Point(70, 31);
+            this.groupBox1.Location = new System.Drawing.Point(47, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(450, 266);
             this.groupBox1.TabIndex = 1;
@@ -109,17 +110,29 @@
             this.btnAgregarFuncionalidad.UseVisualStyleBackColor = true;
             this.btnAgregarFuncionalidad.Click += new System.EventHandler(this.btnAgregarFuncionalidad_Click_1);
             // 
+            // lblNombreRol
+            // 
+            this.lblNombreRol.AutoSize = true;
+            this.lblNombreRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreRol.Location = new System.Drawing.Point(64, 20);
+            this.lblNombreRol.Name = "lblNombreRol";
+            this.lblNombreRol.Size = new System.Drawing.Size(33, 20);
+            this.lblNombreRol.TabIndex = 2;
+            this.lblNombreRol.Text = "Rol";
+            // 
             // AgregarFuncARol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 342);
+            this.Controls.Add(this.lblNombreRol);
             this.Controls.Add(this.groupBox1);
             this.Name = "AgregarFuncARol";
             this.Text = "Agregar Funcionalidad ";
             this.Load += new System.EventHandler(this.AgregarFuncARol_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +145,6 @@
         private System.Windows.Forms.ListBox lstFuncionalidades;
         private System.Windows.Forms.Button btnAgregarFuncionalidad;
         private System.Windows.Forms.Button btnSacarFuncionalidad;
+        private System.Windows.Forms.Label lblNombreRol;
     }
 }

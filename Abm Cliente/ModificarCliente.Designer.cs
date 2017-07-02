@@ -52,6 +52,7 @@
             this.GridClientes.Location = new System.Drawing.Point(21, 117);
             this.GridClientes.MultiSelect = false;
             this.GridClientes.Name = "GridClientes";
+            this.GridClientes.ReadOnly = true;
             this.GridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridClientes.Size = new System.Drawing.Size(475, 150);
             this.GridClientes.TabIndex = 0;

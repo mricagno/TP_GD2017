@@ -104,6 +104,7 @@
             this.GridViajesRendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridViajesRendidos.Location = new System.Drawing.Point(204, 35);
             this.GridViajesRendidos.Name = "GridViajesRendidos";
+            this.GridViajesRendidos.ReadOnly = true;
             this.GridViajesRendidos.Size = new System.Drawing.Size(543, 339);
             this.GridViajesRendidos.TabIndex = 25;
             this.GridViajesRendidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViajesRendidos_CellContentClick);

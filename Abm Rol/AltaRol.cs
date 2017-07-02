@@ -33,7 +33,6 @@ namespace UberFrba.Abm_Rol
                 }
                 catch (Exception ex) {
                     MessageBox.Show(ex.Message.ToString(), "Alta Rol", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
 
             } 

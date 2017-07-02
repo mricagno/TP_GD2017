@@ -49,6 +49,7 @@
             this.GridTodosLosViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridTodosLosViajes.Location = new System.Drawing.Point(34, 82);
             this.GridTodosLosViajes.Name = "GridTodosLosViajes";
+            this.GridTodosLosViajes.ReadOnly = true;
             this.GridTodosLosViajes.RowTemplate.ReadOnly = true;
             this.GridTodosLosViajes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridTodosLosViajes.Size = new System.Drawing.Size(779, 402);

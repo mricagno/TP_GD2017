@@ -55,6 +55,7 @@
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(45, 95);
             this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
             this.dataGrid.Size = new System.Drawing.Size(544, 230);
             this.dataGrid.TabIndex = 7;
             // 

@@ -40,9 +40,6 @@ namespace UberFrba.Abm_Cliente
         {
             var nuevoCliente = new NuevoCliente();
 
-         
-
-
             
             if (String.IsNullOrEmpty(txtNombreCliente.Text) || String.IsNullOrEmpty(txtApellidoCliente.Text))
             {

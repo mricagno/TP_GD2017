@@ -321,16 +321,10 @@ namespace UberFrba.Backend
         internal static void crearRol(string nombreRolNuevo)
         {
             String query = "EXEC DROP_DATABASE.ALTA_ROL '" + nombreRolNuevo + "'";
-            //new Server().realizarQuery(query);
-            try
-             {
-                new Server().realizarQuery(query);
-             }
-            catch (SqlException ex)
-             {
-                 MessageBox.Show(ex.Message);
-                 throw new System.ArgumentException();
-            } 
+           
+            new Server().realizarQuery(query);
+           
+            
         }
 
         internal static void crearAuto(String marca, String modelo, String patente, int DNI, String turno)

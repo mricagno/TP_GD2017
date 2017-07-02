@@ -169,6 +169,7 @@
             this.GridChofer.Location = new System.Drawing.Point(21, 117);
             this.GridChofer.MultiSelect = false;
             this.GridChofer.Name = "GridChofer";
+            this.GridChofer.ReadOnly = true;
             this.GridChofer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridChofer.Size = new System.Drawing.Size(475, 150);
             this.GridChofer.TabIndex = 0;

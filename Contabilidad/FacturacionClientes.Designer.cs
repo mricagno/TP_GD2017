@@ -102,6 +102,7 @@
             this.GridFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridFacturacion.Location = new System.Drawing.Point(206, 69);
             this.GridFacturacion.Name = "GridFacturacion";
+            this.GridFacturacion.ReadOnly = true;
             this.GridFacturacion.Size = new System.Drawing.Size(543, 339);
             this.GridFacturacion.TabIndex = 29;
             this.GridFacturacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);

@@ -152,6 +152,7 @@
             this.GridAutomovil.Location = new System.Drawing.Point(21, 117);
             this.GridAutomovil.MultiSelect = false;
             this.GridAutomovil.Name = "GridAutomovil";
+            this.GridAutomovil.ReadOnly = true;
             this.GridAutomovil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridAutomovil.Size = new System.Drawing.Size(475, 150);
             this.GridAutomovil.TabIndex = 0;

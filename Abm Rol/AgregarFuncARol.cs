@@ -40,6 +40,7 @@ namespace UberFrba.Abm_Rol
 
         private void AgregarFuncARol_Load(object sender, EventArgs e)
         {
+            lblNombreRol.Text = "Rol " + nombreRolNuevo;
             lstAgregarFuncionalidades.Items.Clear();
             lstFuncionalidades.Items.Clear();
 
