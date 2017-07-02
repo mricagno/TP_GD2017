@@ -240,13 +240,26 @@ namespace UberFrba
                     tblMenu.SelectTab(tabAutos.Name);
                 if (seleccionarTab == Tabs.estadisticas())
                     tblMenu.SelectTab(tabEstadisticas.Name);
-            }
-            catch
+            }catch(Exception ex)
             {
 
             }
+            try
+            {
+                if (tblMenu.TabPages.Count == 0)
+                    {
+                        MessageBox.Show("Su rol no posee funcionalidades habilitadas. Por favor contactarse con el administrador del sistema ", "Uber", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
             
+                    }
+            }catch(Exception ex)
+            {
+
+            }
+
+
         }
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
