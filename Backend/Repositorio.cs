@@ -773,19 +773,30 @@ namespace UberFrba.Backend
         }
         public static ObservableCollection<DtoClienteModificar> filtrar_Cliente(string nombre, string apellido, string documento)
         {
-            int? documento_s = null;
-            String queryString;
-            if (!String.IsNullOrEmpty(documento))
+            
+
+            String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CLIENTE ";
+            if(String.IsNullOrEmpty(nombre))
             {
-                documento_s = Convert.ToInt32(documento);
-                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CLIENTE'" + nombre + "', '" + apellido
-                + "'," + documento_s;
+                queryString = queryString + "''";
+            }else
+                queryString = queryString + "'" + nombre +"' , '";
+
+            if (String.IsNullOrEmpty(apellido))
+            {
+                queryString = queryString + "', '";
             }
             else
+                queryString = queryString + apellido + "' , '";
+
+            if (String.IsNullOrEmpty(documento))
             {
-                queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CLIENTE'" + nombre + "', '" + apellido
-                 + "',null";
+                queryString = queryString + "'";
             }
+            else
+                queryString = queryString + documento + "'";
+
+
 
             SqlDataReader reader = new Server().query(queryString);
             var cliente_filtrados = new ObservableCollection<DtoClienteModificar>();
