@@ -85,12 +85,17 @@ namespace UberFrba.Abm_Cliente
                 MessageBox.Show("El dni ingresado no es valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            if (String.IsNullOrEmpty(txtMailCliente.Text))
+            nuevoCliente.email = "";
+            if (!String.IsNullOrEmpty(txtMailCliente.Text))
             {
-                MessageBox.Show("Debe ingresar un mail", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                if (!txtMailCliente.Text.Contains("@") || !txtMailCliente.Text.Contains(".com"))
+                {
+                    MessageBox.Show("Debe ingresar un mail valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                nuevoCliente.email = txtMailCliente.Text;    
             }
-            nuevoCliente.email = txtMailCliente.Text;
+            
             if (String.IsNullOrEmpty(txtTelefonoCliente.Text) || !Utils.IsDigitsOnly(txtTelefonoCliente.Text))
             {
                 MessageBox.Show("El telefono ingresado no es valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

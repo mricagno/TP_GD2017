@@ -66,12 +66,17 @@ namespace UberFrba.Abm_Cliente
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtMailCliente.Text))
+            nuevoCliente.email = "";
+            if (!String.IsNullOrEmpty(txtMailCliente.Text))
             {
-                MessageBox.Show("Debe ingresar un mail", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                if (!txtMailCliente.Text.Contains("@") || !txtMailCliente.Text.Contains(".com"))
+                {
+                    MessageBox.Show("Debe ingresar un mail valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                nuevoCliente.email = txtMailCliente.Text;
             }
-            nuevoCliente.email = txtMailCliente.Text;
+            
             if (String.IsNullOrEmpty(txtTelefonoCliente.Text) || !Utils.IsDigitsOnly(txtTelefonoCliente.Text))
             {
                 MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

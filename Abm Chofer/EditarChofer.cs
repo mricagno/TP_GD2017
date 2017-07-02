@@ -68,6 +68,11 @@ namespace UberFrba.Abm_Chofer
                 MessageBox.Show("Debe ingresar un mail", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            if (!txtMailChofer.Text.Contains("@") || !txtMailChofer.Text.Contains(".com"))
+            {
+                MessageBox.Show("Debe ingresar un mail valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             actualizarChofer.email = txtMailChofer.Text;
             try
             {
