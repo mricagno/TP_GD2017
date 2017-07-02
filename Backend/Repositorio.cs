@@ -716,6 +716,9 @@ namespace UberFrba.Backend
             }
 
 
+
+
+
             SqlDataReader reader = new Server().query(queryString);
             var autos_filtrados = new ObservableCollection<DtoAutoHabilitado>();
 
@@ -738,7 +741,7 @@ namespace UberFrba.Backend
         }
         public static ObservableCollection<DtoModificarChofer> filtrar_Chofer(string nombre, string apellido, string documento)
         {
-        
+
 
             String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CHOFER ";
             if (String.IsNullOrEmpty(nombre))
@@ -746,21 +749,24 @@ namespace UberFrba.Backend
                 queryString = queryString + "''";
             }
             else
-                queryString = queryString + "'" + nombre + "' , '";
+                queryString = queryString + "'" + nombre + "'";
+
+            queryString = queryString + " , ";
 
             if (String.IsNullOrEmpty(apellido))
             {
-                queryString = queryString + "', '";
+                queryString = queryString + "''";
             }
             else
-                queryString = queryString + apellido + "' , '";
+                queryString = queryString + "'" + apellido + "'";
 
+            queryString = queryString + " , ";
             if (String.IsNullOrEmpty(documento))
             {
-                queryString = queryString + "'";
+                queryString = queryString + "''";
             }
             else
-                queryString = queryString + documento + "'";
+                queryString = queryString + "'" + documento + "'";
 
 
             SqlDataReader reader = new Server().query(queryString);
@@ -791,21 +797,24 @@ namespace UberFrba.Backend
             {
                 queryString = queryString + "''";
             }else
-                queryString = queryString + "'" + nombre +"' , '";
+                queryString = queryString + "'" + nombre +"'";
+
+            queryString = queryString + " , ";
 
             if (String.IsNullOrEmpty(apellido))
             {
-                queryString = queryString + "', '";
+                queryString = queryString + "''";
             }
             else
-                queryString = queryString + apellido + "' , '";
+                queryString = queryString + "'" + apellido + "'";
 
+            queryString = queryString + " , ";
             if (String.IsNullOrEmpty(documento))
             {
-                queryString = queryString + "'";
+                queryString = queryString + "''";
             }
             else
-                queryString = queryString + documento + "'";
+                queryString = queryString + "'" +  documento + "'";
 
 
 
