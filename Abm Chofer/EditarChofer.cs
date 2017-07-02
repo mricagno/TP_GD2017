@@ -48,9 +48,9 @@ namespace UberFrba.Abm_Chofer
 
             actualizarChofer.nombre = txtNombreChofer.Text;
             actualizarChofer.apellido = txtApellidoChofer.Text;
-            if (!Utils.IsDigitsOnly(txtDniChofer.Text) || txtDniChofer.Text.Length != 8)
+            if (!Utils.IsDigitsOnly(txtDniChofer.Text) )
             {
-                MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El DNI debe tener digitos numericos", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             try
@@ -70,7 +70,7 @@ namespace UberFrba.Abm_Chofer
             }
             if (!txtMailChofer.Text.Contains("@") || !txtMailChofer.Text.Contains(".com"))
             {
-                MessageBox.Show("Debe ingresar un mail valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un mail valido. Debe contener @ y .com", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             actualizarChofer.email = txtMailChofer.Text;

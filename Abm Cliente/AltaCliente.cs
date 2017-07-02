@@ -68,9 +68,9 @@ namespace UberFrba.Abm_Cliente
             }
             nuevoCliente.nombre = txtNombreCliente.Text;
             nuevoCliente.apellido = txtApellidoCliente.Text;
-            if (String.IsNullOrEmpty(txtDniCliente.Text) || !Utils.IsDigitsOnly(txtDniCliente.Text) || txtDniCliente.Text.Length != 8)
+            if (String.IsNullOrEmpty(txtDniCliente.Text) || !Utils.IsDigitsOnly(txtDniCliente.Text))
             {
-                MessageBox.Show("El DNI debe tener 8 digitos numericos", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El DNI debe tener digitos numericos", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -90,7 +90,7 @@ namespace UberFrba.Abm_Cliente
             {
                 if (!txtMailCliente.Text.Contains("@") || !txtMailCliente.Text.Contains(".com"))
                 {
-                    MessageBox.Show("Debe ingresar un mail valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar un mail valido. Debe contener @ y .com", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 nuevoCliente.email = txtMailCliente.Text;    
