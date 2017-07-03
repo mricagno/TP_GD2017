@@ -30,20 +30,22 @@ namespace UberFrba.Turno
 
         private void txtValorKm_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtValorKm.Text, "[^0-9]"))
+            /*if (System.Text.RegularExpressions.Regex.IsMatch(txtValorKm.Text, "[^0-9]"))
             {
                 MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);
                 txtValorKm.Text = txtValorKm.Text.Remove(txtValorKm.Text.Length - 1);
-            }
+            }*/
         }
 
         private void txtPrecioBase_TextChanged(object sender, EventArgs e)
         {
+            /*
+          
             if (System.Text.RegularExpressions.Regex.IsMatch(txtPrecioBase.Text, "[^0-9]"))
             {
                 MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);
                 txtPrecioBase.Text = txtPrecioBase.Text.Remove(txtPrecioBase.Text.Length - 1);
-            }
+            }*/
         }
 
         private void AltaTurno_Load(object sender, EventArgs e)
@@ -52,8 +54,17 @@ namespace UberFrba.Turno
             if(accion == "modificar"){
                 this.Text = "Modificar turno";
                 lblturno.Text = turno;
-                //traer el turno de la db
-                //setear valores en los combos
+
+                var modificarTurno = Repositorio.infoTurno(turno);
+                txtNombreTurno.Text = modificarTurno.Nombre;
+                txtPrecioBase.Text = modificarTurno.PrecioBase.ToString();
+                txtValorKm.Text = modificarTurno.ValorKm.ToString();
+                txtHoraFin.Text = modificarTurno.HoraFin.ToString();
+                txtHoraInicio.Text = modificarTurno.HoraInicio.ToString();
+                if (modificarTurno.Habilitado == 1)
+                    checkHabilitadoTurno.Checked = true;
+                
+
             }else{
                 this.Text = "Alta turno";
                 lblturno.Text = "";
@@ -79,7 +90,7 @@ namespace UberFrba.Turno
                 turnoDto.Nombre = txtNombreTurno.Text;
                 if (String.IsNullOrEmpty(txtHoraInicio.Text) || !Utils.IsDigitsOnly(txtHoraInicio.Text))
                 {
-                    MessageBox.Show("Debe ingresar hora incio numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar hora inicio numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
@@ -88,20 +99,40 @@ namespace UberFrba.Turno
                     MessageBox.Show("Debe ingresar hora fin numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                if (String.IsNullOrEmpty(txtPrecioBase.Text) || !Utils.IsDigitsOnly(txtPrecioBase.Text))
+                if (String.IsNullOrEmpty(txtPrecioBase.Text) )
                 {
                     MessageBox.Show("Debe ingresar precio base numerico", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-                if (String.IsNullOrEmpty(txtValorKm.Text) || !Utils.IsDigitsOnly(txtValorKm.Text))
+                if (String.IsNullOrEmpty(txtValorKm.Text) )
                 {
                     MessageBox.Show("Debe ingresar valor km numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 turnoDto.HoraInicio = Convert.ToInt32(txtHoraInicio.Text);
                 turnoDto.HoraFin = Convert.ToInt32(txtHoraFin.Text);
-                turnoDto.PrecioBase = Convert.ToInt32(txtPrecioBase.Text);
-                turnoDto.ValorKm = Convert.ToInt32(txtValorKm.Text);
+
+
+                try
+                {
+                    turnoDto.PrecioBase = Convert.ToDecimal(txtPrecioBase.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Debe ingresar un precio base valido valido", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                try
+                {
+                    turnoDto.ValorKm = Convert.ToDecimal(txtValorKm.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Debe ingresar un valor km valido", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+               
+               
 
                 if( turnoDto.HoraInicio > turnoDto.HoraFin)
                 {
@@ -152,7 +183,7 @@ namespace UberFrba.Turno
         private void txtHoraInicio_TextChanged(object sender, EventArgs e)
         {
             
-
+            /*
             if (System.Text.RegularExpressions.Regex.IsMatch(txtHoraInicio.Text, "[^0-9]") )
             {
                 
@@ -174,11 +205,12 @@ namespace UberFrba.Turno
                 MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);
                 txtHoraInicio.Text = txtHoraInicio.Text.Remove(txtHoraInicio.Text.Length - 1);
             
-            }
+            }*/
         }
 
         private void txtHoraFin_TextChanged(object sender, EventArgs e)
         {
+ 
             if (System.Text.RegularExpressions.Regex.IsMatch(txtHoraFin.Text, "[^0-9]"))
             {
                 MessageBox.Show("Por favor ingresar solo numeros", "Uber", MessageBoxButtons.OK);

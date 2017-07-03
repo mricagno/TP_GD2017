@@ -112,6 +112,7 @@
             // txtPrecioBase
             // 
             this.txtPrecioBase.Location = new System.Drawing.Point(120, 129);
+            this.txtPrecioBase.MaxLength = 10;
             this.txtPrecioBase.Name = "txtPrecioBase";
             this.txtPrecioBase.Size = new System.Drawing.Size(145, 20);
             this.txtPrecioBase.TabIndex = 7;
@@ -129,6 +130,7 @@
             // txtValorKm
             // 
             this.txtValorKm.Location = new System.Drawing.Point(120, 100);
+            this.txtValorKm.MaxLength = 10;
             this.txtValorKm.Name = "txtValorKm";
             this.txtValorKm.Size = new System.Drawing.Size(145, 20);
             this.txtValorKm.TabIndex = 5;

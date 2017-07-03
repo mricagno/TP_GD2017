@@ -11,8 +11,8 @@ namespace UberFrba.Backend
         public String Nombre { get; set; }
         public int HoraInicio { get; set; }
         public int HoraFin { get; set; }
-        public int ValorKm { get; set; }
-        public int PrecioBase { get; set; }
+        public decimal ValorKm { get; set; }
+        public decimal PrecioBase { get; set; }
         public int Habilitado { get; set; }
     }
 }

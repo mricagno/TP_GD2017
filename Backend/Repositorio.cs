@@ -943,5 +943,29 @@ namespace UberFrba.Backend
             reader.Close();
             return roles;
         }
+
+        internal static DtoTurno infoTurno(string turno)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_DATOS_TURNO '" + turno + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var nuevoTurno = new DtoTurno();
+
+            while (reader.Read())
+            {
+                nuevoTurno.Nombre = turno;
+                nuevoTurno.HoraInicio = Convert.ToInt32(reader["DT_INICIO_TURNO"].ToString());
+                nuevoTurno.HoraFin = Convert.ToInt32(reader["DT_FIN_TURNO"].ToString());
+                nuevoTurno.ValorKm = Convert.ToDecimal(reader["VALOR_KM"].ToString());
+                nuevoTurno.PrecioBase = Convert.ToDecimal(reader["PRECIO_BASE"].ToString());
+                nuevoTurno.Habilitado = Convert.ToInt32(reader["ID_STATUS"].ToString());
+
+               
+            }
+            reader.Close();
+            return nuevoTurno;
+        }
+
+        
     }
 }
