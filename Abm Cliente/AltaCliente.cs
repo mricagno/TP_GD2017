@@ -30,7 +30,43 @@ namespace UberFrba.Abm_Cliente
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                var dataChofer = Repositorio.data_alta_cliente(lstUsuarios.SelectedItem.ToString());
+                txtApellidoCliente.Text = dataChofer.apellido;
+                txtDireccionCliente.Text = dataChofer.direccion;
 
+                txtNombreCliente.Text = dataChofer.nombre;
+                if (dataChofer.telefono.ToString() != "0")
+                    txtTelefonoCliente.Text = dataChofer.telefono.ToString();
+                else
+                    txtTelefonoCliente.Text = "";
+
+                if (dataChofer.num_dni.ToString() != "0")
+                    txtDniCliente.Text = dataChofer.num_dni.ToString();
+                else
+                    txtDniCliente.Text = "";
+                
+                
+                if(dataChofer.anio.ToString() !=  "0")
+                    dateFechaNacimiento.Value = new DateTime(dataChofer.anio, dataChofer.mes, dataChofer.dia);
+                else
+                    dateFechaNacimiento.Value = Utils.getConfigDateTime();
+
+
+                txtMailCliente.Text = dataChofer.email;
+                if (dataChofer.codigo_postal.ToString() != "0")
+                    txtCodigoPostalCliente.Text = dataChofer.codigo_postal.ToString();
+                else
+                    txtCodigoPostalCliente.Text = "";
+                
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+                
         }
 
         private void AltaCliente_Load(object sender, EventArgs e)

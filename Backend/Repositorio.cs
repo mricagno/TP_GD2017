@@ -996,6 +996,34 @@ namespace UberFrba.Backend
             return chofer;
         }
 
+
+
+        internal static NuevoChofer data_alta_chofer(string username)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_DATOS_ALTA_CHOFER '" + username + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var chofer = new NuevoChofer();
+
+            while (reader.Read())
+            {
+
+
+                chofer.apellido = reader["APELLIDO"].ToString();
+                chofer.nombre = reader["NOMBRE"].ToString();
+                chofer.num_dni = Convert.ToInt32(reader["NUM_DNI"].ToString());
+                chofer.email = reader["EMAIL"].ToString();
+                chofer.telefono = Convert.ToInt32(reader["NUM_TELEFONO"].ToString());
+                chofer.direccion = reader["DIRECCION"].ToString();
+                chofer.anio = Convert.ToInt32(reader["ANIO"].ToString());
+                chofer.mes = Convert.ToInt32(reader["MES"].ToString());
+                chofer.dia = Convert.ToInt32(reader["DIA"].ToString());
+
+
+            }
+            reader.Close();
+            return chofer;
+        }
         internal static NuevoCliente datacliente(string dni)
         {
             String queryString = "EXEC  DROP_DATABASE.SP_DATOS_CLIENTE '" + dni + "'";
@@ -1018,6 +1046,33 @@ namespace UberFrba.Backend
                 cliente.dia = Convert.ToInt32(reader["DIA"].ToString());
 
 
+            }
+            reader.Close();
+            return cliente;
+        }
+
+        internal static NuevoCliente data_alta_cliente(string username)
+        {
+            String queryString = "EXEC  DROP_DATABASE.SP_DATOS_ALTA_CLIENTE '" + username + "'";
+
+            SqlDataReader reader = new Server().query(queryString);
+            var cliente = new NuevoCliente();
+
+            while (reader.Read())
+            {
+
+
+                cliente.apellido = reader["APELLIDO"].ToString();
+                cliente.nombre = reader["NOMBRE"].ToString();
+                cliente.num_dni = Convert.ToInt32(reader["NUM_DNI"].ToString());
+                cliente.email = reader["EMAIL"].ToString();
+                cliente.telefono = Convert.ToInt32(reader["NUM_TELEFONO"].ToString());
+                cliente.direccion = reader["DIRECCION"].ToString();
+                cliente.anio = Convert.ToInt32(reader["ANIO"].ToString());
+                cliente.mes = Convert.ToInt32(reader["MES"].ToString());
+                cliente.dia = Convert.ToInt32(reader["DIA"].ToString());
+
+                
             }
             reader.Close();
             return cliente;

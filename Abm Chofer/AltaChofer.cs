@@ -143,7 +143,36 @@ namespace UberFrba.Abm_Chofer
 
         private void lstUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                var datacliente = Repositorio.data_alta_chofer(lstUsuarios.SelectedItem.ToString());
+                txtApellidoChofer.Text = datacliente.apellido;
+                txtDireccionChofer.Text = datacliente.direccion;
 
+                txtNombreChofer.Text = datacliente.nombre;
+                if (datacliente.telefono.ToString() != "0")
+                    txtTelefonoChofer.Text = datacliente.telefono.ToString();
+                else
+                    txtTelefonoChofer.Text = "";
+
+                if (datacliente.num_dni.ToString() != "0")
+                    txtDniChofer.Text = datacliente.num_dni.ToString();
+                else
+                    txtDniChofer.Text = "";
+
+                if (datacliente.anio.ToString() != "0")
+                    dateFechaNacimiento.Value = new DateTime(datacliente.anio, datacliente.mes, datacliente.dia);
+                else
+                    dateFechaNacimiento.Value = Utils.getConfigDateTime();
+
+                txtMailChofer.Text = datacliente.email;
+                
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void dateFechaNacimiento_ValueChanged(object sender, EventArgs e)
