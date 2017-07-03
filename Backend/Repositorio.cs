@@ -253,7 +253,7 @@ namespace UberFrba.Backend
         internal static void modificarTurno(string nombre, DtoTurno turnoDto)
         {
             String query = "EXEC DROP_DATABASE.SP_EDITAR_TURNO '" + nombre + "', '" + turnoDto.Nombre + "', " + turnoDto.HoraInicio + ", " +
-               turnoDto.HoraFin + ", " + turnoDto.ValorKm + ", " + turnoDto.PrecioBase + ", " +
+               turnoDto.HoraFin + ", " + turnoDto.ValorKm.ToString().Replace(',','.') + ", " + turnoDto.PrecioBase.ToString().Replace(',','.') + ", " +
                turnoDto.Habilitado;
 
             new Server().realizarQuery(query);
@@ -262,7 +262,7 @@ namespace UberFrba.Backend
         internal static void altaTurno(DtoTurno turnoDto)
         {
             String query = "EXEC DROP_DATABASE.SP_CREAR_TURNO '" + turnoDto.Nombre + "', " + turnoDto.HoraInicio + ", " +
-               turnoDto.HoraFin + ", " + turnoDto.ValorKm + ", " + turnoDto.PrecioBase + ", " +
+               turnoDto.HoraFin + ", " + turnoDto.ValorKm.ToString().Replace(',', '.') + ", " + turnoDto.PrecioBase.ToString().Replace(',', '.') + ", " +
                turnoDto.Habilitado;
 
             new Server().realizarQuery(query);
