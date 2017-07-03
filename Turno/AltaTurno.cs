@@ -117,7 +117,7 @@ namespace UberFrba.Turno
                 try
                 {
                     //turnoDto.PrecioBase = Convert.ToDecimal();
-                    turnoDto.PrecioBase = float.Parse(txtPrecioBase.Text, CultureInfo.InvariantCulture.NumberFormat);
+                    turnoDto.PrecioBase = float.Parse(txtPrecioBase.Text, CultureInfo.CurrentCulture.NumberFormat);
 
                 }
                 catch
@@ -128,7 +128,7 @@ namespace UberFrba.Turno
                 try
                 {
                     //turnoDto.ValorKm = Convert.ToDecimal(txtValorKm.Text);
-                    turnoDto.ValorKm = float.Parse(txtValorKm.Text, CultureInfo.InvariantCulture.NumberFormat);
+                    turnoDto.ValorKm = float.Parse(txtValorKm.Text, CultureInfo.CurrentCulture.NumberFormat);
                 }
                 catch
                 {

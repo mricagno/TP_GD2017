@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,7 @@ namespace UberFrba.Backend
         public static void registrarViaje(RegistroViaje registroViaje) {
 
             String query = "EXEC DROP_DATABASE.SP_ALTA_REGISTRO_VIAJE '" + registroViaje.idChofer + "', '" + registroViaje.Automovil + "', '" + registroViaje.Turno + "', " +
-                registroViaje.Km.t + ", '" + registroViaje.Inicio + "', '" + registroViaje.Fin + "', '" +
+                registroViaje.Km+ ", '" + registroViaje.Inicio + "', '" + registroViaje.Fin + "', '" +
                 registroViaje.idCliente + "'";
 
             new Server().realizarQuery(query);
@@ -956,8 +957,8 @@ namespace UberFrba.Backend
                 nuevoTurno.Nombre = turno;
                 nuevoTurno.HoraInicio = Convert.ToInt32(reader["DT_INICIO_TURNO"].ToString());
                 nuevoTurno.HoraFin = Convert.ToInt32(reader["DT_FIN_TURNO"].ToString());
-                nuevoTurno.ValorKm = Convert.ToDecimal(reader["VALOR_KM"].ToString());
-                nuevoTurno.PrecioBase = Convert.ToDecimal(reader["PRECIO_BASE"].ToString());
+                nuevoTurno.ValorKm = float.Parse(reader["VALOR_KM"].ToString(), CultureInfo.CurrentCulture.NumberFormat);
+                nuevoTurno.PrecioBase = float.Parse(reader["PRECIO_BASE"].ToString(), CultureInfo.CurrentCulture.NumberFormat); 
                 nuevoTurno.Habilitado = Convert.ToInt32(reader["ID_STATUS"].ToString());
 
                
