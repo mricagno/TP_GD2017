@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,7 +116,9 @@ namespace UberFrba.Turno
 
                 try
                 {
-                    turnoDto.PrecioBase = Convert.ToDecimal(txtPrecioBase.Text);
+                    //turnoDto.PrecioBase = Convert.ToDecimal();
+                    turnoDto.PrecioBase = float.Parse(txtPrecioBase.Text, CultureInfo.InvariantCulture.NumberFormat);
+
                 }
                 catch
                 {
@@ -124,7 +127,8 @@ namespace UberFrba.Turno
                 }
                 try
                 {
-                    turnoDto.ValorKm = Convert.ToDecimal(txtValorKm.Text);
+                    //turnoDto.ValorKm = Convert.ToDecimal(txtValorKm.Text);
+                    turnoDto.ValorKm = float.Parse(txtValorKm.Text, CultureInfo.InvariantCulture.NumberFormat);
                 }
                 catch
                 {
