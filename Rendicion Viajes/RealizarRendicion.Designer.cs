@@ -100,6 +100,7 @@
             this.dateRendicion.Name = "dateRendicion";
             this.dateRendicion.Size = new System.Drawing.Size(111, 20);
             this.dateRendicion.TabIndex = 0;
+            this.dateRendicion.ValueChanged += new System.EventHandler(this.dateRendicion_ValueChanged);
             // 
             // GridViajesRendidos
             // 

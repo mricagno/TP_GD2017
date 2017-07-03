@@ -67,7 +67,7 @@ namespace UberFrba.Rendicion_Viajes
                     MessageBox.Show("Debe seleccionar un chofer", "Rendicion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                String fecha = dateRendicion.Value.ToString("yyyy-MM-ddTHH:mm:ssZ");
+                String fecha = dateRendicion.Value.ToString("yyyy-MM-10THH:mm:ssZ");
 
 
 
@@ -94,6 +94,11 @@ namespace UberFrba.Rendicion_Viajes
         }
 
         private void GridViajesRendidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateRendicion_ValueChanged(object sender, EventArgs e)
         {
 
         }
