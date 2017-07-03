@@ -68,7 +68,7 @@ namespace UberFrba.Backend
         public static void registrarViaje(RegistroViaje registroViaje) {
 
             String query = "EXEC DROP_DATABASE.SP_ALTA_REGISTRO_VIAJE '" + registroViaje.idChofer + "', '" + registroViaje.Automovil + "', '" + registroViaje.Turno + "', " +
-                registroViaje.Km + ", '" + registroViaje.Inicio + "', '" + registroViaje.Fin + "', '" +
+                registroViaje.Km.t + ", '" + registroViaje.Inicio + "', '" + registroViaje.Fin + "', '" +
                 registroViaje.idCliente + "'";
 
             new Server().realizarQuery(query);
@@ -252,7 +252,7 @@ namespace UberFrba.Backend
         internal static void modificarTurno(string nombre, DtoTurno turnoDto)
         {
             String query = "EXEC DROP_DATABASE.SP_EDITAR_TURNO '" + nombre + "', '" + turnoDto.Nombre + "', " + turnoDto.HoraInicio + ", " +
-               turnoDto.HoraFin + ", '" + turnoDto.ValorKm + "', '" + turnoDto.PrecioBase + "', " +
+               turnoDto.HoraFin + ", " + turnoDto.ValorKm + ", " + turnoDto.PrecioBase + ", " +
                turnoDto.Habilitado;
 
             new Server().realizarQuery(query);
