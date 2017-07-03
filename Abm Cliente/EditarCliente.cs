@@ -18,16 +18,33 @@ namespace UberFrba.Abm_Cliente
         {
             this.dni = unDni;
             InitializeComponent();
-            try
+            
+
+             try
             {
+
+
                 DateTime fecha_hoy = Utils.getConfigDateTime();
                 dateFechaNacimiento.Value = fecha_hoy;
+                var datacliente = Repositorio.datacliente(dni);
+
+                txtApellidoCliente.Text = datacliente.apellido;
+                txtNombreCliente.Text = datacliente.nombre;
+                txtDniCliente.Text = datacliente.num_dni.ToString();
+                txtMailCliente.Text = datacliente.email.ToString();
+
+                txtDireccionCliente.Text = datacliente.direccion;
+
+                dateFechaNacimiento.Value = new DateTime(datacliente.anio, datacliente.mes, datacliente.dia);
+                txtTelefonoCliente.Text = datacliente.telefono.ToString();
+                txtCodigoPostalCliente.Text = datacliente.codigo_postal.ToString();
 
             }
             catch (Exception ex)
             {
 
             }
+      
            
         }
 

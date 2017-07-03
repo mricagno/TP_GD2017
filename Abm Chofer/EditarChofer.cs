@@ -23,6 +23,14 @@ namespace UberFrba.Abm_Chofer
             {
                 DateTime fecha_hoy = Utils.getConfigDateTime();
                 dateFechaNacimiento.Value = fecha_hoy;
+                var dataChofer = Repositorio.dataChofer(dni);
+                txtApellidoChofer.Text = dataChofer.apellido;
+                txtDireccionChofer.Text = dataChofer.direccion;
+                
+                txtNombreChofer.Text = dataChofer.nombre;
+                txtTelefonoChofer.Text = dataChofer.telefono.ToString();
+                txtDniChofer.Text = dataChofer.num_dni.ToString();
+                dateFechaNacimiento.Value = new DateTime(dataChofer.anio, dataChofer.mes, dataChofer.dia);
 
             }
             catch (Exception ex)

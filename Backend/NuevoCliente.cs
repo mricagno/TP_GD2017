@@ -17,6 +17,12 @@ namespace UberFrba.Backend
         public String direccion;
         public int codigo_postal; //tiene qe ser string. TODO newton
         public String fecha_nacimiento;
-       
+
+
+        public int anio { get; set; }
+
+        public int mes { get; set; }
+
+        public int dia { get; set; }
     }
 }
