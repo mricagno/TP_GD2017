@@ -38,6 +38,7 @@ namespace UberFrba.Rendicion_Viajes
         private void RealizarRendicion_Load(object sender, EventArgs e)
         {
             txtTotal.Enabled = false;
+            txttotalviajes.Enabled = false;
             lstChoferes.Items.Clear();
             ObservableCollection<DtoChoferHabilitado> choferes = Repositorio.todosLosChoferesHabilitadosConAutos();
 
@@ -76,7 +77,8 @@ namespace UberFrba.Rendicion_Viajes
                 {
                     total = total + Convert.ToDecimal(v.Monto);
                 }
-                txtTotal.Text = total.ToString();
+                txttotalviajes.Text = total.ToString();
+                txtTotal.Text = (total * 30 / 100).ToString();
                 MessageBox.Show("La rendición del chofer se realizó correctamente", "Rendición", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.GridViajesRendidos.DataSource = viajes;
                 GridViajesRendidos.Update();

@@ -37,6 +37,8 @@
             this.GridViajesRendidos = new System.Windows.Forms.DataGridView();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txttotalviajes = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViajesRendidos)).BeginInit();
@@ -120,17 +122,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(454, 9);
+            this.label1.Location = new System.Drawing.Point(454, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "Total Rendido";
+            // 
+            // txttotalviajes
+            // 
+            this.txttotalviajes.Location = new System.Drawing.Point(299, 9);
+            this.txttotalviajes.Name = "txttotalviajes";
+            this.txttotalviajes.Size = new System.Drawing.Size(149, 20);
+            this.txttotalviajes.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(218, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Total Viajes";
             // 
             // RealizarRendicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 459);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txttotalviajes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.GridViajesRendidos);
@@ -160,5 +180,7 @@
         private System.Windows.Forms.DataGridView GridViajesRendidos;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txttotalviajes;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -85,29 +85,29 @@ namespace UberFrba.Turno
                 var turnoDto = new DtoTurno();
                 if (String.IsNullOrEmpty(txtNombreTurno.Text))
                 {
-                    MessageBox.Show("Debe ingresar nombre del turno", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar nombre del turno", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 turnoDto.Nombre = txtNombreTurno.Text;
                 if (String.IsNullOrEmpty(txtHoraInicio.Text) || !Utils.IsDigitsOnly(txtHoraInicio.Text))
                 {
-                    MessageBox.Show("Debe ingresar hora inicio numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar hora inicio numerica", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
 
                 if (String.IsNullOrEmpty(txtHoraFin.Text) || !Utils.IsDigitsOnly(txtHoraFin.Text))
                 {
-                    MessageBox.Show("Debe ingresar hora fin numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar hora fin numerica", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 if (String.IsNullOrEmpty(txtPrecioBase.Text) )
                 {
-                    MessageBox.Show("Debe ingresar precio base numerico", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar precio base numerico", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 if (String.IsNullOrEmpty(txtValorKm.Text) )
                 {
-                    MessageBox.Show("Debe ingresar valor km numerica", "Alta Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Debe ingresar valor km numerica", "Turno", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 turnoDto.HoraInicio = Convert.ToInt32(txtHoraInicio.Text);
@@ -140,7 +140,7 @@ namespace UberFrba.Turno
 
                 if( turnoDto.HoraInicio > turnoDto.HoraFin)
                 {
-                    MessageBox.Show("La hora fin debe ser mayor a la hora inicio", "Alta turno", MessageBoxButtons.OK);
+                    MessageBox.Show("La hora fin debe ser mayor a la hora inicio", "Turno", MessageBoxButtons.OK);
                     return;
                 }
 
@@ -170,14 +170,14 @@ namespace UberFrba.Turno
                 else
                 {
                     Repositorio.altaTurno(turnoDto);
-                    MessageBox.Show("Se creo el turno correctamente", "Alta turno", MessageBoxButtons.OK);
+                    MessageBox.Show("Se creo el turno correctamente", "Turno", MessageBoxButtons.OK);
                     new Principal(Tabs.turnos()).Show();
                     this.Close();
 
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString(), "Alta turno", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message.ToString(), "Turno", MessageBoxButtons.OK);
                 return;
             }
 

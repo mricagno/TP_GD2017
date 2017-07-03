@@ -65,7 +65,7 @@ namespace UberFrba.Abm_Chofer
             }
             catch
             {
-                MessageBox.Show("Debe ingresar un dni valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un dni valido", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
            
@@ -78,7 +78,7 @@ namespace UberFrba.Abm_Chofer
 
             if (!txtMailChofer.Text.Contains("@") || !txtMailChofer.Text.Contains(".com"))
             {
-                MessageBox.Show("Debe ingresar un mail valido. Debe contener @ y .com", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un mail valido. Debe contener @ y .com", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             nuevoChofer.email = txtMailChofer.Text;
@@ -94,7 +94,7 @@ namespace UberFrba.Abm_Chofer
             }
             catch
             {
-                MessageBox.Show("Debe ingresar un telefono valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar un telefono valido", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             
@@ -110,7 +110,7 @@ namespace UberFrba.Abm_Chofer
             }
             catch
             {
-                MessageBox.Show("Debe ingresar una fecha valido", "Alta Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar una fecha valido", "Alta Chofer", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             

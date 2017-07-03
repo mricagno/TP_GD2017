@@ -170,5 +170,10 @@ namespace UberFrba.Abm_Cliente
             new ModificarCliente().Show();
             this.Close();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
