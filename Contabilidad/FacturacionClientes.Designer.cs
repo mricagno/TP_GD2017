@@ -54,6 +54,8 @@
             // 
             // dateFactura
             // 
+            this.dateFactura.CustomFormat = "yyyy/MM";
+            this.dateFactura.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFactura.Location = new System.Drawing.Point(22, 24);
             this.dateFactura.Name = "dateFactura";
             this.dateFactura.Size = new System.Drawing.Size(218, 20);

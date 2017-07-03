@@ -94,7 +94,7 @@
             // 
             // dateRendicion
             // 
-            this.dateRendicion.CustomFormat = "yyyy/MM";
+            this.dateRendicion.CustomFormat = "yyyy/MM/dd";
             this.dateRendicion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateRendicion.Location = new System.Drawing.Point(15, 32);
             this.dateRendicion.Name = "dateRendicion";
