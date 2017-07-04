@@ -84,10 +84,10 @@ namespace UberFrba.Abm_Cliente
                     txtTelefonoCliente.Text = "";
 
 
-                if (datacliente.telefono.ToString() != "-1")
-                    txtTelefonoCliente.Text = datacliente.telefono.ToString();
+                if (datacliente.cod_postal.ToString() != "-1")
+                    txtCodigoPostalCliente.Text = datacliente.cod_postal.ToString();
                 else
-                    txtTelefonoCliente.Text = "";
+                    txtCodigoPostalCliente.Text = "";
 
                 
             }
