@@ -17,6 +17,7 @@ namespace UberFrba.Backend
         public int telefono;
         public String direccion;
         public String fecha_nacimiento;
+        public String cod_postal;
 
         public int anio { get; set; }
 

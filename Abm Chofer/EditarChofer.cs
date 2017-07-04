@@ -14,6 +14,7 @@ namespace UberFrba.Abm_Chofer
     public partial class EditarChofer : Form
     {
         String dni;
+        String principal;
         public EditarChofer( String unDni)
         {
             this.dni = unDni;
@@ -39,6 +40,49 @@ namespace UberFrba.Abm_Chofer
             }
         }
 
+        public EditarChofer(String unDni, String username)
+        {
+            
+            InitializeComponent();
+
+
+            try
+            {
+                principal = "ok";
+
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+                NuevoCliente chofer = Repositorio.data_alta_cliente(username); //lo reutilizo no es lo correcto
+                this.dni = chofer.num_dni.ToString();
+
+
+                txtApellidoChofer.Text = chofer.apellido;
+                txtNombreChofer.Text = chofer.nombre;
+                txtDniChofer.Text = chofer.num_dni.ToString();
+                txtMailChofer.Text = chofer.email.ToString();
+
+                txtDireccionChofer.Text = chofer.direccion;
+                
+
+                dateFechaNacimiento.Value = new DateTime(chofer.anio, chofer.mes, chofer.dia);
+                
+
+
+                if (chofer.telefono.ToString() != "0")
+                    txtTelefonoChofer.Text = chofer.telefono.ToString();
+                else
+                    txtTelefonoChofer.Text = "";
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+        }
+
         private void EditarChofer_Load(object sender, EventArgs e)
         {
 
@@ -46,7 +90,10 @@ namespace UberFrba.Abm_Chofer
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ModificarChofer().Show();
+            if (principal == "ok")
+                new Principal("").Show();
+            else
+                new ModificarChofer().Show();
             this.Close();
         }
 

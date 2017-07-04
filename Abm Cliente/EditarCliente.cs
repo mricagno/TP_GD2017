@@ -14,6 +14,7 @@ namespace UberFrba.Abm_Cliente
     public partial class EditarCliente : Form
     {
         String dni;
+        String principal;
         public EditarCliente(String unDni)
         {
             this.dni = unDni;
@@ -39,6 +40,8 @@ namespace UberFrba.Abm_Cliente
                 txtTelefonoCliente.Text = datacliente.telefono.ToString();
                 txtCodigoPostalCliente.Text = datacliente.codigo_postal.ToString();
 
+
+
             }
             catch (Exception ex)
             {
@@ -46,6 +49,54 @@ namespace UberFrba.Abm_Cliente
             }
       
            
+        }
+
+        public EditarCliente(String unDni, String username)
+        {
+            
+            InitializeComponent();
+
+
+            try
+            {
+                principal = "ok";
+                DateTime fecha_hoy = Utils.getConfigDateTime();
+                dateFechaNacimiento.Value = fecha_hoy;
+                NuevoChofer datacliente = Repositorio.data_alta_chofer(username); //lo reutilizo no es lo correcto
+                this.dni = datacliente.num_dni.ToString();
+                
+                
+
+                txtApellidoCliente.Text = datacliente.apellido;
+                txtNombreCliente.Text = datacliente.nombre;
+                txtDniCliente.Text = datacliente.num_dni.ToString();
+                txtMailCliente.Text = datacliente.email.ToString();
+
+                txtDireccionCliente.Text = datacliente.direccion;
+
+                dateFechaNacimiento.Value = new DateTime(datacliente.anio, datacliente.mes, datacliente.dia);
+                txtTelefonoCliente.Text = datacliente.telefono.ToString();
+
+
+                if (datacliente.telefono.ToString() != "0")
+                    txtTelefonoCliente.Text = datacliente.telefono.ToString();
+                else
+                    txtTelefonoCliente.Text = "";
+
+
+                if (datacliente.telefono.ToString() != "-1")
+                    txtTelefonoCliente.Text = datacliente.telefono.ToString();
+                else
+                    txtTelefonoCliente.Text = "";
+
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
         }
 
         private void EditarCliente_Load(object sender, EventArgs e)
@@ -167,7 +218,11 @@ namespace UberFrba.Abm_Cliente
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new ModificarCliente().Show();
+            if (principal == "ok")
+                new Principal("").Show();
+            else
+                new ModificarCliente().Show();
+           
             this.Close();
         }
 

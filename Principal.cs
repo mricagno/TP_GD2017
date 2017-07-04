@@ -69,6 +69,18 @@ namespace UberFrba
 
 
             tblMenu.TabPages.Clear();
+
+            //Tab perfil
+            if (Sesion.rol == "CLIENTE")
+            {
+                tblMenu.TabPages.Add(tlbPerfil);
+            }
+            if (Sesion.rol == "CHOFER")
+            {
+                tblMenu.TabPages.Add(tlbPerfil);
+            }
+
+
             //TAB seguridad
             if (funcionalidades.Contains("ALTA_ROL"))
                 this.btnAltaRol.Enabled = true;
@@ -244,6 +256,9 @@ namespace UberFrba
             {
 
             }
+
+            
+
             try
             {
                 if (tblMenu.TabPages.Count == 0)
@@ -414,6 +429,21 @@ namespace UberFrba
         {
             new ModificarAuto().Show();
             this.Close();
+        }
+
+        private void btnEditarMisDatos_Click(object sender, EventArgs e)
+        {
+            if (Sesion.rol == "CLIENTE")
+            {
+                new EditarCliente(null, Sesion.username).Show();
+                this.Close();
+            }
+            if (Sesion.rol == "CHOFER")
+            {
+                new EditarChofer(null, Sesion.username).Show();
+                this.Close();
+            }
+               
         }
 
 

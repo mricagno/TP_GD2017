@@ -1018,6 +1018,8 @@ namespace UberFrba.Backend
                 chofer.anio = Convert.ToInt32(reader["ANIO"].ToString());
                 chofer.mes = Convert.ToInt32(reader["MES"].ToString());
                 chofer.dia = Convert.ToInt32(reader["DIA"].ToString());
+                chofer.cod_postal = reader["CD_POSTAL"].ToString();
+                
 
 
             }

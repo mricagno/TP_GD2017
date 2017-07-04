@@ -61,6 +61,8 @@
             this.radioButtonMasRecaudacion = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.tlbPerfil = new System.Windows.Forms.TabPage();
+            this.btnEditarMisDatos = new System.Windows.Forms.Button();
             this.tblMenu.SuspendLayout();
             this.tabSeguridad.SuspendLayout();
             this.tabChoferes.SuspendLayout();
@@ -70,6 +72,7 @@
             this.tabViajes.SuspendLayout();
             this.tabContabilidad.SuspendLayout();
             this.tabEstadisticas.SuspendLayout();
+            this.tlbPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNuevoTurno
@@ -151,6 +154,7 @@
             // 
             // tblMenu
             // 
+            this.tblMenu.Controls.Add(this.tlbPerfil);
             this.tblMenu.Controls.Add(this.tabSeguridad);
             this.tblMenu.Controls.Add(this.tabChoferes);
             this.tblMenu.Controls.Add(this.tabCliente);
@@ -446,6 +450,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // tlbPerfil
+            // 
+            this.tlbPerfil.Controls.Add(this.btnEditarMisDatos);
+            this.tlbPerfil.Location = new System.Drawing.Point(4, 22);
+            this.tlbPerfil.Name = "tlbPerfil";
+            this.tlbPerfil.Size = new System.Drawing.Size(443, 274);
+            this.tlbPerfil.TabIndex = 8;
+            this.tlbPerfil.Text = "Perfil";
+            this.tlbPerfil.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarMisDatos
+            // 
+            this.btnEditarMisDatos.Location = new System.Drawing.Point(39, 52);
+            this.btnEditarMisDatos.Name = "btnEditarMisDatos";
+            this.btnEditarMisDatos.Size = new System.Drawing.Size(95, 41);
+            this.btnEditarMisDatos.TabIndex = 9;
+            this.btnEditarMisDatos.Text = "Editar mis datos";
+            this.btnEditarMisDatos.UseVisualStyleBackColor = true;
+            this.btnEditarMisDatos.Click += new System.EventHandler(this.btnEditarMisDatos_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,6 +491,7 @@
             this.tabContabilidad.ResumeLayout(false);
             this.tabEstadisticas.ResumeLayout(false);
             this.tabEstadisticas.PerformLayout();
+            this.tlbPerfil.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,5 +532,7 @@
         private System.Windows.Forms.Button btnNuevoChofer;
         private System.Windows.Forms.RadioButton radioButtonMasRecaudacion;
         private System.Windows.Forms.Button btnModificarAuto;
+        private System.Windows.Forms.TabPage tlbPerfil;
+        private System.Windows.Forms.Button btnEditarMisDatos;
     }
 }
