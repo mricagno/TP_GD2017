@@ -753,7 +753,7 @@ namespace UberFrba.Backend
                 registroAuto.Modelo = reader["MODELO"].ToString();
                 registroAuto.Patente = reader["PATENTE"].ToString();
                 registroAuto.DNI = reader["NUM_DNI"].ToString();
-                registroAuto.Turno = reader["ID_TURNO"].ToString();
+                registroAuto.Turno = reader["TURNO"].ToString();
 
                 autos_filtrados.Add(registroAuto);
             }
