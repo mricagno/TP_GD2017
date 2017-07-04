@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSacarRol = new System.Windows.Forms.Button();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
             this.lstAgregarRoles = new System.Windows.Forms.ListBox();
             this.btnGuardarRolesChofer = new System.Windows.Forms.Button();
             this.lstRoles = new System.Windows.Forms.ListBox();
             this.btnAgregarRol = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,16 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selección de Roles";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(17, 202);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Atención:  El rol chofer y cliente no están disponibles para edición";
             // 
             // btnSacarRol
             // 
@@ -110,16 +120,6 @@
             this.btnAgregarRol.Text = "+";
             this.btnAgregarRol.UseVisualStyleBackColor = true;
             this.btnAgregarRol.Click += new System.EventHandler(this.btnAgregarRol_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(17, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Atención:  El rol chofer no está disponible para edición";
             // 
             // EditarRolChofer
             // 

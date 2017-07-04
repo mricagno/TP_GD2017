@@ -61,9 +61,9 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(17, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 13);
+            this.label1.Size = new System.Drawing.Size(316, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Atención:  El rol cliente no está disponible para edición";
+            this.label1.Text = "Atención:  El rol chofer y cliente no están disponibles para edición";
             // 
             // btnSacarRol
             // 

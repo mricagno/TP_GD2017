@@ -23,10 +23,15 @@ namespace UberFrba.Abm_Rol
             String nombreRol = dameRolAModificar();
             if (String.IsNullOrEmpty(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol");
+                MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
+
+            if (nombreRol == "ADMINISTRADOR")
+            {
+                MessageBox.Show("El rol administrador se encuentra habilitado", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             try{
                 
                 Repositorio.habilitarRol(nombreRol);
@@ -43,10 +48,15 @@ namespace UberFrba.Abm_Rol
         private void btnAgregarFuncionalidadARol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
-            
+            if(nombreRol == "ADMINISTRADOR")
+            {
+                MessageBox.Show("El administrador debe tener todas las funcionalidades. No se puede modificar", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (String.IsNullOrEmpty(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol");
+                
+                MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -64,12 +74,16 @@ namespace UberFrba.Abm_Rol
             String nombreRol = dameRolAModificar();
             if (String.IsNullOrEmpty(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol");
+                MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            
-                new ModificarNombreRol(nombreRol).Show();
-                this.Close();
+            if (nombreRol == "ADMINISTRADOR")
+            {
+                MessageBox.Show("No se puede modificar el nombre del Administrador", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            new ModificarNombreRol(nombreRol).Show();
+            this.Close();
             
 
         }
@@ -81,9 +95,16 @@ namespace UberFrba.Abm_Rol
            
             if (String.IsNullOrEmpty(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol");
+                MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 return;
             }
+            if (nombreRol == "ADMINISTRADOR")
+            {
+                MessageBox.Show("No se le pueden quitar funcionalidades al Administrador", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             new FormEliminarFuncionalidadARol(nombreRol).Show();
             this.Close();
         }
