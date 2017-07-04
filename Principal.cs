@@ -301,8 +301,9 @@ namespace UberFrba
 
         private void btnModificarRol_Click(object sender, EventArgs e)
         {
-            this.Close();
             new ModificarRol().Show();
+            this.Close();
+            
         }
 
         
