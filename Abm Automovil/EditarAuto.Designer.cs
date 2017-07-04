@@ -39,11 +39,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCrearAuto = new System.Windows.Forms.Button();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbChofer = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbChofer);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.cmbMarcas);
             this.groupBox2.Controls.Add(this.cmbTurnos);
             this.groupBox2.Controls.Add(this.label4);
@@ -54,7 +58,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(26, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(301, 171);
+            this.groupBox2.Size = new System.Drawing.Size(301, 196);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Completar datos";
@@ -129,7 +133,7 @@
             // 
             // btnCrearAuto
             // 
-            this.btnCrearAuto.Location = new System.Drawing.Point(193, 213);
+            this.btnCrearAuto.Location = new System.Drawing.Point(193, 235);
             this.btnCrearAuto.Name = "btnCrearAuto";
             this.btnCrearAuto.Size = new System.Drawing.Size(102, 35);
             this.btnCrearAuto.TabIndex = 17;
@@ -139,13 +143,30 @@
             // 
             // btnMenuPrincipal
             // 
-            this.btnMenuPrincipal.Location = new System.Drawing.Point(26, 214);
+            this.btnMenuPrincipal.Location = new System.Drawing.Point(26, 236);
             this.btnMenuPrincipal.Name = "btnMenuPrincipal";
             this.btnMenuPrincipal.Size = new System.Drawing.Size(101, 34);
             this.btnMenuPrincipal.TabIndex = 18;
             this.btnMenuPrincipal.Text = " Menu Principal";
             this.btnMenuPrincipal.UseVisualStyleBackColor = true;
             this.btnMenuPrincipal.Click += new System.EventHandler(this.btnMenuPrincipal_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Chofer";
+            // 
+            // cmbChofer
+            // 
+            this.cmbChofer.FormattingEnabled = true;
+            this.cmbChofer.Location = new System.Drawing.Point(114, 153);
+            this.cmbChofer.Name = "cmbChofer";
+            this.cmbChofer.Size = new System.Drawing.Size(154, 21);
+            this.cmbChofer.TabIndex = 17;
             // 
             // EditarAuto
             // 
@@ -177,5 +198,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCrearAuto;
         private System.Windows.Forms.Button btnMenuPrincipal;
+        private System.Windows.Forms.ComboBox cmbChofer;
+        private System.Windows.Forms.Label label5;
     }
 }

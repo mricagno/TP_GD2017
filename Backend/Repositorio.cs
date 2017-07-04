@@ -694,11 +694,14 @@ namespace UberFrba.Backend
             return funcionalidades;
         }
 
-        internal static void modificarAuto(String patentevieja, string marca, string modelo, string patente, string turno)
+        internal static void modificarAuto(String patentevieja, string marca, string modelo, string patente, string turno, string dniChofer)
         {
 
+            if (string.IsNullOrEmpty(dniChofer))
+                dniChofer = "null";
+
              String query = "EXEC DROP_DATABASE.[MODIFICAR_AUTO] '" + patentevieja.ToString() + "', '" + marca
-                 + "', '"  + modelo + "', '" + patente + "', '" + turno + "'" ;
+                 + "', '"  + modelo + "', '" + patente + "', '" + turno + "', " + dniChofer  ;
             new Server().realizarQuery(query);
         }
 
@@ -1078,6 +1081,25 @@ namespace UberFrba.Backend
             }
             reader.Close();
             return cliente;
+        }
+
+        internal static String usuarioDelChofer(int dni)
+        {
+            String queryString = "EXEC  DROP_DATABASE.USUARIO_DNI " + dni.ToString();
+
+            SqlDataReader reader = new Server().query(queryString);
+
+            String usuario = "";
+            while (reader.Read())
+            {
+
+
+                usuario =  reader["USUARIO"].ToString();
+                
+
+            }
+            reader.Close();
+            return usuario;
         }
     }
 }

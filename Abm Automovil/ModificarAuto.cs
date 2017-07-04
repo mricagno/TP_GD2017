@@ -134,7 +134,12 @@ namespace UberFrba.Abm_Automovil
                 return;
             }
             String patente = auto.Cells[0].Value.ToString();
-            new EditarAuto(patente).Show();
+            String marca = auto.Cells[1].Value.ToString();
+            String modelo = auto.Cells[2].Value.ToString();
+            String dni = auto.Cells[3].Value.ToString();
+            String turno = auto.Cells[4].Value.ToString();
+            
+            new EditarAuto(patente, marca, modelo, dni, turno).Show();
             this.Close();
         }
 
