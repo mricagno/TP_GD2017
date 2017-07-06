@@ -21,6 +21,12 @@ namespace UberFrba.Abm_Rol
         private void btnHabilitarRol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
+
+            if (!cmbRoles.Items.Contains(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (String.IsNullOrEmpty(nombreRol))
             {
                 MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -48,6 +54,13 @@ namespace UberFrba.Abm_Rol
         private void btnAgregarFuncionalidadARol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
+
+            if (!cmbRoles.Items.Contains(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if(nombreRol == "ADMINISTRADOR")
             {
                 MessageBox.Show("El administrador debe tener todas las funcionalidades. No se puede modificar", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -72,6 +85,11 @@ namespace UberFrba.Abm_Rol
             
 
             String nombreRol = dameRolAModificar();
+            if (!cmbRoles.Items.Contains(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             if (String.IsNullOrEmpty(nombreRol))
             {
                 MessageBox.Show("Debe seleccionar un rol", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,7 +109,11 @@ namespace UberFrba.Abm_Rol
         private void btnEliminarFuncionalidadARol_Click(object sender, EventArgs e)
         {
             String nombreRol = dameRolAModificar();
-
+            if (!cmbRoles.Items.Contains(nombreRol))
+            {
+                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
            
             if (String.IsNullOrEmpty(nombreRol))
             {
@@ -125,6 +147,8 @@ namespace UberFrba.Abm_Rol
             {
                 cmbRoles.Items.Add(s);
             }
+            
+
         }
 
         private void btnmenu_principal_Click(object sender, EventArgs e)
