@@ -48,6 +48,7 @@
             // 
             // btnHabilitar
             // 
+            this.btnHabilitar.Enabled = false;
             this.btnHabilitar.Location = new System.Drawing.Point(233, 324);
             this.btnHabilitar.Name = "btnHabilitar";
             this.btnHabilitar.Size = new System.Drawing.Size(99, 33);
@@ -78,6 +79,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Location = new System.Drawing.Point(135, 324);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 34);

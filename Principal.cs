@@ -105,13 +105,18 @@ namespace UberFrba
             if (funcionalidades.Contains("MODIFICAR_CLIENTE"))
                 ModificarCliente.Enabled = true;
 
+            if (!this.NuevoCliente.Enabled && !this.ModificarCliente.Enabled)
+                tblMenu.TabPages.Remove(tabCliente);
+            else
+                tblMenu.TabPages.Add(tabCliente);   
+
+
             //TAB CHOFER
 
             if (funcionalidades.Contains("ALTA_CHOFER"))
                 this.btnNuevoChofer.Enabled = true;
             if (funcionalidades.Contains("BAJA_CHOFER"))
             {
-           
                 this.btnModificarChofer.Enabled = true;
             }
             if (funcionalidades.Contains("MODIFICAR_CHOFER"))
@@ -192,9 +197,9 @@ namespace UberFrba
                 this.btnConsultarEstadistica.Enabled = true;
 
             if (!this.btnConsultarEstadistica.Enabled)
-                tblMenu.TabPages.Remove(tabContabilidad);
+                tblMenu.TabPages.Remove(tabEstadisticas);
             else
-                tblMenu.TabPages.Add(tabContabilidad);
+                tblMenu.TabPages.Add(tabEstadisticas);
 
 
            

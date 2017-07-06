@@ -14,15 +14,13 @@ namespace UberFrba.Abm_Cliente
 {
     public partial class ModificarCliente : Form
     {
+
+        ObservableCollection<String> funcionalidades = new ObservableCollection<String>();
         public ModificarCliente()
         {
             InitializeComponent();
-            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
+            funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
 
-            if (funcionalidades.Contains("MODIFICAR_CLIENTE"))
-                //this.btnModificar.Enabled = true;
-            if (funcionalidades.Contains("BAJA_CLIENTE"))
-                this.btnEliminar.Enabled = true;
         }
 
         private void Nombre_Click(object sender, EventArgs e)
@@ -106,6 +104,18 @@ namespace UberFrba.Abm_Cliente
             GridClientes.DataSource = clientes;
             GridClientes.Update();
             GridClientes.Refresh();
+
+            if (funcionalidades.Contains("ALTA_CLIENTE"))
+                btnHabilitar.Enabled = true;
+                
+            if (funcionalidades.Contains("BAJA_CLIENTE"))
+                this.btnEliminar.Enabled = true;
+
+            if (Sesion.rol == "ADMINISTRADOR")
+            {
+                this.btnEliminar.Enabled = true;
+                btnHabilitar.Enabled = true;
+            }
 
         }
 

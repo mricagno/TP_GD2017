@@ -14,15 +14,12 @@ namespace UberFrba.Abm_Chofer
 {
     public partial class ModificarChofer : Form
     {
+
+        public ObservableCollection<String> funcionalidades = new ObservableCollection<String>();
         public ModificarChofer()
         {
             InitializeComponent();
-            ObservableCollection<String> funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
-
-            if (funcionalidades.Contains("MODIFICAR_CHOFER"))
-                this.btnModificar.Enabled = true;
-            if (funcionalidades.Contains("BAJA_CHOFER"))
-                this.btnEliminar.Enabled = true;
+            funcionalidades = Repositorio.funcionalidadesUsuario(Sesion.rol);
 
         }
 
@@ -107,6 +104,17 @@ namespace UberFrba.Abm_Chofer
             GridChofer.DataSource = choferes;
             GridChofer.Update();
             GridChofer.Refresh();
+
+            if (funcionalidades.Contains("ALTA_CHOFER"))
+                this.btnHabilitar.Enabled = true;
+            if (funcionalidades.Contains("BAJA_CHOFER"))
+                this.btnEliminar.Enabled = true;
+
+            if (Sesion.rol == "ADMINISTRADOR")
+            {
+                this.btnEliminar.Enabled = true;
+                btnHabilitar.Enabled = true;
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
