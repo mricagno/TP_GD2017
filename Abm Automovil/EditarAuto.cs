@@ -75,7 +75,23 @@ namespace UberFrba.Abm_Automovil
                 String turno = cmbTurnos.SelectedItem.ToString();
 
                 String dniChofer = "";
-               
+
+                if (!String.IsNullOrEmpty(cmbChofer.Text) )
+                {
+                    bool mensaje = true;
+                    foreach(DtoChoferHabilitado c in cmbChofer.Items){
+                        if(c.usuario == cmbChofer.Text)
+                            mensaje = false;
+                    }
+                   if(mensaje == true)
+                    {
+                        MessageBox.Show("Debe seleccionar un item del combo o dejarlo vacio", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                
+                
+                }
+
                 if (cmbChofer.SelectedItem != null)
                 {
                     dniChofer = ((DtoChoferHabilitado)(cmbChofer.SelectedItem)).DNI.ToString();

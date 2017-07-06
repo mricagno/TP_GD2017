@@ -111,6 +111,7 @@
             // 
             // Fact_total
             // 
+            this.Fact_total.Enabled = false;
             this.Fact_total.Location = new System.Drawing.Point(561, 24);
             this.Fact_total.Name = "Fact_total";
             this.Fact_total.Size = new System.Drawing.Size(187, 20);
