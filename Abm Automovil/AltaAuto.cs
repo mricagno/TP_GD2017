@@ -59,7 +59,7 @@ namespace UberFrba.Abm_Automovil
                     MessageBox.Show("Debe seleccionar un chofer", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
-
+                
                 if (cmbMarcas.SelectedItem == null)
                  {
                     MessageBox.Show("Debe seleccionar un marca", "Alta Auto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -101,6 +101,11 @@ namespace UberFrba.Abm_Automovil
             }
 
             
+        }
+
+        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

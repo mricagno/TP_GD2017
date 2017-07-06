@@ -89,6 +89,7 @@
             this.cmbMarcas.Name = "cmbMarcas";
             this.cmbMarcas.Size = new System.Drawing.Size(180, 21);
             this.cmbMarcas.TabIndex = 15;
+            this.cmbMarcas.SelectedIndexChanged += new System.EventHandler(this.cmbMarcas_SelectedIndexChanged);
             // 
             // cmbTurnos
             // 

@@ -75,6 +75,7 @@ namespace UberFrba.Abm_Automovil
                 String turno = cmbTurnos.SelectedItem.ToString();
 
                 String dniChofer = "";
+               
                 if (cmbChofer.SelectedItem != null)
                 {
                     dniChofer = ((DtoChoferHabilitado)(cmbChofer.SelectedItem)).DNI.ToString();

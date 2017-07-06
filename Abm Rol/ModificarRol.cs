@@ -24,7 +24,7 @@ namespace UberFrba.Abm_Rol
 
             if (!cmbRoles.Items.Contains(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe seleccionar un rol del combo", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (String.IsNullOrEmpty(nombreRol))
@@ -57,7 +57,7 @@ namespace UberFrba.Abm_Rol
 
             if (!cmbRoles.Items.Contains(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe seleccionar un rol del combo", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -87,7 +87,7 @@ namespace UberFrba.Abm_Rol
             String nombreRol = dameRolAModificar();
             if (!cmbRoles.Items.Contains(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe seleccionar un rol del combo", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (String.IsNullOrEmpty(nombreRol))
@@ -111,7 +111,7 @@ namespace UberFrba.Abm_Rol
             String nombreRol = dameRolAModificar();
             if (!cmbRoles.Items.Contains(nombreRol))
             {
-                MessageBox.Show("Debe seleccionar un rol de la lista", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe seleccionar un rol del combo", "Modificar Rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
            
