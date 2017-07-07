@@ -713,7 +713,7 @@ namespace UberFrba.Backend
             String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_AUTOS ";
             if (String.IsNullOrEmpty(marca))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + marca + "'";
@@ -722,7 +722,7 @@ namespace UberFrba.Backend
 
             if (String.IsNullOrEmpty(modelo))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + modelo + "'";
@@ -730,7 +730,7 @@ namespace UberFrba.Backend
             queryString = queryString + " , ";
             if (String.IsNullOrEmpty(patente))
             {
-                queryString = queryString + "";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + patente + "'";
@@ -742,7 +742,7 @@ namespace UberFrba.Backend
                 queryString = queryString + "null";
             }
             else
-                queryString = queryString + "'" + dni + "'";
+                queryString = queryString +  dni ;
 
             SqlDataReader reader = new Server().query(queryString);
             var autos_filtrados = new ObservableCollection<DtoAutoHabilitado>();
@@ -771,7 +771,7 @@ namespace UberFrba.Backend
             String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CHOFER ";
             if (String.IsNullOrEmpty(nombre))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + nombre + "'";
@@ -780,7 +780,7 @@ namespace UberFrba.Backend
 
             if (String.IsNullOrEmpty(apellido))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + apellido + "'";
@@ -791,7 +791,7 @@ namespace UberFrba.Backend
                 queryString = queryString + "null";
             }
             else
-                queryString = queryString + "'" + documento + "'";
+                queryString = queryString  + documento  ;
 
 
             SqlDataReader reader = new Server().query(queryString);
@@ -820,7 +820,7 @@ namespace UberFrba.Backend
             String queryString = "EXEC  DROP_DATABASE.SP_FILTRAR_CLIENTE ";
             if(String.IsNullOrEmpty(nombre))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }else
                 queryString = queryString + "'" + nombre +"'";
 
@@ -828,7 +828,7 @@ namespace UberFrba.Backend
 
             if (String.IsNullOrEmpty(apellido))
             {
-                queryString = queryString + "null";
+                queryString = queryString + "''";
             }
             else
                 queryString = queryString + "'" + apellido + "'";
@@ -839,7 +839,7 @@ namespace UberFrba.Backend
                 queryString = queryString + "null";
             }
             else
-                queryString = queryString + "'" +  documento + "'";
+                queryString = queryString +  documento;
 
 
 

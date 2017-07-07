@@ -106,7 +106,7 @@
             // 
             // modelo_Box
             // 
-            this.modelo_Box.Location = new System.Drawing.Point(290, 28);
+            this.modelo_Box.Location = new System.Drawing.Point(90, 28);
             this.modelo_Box.Name = "modelo_Box";
             this.modelo_Box.Size = new System.Drawing.Size(100, 20);
             this.modelo_Box.TabIndex = 4;
@@ -124,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 31);
+            this.label1.Location = new System.Drawing.Point(20, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 2;
@@ -132,7 +132,7 @@
             // 
             // marca_Box
             // 
-            this.marca_Box.Location = new System.Drawing.Point(90, 28);
+            this.marca_Box.Location = new System.Drawing.Point(290, 19);
             this.marca_Box.Name = "marca_Box";
             this.marca_Box.Size = new System.Drawing.Size(100, 20);
             this.marca_Box.TabIndex = 1;
@@ -140,7 +140,7 @@
             // Nombre
             // 
             this.Nombre.AutoSize = true;
-            this.Nombre.Location = new System.Drawing.Point(18, 31);
+            this.Nombre.Location = new System.Drawing.Point(218, 28);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(37, 13);
             this.Nombre.TabIndex = 0;
