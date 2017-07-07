@@ -33,7 +33,7 @@ namespace UberFrba.Turno
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error al eliminar el turno - Exception :" + ex.ToString(), "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message.ToString(), "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
            
