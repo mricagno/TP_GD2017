@@ -38,7 +38,11 @@ namespace UberFrba.Abm_Cliente
 
                 dateFechaNacimiento.Value = new DateTime(datacliente.anio, datacliente.mes, datacliente.dia);
                 txtTelefonoCliente.Text = datacliente.telefono.ToString();
-                txtCodigoPostalCliente.Text = datacliente.codigo_postal.ToString();
+
+                if (datacliente.codigo_postal.ToString() == "-1")
+                    txtCodigoPostalCliente.Text = "";
+                else
+                    txtCodigoPostalCliente.Text = datacliente.codigo_postal.ToString();
 
 
 

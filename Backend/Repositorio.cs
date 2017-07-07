@@ -1049,9 +1049,14 @@ namespace UberFrba.Backend
                 cliente.anio = Convert.ToInt32(reader["ANIO"].ToString());
                 cliente.mes = Convert.ToInt32(reader["MES"].ToString());
                 cliente.dia = Convert.ToInt32(reader["DIA"].ToString());
-
-
+                try {
+                    cliente.codigo_postal = Convert.ToInt32(reader["CD_POSTAL"]);
+                }catch(Exception ex){
+                    cliente.codigo_postal = 0;
+                }
             }
+
+            
             reader.Close();
             return cliente;
         }
