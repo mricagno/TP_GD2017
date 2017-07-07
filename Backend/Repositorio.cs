@@ -242,8 +242,8 @@ namespace UberFrba.Backend
         internal static void modificarChofer(String dni, NuevoChofer actualizarChofer)
         {
             String query = "EXEC DROP_DATABASE.SP_EDITAR_CHOFER " + dni + ", '" + actualizarChofer.nombre + "', '" + actualizarChofer.apellido + "', " +
-                actualizarChofer.num_dni + ", '" + actualizarChofer.email + "', " + actualizarChofer.telefono + ", '" +
-                actualizarChofer.direccion + "', '" + actualizarChofer.fecha_nacimiento + "'";
+                actualizarChofer.num_dni + ", '" + actualizarChofer.direccion + "', " + actualizarChofer.telefono + ", '" +
+                actualizarChofer.email + "', '" + actualizarChofer.fecha_nacimiento + "'";
 
             new Server().realizarQuery(query);
         }
