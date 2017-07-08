@@ -111,10 +111,12 @@ namespace UberFrba.Abm_Cliente
             if (funcionalidades.Contains("BAJA_CLIENTE"))
                 this.btnEliminar.Enabled = true;
 
-            if (Sesion.rol == "ADMINISTRADOR")
+            if (Sesion.rol == "ADMINISTRADOR" || funcionalidades.Contains("MODIFICAR_CLIENTE"))
             {
                 this.btnEliminar.Enabled = true;
                 btnHabilitar.Enabled = true;
+                this.btnModificar.Enabled = true;
+                this.btnEditarRolesChofer.Enabled = true;
             }
 
         }

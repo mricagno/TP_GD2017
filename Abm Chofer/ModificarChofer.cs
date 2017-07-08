@@ -110,10 +110,12 @@ namespace UberFrba.Abm_Chofer
             if (funcionalidades.Contains("BAJA_CHOFER"))
                 this.btnEliminar.Enabled = true;
 
-            if (Sesion.rol == "ADMINISTRADOR")
+            if (Sesion.rol == "ADMINISTRADOR" || funcionalidades.Contains("MODIFICAR_CHOFER" ))
             {
                 this.btnEliminar.Enabled = true;
                 btnHabilitar.Enabled = true;
+                this.btnEditarRolesChofer.Enabled = true;
+                this.btnModificar.Enabled = true;
             }
         }
 

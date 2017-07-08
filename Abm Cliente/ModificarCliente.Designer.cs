@@ -146,6 +146,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Enabled = false;
             this.btnModificar.Location = new System.Drawing.Point(357, 322);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(93, 34);
@@ -176,6 +177,7 @@
             // 
             // btnEditarRolesChofer
             // 
+            this.btnEditarRolesChofer.Enabled = false;
             this.btnEditarRolesChofer.Location = new System.Drawing.Point(456, 322);
             this.btnEditarRolesChofer.Name = "btnEditarRolesChofer";
             this.btnEditarRolesChofer.Size = new System.Drawing.Size(81, 34);
